@@ -2,6 +2,10 @@
 
 The seed picks each source's liquid level and which cells of the empty rack
 the receiving tubes stand in. Everything else is fixed by settings.py.
+
+There are two arms, each with its own gripper and wrist camera. Their names
+start with the arm's name: "arm1/shoulder_pan_joint", "arm2/gripper/pinch",
+"arm1/wrist".
 """
 
 from __future__ import annotations
@@ -16,6 +20,7 @@ from .glassware import add_container
 from .racks import add_rack, add_stand, add_tray, slot_positions
 from .settings import (
     ARM_XML,
+    ARMS,
     FRONT,
     GRIPPER_XML,
     HOME,
@@ -39,8 +44,12 @@ ARM_JOINTS = (
     "wrist_2_joint",
     "wrist_3_joint",
 )
+ARM_ACTUATORS = ("shoulder_pan", "shoulder_lift", "elbow", "wrist_1", "wrist_2", "wrist_3")
 GRIPPER_PREFIX = "gripper/"
+GRIPPER_ACTUATOR = GRIPPER_PREFIX + "fingers_actuator"
+# The point halfway between the fingertips, within one arm.
 PINCH_SITE = GRIPPER_PREFIX + "pinch"
+ARM_NAMES = tuple(a.name for a in ARMS)
 
 
 @dataclass
@@ -58,9 +67,11 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
     rng = np.random.default_rng(seed)
     truth = Truth(seed=seed)
 
-    spec = mujoco.MjSpec.from_file(str(ARM_XML))
+    spec = mujoco.MjSpec()
     spec.option.timestep = TIMESTEP
-    # The gripper's own settings; attaching it does not carry them over. An
+    # The arm model's own integrator; it is not carried over when attaching.
+    spec.option.integrator = mujoco.mjtIntegrator.mjINT_IMPLICITFAST
+    # The gripper's own settings, which are not carried over either. An
     # elliptic friction cone with a high impratio keeps a held tube from
     # creeping out of the fingers.
     spec.option.cone = mujoco.mjtCone.mjCONE_ELLIPTIC
@@ -69,21 +80,18 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
     # touches them. Without this every ball in every source costs time on
     # every step, though only one source is ever being poured.
     spec.option.enableflags |= mujoco.mjtEnableBit.mjENBL_SLEEP
-    # With two thousand free balls the model has over ten thousand degrees
-    # of freedom. The default Newton solver factors a matrix that size every
+    # With hundreds of free balls the model has thousands of degrees of
+    # freedom. The default Newton solver factors a matrix that size every
     # step and runs at a few steps a second; conjugate gradient is many times
     # faster. It needs 100 iterations: at 20 a light tube holding a tall
     # stack of stiff balls is pushed harder than it is held and flies apart.
     spec.option.solver = mujoco.mjtSolver.mjSOL_CG
     spec.option.iterations = 100
     spec.option.ls_iterations = 10
-    gripper = mujoco.MjSpec.from_file(str(GRIPPER_XML))
-    spec.attach(gripper, prefix=GRIPPER_PREFIX, site=spec.site("attachment_site"))
-    # A real UR controller cancels gravity itself; the model's position
-    # actuators do not, and the arm would sag below every target.
-    for body in spec.bodies:
-        if body.name != "world":
-            body.gravcomp = 1.0
+    for base in ARMS:
+        turn = [np.cos(base.yaw / 2), 0, 0, np.sin(base.yaw / 2)]
+        frame = spec.worldbody.add_frame(pos=list(base.pos), quat=turn)
+        spec.attach(_arm_with_gripper(), prefix=f"{base.name}/", frame=frame)
 
     spec.visual.global_.offwidth = IMAGE_SIZE[0]
     spec.visual.global_.offheight = IMAGE_SIZE[1]
@@ -99,12 +107,6 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
     )
     for cam in (OVERHEAD, FRONT):
         world.add_camera(name=cam.name, pos=list(cam.pos), xyaxes=list(cam.xyaxes), fovy=cam.fovy)
-    # Clamped to the side of the wrist, looking along the fingers (the
-    # wrist's +y axis) and tilted in towards them, as a wrist camera would be.
-    spec.body("wrist_3_link").add_camera(
-        name="wrist", pos=[0, 0.10, -0.07], xyaxes=[1, 0, 0, 0, -0.3, 1], fovy=75.0
-    )
-
     add_rack(spec, "source_rack", LAYOUT.source_rack)
     add_rack(spec, "empty_rack", LAYOUT.empty_rack)
     add_rack(spec, "filled_rack", LAYOUT.filled_rack)
@@ -155,16 +157,53 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
     return spec.compile(), truth
 
 
-def arm_joint_ids(model: mujoco.MjModel) -> np.ndarray:
-    return np.array([model.joint(name).qposadr[0] for name in ARM_JOINTS])
+def _arm_with_gripper() -> mujoco.MjSpec:
+    """One UR5e with its Robotiq gripper and wrist camera, ready to attach to the table."""
+    arm = mujoco.MjSpec.from_file(str(ARM_XML))
+    # Match the gripper's own settings so attaching it does not warn.
+    arm.option.cone = mujoco.mjtCone.mjCONE_ELLIPTIC
+    arm.option.impratio = 10
+    gripper = mujoco.MjSpec.from_file(str(GRIPPER_XML))
+    arm.attach(gripper, prefix=GRIPPER_PREFIX, site=arm.site("attachment_site"))
+    # A real UR controller cancels gravity itself; the model's position
+    # actuators do not, and the arm would sag below every target.
+    for body in arm.bodies:
+        if body.name != "world":
+            body.gravcomp = 1.0
+    # Clamped to the side of the wrist, looking along the fingers (the
+    # wrist's +y axis) and tilted in towards them, as a wrist camera would be.
+    arm.body("wrist_3_link").add_camera(
+        name="wrist", pos=[0, 0.10, -0.07], xyaxes=[1, 0, 0, 0, -0.3, 1], fovy=75.0
+    )
+    return arm
+
+
+def arm_joint_ids(model: mujoco.MjModel, arm: str = "arm1") -> np.ndarray:
+    """Where the arm's six joint angles are in ``data.qpos``."""
+    return np.array([model.joint(f"{arm}/{name}").qposadr[0] for name in ARM_JOINTS])
+
+
+def arm_actuator_ids(model: mujoco.MjModel, arm: str = "arm1") -> np.ndarray:
+    """Where the arm's six joint targets are in ``data.ctrl``."""
+    return np.array([model.actuator(f"{arm}/{name}").id for name in ARM_ACTUATORS])
+
+
+def gripper_actuator_id(model: mujoco.MjModel, arm: str = "arm1") -> int:
+    """Where the arm's gripper command is in ``data.ctrl``: 0 is open, 255 closed."""
+    return model.actuator(f"{arm}/{GRIPPER_ACTUATOR}").id
+
+
+def pinch_site(arm: str = "arm1") -> str:
+    return f"{arm}/{PINCH_SITE}"
 
 
 def reset(model: mujoco.MjModel, data: mujoco.MjData) -> None:
-    """Put the arm at home with the gripper open."""
+    """Put both arms at home with their grippers open."""
     mujoco.mj_resetData(model, data)
-    data.qpos[arm_joint_ids(model)] = HOME
-    data.ctrl[:6] = HOME
-    data.ctrl[6] = 0.0
+    for arm in ARM_NAMES:
+        data.qpos[arm_joint_ids(model, arm)] = HOME
+        data.ctrl[arm_actuator_ids(model, arm)] = HOME
+        data.ctrl[gripper_actuator_id(model, arm)] = 0.0
     mujoco.mj_forward(model, data)
 
 

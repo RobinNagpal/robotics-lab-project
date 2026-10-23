@@ -14,7 +14,7 @@ from PIL import Image
 from . import scene
 from .settings import IMAGE_SIZE
 
-CAMERAS = ("front", "overhead", "wrist")
+CAMERAS = ("front", "overhead", "arm1/wrist", "arm2/wrist")
 
 
 def main() -> None:
@@ -33,7 +33,7 @@ def main() -> None:
     with mujoco.Renderer(model, height=IMAGE_SIZE[1], width=IMAGE_SIZE[0]) as renderer:
         for cam in CAMERAS:
             renderer.update_scene(data, camera=cam)
-            path = args.out / f"seed{args.seed}_{cam}.png"
+            path = args.out / f"seed{args.seed}_{cam.replace('/', '_')}.png"
             Image.fromarray(renderer.render()).save(path)
             print(path)
 

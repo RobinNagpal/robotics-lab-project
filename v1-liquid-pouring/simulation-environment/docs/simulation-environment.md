@@ -16,6 +16,22 @@ called **meshes**) for how things look:
 
 `make assets` downloads them into `assets/`, always the same version.
 
+## Two arms
+
+The two arms face each other, 0.9 m apart, and everything they work on stands in a row
+halfway between them. So either arm can do any job, and the two can share the work
+(for example, one holds the source while the other moves tubes).
+
+Moving an arm needs some care:
+
+- **Each arm has its own names**: `arm1/...` and `arm2/...`, for its joints, motors, gripper and camera.
+- **Move in small steps, through a high point.** Jumping straight to a far target swings the arm
+  the shortest way for its joints, and that can sweep it low through the racks.
+  `kinematics.move_to` slides the arm there gradually.
+- **Keep the joint angles real.** When working out the joint angles for a gripper position
+  (**inverse kinematics**), the answer can spin a joint through several full turns, which a real arm cannot do.
+  The solver keeps each joint within its limits and as close as possible to where it already is.
+
 ## Containers: one shape to look at, another to touch
 
 MuJoCo fills in any mesh when it checks what touches what (**collision**). A tube mesh would
@@ -61,12 +77,12 @@ Sleeping matters most:
 
 | Situation | Speed |
 |---|---|
-| Nothing touched (only the arm moving) | about 14 times faster than real life |
+| Nothing touched (only the arms moving) | about 10 times faster than real life |
 | Gripper holding the beaker (beaker, tray, flask and their balls awake) | about half the speed of real life |
 
 Things can only be woken by touching them. To move an object, the arm has to grip it.
 
-We also kept two of the arm's own settings, because changing them made things unstable
+We also kept two of the arms' own settings, because changing them made things unstable
 (shake and fly apart): the **integrator** (the method that turns forces into movement) and the
 **friction cone** (how sideways grip is worked out, which stops held objects from slipping).
 
