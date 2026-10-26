@@ -1,0 +1,25 @@
+[workspace]
+name = "step-0-detect-and-classify"
+version = "0.1.0"
+description = "Step 0 of the liquid pouring task: find every object on the table, say what it is and where it stands"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+# The simulation's glassware code reads meshes with it.
+trimesh = ">=4.0"
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3"
+# YOLO11-seg; brings PyTorch and OpenCV with it.
+ultralytics = ">=8.3,<9"
+
+[activation.env]
+# The lab scene's building blocks (racks, glassware, liquid) come from the
+# simulation environment next door.
+PYTHONPATH = "$PIXI_PROJECT_ROOT/../simulation-environment:$PIXI_PROJECT_ROOT"

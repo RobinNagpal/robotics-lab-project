@@ -1,0 +1,19 @@
+[workspace]
+name = "liquid-pouring-sim"
+version = "0.1.0"
+description = "The MuJoCo lab scene for the liquid pouring task: a UR5e, three racks, glassware and liquid made of small balls"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+# Reads the glassware meshes (GLB) and writes the OBJ files MuJoCo loads.
+trimesh = ">=4.0"
+# Saves the rendered pictures.
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3"
