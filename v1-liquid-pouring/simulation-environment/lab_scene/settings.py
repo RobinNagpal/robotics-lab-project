@@ -24,9 +24,27 @@ CONVERTED = ASSETS / "converted"
 # radius, so it cannot pass through a 2 mm glass wall in one step.
 TIMESTEP = 0.001
 
-# The arm starts here: upright, gripper pointing straight down, clear of the
-# racks and of the overhead camera's view of them.
+# Each arm starts here, in its own base's frame: upright, gripper pointing
+# straight down, clear of the racks and of the overhead camera's view of them.
 HOME = (-1.5708, -1.5708, 1.5708, -1.5708, -1.5708, 0.0)
+
+
+@dataclass(frozen=True)
+class ArmBase:
+    """Where an arm is bolted to the table, and which way it faces (yaw, radians)."""
+
+    name: str
+    pos: tuple[float, float, float]
+    yaw: float
+
+
+# Two UR5e arms facing each other across the table, 0.9 m apart. Everything
+# they work on stands on the line halfway between them, so each arm can
+# reach every rack, the tray and the stand. Arm 1's base is the origin.
+ARMS = (
+    ArmBase("arm1", (0.0, 0.0, 0.0), 0.0),
+    ArmBase("arm2", (0.90, 0.0, 0.0), 3.141592653589793),
+)
 
 
 @dataclass(frozen=True)
@@ -190,15 +208,19 @@ RACK = Rack()
 
 @dataclass(frozen=True)
 class Layout:
-    """Where everything stands on the table. All within the UR5e's 850 mm reach."""
+    """Where everything stands on the table: in a row along y, halfway between the arms.
 
-    source_rack: tuple[float, float] = (0.50, 0.30)
-    # The beaker and the flask stand on this tray, next to the source rack.
-    tray: tuple[float, float] = (0.27, 0.36)
+    Sources on one side of the stand, receivers on the other. The furthest
+    cell is about 0.6 m from either arm's base, well inside its reach.
+    """
+
+    stand: tuple[float, float] = (0.45, 0.0)
+    source_rack: tuple[float, float] = (0.45, 0.22)
+    # The beaker and the flask stand on this tray, beyond the source rack.
+    tray: tuple[float, float] = (0.45, 0.37)
     tray_size: tuple[float, float] = (0.20, 0.11)
-    stand: tuple[float, float] = (0.50, 0.0)
-    empty_rack: tuple[float, float] = (0.50, -0.30)
-    filled_rack: tuple[float, float] = (0.27, -0.38)
+    empty_rack: tuple[float, float] = (0.45, -0.22)
+    filled_rack: tuple[float, float] = (0.45, -0.36)
 
 
 LAYOUT = Layout()
@@ -215,5 +237,7 @@ class Camera:
 # The overhead camera sees the whole work area; it is what the arm uses to
 # find the racks. The front camera is only for people to watch.
 OVERHEAD = Camera("overhead", pos=(0.40, 0.0, 1.20), xyaxes=(0, -1, 0, 1, 0, 0), fovy=50.0)
-FRONT = Camera("front", pos=(0.95, 0.0, 0.45), xyaxes=(0, 1, 0, -0.59, 0, 0.81), fovy=60.0)
+# From the long side of the table, between the two arms, where a person
+# watching would stand; the arms are left and right of the picture.
+FRONT = Camera("front", pos=(0.45, -1.05, 0.60), xyaxes=(1, 0, 0, 0, 0.464, 0.886), fovy=55.0)
 IMAGE_SIZE = (640, 480)
