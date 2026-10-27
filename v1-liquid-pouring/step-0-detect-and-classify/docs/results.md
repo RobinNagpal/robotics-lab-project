@@ -1,186 +1,206 @@
-# Step 0 Results: Detect and Classify with YOLO11-seg
+# Step 0 Results: YOLO11-seg vs the Custom CNN
 
-The plan for this step is in [step-0-detect-and-classify.md](../../docs/solutions/step-0-detect-and-classify.md).
-This file says what we built, how we trained it, and how well it works.
+What the two models are and how they were trained is in [approach.md](approach.md).
+This page is only about how well they work, and how they compare.
 
----
-
-## Summary
-
-On 400 test scenes it has never seen, the detector:
-
-- **finds 98.1%** of the objects (4,445 of 4,529),
-- **gives the right class to 98.2%** of the objects it finds,
-- **places 97.6%** of the correctly classified objects **within 1 cm** of where they really stand.
-
-Racks, the tray, the stand, beakers and flasks are close to perfect. The weak spot is
-**test tube vs centrifuge tube**: from above both are rings about 25 to 29 mm across.
+Both models were trained on the same 800 pictures and graded on the same **300 test pictures**
+that neither had ever seen, by the same script. Those 300 pictures hold **2,844 real objects:
+1,944 tubes and 900 racks.**
 
 ---
 
-## Model
+## What the words mean
 
-| | |
+| Word | Meaning |
 |---|---|
-| Model | `yolo11s-seg` (YOLO11, small, with masks), Ultralytics 8.4.123 |
-| Start point | weights trained on COCO (everyday photos), then trained on our pictures |
-| Why YOLO11 | newer than YOLOv8, more accurate for its size, same code |
-| Why small (`s`) | a good middle: nano is less accurate, medium is slower to train |
-| Licence | AGPL-3.0 (fine for research; matters if this ships in a product) |
+| **Detection** | one object the model says it sees: an outline plus a class (`rack` or `test_tube`) |
+| **Found** | a real object counts as found when one of the model's outlines covers it well: the two outlines overlap by at least half (the shared area is at least half of the two areas together) |
+| **Missed** | a real object that no outline covers well |
+| **Detection matching nothing** (a **wrong detection**) | an outline the model drew that does not cover any real object well. For example, one outline drawn around two touching tubes, or an outline around only a small piece of a tube. The robot would think there is an object there that is not really there (or not really that shape) |
+| **Right class** | of the found objects, how many were called the right thing (a tube a tube, a rack a rack) |
+| **Position error** | the distance on the table between where we computed an object stands and where it really stands |
+| **Within 1 cm** | position error under 1 cm: close enough for the gripper to take the object |
+| **Median** | the middle value: half the objects are better than this, half worse |
+| **95% under** | 95 out of 100 objects are better than this; it shows how bad the worst few are |
+| **Neighbour** | another tube in a touching cell of the same rack, side by side or corner to corner |
 
-## Data
+---
 
-All pictures come from the overhead camera, 1280 x 960, in random scenes built by
-`detect_classify/random_scene.py`. The labels come from MuJoCo's segmentation picture, so
-nothing is labelled by hand.
+## The result in one table
 
-What changes from scene to scene:
-
-- how many tubes stand in the source rack (1 to 4) and the empty rack (1 to 5), and which kinds,
-- how many beakers and flasks there are (0 to 2), and whether there is a tray (80% of scenes),
-- where the 3 racks, the tray and the stand stand, and which way they face,
-- colours of the table, plastic, glass and liquid; the lights; the camera mount (up to 2 cm, 2 degrees);
-  the arm's pose.
-
-| Split | Pictures | Seeds | Objects |
+| | YOLO11-seg | Custom CNN | Better |
 |---|---|---|---|
-| Train | 2,000 | 0 to 1,999 | 22,517 |
-| Validation | 400 | 1,000,000 to 1,000,399 | 4,503 |
-| Test | 400 | 2,000,000 to 2,000,399 | 4,529 |
+| Tubes found | 1,887 of 1,944 (97.1%) | 1,898 of 1,944 (97.6%) | Custom |
+| Racks found | 900 of 900 (100%) | 900 of 900 (100%) | same |
+| Right class | 100% | 100% | same |
+| Detections matching nothing | 48 (about 1 in 6 pictures) | 31 (about 1 in 10 pictures) | Custom |
+| Tubes within 1 cm | 95.1% | 94.7% | YOLO |
+| Tube position error, median | 0.8 mm | 0.9 mm | about the same |
+| Tube position error, 95% under | 9.2 mm | 10.7 mm | YOLO |
+| Racks within 1 cm | 98.4% | 97.6% | YOLO |
+| Time to train | 18 min | 58 min | YOLO |
 
-Objects in the training set, per class:
+**In short: the two are about level.** The custom CNN finds a few more tubes and makes fewer
+wrong detections. YOLO places tubes a little more exactly and trains three times faster.
+Neither ever confuses a tube with a rack.
 
-| test_tube | centrifuge_tube | beaker | flask | rack | tray | pouring_stand |
-|---|---|---|---|---|---|---|
-| 9,970 | 955 | 1,018 | 981 | 6,000 | 1,593 | 2,000 |
+The same test picture, three ways (each object outlined in its own colour; racks in white):
 
-Rendering all 2,800 pictures takes about 9 minutes on 8 cores.
+![A test picture: the true outlines, YOLO's and the custom CNN's](images/overview.jpg)
 
-## Training settings
+Seen from this far, both look right. The differences are in the details below.
 
-| Setting | Value | Why |
+---
+
+## 1. Finding objects
+
+**Racks are never missed** by either model. All the misses are tubes:
+
+| | YOLO11-seg | Custom CNN |
 |---|---|---|
-| `imgsz` | 640 | 1280 needed more memory than the Mac has (see below) |
-| `batch` | 8 | fits in 5.4 GB |
-| `epochs` | 30, `patience=10` | stop early if the score stops improving |
-| `device` | `mps` (Apple M5 GPU) | |
-| `hsv_h`, `hsv_s`, `hsv_v` | 0.5, 0.7, 0.4 | strong colour changes, so it learns shapes, not colours |
-| `fliplr`, `flipud` | 0.5, 0.5 | a straight-down camera has no up or down |
-| everything else | Ultralytics defaults | (mosaic, scale, optimizer `auto`) |
-| `seed` | 0, `deterministic=True` | so a run can be repeated |
+| Tubes missed | 57 | 46 |
+| ... of them short (100 mm) tubes | 40 | 27 |
 
-### How long it took
+**Almost every missed tube stands next to other tubes.** A tube with no neighbour is nearly
+never missed; the more neighbours, the more often it is:
 
-- **About 6.3 minutes per epoch** (4.5 training, about 1 checking the validation set), on an Apple M5 with 16 GB.
-- The first try, at `imgsz=1280` and `batch=8`, needed 17.3 GB. The Mac ran out of memory, swapped
-  to disk, and took 5 to 10 minutes per batch. Measured speeds of other settings, for one epoch of
-  2,000 pictures (training only):
-
-| Model | `imgsz` | `batch` | Memory | Time per epoch |
+| A tube with ... neighbours | 0 | 1 | 2 | 3 or more |
 |---|---|---|---|---|
-| yolo11s-seg | 640 | 8 | 5.4 GB | 4.5 min (used) |
-| yolo11n-seg | 640 | 8 | 3.5 GB | 3.3 min |
-| yolo11s-seg | 1280 | 2 | 8.5 GB | 15 min |
-| yolo11n-seg | 1280 | 4 | 9.3 GB | 9.4 min |
+| Tubes in the test pictures | 634 | 773 | 420 | 117 |
+| Missed by YOLO | 1 (0.2%) | 26 (3.4%) | 22 (5.2%) | 8 (6.8%) |
+| Missed by the custom CNN | 1 (0.2%) | 16 (2.1%) | 20 (4.8%) | 9 (7.7%) |
 
-- **The run stopped in epoch 13 of 30**, after 78 minutes, with an error inside Ultralytics'
-  training code (`RuntimeError: shape mismatch` in the box assigner). This looks like a bug in
-  PyTorch on the Apple GPU, not in our data. The best weights, from **epoch 10**, were saved and
-  are the ones graded here.
+**Why short tubes next to tall ones are hard.** The camera is 1.2 m above the table. A tube
+that is not right under the camera is seen a little from the side, so in the picture a tall
+tube leans over its neighbours, and can hide much of a short one. A missed tube shows about half
+as many pixels as an average tube.
 
-Validation score per epoch (masks; 1.0 is perfect):
+Some tubes YOLO missed, and what each model drew there:
 
-| Epoch | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | **10** | 11 | 12 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| mAP50 | .890 | .904 | .942 | .952 | .967 | .943 | .968 | .967 | .977 | **.978** | .977 | .978 |
-| mAP50-95 | .657 | .671 | .698 | .701 | .725 | .725 | .734 | .731 | .732 | **.746** | .743 | .737 |
+![Tubes YOLO missed](images/missed_tubes.jpg)
 
-The score had mostly levelled off by epoch 10, so the missing epochs would likely add little.
+*Top two rows: the missed tube is half hidden by its neighbours. YOLO stretches a neighbour's
+outline over it, or leaves it out. Bottom row: a clear, empty tube on a pale rack, seen almost
+straight down, is only a faint ring. Here the custom CNN finds it.*
 
----
+**Touching tubes: where the two models differ most.** YOLO sometimes draws one outline around
+two touching tubes. Then neither tube counts as found, and the outline is a wrong detection. The
+custom CNN finds each object's centre first, so two touching tubes stay two objects:
 
-## Results on the test set
+![Touching tubes: true outlines, YOLO, custom CNN](images/touching_tubes.jpg)
 
-### YOLO's own scores
-
-| | mAP50 | mAP50-95 |
-|---|---|---|
-| Boxes | 0.985 | 0.894 |
-| Masks | 0.982 | 0.745 |
-
-Masks, per class:
-
-| Class | mAP50 | mAP50-95 |
-|---|---|---|
-| test_tube | 0.978 | 0.529 |
-| centrifuge_tube | 0.925 | 0.482 |
-| beaker | 0.995 | 0.683 |
-| flask | 0.995 | 0.696 |
-| rack | 0.995 | 0.927 |
-| tray | 0.995 | 0.956 |
-| pouring_stand | 0.995 | 0.941 |
-
-mAP50-95 is low for tubes because a tube is only about 11 pixels wide at `imgsz=640`: being one
-pixel off at the edge is already a big share of the outline. This matters less than it looks,
-because the position comes from depth, not from the outline's exact edge (next table).
-
-### Step 0 grading: count, class, position
-
-From `python -m detect_classify.evaluate` (confidence 0.5). A detection counts as finding an
-object when its mask overlaps the true outline by at least half (intersection over union).
-Positions are only graded for objects given the right class.
-
-| Class | True | Found | Right class | x-y error, median | x-y error, 95% under | Within 1 cm | Top height error, median |
-|---|---|---|---|---|---|---|---|
-| test_tube | 1,976 | 1,906 (96.5%) | 1,849 (97.0%) | 0.9 mm | 9.2 mm | 95.5% | 0.1 mm |
-| centrifuge_tube | 213 | 203 (95.3%) | 190 (93.6%) | 0.5 mm | 21.1 mm | 93.7% | 0.1 mm |
-| beaker | 214 | 214 (100%) | 214 (100%) | 1.2 mm | 3.0 mm | 99.5% | 0.8 mm |
-| flask | 198 | 195 (98.5%) | 183 (93.8%) | 0.6 mm | 1.2 mm | 100% | 0.1 mm |
-| rack | 1,200 | 1,199 (99.9%) | 1,199 (100%) | 0.0 mm | 0.4 mm | 99.3% | 0.1 mm |
-| tray | 328 | 328 (100%) | 328 (100%) | 0.0 mm | 0.3 mm | 99.7% | 0.1 mm |
-| pouring_stand | 400 | 400 (100%) | 400 (100%) | 0.0 mm | 0.3 mm | 99.8% | 0.1 mm |
-
-Also: **71 detections** matched no real object (about 1 in every 6 pictures).
-
-Mistaken classes:
-
-| True class | Called | Times |
-|---|---|---|
-| test_tube | centrifuge_tube | 57 |
-| centrifuge_tube | test_tube | 13 |
-| flask | beaker | 12 |
-
-### Compared with perfect outlines
-
-To tell detector mistakes from locating mistakes, the same grading was run with the true
-outlines in place of the detector (`python -m detect_classify.evaluate --oracle`):
-
-| Class | x-y error, median | Within 1 cm |
-|---|---|---|
-| test_tube | 0.7 mm | 98.9% |
-| centrifuge_tube | 0.3 mm | 99.1% |
-| beaker | 1.2 mm | 100% |
-| flask | 0.6 mm | 100% |
-| rack, tray, stand | 0.0 mm | 100% |
-
-So the locating maths is sound. Almost all the loss comes from the detector: missed tubes,
-wrong tube classes, and a few tube masks that spill onto a neighbour (the 9 to 21 mm tail).
+*In each row, YOLO's outline runs over two tubes (top: pink and peach; middle: green; bottom:
+brown). The custom CNN keeps them apart, though its outlines are rougher at the edges.*
 
 ---
 
-## What to improve next
+## 2. Detections matching nothing
 
-In order of how much they should help:
+None of them is on the table, an arm or a shadow. All of YOLO's are on real tubes; 26 of the
+custom CNN's 31 are on real tubes, and its other 5 are on an empty part of a rack. They are of
+three kinds:
 
-1. **Test tube vs centrifuge tube.** From above they look almost the same. Options: give the
-   model the depth picture as well (the centrifuge tube is shorter and plastic), train at a larger
-   picture size on a bigger GPU, or leave this to a close-up with the wrist camera.
-2. **Tubes standing close together.** Most missed tubes and the larger position errors are tubes
-   right next to each other in a rack. A larger `imgsz` should help here too.
-3. **Finish the run.** Resume from `last.pt` for the remaining epochs. The score had mostly
-   levelled off, so expect a small gain.
-4. **Roles** (source rack, empty rack, source, receiver) are not done yet. They need "does this
-   container hold liquid?", which belongs with Step 0.2 (liquid level).
+| Kind | YOLO11-seg | Custom CNN |
+|---|---|---|
+| One outline around **two** touching tubes | 22 | 2 |
+| One tube outlined badly: only part of it, or a second outline on a tube that already has one | 26 | 13 |
+| A small **fragment**, less than a third of a tube (5 of the 16 on an empty part of a rack, with no tube there) | 0 | 16 |
+| **Total** | **48** | **31** |
+
+The custom CNN almost never merges two tubes (2 against 22). Its own kind of mistake is the
+small fragment: a few pixels of a tube that point to a centre of their own, and become a tiny
+extra object:
+
+![The custom CNN's small fragments](images/custom_fragments.jpg)
+
+*Top: a fragment on an empty rack, where there is no tube at all: a round hole of the rack
+taken for a tube's rim. Bottom: a piece of a tube split off as its own object.*
+
+These fragments are small and could be removed with a minimum-size rule, but we did not tune
+anything on the test pictures, to keep the comparison fair.
+
+---
+
+## 3. Placing objects
+
+The position comes from the depth picture, inside the model's outline, the same way for both
+models. So a better outline gives a better position.
+
+**How good can it get?** With the *true* outlines in place of a model, the same geometry puts
+**99.2% of tubes and 100% of racks within 1 cm** (median error 0.7 mm). So the geometry is sound,
+and what is lost below comes from the outlines.
+
+| | YOLO11-seg | Custom CNN | Perfect outlines |
+|---|---|---|---|
+| Tubes within 1 cm | 95.1% | 94.7% | 99.2% |
+| Tubes found but more than 1 cm off | 92 | 101 | |
+| ... of them with an outline running onto another tube | 11 | 2 | |
+| Racks within 1 cm | 98.4% | 97.6% | 100% |
+
+**Why a tube ends up more than 1 cm off.** The position is the middle of the highest points
+inside the outline, which should be the tube's rim. If the outline is off, the highest points
+are somewhere else: the wrong part of the tube, or the rim of a taller neighbour the outline
+strays onto. Then the computed position jumps by a centimetre or more:
+
+![Positions more than 1 cm off](images/position_off.jpg)
+
+*Green dot: where the tube really stands. Red dot: where its outline put it. The outline
+covers the wrong part of the tube, so the highest points it finds are not the rim.*
+
+Almost all of these (88 of YOLO's 92) are again tubes with neighbours. The custom CNN's outlines
+rarely run onto another tube (2 against 11), but they are a little rougher at the edges: they are
+drawn at half the picture's size and then scaled up. That is why it places slightly fewer tubes
+within 1 cm, even though it keeps tubes apart better.
+
+---
+
+## 4. Training
+
+How each model improved, checked on the 150 validation pictures after every epoch (one pass
+over the 800 training pictures):
+
+**YOLO** (score for outlines, mAP50: 1.0 is perfect; it is high when most objects are found
+with good outlines and few wrong detections):
+
+| Epoch | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|---|
+| mAP50 | .910 | .969 | .972 | .964 | .977 | .969 | .982 | .980 |
+
+**Custom CNN** (share of tubes found, and number of wrong tube detections):
+
+| Epoch | 1 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 39 (kept) |
+|---|---|---|---|---|---|---|---|---|---|
+| Tubes found | 32% | 87% | 86% | 92% | 93% | 96% | 97% | 97% | 98% |
+| Wrong tube detections | 275 | 218 | 75 | 24 | 66 | 24 | 9 | 8 | 7 |
+
+YOLO starts from a model that already knows everyday photos, so it is good after one epoch.
+The custom CNN starts from nothing: it needs about 25 epochs to reach the same level. Neither
+had fully stopped improving at the end.
+
+| | YOLO11-seg | Custom CNN |
+|---|---|---|
+| Epochs | 8 | 40 |
+| Time per epoch | about 2.2 min | about 1.4 min |
+| Total | 18 min | 58 min |
+| Time to find objects in one picture | about 20 ms | about 15 ms |
+
+(Measured on an Apple M5 Mac.)
+
+---
+
+## What we learn
+
+1. **Racks and classes are solved.** Both models find every rack and never confuse a tube
+   with a rack.
+2. **The hard case is tubes standing close together**, worst for a short tube next to tall
+   ones. All the misses, nearly all the wrong detections and nearly all the bad positions are there.
+3. **Finding centres first (the custom CNN) keeps touching tubes apart:** 2 merged pairs
+   instead of 22, and 46 missed tubes instead of 57.
+4. **But exact outlines matter for the position**, and there YOLO is still a little better.
+5. **Overall the two are level.** YOLO gets there with a ready-made model and a third of the
+   training time, which makes it the simpler choice today. The custom CNN has room to grow
+   (sharper outlines, or using the depth picture as an extra input), which YOLO cannot easily do.
+   The ways to improve it are in [improvements.md](improvements.md).
 
 ---
 
@@ -189,13 +209,17 @@ In order of how much they should help:
 From `step-0-detect-and-classify/`:
 
 ```
-make data                      # render the 2,000 / 400 / 400 pictures with labels
-make preview                   # draw labels over 12 pictures, to check them
-make train NAME=yolo11s_640_2000
-make evaluate NAME=yolo11s_640_2000
-make oracle                    # grade the locating maths alone
+make data                         # render the 800 / 150 / 300 pictures with labels
+make train                        # YOLO11s-seg, 8 epochs, about 18 minutes
+make evaluate                     # grade YOLO on the 300 test pictures
+make train-custom                 # the custom CNN, 40 epochs, about an hour
+make evaluate-custom              # grade the custom CNN the same way
+make oracle                       # grade with the true outlines (the geometry alone)
 ```
 
-Files: weights in `runs/yolo11s_640_2000/weights/best.pt`, training curves in
-`runs/yolo11s_640_2000/results.csv` and `results.png`, grading in
-`runs/yolo11s_640_2000/step0_results.json`.
+| | YOLO11-seg | Custom CNN |
+|---|---|---|
+| Weights | `runs/yolo11s_640_800/weights/best.pt` | `runs/custom_rgb/weights/best.pt` |
+| Scores per epoch | `runs/yolo11s_640_800/results.csv` | `runs/custom_rgb/results.csv` |
+| Training log | `train_yolo11s_640_800.log` | `train_custom_rgb.log` |
+| Test grade | `runs/yolo11s_640_800/step0_results.json` | `runs/custom_rgb/step0_results.json` |

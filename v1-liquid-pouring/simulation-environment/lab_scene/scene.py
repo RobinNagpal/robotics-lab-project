@@ -1,7 +1,7 @@
 """Build the whole lab scene for one seed.
 
-The seed picks each source's liquid level and which cells of the empty rack
-the receiving tubes stand in. Everything else is fixed by settings.py.
+The seed picks each source's liquid level and which rack cells the source
+and receiving tubes stand in. Everything else is fixed by settings.py.
 
 There are two arms, each with its own gripper and wrist camera. Their names
 start with the arm's name: "arm1/shoulder_pan_joint", "arm2/gripper/pinch",
@@ -17,7 +17,7 @@ import numpy as np
 
 from . import liquid
 from .glassware import add_container
-from .racks import add_rack, add_stand, add_tray, slot_positions
+from .racks import add_rack, slot_positions
 from .settings import (
     ARM_XML,
     ARMS,
@@ -30,7 +30,6 @@ from .settings import (
     OVERHEAD,
     RECEIVERS,
     SOURCES,
-    SOURCES_IN_RACK,
     TABLE,
     TIMESTEP,
     Container,
@@ -50,16 +49,29 @@ GRIPPER_ACTUATOR = GRIPPER_PREFIX + "fingers_actuator"
 # The point halfway between the fingertips, within one arm.
 PINCH_SITE = GRIPPER_PREFIX + "pinch"
 ARM_NAMES = tuple(a.name for a in ARMS)
+# The gap between the finger pads (m) for a gripper command, measured with
+# nothing between the fingers.
+GRIPPER_GAP = ((0, 0.0852), (90, 0.0570), (180, 0.0251), (240, 0.0029), (255, 0.0004))
+# How much narrower than the object the fingers are told to close, m.
+GRIP_SQUEEZE = 0.004
+RACKS = ("source_rack", "empty_rack", "destination_rack")
+# Cells of a 2 x 5 rack, numbered along the first row (0 to 4) and then the
+# second (5 to 9). The open fingers reach about 60 mm either side along the
+# row, so two tubes in one row stand at least three cells (108 mm) apart;
+# in different rows they are never in the same column. Each set has room for
+# four tubes, and the seed picks the set and which cells of it are used.
+SPACED_CELLS = ((0, 3, 6, 9), (1, 4, 5, 8))
 
 
 @dataclass
 class Truth:
-    """What the scene was built with. For tests and the examiner; the arm must not read it."""
+    """What the scene was built with. For tests and the examiner; the arms must not read it."""
 
     seed: int
     containers: dict[str, Container] = field(default_factory=dict)
     levels: dict[str, float] = field(default_factory=dict)  # sources only, as asked for
     balls: dict[str, int] = field(default_factory=dict)
+    source_slots: dict[str, int] = field(default_factory=dict)
     receiver_slots: dict[str, int] = field(default_factory=dict)
 
 
@@ -91,7 +103,7 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
     for base in ARMS:
         turn = [np.cos(base.yaw / 2), 0, 0, np.sin(base.yaw / 2)]
         frame = spec.worldbody.add_frame(pos=list(base.pos), quat=turn)
-        spec.attach(_arm_with_gripper(), prefix=f"{base.name}/", frame=frame)
+        spec.attach(arm_with_gripper(), prefix=f"{base.name}/", frame=frame)
 
     spec.visual.global_.offwidth = IMAGE_SIZE[0]
     spec.visual.global_.offheight = IMAGE_SIZE[1]
@@ -107,31 +119,20 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
     )
     for cam in (OVERHEAD, FRONT):
         world.add_camera(name=cam.name, pos=list(cam.pos), xyaxes=list(cam.xyaxes), fovy=cam.fovy)
-    add_rack(spec, "source_rack", LAYOUT.source_rack)
-    add_rack(spec, "empty_rack", LAYOUT.empty_rack)
-    add_rack(spec, "filled_rack", LAYOUT.filled_rack)
-    tray_floor = add_tray(spec, "source_tray", LAYOUT.tray, LAYOUT.tray_size)
-    add_stand(spec, "pouring_stand", LAYOUT.stand)
+    for rack in RACKS:
+        add_rack(spec, rack, getattr(LAYOUT, rack))
 
-    # Sources: tubes in alternate cells of the source rack's front row, the
-    # beaker and flask side by side on the tray.
-    source_cells = slot_positions(LAYOUT.source_rack)
-    tray_spots = [(LAYOUT.tray[0] - 0.045, LAYOUT.tray[1]), (LAYOUT.tray[0] + 0.045, LAYOUT.tray[1])]
+    # Sources and receivers: each in a cell of its rack chosen by the seed,
+    # far enough apart that the open fingers miss the other tubes.
     placed = []
-    for container in SOURCES:
-        if container.name in SOURCES_IN_RACK:
-            pos = list(source_cells[2 * SOURCES_IN_RACK.index(container.name)])
-        else:
-            x, y = tray_spots.pop(0)
-            pos = [x, y, tray_floor]
-        add_container(spec, world, container, pos)
+    source_cells = slot_positions(LAYOUT.source_rack)
+    for container, cell in zip(SOURCES, _spaced_cells(rng), strict=False):
+        pos = source_cells[cell]
+        add_container(spec, world, container, list(pos))
         placed.append((container, np.array(pos)))
-
-    # Receivers: in cells of the empty rack chosen by the seed, one apart so
-    # the fingers fit between them.
-    free_cells = rng.permutation([0, 2, 4, 5, 7, 9])
+        truth.source_slots[container.name] = int(cell)
     empty_cells = slot_positions(LAYOUT.empty_rack)
-    for container, cell in zip(RECEIVERS, free_cells, strict=False):
+    for container, cell in zip(RECEIVERS, _spaced_cells(rng), strict=False):
         add_container(spec, world, container, list(empty_cells[cell]))
         truth.receiver_slots[container.name] = int(cell)
 
@@ -144,10 +145,10 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
         truth.levels[container.name] = level
         truth.balls[container.name] = len(centres)
 
-    # The liquid is already settled, so everything except the arm starts
-    # asleep and costs nothing until the arm touches it. A touch wakes the
+    # The liquid is already settled, so everything except the arms starts
+    # asleep and costs nothing until an arm touches it. A touch wakes the
     # touched body and everything resting on or in it.
-    free = {"source_rack", "empty_rack", "filled_rack", "source_tray", *(c.name for c in SOURCES + RECEIVERS)}
+    free = {*RACKS, *(c.name for c in SOURCES + RECEIVERS)}
     for body in spec.bodies:
         if body.name in free or body.name.startswith(liquid.BALL_PREFIX):
             body.sleep = mujoco.mjtSleepPolicy.mjSLEEP_INIT
@@ -157,7 +158,12 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
     return spec.compile(), truth
 
 
-def _arm_with_gripper() -> mujoco.MjSpec:
+def _spaced_cells(rng: np.random.Generator) -> np.ndarray:
+    """Rack cells far enough apart for the open fingers, in a random order."""
+    return rng.permutation(SPACED_CELLS[rng.integers(len(SPACED_CELLS))])
+
+
+def arm_with_gripper() -> mujoco.MjSpec:
     """One UR5e with its Robotiq gripper and wrist camera, ready to attach to the table."""
     arm = mujoco.MjSpec.from_file(str(ARM_XML))
     # Match the gripper's own settings so attaching it does not warn.
@@ -191,6 +197,18 @@ def arm_actuator_ids(model: mujoco.MjModel, arm: str = "arm1") -> np.ndarray:
 def gripper_actuator_id(model: mujoco.MjModel, arm: str = "arm1") -> int:
     """Where the arm's gripper command is in ``data.ctrl``: 0 is open, 255 closed."""
     return model.actuator(f"{arm}/{GRIPPER_ACTUATOR}").id
+
+
+def grip_command(width: float, squeeze: float = GRIP_SQUEEZE) -> float:
+    """The gripper command that closes the fingers to ``squeeze`` less than ``width``, m.
+
+    Closing all the way (255) on a 25 mm tube asks the fingers to travel
+    25 mm into it; the finger links then wrap round the tube and the solver
+    flings it away. Commanding a gap a few millimetres under the width holds
+    it firmly without that.
+    """
+    commands, gaps = zip(*GRIPPER_GAP[::-1], strict=True)
+    return float(np.interp(width - squeeze, gaps, commands))
 
 
 def pinch_site(arm: str = "arm1") -> str:

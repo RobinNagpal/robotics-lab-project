@@ -11,16 +11,17 @@ called **meshes**) for how things look:
 | From | What we take |
 |---|---|
 | [MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie) | the UR5e arm and the Robotiq gripper |
-| [AutoBio](https://github.com/autobio-bench/AutoBio) | the tube rack and the 50 ml centrifuge tube |
-| [Lab Assets](https://opengameart.org/content/lab-assets) (free for any use) | the test tube, beaker and flask |
+| [AutoBio](https://github.com/autobio-bench/AutoBio) | the tube rack |
+| [Lab Assets](https://opengameart.org/content/lab-assets) (free for any use) | the test tube (all six tubes use it, stretched to their heights) |
 
 `make assets` downloads them into `assets/`, always the same version.
 
 ## Two arms
 
 The two arms face each other, 0.9 m apart, and everything they work on stands in a row
-halfway between them. So either arm can do any job, and the two can share the work
-(for example, one holds the source while the other moves tubes).
+halfway between them. So either arm can do any job. In the task one arm holds the source
+and the other the receiver, and they meet at the **pouring point**: the empty middle of
+the row, 0.25 m up. Nothing stands there, so the pour happens in the air.
 
 Moving an arm needs some care:
 
@@ -28,9 +29,32 @@ Moving an arm needs some care:
 - **Move in small steps, through a high point.** Jumping straight to a far target swings the arm
   the shortest way for its joints, and that can sweep it low through the racks.
   `kinematics.move_to` slides the arm there gradually.
+- **Point the fingers the right way.** `kinematics.move_to` takes the direction the fingers
+  should point (straight down unless told otherwise). Holding a tube from above puts the
+  gripper right over its rim, where the source has to pour in, so at the pouring point the
+  receiver arm should hold its tube from the side. Both arms reach the pouring point either way.
 - **Keep the joint angles real.** When working out the joint angles for a gripper position
   (**inverse kinematics**), the answer can spin a joint through several full turns, which a real arm cannot do.
   The solver keeps each joint within its limits and as close as possible to where it already is.
+
+## Gripping a tube
+
+Two things make the difference between lifting a tube and throwing it across the room:
+
+- **Do not close the gripper all the way.** At 255 the fingers try to close to 0 mm. On a
+  25 mm tube that means 25 mm of squeeze; the finger links wrap round the tube and the
+  solver flings it away. `scene.grip_command(width)` gives the command that closes the
+  fingers 4 mm narrower than the tube, which holds it firmly. The table behind it
+  (`GRIPPER_GAP`) was measured with nothing between the fingers: 85 mm open, 25 mm at 180.
+- **Keep tubes apart.** Open, the fingers reach about 60 mm to either side. With tubes one
+  cell (72 mm) apart in a row, a finger hit the next tube on the way down. So tubes in one
+  row stand at least three cells apart. Also keep the finger pads above the rack's top plate:
+  for the short tube, grip higher than 3 cm below its rim.
+
+Even so, gripping is not fully reliable yet: in a run of 48 picks (every tube, both arms,
+4 seeds) 2 still blew up. Those happen as the tube wakes from sleep under the fingers (see
+**Speed tricks** below). With sleeping turned off the same grips were clean. Making the
+grasp reliable is part of the pick-and-place step.
 
 ## Containers: one shape to look at, another to touch
 
@@ -59,7 +83,7 @@ The liquid is made of small balls.
 
 **How a source gets filled:**
 
-1. Balls pack less tightly in a narrow tube than in a wide beaker. So, once per container,
+1. Balls pack less tightly in a narrow tube than in a wider container. So, once per container,
    we fill it, let the balls settle, and measure how many fit. The result is saved and reused.
 2. Each source is filled and settled on its own, standing straight, **before** the scene is
    built. When we dropped balls into the full scene instead, tubes leaning slightly in the
@@ -78,7 +102,7 @@ Sleeping matters most:
 | Situation | Speed |
 |---|---|
 | Nothing touched (only the arms moving) | about 10 times faster than real life |
-| Gripper holding the beaker (beaker, tray, flask and their balls awake) | about half the speed of real life |
+| Gripper holding a full source tube (the tube, its rack, the tubes in it and their balls awake) | slower; how much depends on how many balls wake |
 
 Things can only be woken by touching them. To move an object, the arm has to grip it.
 
@@ -89,8 +113,9 @@ We also kept two of the arms' own settings, because changing them made things un
 ## Limits
 
 - **The balls are not water.** They pour more like small marbles: in lumps, not a smooth stream.
-- **Squeezing a full beaker can flick out a ball or two.**
-- **Sometimes there is not enough liquid.** If all sources start low, together they may hold less
-  than the three tubes need.
-- **Only the liquid levels and the tubes' places in the rack change between scenes.** The number
-  of objects and where they stand stay the same. Step 0 (finding objects with the camera) will need these to change too.
+- **Gripping can still fail now and then** (see **Gripping a tube**).
+- **Sometimes there is not enough liquid.** A source that starts at 20 % holds only a few
+  dozen balls, so half of it is a small pour.
+- **Only the liquid levels and the tubes' places in the racks change between scenes.** The number
+  of objects and where the racks stand stay the same. Step 0 (finding objects with the camera) uses
+  its own, more varied scenes.

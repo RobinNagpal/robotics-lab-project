@@ -1,6 +1,6 @@
 """Render overhead pictures of random scenes, with YOLO labels made from MuJoCo's segmentation.
 
-    python -m detect_classify.generate_data --split train --first 0 --count 2000
+    python -m detect_classify.generate_data --split train --first 0 --count 800
 
 For every seed this writes, under data/<split>/:
     images/<seed>.jpg   the colour picture the detector sees

@@ -1,7 +1,7 @@
 """Every number that describes the lab scene, in one place.
 
-The arm's base is at the origin, bolted to the table, and the table top is
-the plane z = 0. x points away from the arm, y to its left. Lengths are in
+Arm 1's base is at the origin, bolted to the table, and the table top is
+the plane z = 0. x points away from arm 1, towards arm 2; y to its left. Lengths are in
 metres, masses in kilograms.
 """
 
@@ -40,7 +40,8 @@ class ArmBase:
 
 # Two UR5e arms facing each other across the table, 0.9 m apart. Everything
 # they work on stands on the line halfway between them, so each arm can
-# reach every rack, the tray and the stand. Arm 1's base is the origin.
+# reach every rack and the pouring point. One arm holds the source, the
+# other the receiver. Arm 1's base is the origin.
 ARMS = (
     ArmBase("arm1", (0.0, 0.0, 0.0), 0.0),
     ArmBase("arm2", (0.90, 0.0, 0.0), 3.141592653589793),
@@ -55,10 +56,9 @@ class Material:
     rgba: tuple[float, float, float, float]
 
 
-# Clear borosilicate glass and the polypropylene of centrifuge tubes and racks.
+# Clear borosilicate glass, and the polypropylene of the racks.
 # Glass on plastic or rubber is about 0.4 to 0.6 dry.
 GLASS = Material(friction=0.5, rgba=(0.85, 0.92, 0.95, 0.30))
-POLYPROPYLENE = Material(friction=0.5, rgba=(0.95, 0.95, 0.92, 0.45))
 RACK_PLASTIC = Material(friction=0.6, rgba=(0.20, 0.45, 0.80, 1.0))
 TABLE = Material(friction=0.7, rgba=(0.82, 0.82, 0.80, 1.0))
 
@@ -121,48 +121,14 @@ RECEIVERS = (
     _test_tube("receiver_200", 0.200, 0.038),
 )
 
+# The sources: plain glass test tubes, the same three heights as the
+# receivers, so the same tilt pours differently from each. Three of them,
+# one for each receiver. They all stand in the source rack.
 SOURCES = (
-    _test_tube("source_tube", 0.150, 0.028),
-    # AutoBio's 50 ml centrifuge tube, at its own measured size: conical tip,
-    # then straight. Polypropylene, about 13 g.
-    Container(
-        name="source_centrifuge_tube",
-        mesh=AUTOBIO / "container" / "centrifuge_50ml_vis" / "visual.obj",
-        mesh_up="z",
-        outline=((0.0, 0.0035), (0.0156, 0.0145), (0.1146, 0.0145)),
-        wall=WALL,
-        mass=0.013,
-        material=POLYPROPYLENE,
-        wall_pieces=16,
-    ),
-    # A 50 ml Griffin beaker: 42 mm across, 60 mm tall, about 35 g.
-    Container(
-        name="source_beaker",
-        mesh=GLASSWARE / "bottle_glassware_beaker_medium.glb",
-        mesh_up="y",
-        outline=((0.0, 0.021), (0.060, 0.021)),
-        wall=WALL,
-        mass=0.035,
-        material=GLASS,
-        wall_pieces=24,
-    ),
-    # A 50 ml Erlenmeyer flask: 51 mm base, 80 mm tall, 22 mm neck, about
-    # 45 g. The neck starts at 72 % of the height, as in the mesh.
-    Container(
-        name="source_flask",
-        mesh=GLASSWARE / "bottle_glassware_erlenmeyer_flask_medium.glb",
-        mesh_up="y",
-        outline=((0.0, 0.0255), (0.010, 0.0255), (0.058, 0.011), (0.080, 0.011)),
-        wall=WALL,
-        mass=0.045,
-        material=GLASS,
-        wall_pieces=24,
-    ),
+    _test_tube("source_tube_100", 0.100, 0.019),
+    _test_tube("source_tube_150", 0.150, 0.028),
+    _test_tube("source_tube_200", 0.200, 0.038),
 )
-
-# The test tube and the centrifuge tube stand in the source rack; the beaker
-# and the flask stand on the tray beside it.
-SOURCES_IN_RACK = ("source_tube", "source_centrifuge_tube")
 
 
 @dataclass(frozen=True)
@@ -210,17 +176,17 @@ RACK = Rack()
 class Layout:
     """Where everything stands on the table: in a row along y, halfway between the arms.
 
-    Sources on one side of the stand, receivers on the other. The furthest
+    Sources on one side of the middle, receivers on the other. The furthest
     cell is about 0.6 m from either arm's base, well inside its reach.
     """
 
-    stand: tuple[float, float] = (0.45, 0.0)
     source_rack: tuple[float, float] = (0.45, 0.22)
-    # The beaker and the flask stand on this tray, beyond the source rack.
-    tray: tuple[float, float] = (0.45, 0.37)
-    tray_size: tuple[float, float] = (0.20, 0.11)
     empty_rack: tuple[float, float] = (0.45, -0.22)
-    filled_rack: tuple[float, float] = (0.45, -0.36)
+    destination_rack: tuple[float, float] = (0.45, -0.36)
+    # The middle of the table, between the arms and between the racks, is
+    # kept clear: the two arms bring their tubes together above it to pour.
+    # The receiver's rim is held about this high.
+    pour_point: tuple[float, float, float] = (0.45, 0.0, 0.25)
 
 
 LAYOUT = Layout()
@@ -235,7 +201,7 @@ class Camera:
 
 
 # The overhead camera sees the whole work area; it is what the arm uses to
-# find the racks. The front camera is only for people to watch.
+# find the racks and tubes. The front camera is only for people to watch.
 OVERHEAD = Camera("overhead", pos=(0.40, 0.0, 1.20), xyaxes=(0, -1, 0, 1, 0, 0), fovy=50.0)
 # From the long side of the table, between the two arms, where a person
 # watching would stand; the arms are left and right of the picture.

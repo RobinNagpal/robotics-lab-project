@@ -1,12 +1,13 @@
 """The classes the detector learns, as in docs/solutions/step-0-detect-and-classify.md.
 
-Role (source or receiver, which rack is which) is not a class: a source tube
-and a receiving tube look the same.
+Role (source, receiver or filled tube; which rack is which) is not a class: the
+tubes are the same glass test tubes, and the three racks are the same rack.
+Tube height (100, 150 or 200 mm) is not a class either, for now.
 """
 
 from __future__ import annotations
 
-CLASSES = ("test_tube", "centrifuge_tube", "beaker", "flask", "rack", "tray", "pouring_stand")
+CLASSES = ("test_tube", "rack")
 CLASS_ID = {name: i for i, name in enumerate(CLASSES)}
 
 # Which simulation container each class is drawn from.
@@ -14,8 +15,7 @@ CONTAINER_CLASS = {
     "receiver_100": "test_tube",
     "receiver_150": "test_tube",
     "receiver_200": "test_tube",
-    "source_tube": "test_tube",
-    "source_centrifuge_tube": "centrifuge_tube",
-    "source_beaker": "beaker",
-    "source_flask": "flask",
+    "source_tube_100": "test_tube",
+    "source_tube_150": "test_tube",
+    "source_tube_200": "test_tube",
 }

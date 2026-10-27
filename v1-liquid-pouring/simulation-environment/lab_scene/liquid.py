@@ -2,7 +2,7 @@
 
 Balls start in a close-packed stack inside a container and settle when the
 simulation runs. Counting balls is how the examiner measures levels and
-spills; the arm itself must never read ball positions.
+spills; the arms themselves must never read ball positions.
 """
 
 from __future__ import annotations
@@ -84,7 +84,7 @@ def _room(container: Container, z: float) -> float:
 def settled_packing(container: Container) -> float:
     """The fraction of the inside that settled balls fill, measured once and cached.
 
-    Narrow tubes pack looser than wide beakers, because fewer balls fit
+    Narrow tubes pack looser than wide ones, because fewer balls fit
     across, so this is measured in the container itself: fill it to the
     rim, let the balls settle, and divide their volume by the volume below
     the surface they settle to.
