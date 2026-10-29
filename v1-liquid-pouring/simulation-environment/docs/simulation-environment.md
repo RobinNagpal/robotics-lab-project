@@ -114,8 +114,6 @@ We also kept two of the arms' own settings, because changing them made things un
 
 - **The balls are not water.** They pour more like small marbles: in lumps, not a smooth stream.
 - **Gripping can still fail now and then** (see **Gripping a tube**).
-- **Sometimes there is not enough liquid.** A source that starts at 20 % holds only a few
-  dozen balls, so half of it is a small pour.
 - **Only the liquid levels and the tubes' places in the racks change between scenes.** The number
   of objects and where the racks stand stay the same. Step 0 (finding objects with the camera) uses
   its own, more varied scenes.

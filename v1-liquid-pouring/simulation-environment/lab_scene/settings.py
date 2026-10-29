@@ -147,8 +147,10 @@ class Liquid:
     water_density: float = 1000.0
     rgba: tuple[float, float, float, float] = (0.15, 0.45, 0.95, 1.0)
     # Each source starts filled to a height between these fractions of its
-    # inside height, drawn from the seed.
-    level: tuple[float, float] = (0.20, 0.90)
+    # inside height, drawn from the seed. Always more than half, so one
+    # source always holds enough for the receiver of the same size to reach
+    # 50 %, with some to spare for spills.
+    level: tuple[float, float] = (0.60, 0.90)
 
     @property
     def ball_density(self) -> float:

@@ -37,7 +37,8 @@ receiving tube, and the source is tilted over the receiver.
 | Racks | source rack, empty rack, destination rack (AutoBio, 10 cells each) |
 | Cameras | `overhead`, `front`, `arm1/wrist`, `arm2/wrist` |
 
-Each source starts filled to a random level between 20 % and 90 %, chosen by the seed.
+Each source starts filled to a random level between 60 % and 90 %, chosen by the seed.
+So it always holds more than its matching receiver needs for 50 %.
 The seed also picks which rack cells the sources and the receivers stand in.
 Sizes, weights, pictures and where each model comes from: [`docs/objects.md`](docs/objects.md).
 

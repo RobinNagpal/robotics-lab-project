@@ -44,10 +44,11 @@ Names in the code start with the arm's name, for example `arm1/shoulder_pan_join
 | **Middle tube** | `source_tube_150` | glass, round bottom | 25 x 150 mm | 50 ml | 28 g | CC0 Lab Assets pack |
 | **Tall tube** | `source_tube_200` | glass, round bottom | 25 x 200 mm | 68 ml | 38 g | CC0 Lab Assets pack |
 
-- Each source starts filled to a random level between **20 % and 90 %** of its height.
+- Each source starts filled to a random level between **60 % and 90 %** of its height,
+  so it always holds more than the receiver of the same size needs for 50 % (with some to spare for spills).
 - All three stand in the source rack, in cells chosen by the seed. They cannot stand on the table by themselves (round bottom).
 - They are the same tubes as the receivers; only the liquid tells them apart.
-- Three sources for three receivers: each pour uses one source.
+- Three sources for three receivers, one of each size: each pour goes from a source to the receiver of the same size.
 
 ## The receivers (tubes to fill)
 

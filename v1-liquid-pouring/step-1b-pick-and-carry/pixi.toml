@@ -1,0 +1,24 @@
+[workspace]
+name = "step-1b-pick-and-carry"
+version = "0.1.0"
+description = "Step 1b of the liquid pouring task: both arms pick a matching pair of tubes and bring them to the pouring point"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+# The simulation's glassware code reads meshes with it.
+trimesh = ">=4.0"
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3"
+# Step 0's detector, YOLO11-seg; brings PyTorch (for the grasp network too) and OpenCV.
+ultralytics = ">=8.3,<9"
+
+[activation.env]
+# The simulation, Step 0 (finding the tubes) and Step 1 (the grasp network) next door.
+PYTHONPATH = "$PIXI_PROJECT_ROOT/../simulation-environment:$PIXI_PROJECT_ROOT/../step-0-detect-and-classify:$PIXI_PROJECT_ROOT/../step-1-grasp:$PIXI_PROJECT_ROOT"
