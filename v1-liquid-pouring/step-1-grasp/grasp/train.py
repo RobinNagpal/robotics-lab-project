@@ -60,8 +60,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    parser.add_argument("--data", type=Path, default=None, help="default: data/, data_side/ or data_side2/")
-    parser.add_argument("--kind", choices=["top", "side", "side2"], default="top")
+    parser.add_argument("--data", type=Path, default=None, help="default: data/ or data_<kind>/")
+    parser.add_argument("--kind", choices=["top", "side", "side2", "side3"], default="top")
     parser.add_argument("--name", required=True)
     parser.add_argument("--epochs", type=int, default=16)
     parser.add_argument("--batch", type=int, default=32)
@@ -75,6 +75,8 @@ def main() -> None:
     run.mkdir(parents=True, exist_ok=True)
     args.data = args.data or Path("data" if args.kind == "top" else f"data_{args.kind}")
     bins, step = (rules.BINS, rules.BIN_STEP) if args.kind == "top" else (side.BINS, side.STEP)
+    if args.kind == "side3":
+        bins *= len(side.HEIGHTS)  # 24 directions at each grip height
     train = Pictures(args.data / "train", augment=True, bins=bins, step=step)
     val = Pictures(args.data / "val", bins=bins, step=step)
     loader = DataLoader(

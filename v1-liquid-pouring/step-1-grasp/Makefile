@@ -15,7 +15,7 @@ PHYSICS ?= 60
 
 py = pixi run python -u -m
 
-.PHONY: help data train evaluate figures data-side train-side evaluate-side figures-side data-side2 train-side2 evaluate-side2 figures-side2 test lint
+.PHONY: help data train evaluate figures data-side train-side evaluate-side figures-side data-side2 train-side2 evaluate-side2 figures-side2 data-side3 train-side3 evaluate-side3 figures-side3 test lint
 
 help: ## Show this help
 	@echo ""
@@ -60,7 +60,7 @@ evaluate-side: ## Grade the side-grasp network: fast check on every test tube, p
 figures-side: ## Draw the pictures used in the side docs, into docs/side/images/
 	$(py) grasp.figures_side --run runs/side_grconv
 
-##@ Side grasps, version 2 (fingers barely open, directions from the rack, docs/side/improved.md)
+##@ Side grasps, version 2 (fingers barely open, directions from the rack, docs/side/version2.md)
 
 data-side2: ## Close-ups turned to the rack, all 24 directions labelled with fingers barely open, into data_side2/
 	$(py) grasp.generate_data --kind side2 --split train --count $(TRAIN)
@@ -74,8 +74,24 @@ evaluate-side2: ## Grade version 2 (and the version 1 network with only the smoo
 	$(py) grasp.evaluate_side --weights runs/side_grconv/best.pt --smooth --physics 0 --out runs/side_grconv_smoothed
 	$(py) grasp.evaluate_side --weights runs/side_v2/best.pt --data data_side2 --version 2 --physics $(PHYSICS)
 
-figures-side2: ## Draw the pictures used in docs/side/improved.md, into docs/side/images/v2/
+figures-side2: ## Draw the pictures used in docs/side/version2.md, into docs/side/images/v2/
 	$(py) grasp.figures_side --version 2 --run runs/side_v2 --data data_side2 --trial-row 24
+
+##@ Side grasps, version 3 (also the grip height: 3, 5 or 7 cm below the rim, docs/side/version3.md)
+
+data-side3: ## As data-side2, every direction labelled at each grip height, into data_side3/
+	$(py) grasp.generate_data --kind side3 --split train --count $(TRAIN)
+	$(py) grasp.generate_data --kind side3 --split val --count $(VAL)
+	$(py) grasp.generate_data --kind side3 --split test --count $(TEST)
+
+train-side3: ## Train the version 3 side-grasp network (72 outputs), used by Step 1b
+	$(py) grasp.train --kind side3 --name side_v3 --epochs $(EPOCHS)
+
+evaluate-side3: ## Grade version 3: fast check on every test tube, physics on a sample
+	$(py) grasp.evaluate_side --weights runs/side_v3/best.pt --data data_side3 --version 3 --physics $(PHYSICS)
+
+figures-side3: ## Draw the pictures used in docs/side/version3.md, into docs/side/images/v3/
+	$(py) grasp.figures_side --version 3 --run runs/side_v3 --data data_side3
 
 ##@ Project
 

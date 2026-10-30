@@ -2,10 +2,13 @@
 
     python -m grasp.evaluate_side --weights runs/side_grconv/best.pt
     python -m grasp.evaluate_side --weights runs/side_v2/best.pt --data data_side2 --version 2
+    python -m grasp.evaluate_side --weights runs/side_v3/best.pt --data data_side3 --version 3
 
-Version 2 (docs/side/improved.md): the fingers come in barely open, directions are counted
+Version 2 (docs/side/version2.md): the fingers come in barely open, directions are counted
 from the rack's side (each sample's frame_yaw), and the scores are smoothed over neighbouring
 directions before choosing. ``--smooth`` alone tries only the last on a version 1 network.
+Version 3 (docs/side/version3.md): as version 2, and the network scores each direction at each of
+side.HEIGHTS; the chosen output says both where the gripper comes from and how low it grips.
 
 1. The cut-off under which the network says "no clear direction" is chosen on
    the validation pictures (the most targets answered right).
@@ -57,7 +60,8 @@ def choose(scores: np.ndarray, heights: np.ndarray, sample: dict, threshold: flo
     return {
         "xy": [float(x) for x in best.xy],
         "k": int(k),
-        "direction": float(sample.get("frame_yaw", 0.0) + side.direction(k)),
+        "direction": float(sample.get("frame_yaw", 0.0) + side.direction(k % side.BINS)),
+        "below": side.HEIGHTS[k // side.BINS] if scores.shape[0] > side.BINS else side.BELOW_RIM,
         "top": best.top,
         "score": best.score,
     }
@@ -89,13 +93,14 @@ def _fast_job(args):
     model, data, _ = scenes.build(seed)
     checker = side.SideChecker(model, data, preshape=preshape)
     return [
-        (i, checker.clear(np.array(g["xy"]), g["direction"], g["top"], target)) for i, target, g in choices
+        (i, checker.clear(np.array(g["xy"]), g["direction"], g["top"], target, g["below"]))
+        for i, target, g in choices
     ]
 
 
 def _trial_job(args):
-    key, seed, target, xy, direction, top, preshape = args
-    return key, side.run(seed, target, np.array(xy), direction, top, preshape=preshape)
+    key, seed, target, xy, direction, top, preshape, below = args
+    return key, side.run(seed, target, np.array(xy), direction, top, preshape=preshape, below=below)
 
 
 def main() -> None:
@@ -106,15 +111,16 @@ def main() -> None:
     parser.add_argument("--weights", type=Path, required=True)
     parser.add_argument("--workers", type=int, default=max(1, mp.cpu_count() - 2))
     parser.add_argument("--physics", type=int, default=PHYSICS_TARGETS)
-    parser.add_argument("--version", type=int, choices=[1, 2], default=1)
+    parser.add_argument("--version", type=int, choices=[1, 2, 3], default=1)
     parser.add_argument("--smooth", action="store_true", help="smooth the scores (on in version 2)")
     parser.add_argument("--out", type=Path, default=None, help="where to write; default: next to the weights")
     args = parser.parse_args()
-    preshape = args.version == 2
-    smooth = args.smooth or args.version == 2
+    preshape = args.version >= 2
+    smooth = args.smooth or args.version >= 2
+    outputs = side.BINS * (len(side.HEIGHTS) if args.version == 3 else 1)
     start = time.time()
     dev = device()
-    net = GraspNet(side.BINS).to(dev)
+    net = GraspNet(outputs).to(dev)
     net.load_state_dict(torch.load(args.weights, map_location=dev))
     net.eval()
     threshold, val_right = best_threshold(net, args.data / "val", dev, smooth)
@@ -160,13 +166,23 @@ def main() -> None:
         g = r["model"]
         if g is not None:
             jobs.append(
-                ((int(i), "model"), r["seed"], r["target"], g["xy"], g["direction"], g["top"], preshape)
+                (
+                    (int(i), "model"),
+                    r["seed"],
+                    r["target"],
+                    g["xy"],
+                    g["direction"],
+                    g["top"],
+                    preshape,
+                    g["below"],
+                )
             )
-        k = int(rng.integers(side.BINS))
+        k = int(rng.integers(outputs))
         r["check_direction"] = k
         t = r["truth"]
-        a = float(samples[i].get("frame_yaw", 0.0) + side.direction(k))
-        jobs.append(((int(i), "check"), r["seed"], r["target"], t["xy"], a, t["top"], preshape))
+        a = float(samples[i].get("frame_yaw", 0.0) + side.direction(k % side.BINS))
+        below = side.HEIGHTS[k // side.BINS] if outputs > side.BINS else side.BELOW_RIM
+        jobs.append(((int(i), "check"), r["seed"], r["target"], t["xy"], a, t["top"], preshape, below))
     print(f"{len(jobs)} physics trials", flush=True)
     with mp.get_context("spawn").Pool(args.workers) as pool:
         for n, ((i, what), result) in enumerate(pool.imap_unordered(_trial_job, jobs), start=1):
@@ -236,6 +252,18 @@ def summarise(rows: list[dict], threshold: float, val_right: float) -> dict:
             ),
         },
         "boxed_in_tried": sum(1 for r in blocked if r["model"] is not None),
+        # Version 3: how often each grip height was chosen (cm below the rim), and for which sizes.
+        "heights_chosen": {
+            size: {
+                f"{round(b * 100)}cm": sum(
+                    1
+                    for r in rows
+                    if r["model"] is not None and r["kind"].endswith(size) and r["model"]["below"] == b
+                )
+                for b in sorted({r["model"]["below"] for r in rows if r["model"] is not None})
+            }
+            for size in ("100", "150", "200")
+        },
         "error_median_mm": float(np.median(errors) * 1000),
         "error_95_mm": float(np.percentile(errors, 95) * 1000),
     }
