@@ -30,7 +30,7 @@ tube_1  test_tube  at (0.52,  0.20)  top 0.156 m  in rack_1  -> role: source
 tube_2  test_tube  at (0.38, -0.24)  top 0.206 m  in rack_2  -> role: receiver
 ```
 
-Which of the three tube sizes (100, 150, 200 mm) a tube is, is left for later.
+Which of the three tube sizes (100, 150, 200 mm) a tube is, is Step 0.1 (see [steps.md](steps.md)).
 
 ## What the arms may use
 
@@ -54,7 +54,8 @@ same rack. What a thing is *for* comes from what is around it, after detection:
 - the third rack (empty at the start, later holding half-filled tubes) is the **destination rack**,
 - a tube is a **source** or a **receiver** depending on its rack and whether it holds liquid.
 
-How much liquid a tube holds is Step 0.2.
+How much liquid a source holds is not needed: every source starts more than half full, so one pour
+always fills its receiver (see [steps.md](steps.md)).
 
 ## How it works
 

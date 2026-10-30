@@ -1,0 +1,21 @@
+# pixi
+.pixi/
+
+# generated pictures and labels, and training runs
+data/
+data_side/
+data_side2/
+runs/
+*.pt
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# MuJoCo
+MUJOCO_LOG.TXT
+
+# macOS
+.DS_Store

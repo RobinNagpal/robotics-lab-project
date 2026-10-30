@@ -125,13 +125,15 @@ def build(
     seed: int,
     fill: Callable[[np.random.Generator, str], float] = task_level,
     hand: Callable[[mujoco.MjSpec], None] | None = None,
+    tubes_per_rack: dict[str, tuple[int, int]] = TUBES_PER_RACK,
 ) -> tuple[mujoco.MjModel, mujoco.MjData, Scene]:
     """Build, colour and pose the scene for one seed. Returns it ready to render.
 
     ``fill`` gives each container's liquid level from its role (source,
     receiver or filled); 0 leaves it empty. ``hand``, if given, replaces the
     two arms: the scene starts without them and ``hand`` adds what should
-    stand in for them, such as a gripper on its own.
+    stand in for them, such as a gripper on its own. ``tubes_per_rack`` gives
+    the fewest and most tubes in each rack.
     """
     rng = np.random.default_rng(seed)
     scene = Scene(seed=seed)
@@ -184,7 +186,7 @@ def build(
         xy, yaw = place.spot(RACK_REACH), rng.uniform(0, 2 * math.pi)
         add_rack(spec, rack, (float(xy[0]), float(xy[1]))).quat = _yaw_quat(yaw)
         scene.instances.append(Instance(rack, "rack", rack, RACK.height))
-        fewest, most = TUBES_PER_RACK[rack]
+        fewest, most = tubes_per_rack[rack]
         count = rng.integers(fewest, most + 1)
         for cell in rng.choice(RACK.rows * RACK.columns, size=count, replace=False):
             row, col = divmod(int(cell), RACK.columns)
