@@ -12,8 +12,7 @@ MENAGERIE_URL    := https://github.com/google-deepmind/mujoco_menagerie
 MENAGERIE_COMMIT := 8161bba264d7fa7c99ca301e91e7fb44737676ad
 MENAGERIE_DIR    := assets/menagerie
 
-# AutoBio, pinned: the centrifuge tubes and the tube rack. Only the asset
-# folders are checked out.
+# AutoBio, pinned: the tube rack. Only the rack's asset folder is checked out.
 AUTOBIO_URL    := https://github.com/autobio-bench/AutoBio
 AUTOBIO_COMMIT := 08504213356cbfe9a82bcd33a43cd282945a45df
 AUTOBIO_DIR    := assets/autobio
@@ -65,7 +64,7 @@ $(MENAGERIE_DIR)/.done:
 $(AUTOBIO_DIR)/.done:
 	rm -rf $(AUTOBIO_DIR)
 	git clone --quiet --filter=blob:none --no-checkout $(AUTOBIO_URL) $(AUTOBIO_DIR)
-	cd $(AUTOBIO_DIR) && git sparse-checkout set autobio/assets/container autobio/assets/rack \
+	cd $(AUTOBIO_DIR) && git sparse-checkout set autobio/assets/rack \
 		&& git checkout --quiet $(AUTOBIO_COMMIT)
 	touch $@
 

@@ -1,101 +1,124 @@
 # Steps to Perform the Task
 
-This file lists the steps the robot arm follows to fill one tube to 50%.
+This file lists the steps the two arms follow to fill one receiving tube to 50%.
 It follows the [problem statement](../problem-statement/problem-statement.md).
 
 ---
 
-## Before Starting: What the Arm Has to Find Out
+## Simplifications for v1
 
-The arm starts knowing nothing about the scene (see the problem statement).
-Before it can pour, it has to find out three things, each a separate step:
+- **Matching pairs.** For every receiving tube in the empty rack there is a source tube of the
+  same height in the source rack (for example one small and one medium in each).
+  Each pour goes from a source to the receiver of the same size.
+- **Always enough liquid.** Every source starts more than half full. One pour always fills its
+  receiver to 50%, so the arms never need a second source.
+- **Target.** "50%" means 50% of the receiving tube's inside height. The source keeps whatever is left.
 
-| Step | Question | Needed for |
-|---|---|---|
-| **0. Detect and classify** | What is on the table, and where? | everything after |
-| 0.1 Measure size | How tall and wide is each container? | the 50% target, the grip height |
-| 0.2 Estimate liquid level | How full is each source? | picking a source, the first tilt angle |
-
-Steps 0.1 and 0.2 come later. They need Step 0's output first, because the arm
-has to know where a container is before it can look at it up close.
-
-The simulation also needs a way to count particles, for grading only:
-how much liquid is in the receiving tube, how much is left in the source, and how much has spilled.
+Because of this, the arms do not need to know how full a source is before pouring.
+They only need to see the receiver's level while it fills.
 
 ---
 
 ## Step 0: Detect and Classify
 
-Find every object on the table, say what kind it is, and where it stands.
+Find every rack and tube on the table, say what kind it is, where it stands, and how high its top is.
+From that follow the roles: source rack, empty rack, destination rack, and which tube is a source or a receiver.
 Details: [step-0-detect-and-classify.md](step-0-detect-and-classify.md).
 
----
+### Step 0.1: Tube Size
 
-## Step 1: Pick an Empty Tube and Place It on the Stand
-
-1. Choose an empty tube from the empty rack.
-2. Check its size (height). Work out the target amount for 50% of this tube.
-3. Grip the tube and lift it out of the rack.
-4. Place it upright on the fixed pouring stand.
-5. Let go and check that it is standing straight and stable.
+Say whether each tube is the small (100 mm), medium (150 mm) or large (200 mm) one.
+A tube's top height (from Step 0) minus the height of the rack floor it stands on gives its height.
+This is what pairs each receiver with its source. Built in Step 1b, with which tubes hold liquid
+(the wrist camera looks straight down into each) and which rack is which.
 
 ---
 
-## Step 2: Pick a Source
+## Step 1: Both Arms Pick and Meet at the Pouring Point
 
-1. Choose a source from the source rack.
-2. Check how much liquid it has. The level is unknown (somewhere between 20% and 90%), so we need to measure or estimate it.
-3. Grip the source firmly and lift it straight up so no liquid spills.
-4. Move it over the receiving tube, with its lip (spout) just above the tube opening.
+Built in two parts:
+
+- **The grasp** (where the fingers close and at which turn): [step-1-grasp.md](step-1-grasp.md).
+- **Both arms pick and meet at the pouring point** (above the middle of the table, 35 cm up), with the
+  coordinator below: [step-1b-pick-and-carry.md](step-1b-pick-and-carry.md). Both arms hold their tube
+  from the side (Step 1's side-grasp network), each with its own wrist camera, so the openings are free
+  for the pour. Works for the medium pair; large tubes not yet.
+
+### Who decides: one coordinator
+
+The two arms do not talk to each other. **One coordinator** (a single program) runs both arms. It
+holds the shared list of what is on the table (from Step 0), gives each arm its job, and waits for
+each arm to report back: "picked", "at the waiting spot", "holding at the pouring point". This is
+the usual way to run two arms; in a real lab it would be a planner sending commands and each arm
+sending back its status (as in ROS).
+
+### Choosing the pair, before anything moves
+
+1. From Step 0 and Step 0.1, list the receivers and the sources, with their sizes.
+   For example: receivers medium and large, sources medium and large.
+2. Choose a size that is in both, for example medium. **Arm A** is given the medium receiver,
+   **Arm B** the medium source.
+3. Each arm looks at its tube up close and runs the grasp model. If either tube is boxed in (no
+   clear turn), the coordinator chooses another pair, for example the large ones, before either
+   arm has moved a tube.
+
+### Who moves when
+
+| # | Arm A (receiver, arm 2) | Arm B (source, arm 1) |
+|---|---|---|
+| 1 | waits at home | grasps the source from the side, lifts it straight up, parks it behind the source rack, reports **"waiting"** |
+| 2 | grasps the receiver from the side, carries it to the pouring point, holds it upright and still, reports **"ready"** | waits |
+| 3 | keeps holding, all through the pour | carries the source to a waiting spot beside the middle, then moves in beside the receiver: **"in place"** |
+
+**One arm moves at a time.** Held from the side, both arms reach far across the table, and with both
+moving at once they touched in testing. Each arm takes the tube on its own side of the table.
+
+If something goes wrong (a pick fails, a tube slips), that arm reports it and the coordinator
+decides: try again, or choose another pair. (Choosing another pair before moving is built; retrying
+after a failed pick is not yet.)
 
 ---
 
-## Step 3: Tilt and Pour Until the Tube Reaches 50%
+## Step 2: Tilt and Pour Until the Receiver Reaches 50%
 
-1. **Tilt slowly at first.** We do not know at which angle the liquid will start to flow, because the starting level is different every time.
-2. **Watch for the first flow.** When the first particles start to leave the source, remember this angle.
-3. **Control the flow.** Keep tilting slowly so the flow stays steady. Each shape (tube, beaker, flask) pours differently at the same angle, so adjust the speed for each shape.
-4. **Keep checking the receiving tube level.** Compare it with the 50% target for this tube size.
-5. **Stop early.** Some liquid is already falling through the air. Start tilting back *before* the tube reaches 50%, so the falling liquid fills the last part.
-6. **Tilt back to stop the flow.** Turn the source back up until no more liquid comes out.
-7. **Check the final level.** Wait for the liquid to settle, then check if the tube is at 50%.
+Planned, not built yet: [step-2-pour.md](step-2-pour.md) (the plan, with the decisions still open).
+The weight from Arm A's wrist (programmed) is compared with a camera CNN (learned), both feeding the
+same controller.
+
+1. **Tilt slowly at first.** The angle at which the liquid starts to flow depends on how full the source is,
+   and that is not known.
+2. **Watch for the first flow.** When the first balls leave the source, remember this angle.
+3. **Keep the flow steady.** Keep tilting slowly. Each tube size pours differently at the same angle.
+4. **Keep checking the receiver's level** and compare it with its 50% mark.
+5. **Stop early.** Some balls are still falling through the air. Start tilting back *before* the receiver
+   reaches 50%, so the falling balls fill the last part.
+6. **Tilt back to stop the flow.** Turn the source upright until nothing more comes out.
+7. **Check the final level.** Let the balls settle, then check the receiver.
    - If it is a little low, pour a small extra amount.
    - If it is at 50%, the pour is done.
 
 ---
 
-## Step 4: If the Source Runs Out, Use a Second Source
+## Step 3: Return the Source to Its Rack
 
-1. **Notice the source is empty.** Signs: the source is tilted a lot but no liquid comes out, or the particle count in the source is near zero.
-2. Turn the empty source back upright.
-3. Return it to its place in the source rack.
-4. Work out how much more liquid the tube still needs.
-5. Pick a second source (go back to Step 2).
-6. Pour only the missing amount (repeat Step 3).
+1. Make sure the source is fully upright so nothing falls out.
+2. Arm B moves it back to its cell in the source rack, puts it down gently and lets go.
 
 ---
 
-## Step 5: Return the Source to Its Rack
+## Step 4: Put the Filled Tube in the Destination Rack
 
-1. Make sure the source is fully upright so nothing drips out.
-2. Move it back to its place in the source rack.
-3. Put it down gently and let go.
-
----
-
-## Step 6: Move the Filled Tube to the Filled Rack
-
-1. Grip the filled tube on the stand.
-2. Lift it slowly and keep it upright so nothing spills.
-3. Move it to a free spot in the filled rack.
-4. Put it down gently and let go.
+1. Arm A lifts the filled receiver slowly and keeps it upright so nothing spills.
+2. It moves it to a free cell in the destination rack, puts it down gently and lets go.
 
 ---
 
-## Step 7: Check the Result
+## Step 5: Check the Result
 
-- **Final level:** how close the tube is to 50%.
-- **Spill:** how many particles fell outside the tube.
+These are measured by counting balls in the simulation. The arms never see them; they are only for grading.
+
+- **Final level:** how close the receiver is to 50%.
+- **Spill:** how many balls fell outside both tubes.
 - **Time:** how long the whole task took.
 
-Then go back to Step 1 for the next empty tube.
+Then go back to Step 1 for the next pair.

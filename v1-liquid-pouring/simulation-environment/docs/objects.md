@@ -11,12 +11,16 @@ Two arms face each other across the table, 0.9 m apart. Everything they work on 
 in one row halfway between them, so **both arms can reach everything**:
 
 ```
-        arm 2 (x = 0.90 m)
-              │
- tray  source rack  stand  empty rack  filled rack      ← all at x = 0.45 m
-              │
-        arm 1 (x = 0, the origin)
+             arm 2 (x = 0.90 m)
+                   │
+ source rack  pouring point  empty rack  destination rack   ← all at x = 0.45 m
+                   │
+             arm 1 (x = 0, the origin)
 ```
+
+The **pouring point** is the empty middle of the row, 0.25 m above the table
+(`LAYOUT.pour_point`). Nothing stands there: the two arms bring their tubes to it
+and the source is tilted over the receiver in the air.
 
 ![From above](../images/overhead.png)
 
@@ -32,18 +36,19 @@ Names in the code start with the arm's name, for example `arm1/shoulder_pan_join
 
 ## The sources (liquid to pour from)
 
-![Sources: flask and beaker on the tray, two tubes in the source rack](../images/sources.png)
+![Sources: three tubes in the source rack](../images/sources.png)
 
-| Object | Shape | Size (width x height) | Holds | Weight | Where from |
-|---|---|---|---|---|---|
-| **Test tube** | glass, round bottom | 25 x 150 mm | 50 ml | 28 g | CC0 Lab Assets pack |
-| **Centrifuge tube** | plastic, cone-shaped tip | 29 x 115 mm | 51 ml | 13 g | AutoBio |
-| **Beaker** | glass, wide and short, flat bottom | 42 x 60 mm | 66 ml | 35 g | CC0 Lab Assets pack |
-| **Erlenmeyer flask** | glass, wide flat base, narrow neck (22 mm) | 51 x 80 mm | 62 ml | 45 g | CC0 Lab Assets pack |
+| Object | Name in the code | Shape | Size (width x height) | Holds | Weight | Where from |
+|---|---|---|---|---|---|---|
+| **Short tube** | `source_tube_100` | glass, round bottom | 25 x 100 mm | 33 ml | 19 g | CC0 Lab Assets pack |
+| **Middle tube** | `source_tube_150` | glass, round bottom | 25 x 150 mm | 50 ml | 28 g | CC0 Lab Assets pack |
+| **Tall tube** | `source_tube_200` | glass, round bottom | 25 x 200 mm | 68 ml | 38 g | CC0 Lab Assets pack |
 
-- Each source starts filled to a random level between **20 % and 90 %** of its height.
-- The two tubes stand in the source rack. They cannot stand on the table by themselves (round or pointed bottom).
-- The beaker and the flask stand on the tray.
+- Each source starts filled to a random level between **60 % and 90 %** of its height,
+  so it always holds more than the receiver of the same size needs for 50 % (with some to spare for spills).
+- All three stand in the source rack, in cells chosen by the seed. They cannot stand on the table by themselves (round bottom).
+- They are the same tubes as the receivers; only the liquid tells them apart.
+- Three sources for three receivers, one of each size: each pour goes from a source to the receiver of the same size.
 
 ## The receivers (tubes to fill)
 
@@ -58,31 +63,32 @@ Names in the code start with the arm's name, for example `arm1/shoulder_pan_join
 All three are glass test tubes with round bottoms. They start empty, in the empty rack.
 Which cells they stand in changes with the seed.
 
-## Racks, tray and stand
-
-![The pouring stand](../images/stand.png)
+## Racks
 
 | Object | What it is for | Size | Weight | Where from |
 |---|---|---|---|---|
-| **Source rack** | holds the two source tubes | 205 x 96 x 60 mm, 10 cells (2 rows of 5), each 30 mm wide | 150 g | AutoBio |
+| **Source rack** | holds the source tubes; each source goes back here after the pour | 205 x 96 x 60 mm, 10 cells (2 rows of 5), each 30 mm wide | 150 g | AutoBio |
 | **Empty rack** | holds the receivers before filling | same | 150 g | AutoBio |
-| **Filled rack** | where filled receivers go; starts empty | same | 150 g | AutoBio |
-| **Tray** | holds the beaker and the flask | 200 x 110 mm, 12 mm rim | about 100 g | made here |
-| **Pouring stand** | holds a receiver while it is filled | one 30 mm cell, 60 mm deep, on a base | fixed to the table | made here |
+| **Destination rack** | where filled receivers go; starts empty | same | 150 g | AutoBio |
 
-The racks and the tray are loose: if an arm bumps them, they move. The stand is bolted down.
+The racks are loose: if an arm bumps them, they move.
+
+Tubes never stand side by side. Open, the fingers reach about 60 mm to either
+side along a row, so two tubes in one row are at least three cells (108 mm) apart, and
+tubes in different rows are never in the same column. With tubes one cell apart the open
+fingers hit the next tube on the way down.
 
 ## The liquid
 
 Small blue balls, **7 mm across**, with no friction (they slide like a liquid).
 **1 ml of liquid weighs 1 g**, like water, so a full source feels as heavy as a real one.
-About 400 balls in total, depending on the seed.
+About 300 to 450 balls in total, depending on the seed.
 
 ## The cameras
 
 | Camera | Where | Used for |
 |---|---|---|
-| `overhead` | 1.2 m above the table, looking straight down | finding objects (Step 0) |
+| `overhead` | 1.2 m above the table, looking straight down | finding the racks and tubes (Step 0) |
 | `front` | on the long side of the table, between the arms | people watching |
 | `arm1/wrist`, `arm2/wrist` | on each gripper, looking along the fingers | close-up looks before gripping |
 

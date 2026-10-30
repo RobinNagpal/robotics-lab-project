@@ -3,175 +3,142 @@
 The first step from the [list of steps](steps.md).
 It follows the [problem statement](../problem-statement/problem-statement.md).
 
+The code is in [`step-0-detect-and-classify/`](../../step-0-detect-and-classify/). Two more pages go deeper:
+
+- [approach.md](../../step-0-detect-and-classify/docs/approach.md): the two models, their exact settings, and why.
+- [results.md](../../step-0-detect-and-classify/docs/results.md): how well each works, explained in plain words.
+- [improvements.md](../../step-0-detect-and-classify/docs/improvements.md): how to make the custom CNN better, and a log of every change we try.
+
 ---
 
 ## Goal
 
-From camera images, make a list of every object on the table with:
+Before the arms can do anything, they have to know what is on the table and where.
+From the overhead camera, Step 0 makes a list of every object with:
 
-- **its class:** what kind of object it is,
-- **its position:** the 3D point in the robot's base frame where it stands,
-  accurate enough for the gripper to reach it (target: within 1 cm).
+- **its class:** what kind of object it is, `rack` or `test_tube`,
+- **its position:** where it stands, in the robot's frame, within 1 cm (close enough for the gripper),
+- **its top:** how high its highest point is.
 
 Example output:
 
 ```
-beaker        at (0.52, -0.31, 0.05)
-flask         at (0.52, -0.22, 0.05)
-test_tube     at (0.48,  0.30, 0.08)   in rack_A
-rack          at (0.48,  0.30, 0.00)   -> role: empty rack
-pouring_stand at (0.60,  0.00, 0.00)
+rack_1  rack       at (0.45,  0.22)  top 0.06 m   -> role: source rack
+rack_2  rack       at (0.45, -0.22)  top 0.06 m   -> role: empty rack
+rack_3  rack       at (0.45, -0.36)  top 0.06 m   -> role: destination rack
+tube_1  test_tube  at (0.52,  0.20)  top 0.156 m  in rack_1  -> role: source
+tube_2  test_tube  at (0.38, -0.24)  top 0.206 m  in rack_2  -> role: receiver
 ```
 
-## What the arm is allowed to know
+Which of the three tube sizes (100, 150, 200 mm) a tube is, is Step 0.1 (see [steps.md](steps.md)).
 
-- **Allowed:** camera images (colour and depth), each camera's fixed position and lens settings
-  (a real lab calibrates its cameras once), and the arm's own joint readings.
-- **Not allowed:** anything from the scene's `Truth` record or MuJoCo body positions.
-  These are used only to make training labels and to grade the result.
+## What the arms may use
 
-## Classes
+- **Allowed:** camera pictures (colour and depth), where each camera is and its lens settings
+  (a real lab measures these once), and the arms' own joint readings.
+- **Not allowed:** the simulator's own answers (where it put each object). Those are only used
+  to make training labels and to grade the result.
+
+## Classes and roles
 
 | Class | Looks like |
 |---|---|
-| `test_tube` | narrow glass tube (sources and receivers look the same) |
-| `centrifuge_tube` | plastic tube with a conical tip |
-| `beaker` | wide, short glass cylinder |
-| `flask` | wide base, narrow neck |
-| `rack` | blue plastic rack with holes |
-| `tray` | flat tray the beaker and flask stand on |
-| `pouring_stand` | the fixed stand |
+| `test_tube` | a narrow glass tube, 25 mm across, 100, 150 or 200 mm tall |
+| `rack` | a plastic rack with 10 holes |
 
-**Role is not a class.** A source tube and a receiving tube look the same, and so do
-the three racks. We work out the role from what is around each object, after detection:
+**A role is not a class.** All tubes are the same kind of tube, and the three racks are the
+same rack. What a thing is *for* comes from what is around it, after detection:
 
-- a rack holding tubes with liquid is the **source rack**,
-- a rack holding empty tubes is the **empty rack**,
-- a rack with nothing in it is the **filled rack**,
-- a container is a **source** if it holds liquid and a **receiver** if it is in the empty rack.
+- the rack with tubes of liquid at many levels is the **source rack**,
+- the rack with only empty tubes is the **empty rack**,
+- the third rack (empty at the start, later holding half-filled tubes) is the **destination rack**,
+- a tube is a **source** or a **receiver** depending on its rack and whether it holds liquid.
 
-"Holds liquid" can be a yes/no answer here. How much liquid is Step 0.2.
+How much liquid a source holds is not needed: every source starts more than half full, so one pour
+always fills its receiver (see [steps.md](steps.md)).
 
-## Cameras
+## How it works
 
-| Camera | Where | Used for |
+Step 0 is split into two jobs:
+
+1. **What and which pixels: a trained model.** The model looks at the overhead colour picture and
+   draws an outline (a mask) around every rack and tube, with its class.
+2. **Where: plain geometry.** For each outline, the depth picture gives how far each pixel is from
+   the camera. With the camera's known position and lens, every pixel becomes a 3D point. The
+   object's position is the middle of its highest points (a tube's rim, a rack's top plate).
+
+So the model never has to guess a position. It only has to get the outline right; the depth
+does the rest. With perfect outlines this geometry puts 99% of tubes and all racks within 1 cm.
+
+```
+overhead colour picture --> model --> outlines + classes --+
+                                                            +--> positions, tops --> roles
+overhead depth picture  -----------------------------------+
+```
+
+## The training data
+
+The pictures come from the simulation, so labels are free: the simulator knows which object
+every pixel belongs to. Each picture is a whole random scene from the overhead camera: both arms,
+the three racks, and several tubes in them. From scene to scene, everything the model must not
+memorise changes: where the racks stand and how they are turned, how many tubes there are and in
+which cells, their heights, the colours, the lights and a small shift of the camera.
+
+| Split | Pictures | Used for |
 |---|---|---|
-| **Overhead** | 1.2 m above the table, looking straight down | **finding and locating** (main camera) |
-| **Front** | in front of the table, looking down at an angle | **checking the class** (side view shows shape) |
-| Wrist | on the gripper | not used in Step 0; used for close-ups in 0.1 and 0.2 |
+| Train | 800 | learning |
+| Validation | 150 | checking progress during training, choosing the best epoch |
+| Test | 300 | the final grade; never seen in training |
 
-Why this split:
+**Both models train on exactly the same pictures and are graded on exactly the same test
+pictures, by the same script.** That is what makes the comparison fair. The size was chosen so
+that YOLO trains in about 20 minutes on the Mac.
 
-- From straight above, nothing hides anything else, and a pixel maps simply onto the table,
-  so positions are most accurate there.
-- From above, every container is a circle. A beaker is a bigger circle than a tube, but a flask
-  and a beaker, or a test tube and a centrifuge tube, can be hard to tell apart. The front
-  camera sees their side outlines.
+## The two models
 
-**Decision:** start with the overhead camera alone. Add the front camera only if
-classification from above is not accurate enough.
+### YOLO11-seg (a ready-made model)
 
-## How to locate an object (both methods use this)
+A well-known, general detector that also draws outlines. It comes already trained on a large set
+of everyday photos (COCO), and we teach it our two classes. Quick to set up and quick to train.
 
-Detection gives a 2D region in the image. To get a 3D position:
+### Custom CNN (our own model)
 
-1. Take the object's pixels (a mask is better than a box: the centre of an open tube's box
-   looks down into the tube, not at its rim).
-2. Read the depth at those pixels from the overhead depth image.
-3. Use the camera's known lens settings to turn each pixel plus depth into a 3D point
-   in the camera frame.
-4. Use the camera's known position to move these points into the robot's base frame.
-5. The object's position is the centre of its points in x and y. The highest point gives its top.
+A network we designed for this setup and trained from scratch. It is built to fix YOLO's weak
+spot, **tubes standing close together**: instead of drawing whole outlines at once, it first
+finds the **centre** of each object, then gives every pixel to the centre it belongs to. Two
+neighbouring tubes have two centres, so they stay apart. It also uses what we know about the
+setup (fixed camera, so objects are always the same size) and looks at the picture in finer
+detail.
 
-## Method A: Programmed (written down, not built)
+## Result in short
 
-1. Render the overhead depth image.
-2. Remove the table: every point at table height is background.
-3. Group the remaining points into separate objects (points that touch belong to one object).
-4. A rack and its tubes touch, so they come out as one group. Split them by height:
-   the rack's top is one flat level, and anything sticking up above it is a tube.
-   Each tube that sticks up is a separate small group.
-5. For each group, measure its shape from depth only (no colour): the footprint size, the height,
-   and whether it is a ring (an open container seen from above) or solid.
-6. Classify with hand-written rules, for example:
-   - large flat footprint with a grid of holes -> `rack`,
-   - ring about 5 cm across and short -> `beaker`,
-   - ring about 3 cm across, tall -> tube.
-
-Weak points: objects touching each other merge into one group and need special rules
-(like the rack split above), look-alike shapes are hard to tell apart with rules,
-and every new object type needs new rules. Glass is see-through, so a real depth camera
-often misses it. MuJoCo's depth image treats glass as solid, so this problem does not show
-in the simulation.
-
-Questions and answers about this step: [step-0-questions.md](step-0-questions.md).
-
-## Method B: Learned (the one we build)
-
-### Which learned model
-
-All of these find the objects in the image. The position still comes from depth (see above),
-except in option 5.
-
-| # | Approach | Example models | Good | Bad |
-|---|---|---|---|---|
-| 1 | **One-stage segmentation** | YOLOv8-seg, YOLO11-seg | fast, easy to train, good tools | masks a bit rough on thin objects |
-| 2 | **Two-stage segmentation** | Mask R-CNN (Detectron2) | often finer masks | slower, more setup |
-| 3 | **Zero-shot, no training** | Grounding DINO + SAM ("find the beaker") | works with no training data | weak at telling lab glassware apart |
-| 4 | **Depth-only network** | a small network on the height map, or PointNet++ on the 3D points | uses shape only, no colour at all | fewer ready-made tools |
-| 5 | **Direct 3D prediction** | a network that outputs class + 3D position per object (CenterNet-style) | no separate depth maths | harder to train, usually less accurate |
-
-A small variation of 1 or 2: give the model the depth image as an extra input next to colour.
-
-**Decision:** build option 1 (YOLO-seg) first. Then compare it against option 3
-(no training, quick to try) and the programmed method. Options 2, 4 and 5 are kept in case
-YOLO is not good enough.
-
-### How we build it
-
-1. **Detector:** YOLO with segmentation (for example YOLOv8-seg or YOLO11-seg),
-   so it gives a mask for each object as well as the class.
-2. **Training data from the simulation, labelled for free:**
-   - For each seed, render colour, depth and a segmentation image from the overhead camera.
-     MuJoCo's segmentation image says which object each pixel belongs to.
-   - Map each MuJoCo body to its class (`source_beaker` -> `beaker`, and so on).
-   - Turn each object's pixels into a YOLO mask label.
-3. **Variety in the scenes**, so the detector learns what objects look like and not where they
-   usually are. The scene builder has to change, from seed to seed:
-   - how many sources and receivers there are, and which kinds,
-   - where the racks, tray and stand stand,
-   - lighting, and the camera position a little.
-
-   Right now only the liquid levels and the receivers' rack cells change, so this is
-   the first piece of work before training.
-4. **Locate** each detected mask with the steps above.
-5. **Assign roles** with the rules above.
-
-## Learned vs Programmed
-
-Can the learned method beat the programmed one? **Partly.** It depends on the sub-task:
-
-| Sub-task | Better method | Why |
+| | YOLO11-seg | Custom CNN |
 |---|---|---|
-| Finding the position (where) | **same** | both use the same depth maths |
-| Separating touching objects (tube in rack) | **learned** | no special rules needed |
-| Telling look-alike shapes apart | **learned** | rules get long and fragile |
-| New objects or layouts | **learned** | more training data instead of new rules |
-| Clean simulation, first try | **programmed** | works with no training, easy to debug |
-| Real glass with a real camera | **learned** | real depth fails on glass |
+| Tubes found | 97.1% | **97.6%** |
+| Racks found | 100% | 100% |
+| Wrong detections | 48 | **31** |
+| Tubes placed within 1 cm | **95.1%** | 94.7% |
+| Training time | **18 min** | 58 min |
 
-In our clean simulation, the programmed method will probably be just as good at the start.
-The learned method wins once the scenes get varied and crowded. It also wins when we move to
-real cameras.
+The two are about level. The custom CNN is better at keeping touching tubes apart and makes
+fewer wrong detections; YOLO places tubes a little more exactly and trains three times faster.
+Both get every class right. The details, with pictures, are in
+[results.md](../../step-0-detect-and-classify/docs/results.md).
 
-So the plan is a mix, as in published work: **a learned model for what and which pixels,
-depth maths for where.** The programmed method stays as a baseline to compare against.
+## Other ways we considered
 
-## Grading
+- **Hand-written rules on the depth picture** (no training): remove the table, group what is
+  left into objects, and classify each group by its size and shape. Fine in a clean simulation,
+  but touching objects merge into one group, and real depth cameras often miss glass.
+- **Other learned models:** a two-stage model such as Mask R-CNN (finer outlines, slower), or a
+  model that needs no training at all such as Grounding DINO + SAM (weak at telling lab
+  glassware apart). Kept in reserve.
 
-Compare the arm's list with the `Truth` record and MuJoCo body positions, over many unseen seeds:
+## How it is graded
 
-- **Count:** did it find every object, with nothing extra?
-- **Class:** fraction of objects with the right class.
-- **Role:** fraction of racks and containers with the right role.
-- **Position:** distance between the found position and the true one (target: under 1 cm).
+On the 300 test pictures, each model's list is compared with the simulator's answers:
+
+- **Count:** how many real objects it found, and how many of its detections match nothing real.
+- **Class:** how many found objects got the right class.
+- **Position:** how far each found position is from the true one (target: under 1 cm).
+- **Role:** which rack and tube plays which part (not graded yet).

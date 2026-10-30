@@ -1,6 +1,7 @@
 """Grade Step 0 on scenes the detector never saw: count, class and position.
 
-    python -m detect_classify.evaluate --weights runs/yolo11s_2000/weights/best.pt
+    python -m detect_classify.evaluate --weights runs/yolo11s_640_800/weights/best.pt
+    python -m detect_classify.evaluate --custom runs/custom_rgb/weights/best.pt   # the custom CNN
     python -m detect_classify.evaluate --oracle    # the true masks: grades only the locating maths
 
 Each detection is paired with the true object whose outline it overlaps most
@@ -77,17 +78,27 @@ def main() -> None:
     )
     parser.add_argument("--data", type=Path, default=Path("data/test"))
     parser.add_argument("--weights", type=Path)
+    parser.add_argument("--custom", type=Path, help="the custom CNN's weights, instead of YOLO's")
     parser.add_argument("--oracle", action="store_true", help="use the true masks instead of a detector")
-    parser.add_argument("--conf", type=float, default=0.5)
+    parser.add_argument("--conf", type=float, default=0.5, help="YOLO's confidence cut-off")
+    parser.add_argument("--peak", type=float, default=0.3, help="the custom CNN's centre-peak cut-off")
     args = parser.parse_args()
-    if not (args.oracle or args.weights):
-        parser.error("give --weights or --oracle")
+    if sum(map(bool, (args.oracle, args.weights, args.custom))) != 1:
+        parser.error("give one of --weights, --custom or --oracle")
 
-    model = None
-    if not args.oracle:
+    detector = None
+    if args.weights:
         from ultralytics import YOLO
 
         model = YOLO(str(args.weights))
+
+        def detector(image):
+            return detections(model, image, args.conf)
+
+    elif args.custom:
+        from .custom_net import Detector
+
+        detector = Detector(args.custom, threshold=args.peak)
 
     per_class = defaultdict(lambda: {"true": 0, "found": 0, "right_class": 0, "xy_mm": [], "top_mm": []})
     extra = 0
@@ -99,7 +110,7 @@ def main() -> None:
         depth = load_depth(args.data / "depth" / f"{image.stem}.png")
         truth = true_masks(args.data / "labels" / f"{image.stem}.txt", (calib.width, calib.height))
         by_label = {o["label"]: o for o in meta["objects"] if o["label"] is not None}
-        found = truth if args.oracle else detections(model, image, args.conf)
+        found = truth if args.oracle else detector(image)
 
         pairs = pair([m for _, m in found], [m for _, m in truth])
         own = own_pixels(found)
@@ -137,7 +148,7 @@ def main() -> None:
     summary["confusion"] = {f"{t} -> {f}": n for (t, f), n in sorted(confusion.items()) if t != f}
     _print(summary)
 
-    name = "oracle" if args.oracle else args.weights.parent.parent.name
+    name = "oracle" if args.oracle else (args.weights or args.custom).parent.parent.name
     out = Path("runs") / name / "step0_results.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(summary, indent=1))

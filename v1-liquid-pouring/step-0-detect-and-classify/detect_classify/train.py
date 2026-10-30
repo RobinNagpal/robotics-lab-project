@@ -1,7 +1,7 @@
 """Train YOLO11-seg on the rendered pictures.
 
-    python -m detect_classify.train --name yolo11s_2000
-    python -m detect_classify.train --fraction 0.25 --name yolo11s_500   # first 25 % of the training set
+    python -m detect_classify.train --name yolo11s_800
+    python -m detect_classify.train --fraction 0.25 --name yolo11s_200   # first 25 % of the training set
 
 The settings are the ones in docs/results.md; change them there and here together.
 """

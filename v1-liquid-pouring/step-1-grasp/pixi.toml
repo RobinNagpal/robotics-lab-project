@@ -1,0 +1,24 @@
+[workspace]
+name = "step-1-grasp"
+version = "0.1.0"
+description = "Step 1 of the liquid pouring task: choose where and at what turn the gripper takes a tube, from a close depth picture"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+# The simulation's glassware code reads meshes with it.
+trimesh = ">=4.0"
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3"
+torch = ">=2.5"
+
+[activation.env]
+# The lab scene's building blocks come from the simulation environment, and
+# the random scenes from Step 0, both next door.
+PYTHONPATH = "$PIXI_PROJECT_ROOT/../simulation-environment:$PIXI_PROJECT_ROOT/../step-0-detect-and-classify:$PIXI_PROJECT_ROOT"

@@ -1,6 +1,6 @@
-"""The three tube racks, the tray for the beaker and flask, and the pouring stand.
+"""The three tube racks: source, empty and destination.
 
-The racks are AutoBio's 10-slot centrifuge tube rack. Its meshes are drawn;
+The racks are AutoBio's 10-slot tube rack. Its meshes are drawn;
 its collision is the set of boxes AutoBio generated for it (a floor, four
 walls and the dividers between the 30 mm cells), copied here.
 """
@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import mujoco
 
-from .settings import AUTOBIO, RACK, RACK_PLASTIC, TABLE
+from .settings import AUTOBIO, RACK, RACK_PLASTIC
 
 RACK_MESHES = ("lower_plane", "pillars", "upper_plane")
 
@@ -81,53 +81,3 @@ def add_rack(spec: mujoco.MjSpec, name: str, xy: tuple[float, float]) -> mujoco.
             group=3,
         )
     return body
-
-
-def add_tray(spec: mujoco.MjSpec, name: str, xy: tuple[float, float], size: tuple[float, float]) -> float:
-    """A flat plastic tray with a low rim. Returns the height of its floor."""
-    floor, rim, thick = 0.004, 0.012, 0.003
-    body = spec.worldbody.add_body(name=name, pos=[xy[0], xy[1], 0])
-    body.add_freejoint(name=f"{name}_joint")
-    hx, hy = size[0] / 2, size[1] / 2
-    parts = [
-        ([hx, hy, floor / 2], [0, 0, floor / 2]),
-        ([hx, thick / 2, rim / 2], [0, hy - thick / 2, rim / 2]),
-        ([hx, thick / 2, rim / 2], [0, -hy + thick / 2, rim / 2]),
-        ([thick / 2, hy, rim / 2], [hx - thick / 2, 0, rim / 2]),
-        ([thick / 2, hy, rim / 2], [-hx + thick / 2, 0, rim / 2]),
-    ]
-    for i, (half, pos) in enumerate(parts):
-        body.add_geom(
-            name=f"{name}_part{i}",
-            type=mujoco.mjtGeom.mjGEOM_BOX,
-            size=half,
-            pos=pos,
-            density=900.0,  # polypropylene
-            friction=[RACK_PLASTIC.friction, 0.005, 0.0001],
-            rgba=list(RACK_PLASTIC.rgba),
-        )
-    return floor
-
-
-def add_stand(spec: mujoco.MjSpec, name: str, xy: tuple[float, float]) -> float:
-    """The pouring stand: one rack cell on a base plate, fixed to the table.
-
-    Returns the height a tube's bottom rests at.
-    """
-    base, inner, wall, height = 0.006, 0.030, 0.006, 0.060
-    body = spec.worldbody.add_body(name=name, pos=[xy[0], xy[1], 0])
-    half_out = inner / 2 + wall
-    parts = [([0.05, 0.05, base / 2], [0, 0, base / 2])]
-    for sx, sy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-        half = [wall / 2 if sx else half_out, wall / 2 if sy else half_out, height / 2]
-        parts.append((half, [sx * (inner / 2 + wall / 2), sy * (inner / 2 + wall / 2), base + height / 2]))
-    for i, (half, pos) in enumerate(parts):
-        body.add_geom(
-            name=f"{name}_part{i}",
-            type=mujoco.mjtGeom.mjGEOM_BOX,
-            size=half,
-            pos=pos,
-            friction=[TABLE.friction, 0.005, 0.0001],
-            rgba=[0.35, 0.35, 0.38, 1],
-        )
-    return base
