@@ -2,6 +2,7 @@
 
     python -m grasp.figures_side --run runs/side_grconv
     python -m grasp.figures_side --version 2 --run runs/side_v2 --data data_side2   # into images/v2/
+    python -m grasp.figures_side --version 3 --run runs/side_v3 --data data_side3   # into images/v3/
 
 Needs the side test data, the trained weights and the evaluation (runs/<name>/evaluation.json).
 """
@@ -21,7 +22,7 @@ from PIL import Image, ImageDraw
 
 from . import pick, scenes, side
 from .figures import GREEN, RED, YELLOW, _caption, _grey, _row, _target, _xy
-from .net import GraspNet
+from .net import GraspNet, label_maps
 from .train import device
 
 OUT = Path("docs/side/images")
@@ -265,32 +266,119 @@ def smoothing_figure(samples, heights, scores, raw_rows, smooth_rows) -> None:
     _row(panels).save(OUT / "smoothing.png")
 
 
+def input_figure(samples: list[dict], heights: np.ndarray) -> None:
+    """What the network is given: the view from above, and the same view as a height picture."""
+    i = next(i for i, s in enumerate(samples) if len(s["tubes"]) >= 5)
+    s = samples[i]
+    model, data, _ = scenes.build(s["seed"])
+    camera = scenes.LookCamera(model, data)
+    camera.look(np.array(s["step0"]["xy"]), s["step0"]["top"], side.LOOK_HEIGHT, yaw=s["frame_yaw"])
+    renderer = mujoco.Renderer(model, heights[i].shape[0] * 3, heights[i].shape[1] * 3)
+    renderer.update_scene(data, camera=scenes.LOOK)
+    colour = Image.fromarray(renderer.render())
+    renderer.close()
+    camera.close()
+    _row(
+        [
+            _caption(colour, "the view from above (for us to see)"),
+            _caption(_grey(heights[i]), "what the network gets: brighter = taller"),
+        ]
+    ).save(OUT / "input.png")
+
+
+def sample_figure(samples: list[dict], heights: np.ndarray) -> None:
+    """One training example: the height picture, its answers, and the maps the network must draw."""
+    i = next(
+        i
+        for i, s in enumerate(samples)
+        if len(s["tubes"]) >= 4 and 3 <= sum(_target(s)["labels"][: side.BINS]) <= 12
+    )
+    s, t = samples[i], _target(samples[i])
+    answers = _grey(heights[i])
+    for other in s["tubes"]:
+        _directions(ImageDraw.Draw(answers), {**other, "labels": other["labels"][: side.BINS]})
+    maps, _ = label_maps(s["tubes"], heights[i].shape[0], len(t["labels"]))
+    panels = [
+        _caption(_grey(heights[i]), "input: height picture"),
+        _caption(answers, "answers: all 24 directions"),
+    ]
+    clear = [k for k in range(side.BINS) if t["labels"][k]]
+    for k in (clear[0], clear[len(clear) // 2]):
+        degrees = k * 360 // side.BINS
+        scaled = Image.fromarray((255 * maps[k]).astype(np.uint8)).resize(answers.size, Image.BILINEAR)
+        panels.append(
+            _caption(scaled.convert("RGB"), f"target map, direction {degrees}: tubes clear from it")
+        )
+    _row(panels).save(OUT / "training_example.png")
+
+
+def heights_figure(samples, heights, scores, rows) -> None:
+    """Version 3: one tall tube at the three grip heights, the truth above and the network below."""
+    r = next(
+        r
+        for r in rows
+        if r["kind"].endswith("200")
+        and r["model"]
+        and r["model"].get("good")
+        and 0
+        < 2 * sum(_target(samples[r["i"]])["labels"][2 * side.BINS :])
+        <= sum(_target(samples[r["i"]])["labels"][: side.BINS])
+    )
+    i, s, t = r["i"], samples[r["i"]], _target(samples[r["i"]])
+    _, (u, v, _) = pick.learned(scores[i], heights[i], Calibration.from_dict(s["camera"]), threshold=0.0)
+    top, bottom = [], []
+    for n, below in enumerate(side.HEIGHTS):
+        first = n * side.BINS
+        cm = round(below * 100)
+        truth = _grey(heights[i])
+        _directions(ImageDraw.Draw(truth), {**t, "labels": t["labels"][first : first + side.BINS]})
+        top.append(_caption(truth, f"truth, {cm} cm under the rim"))
+        out = _grey(heights[i])
+        d = ImageDraw.Draw(out)
+        for b in range(side.BINS):
+            x = float(scores[i][first + b, v, u])
+            _arrow(d, u, v, float(side.direction(b)), 12 + 45 * x, (int(255 * (1 - x)), int(255 * x), 80), 3)
+        bottom.append(_caption(out, f"network, {cm} cm under the rim"))
+    grid, under = _row(top), _row(bottom)
+    out = Image.new("RGB", (grid.width, grid.height + under.height + 8), (255, 255, 255))
+    out.paste(grid, (0, 0))
+    out.paste(under, (0, grid.height + 8))
+    out.save(OUT / "heights.png")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--data", type=Path, default=Path("data_side"))
     parser.add_argument("--run", type=Path, required=True)
-    parser.add_argument("--version", type=int, choices=[1, 2], default=1)
-    # Version 2: test row 24, a lift after which no neighbour has settled in its cell (see improved.md).
+    parser.add_argument("--version", type=int, choices=[1, 2, 3], default=1)
+    # Version 2: test row 24, a lift after which no neighbour has settled in its cell (see version2.md).
     parser.add_argument("--trial-row", type=int, default=None)
     args = parser.parse_args()
     global OUT
-    if args.version == 2:
-        OUT = OUT / "v2"
+    if args.version >= 2:
+        OUT = OUT / f"v{args.version}"
     OUT.mkdir(parents=True, exist_ok=True)
     samples = json.loads((args.data / "test" / "samples.json").read_text())
     heights = np.load(args.data / "test" / "heights.npy").astype(np.float32)
     rows = json.loads((args.run / "evaluation.json").read_text())["rows"]
     dev = device()
-    net = GraspNet(side.BINS).to(dev)
+    net = GraspNet(side.BINS * (len(side.HEIGHTS) if args.version == 3 else 1)).to(dev)
     net.load_state_dict(torch.load(args.run / "best.pt", map_location=dev))
     net.eval()
     scores = np.concatenate(
         [pick.model_scores(net, heights[i : i + 64], dev) for i in range(0, len(heights), 64)]
     )
-    if args.version == 2:
+    if args.version >= 2:
         scores = side.smoothed(scores)
+    if args.version == 3:
+        input_figure(samples, heights)
+        sample_figure(samples, heights)
+        heights_figure(samples, heights, scores, rows)
+        score_map_figure(samples, heights, scores)
+        print(f"pictures written to {OUT}/")
+        return
     labels_figure(samples, heights)
     outputs_figure(samples, heights, scores, rows)
     score_map_figure(samples, heights, scores)

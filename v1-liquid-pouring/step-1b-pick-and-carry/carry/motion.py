@@ -67,6 +67,11 @@ class Planner:
         self.names = names
         self.is_ball = np.array([n.startswith(liquid.BALL_PREFIX) for n in names])
         self.arm_of = {a: np.array([n.startswith(f"{a}/") for n in names]) for a in lab.ARM_NAMES}
+        # How far closed the fingers already are on the way in (0: fully open), and the sideways
+        # shove tried while closing. Side grasps version 3 (Coordinator) come in with the fingers
+        # opened only 35 mm and need no shove (step-1-grasp/docs/side/version2.md).
+        self.way_in_closing = 0.0
+        self.shove = side.SideChecker.SHOVE
 
     def solve_line(
         self, data: mujoco.MjData, arm: str, start: np.ndarray, end: np.ndarray, yaw0: float, yaw1: float
@@ -158,7 +163,7 @@ class Planner:
             ]
         )
         closed = scenes._closed_fingers()
-        poses = [f * closed for f in side.SideChecker.CLOSING] + [LOADED]
+        poses = [max(f, self.way_in_closing) * closed for f in side.SideChecker.CLOSING] + [LOADED]
         own = self.arm_of[arm]
         skip = np.array([n in (target, "world") for n in self.names]) | self.is_ball
         site = self.model.site(lab.pinch_site(arm)).id
@@ -177,7 +182,7 @@ class Planner:
             self.model.geom_margin[:] = saved
 
     def _closing(self, work, joints, fingers, poses, own, skip, site, arm, q, direction) -> None:
-        for shove in (0.0, -side.SideChecker.SHOVE, side.SideChecker.SHOVE):
+        for shove in sorted({0.0, -self.shove, self.shove}, key=abs):
             work.qpos[joints] = q
             if shove:
                 mujoco.mj_kinematics(self.model, work)

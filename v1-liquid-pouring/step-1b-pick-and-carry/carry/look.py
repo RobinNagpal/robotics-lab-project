@@ -8,6 +8,8 @@ are (at home while looking), so the arm does not block its own view.
 
 from __future__ import annotations
 
+import math
+
 import mujoco
 import numpy as np
 from detect_classify.camera import Calibration
@@ -29,8 +31,13 @@ class Camera:
         # Looking straight down, with the picture's up along the table's +y.
         self.cam.elevation, self.cam.azimuth = -90.0, 90.0
 
-    def heights(self, xy: np.ndarray, height: float) -> tuple[np.ndarray, Calibration]:
-        """Heights above the table (m) seen from ``height`` above the point ``xy`` on the table."""
+    def heights(self, xy: np.ndarray, height: float, yaw: float = 0.0) -> tuple[np.ndarray, Calibration]:
+        """Heights above the table (m) seen from ``height`` above the point ``xy`` on the table.
+
+        With ``yaw``, the camera is turned about the vertical by that much (side grasps version 3:
+        turned to the rack), as grasp.scenes.LookCamera turns it in Step 1.
+        """
+        self.cam.azimuth = 90.0 + math.degrees(yaw)
         self.cam.lookat[:] = [xy[0], xy[1], 0.0]
         self.cam.distance = height
         self.renderer.update_scene(self.data, camera=self.cam)

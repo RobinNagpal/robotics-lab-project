@@ -8,9 +8,10 @@ import math
 import mujoco
 import numpy as np
 import pytest
+from grasp import scenes, side
 from lab_scene import scene as lab
 
-from carry import episode, motion
+from carry import episode, look, motion
 from carry.perceive import Perception, Table, Tube
 
 
@@ -18,8 +19,7 @@ from carry.perceive import Perception, Table, Tube
 def scene():
     model, truth = lab.build(0)
     data = mujoco.MjData(model)
-    lab.reset(model, data)
-    lab.settle(model, data, 0.5)
+    episode.prepare(model, data)
     return model, data, truth
 
 
@@ -52,8 +52,8 @@ def test_pair_has_one_size_and_falls_back_when_a_tube_is_boxed_in(scene, table):
     # Pretend the medium receiver is boxed in: the next size is taken instead.
     real = coordinator.grasp_of
 
-    def boxed(camera, tube: Tube, arm: str):
-        return None if tube.size == 0.15 and tube.rack == "empty_rack" else real(camera, tube, arm)
+    def boxed(camera, tube: Tube, arm: str, role: str):
+        return None if tube.size == 0.15 and tube.rack == "empty_rack" else real(camera, tube, arm, role)
 
     coordinator.grasp_of = boxed
     choice = coordinator.choose(table, [0.15, 0.2, 0.1])
@@ -116,3 +116,30 @@ def test_full_run_brings_both_tubes_to_the_pouring_point():
     closed = {arm: t for t, arm, what in r["timeline"] if what == "closing"}
     assert closed[episode.RECEIVER_ARM] > at["waiting"]
     assert at["ready"] <= at["in place"] - episode.SETTLE
+
+
+def test_close_up_turned_to_the_rack(scene, table):
+    """Turned by the rack's angle read from the plain close-up, the rack lines up with the picture."""
+    model, data, _ = scene
+    camera = look.Camera(model, data)
+    tube = table.in_rack("empty_rack")[0]
+    height = tube.top + side.LOOK_HEIGHT
+    yaw = side.rack_yaw(camera.heights(tube.xy, height)[0])
+    turned, calib = camera.heights(tube.xy, height, yaw)
+    camera.close()
+    assert abs(math.degrees(side.rack_yaw(turned))) < 1.5
+    u, v = calib.project(np.array([[*tube.xy, tube.top]]))[0]
+    assert abs(u - 63.5) < 3 and abs(v - 63.5) < 3
+
+
+def test_fingers_come_in_opened_just_wider_than_the_tube():
+    model, truth = lab.build(0)
+    data = mujoco.MjData(model)
+    episode.prepare(model, data)
+    closing = episode._preshape_closing(model, data)
+    fingers = np.array(
+        [model.jnt_qposadr[j] for j in range(model.njnt) if model.joint(j).name.startswith("arm2/gripper/")]
+    )
+    # The real gripper, told to open 35 mm, is where the planner thinks it is (within a few percent).
+    reached = np.linalg.norm(data.qpos[fingers]) / np.linalg.norm(scenes._closed_fingers())
+    assert reached == pytest.approx(closing, abs=0.05)
