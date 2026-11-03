@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250">
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6675"/></marker></defs>
+<rect width="1000" height="250" rx="10" fill="#ffffff"/>
+<rect x="20" y="24" width="205" height="110" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="122.5" y="48" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="middle">1. Look</text>
+<text x="122.5" y="70.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">pour camera and wrist</text>
+<text x="122.5" y="87.5" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">camera pictures,</text>
+<text x="122.5" y="105.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">Arm B's joints</text>
+<line x1="229" y1="79" x2="261" y2="79" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="265" y="24" width="205" height="110" rx="10" fill="#fbe9ec" stroke="#d5dbe3"/>
+<text x="367.5" y="48" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="middle">2. Think</text>
+<text x="367.5" y="70.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">the policy gives the</text>
+<text x="367.5" y="87.5" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">next 1 s of joint</text>
+<text x="367.5" y="105.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">targets; the first is used</text>
+<line x1="474" y1="79" x2="506" y2="79" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="510" y="24" width="205" height="110" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="612.5" y="48" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="middle">3. Check</text>
+<text x="612.5" y="70.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">safety check: would it</text>
+<text x="612.5" y="87.5" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">hit Arm A or the</text>
+<text x="612.5" y="105.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">receiver? Then hold</text>
+<line x1="719" y1="79" x2="751" y2="79" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="755" y="24" width="205" height="110" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="857.5" y="48" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="middle">4. Move</text>
+<text x="857.5" y="70.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">slide to the new targets</text>
+<text x="857.5" y="87.5" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">over 0.1 s; the</text>
+<text x="857.5" y="105.0" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="normal" text-anchor="middle">simulation runs</text>
+<path d="M857.5,136 L857.5,184 L122.5,184 L122.5,140" fill="none" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<text x="500" y="178" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#5b6675" font-weight="normal" text-anchor="middle">every 0.1 s, until the policy says "finished" 3 times running (or 60 s)</text>
+<text x="500" y="220" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#5b6675" font-weight="normal" text-anchor="middle" font-style="italic">The simulation waits while the policy thinks, so the pictures and the joints always belong to the same moment.</text>
+</svg>

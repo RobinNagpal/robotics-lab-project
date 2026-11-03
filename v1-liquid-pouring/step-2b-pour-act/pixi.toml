@@ -1,0 +1,25 @@
+[workspace]
+name = "step-2b-pour-act"
+version = "0.1.0"
+description = "Step 2b of the liquid pouring task: a learned pour (ACT) that moves Arm B from the cameras, trained on the programmed pour"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+# The simulation's glassware code reads meshes with it.
+trimesh = ">=4.0"
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3"
+# Step 0's detector, YOLO11-seg; brings PyTorch (for the networks) and OpenCV.
+ultralytics = ">=8.3,<9"
+
+[activation.env]
+# The simulation, Step 0 (finding the tubes), Step 1 (the grasp network), Step 1b (pick and carry) and
+# Step 2 (the programmed pour and the level network) next door. Step 2's code is only read, never changed.
+PYTHONPATH = "$PIXI_PROJECT_ROOT/../simulation-environment:$PIXI_PROJECT_ROOT/../step-0-detect-and-classify:$PIXI_PROJECT_ROOT/../step-1-grasp:$PIXI_PROJECT_ROOT/../step-1b-pick-and-carry:$PIXI_PROJECT_ROOT/../step-2-pour:$PIXI_PROJECT_ROOT"

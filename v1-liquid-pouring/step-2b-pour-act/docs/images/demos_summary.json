@@ -1,0 +1,36 @@
+{
+ "0.0": {
+  "pours": 117,
+  "within_window": 116,
+  "pours_with_spill": 6,
+  "spilled": 12,
+  "topups": 91,
+  "median_seconds": 20.87
+ },
+ "1.0": {
+  "pours": 110,
+  "within_window": 105,
+  "pours_with_spill": 22,
+  "spilled": 35,
+  "topups": 82,
+  "median_seconds": 21.175
+ },
+ "train": {
+  "pours": 158,
+  "nudged": 78,
+  "medium": 43,
+  "ticks": 32447
+ },
+ "val": {
+  "pours": 33,
+  "nudged": 16,
+  "medium": 10,
+  "ticks": 6532
+ },
+ "test": {
+  "pours": 36,
+  "nudged": 16,
+  "medium": 14,
+  "ticks": 7198
+ }
+}
