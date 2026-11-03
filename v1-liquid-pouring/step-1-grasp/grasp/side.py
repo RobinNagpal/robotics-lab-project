@@ -20,7 +20,7 @@ The way in, for every direction:
 The fast check (SideChecker) tries all three with the open, then closing,
 gripper, as scenes.Checker does for top-down grasps.
 
-Version 2 (docs/side/improved.md) changes three things, each switched on by an
+Version 2 (docs/side/version2.md) changes three things, each switched on by an
 argument so that version 1 (runs/side_grconv, used by Step 1b) stays as it was:
 
 - the fingers come in opened only a little wider than the tube (PRESHAPE_GAP),
@@ -56,6 +56,11 @@ LOOK_HEIGHT = 0.35
 # the tube and its opening stay clear. Never lower than 2 cm above the rack's
 # top plate.
 BELOW_RIM = 0.03
+# Version 3: the grip heights the network scores, as distances below the rim. Gripping lower never
+# makes a tube easier to pick (the fingers come down among the neighbours), but a tall tube held 3 cm
+# under its rim hangs 17 cm below the fingers, and carried over the racks the arm then works near
+# its wrist's awkward pose (docs/side/version3.md).
+HEIGHTS = (0.03, 0.05, 0.07)
 ABOVE_RACK = 0.02
 # Coming down beside the tube: this far out from its axis, from this far above the grip height.
 OUT = 0.06
@@ -82,8 +87,9 @@ def direction(k: int | np.ndarray) -> float | np.ndarray:
     return k * STEP
 
 
-def grip_height(top: float) -> float:
-    return max(top - BELOW_RIM, RACK.height + ABOVE_RACK)
+def grip_height(top: float, below: float | None = None) -> float:
+    """The pinch point's height: ``below`` the rim (default BELOW_RIM), never under rack top + 2 cm."""
+    return max(top - (BELOW_RIM if below is None else below), RACK.height + ABOVE_RACK)
 
 
 def along(a: float) -> np.ndarray:
@@ -98,18 +104,65 @@ def frame(a: float) -> np.ndarray:
     return np.stack([np.cross(y, z), y, z], axis=1)
 
 
-def pinch_at(xy: np.ndarray, a: float, top: float) -> np.ndarray:
+def pinch_at(xy: np.ndarray, a: float, top: float, below: float | None = None) -> np.ndarray:
     """Where the pinch point goes to hold the tube whose axis is at ``xy`` from direction ``a``."""
-    return np.array([xy[0], xy[1], grip_height(top)]) - DEPTH * along(a)
+    return np.array([xy[0], xy[1], grip_height(top, below)]) - DEPTH * along(a)
 
 
-def way_in(xy: np.ndarray, a: float, top: float, step: float = 0.005) -> list[np.ndarray]:
+def way_in(
+    xy: np.ndarray, a: float, top: float, step: float = 0.005, below: float | None = None
+) -> list[np.ndarray]:
     """Pinch points along the way in: down beside the tube, then straight in."""
-    end = pinch_at(xy, a, top)
+    end = pinch_at(xy, a, top, below)
     out = end + (OUT + DEPTH) * along(a)
     down = [out + [0, 0, h] for h in np.arange(DROP, -1e-9, -step)]
     inward = [out - along(a) * d for d in np.arange(step, OUT + DEPTH + 1e-9, step)]
     return down + inward
+
+
+def pad_centres(
+    model: mujoco.MjModel,
+    data: mujoco.MjData,
+    fingers: np.ndarray,
+    closed: np.ndarray,
+    prefix: str,
+    closing: float,
+) -> float:
+    """How far apart a gripper's two pad centres are with its fingers ``closing`` of the way shut.
+
+    ``fingers`` are the gripper's finger joints' qpos addresses, ``closed`` their angles closed on a
+    tube (scenes._closed_fingers), ``prefix`` the gripper's geom names' prefix. Leaves the fingers there.
+    """
+    data.qpos[fingers] = closing * closed
+    mujoco.mj_kinematics(model, data)
+    return float(np.linalg.norm(data.geom(f"{prefix}left_pad1").xpos - data.geom(f"{prefix}right_pad1").xpos))
+
+
+def closing_for_gap(
+    model: mujoco.MjModel,
+    data: mujoco.MjData,
+    fingers: np.ndarray,
+    closed: np.ndarray,
+    prefix: str,
+    gap: float,
+) -> float:
+    """How far closed the fingers are (0 open, 1 closed on the tube) when the pads are ``gap`` apart.
+
+    Closed on the tube the gap is the tube's width; the pads' thickness is the rest of the distance
+    between their centres. The fingers are put back as they were.
+    """
+    before = data.qpos[fingers].copy()
+    thickness = pad_centres(model, data, fingers, closed, prefix, 1.0) - 2 * rules.TUBE_RADIUS
+    low, high = 0.0, 1.0
+    for _ in range(30):
+        mid = (low + high) / 2
+        if pad_centres(model, data, fingers, closed, prefix, mid) - thickness > gap:
+            low = mid
+        else:
+            high = mid
+    data.qpos[fingers] = before
+    mujoco.mj_kinematics(model, data)
+    return (low + high) / 2
 
 
 class SideChecker(scenes.Checker):
@@ -127,7 +180,7 @@ class SideChecker(scenes.Checker):
         if preshape:
             # With the pads already 5 mm from the tube, the first to touch moves the tube in its cell's
             # play rather than shoving the arm: in physics, 12 of 12 grasps that only the 3 mm shove
-            # had called blocked lifted cleanly (docs/side/improved.md).
+            # had called blocked lifted cleanly (docs/side/version2.md).
             self.SHOVE = 0.0
         wrist = model.geom(scenes.WRIST).id
         model.geom_contype[wrist] = model.geom_conaffinity[wrist] = 1
@@ -139,27 +192,13 @@ class SideChecker(scenes.Checker):
 
     def _pad_centres(self, closing: float) -> float:
         """How far apart the two pads' centres are, with the fingers ``closing`` of the way shut."""
-        self.data.qpos[self.fingers] = closing * self.closed
-        mujoco.mj_kinematics(self.model, self.data)
-        left, right = self.data.geom("gripper/left_pad1").xpos, self.data.geom("gripper/right_pad1").xpos
-        return float(np.linalg.norm(left - right))
+        out = pad_centres(self.model, self.data, self.fingers, self.closed, "gripper/", closing)
+        return out
 
     def _closing_for(self, gap: float) -> float:
-        """How far closed the fingers are when the gap between the pads is ``gap``.
-
-        Closed on the tube (closing = 1) the gap is the tube's width; the pads' thickness is the
-        rest of the distance between their centres.
-        """
-        thickness = self._pad_centres(1.0) - 2 * rules.TUBE_RADIUS
-        low, high = 0.0, 1.0
-        for _ in range(30):
-            mid = (low + high) / 2
-            if self._pad_centres(mid) - thickness > gap:
-                low = mid
-            else:
-                high = mid
+        out = closing_for_gap(self.model, self.data, self.fingers, self.closed, "gripper/", gap)
         self.park()
-        return (low + high) / 2
+        return out
 
     def touches_side(self, pinch: np.ndarray, a: float, closing: float = 0.0) -> list[str]:
         quat = np.zeros(4)
@@ -178,13 +217,13 @@ class SideChecker(scenes.Checker):
                 hit.append(self.model.body(self.model.geom_bodyid[other]).name)
         return hit
 
-    def clear(self, xy: np.ndarray, a: float, top: float, target: str) -> bool:
+    def clear(self, xy: np.ndarray, a: float, top: float, target: str, below: float | None = None) -> bool:
         # The end of the way in first: that is where most side grasps are blocked.
-        for pinch in reversed(way_in(xy, a, top)):
+        for pinch in reversed(way_in(xy, a, top, below=below)):
             if self.touches_side(pinch, a, self.way_in_closing):
                 return False
         opening = frame(a)[:, 0]
-        pinch = pinch_at(xy, a, top)
+        pinch = pinch_at(xy, a, top, below)
         closing = sorted({max(f, self.way_in_closing) for f in self.CLOSING})
         for shove in (0.0, -self.SHOVE, self.SHOVE):
             for f in closing:
@@ -192,11 +231,30 @@ class SideChecker(scenes.Checker):
                     return False
         return True
 
-    def labels(self, xy: np.ndarray, top: float, target: str, frame_yaw: float = 0.0) -> np.ndarray:
-        """For each of the 24 directions, counted from ``frame_yaw``, whether the grasp is clear."""
-        out = np.array([self.clear(xy, frame_yaw + direction(k), top, target) for k in range(BINS)])
+    def labels(
+        self, xy: np.ndarray, top: float, target: str, frame_yaw: float = 0.0, heights: bool = False
+    ) -> np.ndarray:
+        """For each of the 24 directions, counted from ``frame_yaw``, whether the grasp is clear.
+
+        With ``heights`` (version 3): 24 for each of HEIGHTS in turn, 72 in all. A direction blocked
+        at one height is taken as blocked at every lower one, without checking: lower, the fingers are
+        further down among the same neighbours (checked against the full test on 15 scenes in
+        docs/side/version3.md). That keeps the labelling about as fast as for one height.
+        """
+        if not heights:
+            out = np.array([self.clear(xy, frame_yaw + direction(k), top, target) for k in range(BINS)])
+            self.park()
+            return out
+        rows = []
+        still = np.ones(BINS, bool)
+        for below in HEIGHTS:
+            row = np.zeros(BINS, bool)
+            for k in np.nonzero(still)[0]:
+                row[k] = self.clear(xy, frame_yaw + direction(k), top, target, below)
+            rows.append(row)
+            still = row
         self.park()
-        return out
+        return np.concatenate(rows)
 
 
 def rack_yaw(heights: np.ndarray) -> float:
@@ -259,11 +317,15 @@ def _grow(seed: np.ndarray, allowed: np.ndarray) -> np.ndarray:
 def smoothed(scores: np.ndarray) -> np.ndarray:
     """Version 2: each direction's score mixed with its two neighbours' (directions wrap round).
 
-    Scores (N, 24, H, W) or (24, H, W). A direction at the edge of a run of clear ones, next to a
-    blocked one, scores lower than one in the middle; one clear direction alone still stands out.
+    Scores (N, 24 x heights, H, W) or (24 x heights, H, W); each height's 24 are mixed on their own.
+    A direction at the edge of a run of clear ones, next to a blocked one, scores lower than one in
+    the middle; one clear direction alone still stands out.
     """
     axis = scores.ndim - 3
-    return 0.5 * scores + 0.25 * (np.roll(scores, 1, axis=axis) + np.roll(scores, -1, axis=axis))
+    shape = scores.shape
+    blocks = scores.reshape(*shape[:axis], shape[axis] // BINS, BINS, *shape[axis + 1 :])
+    mixed = 0.5 * blocks + 0.25 * (np.roll(blocks, 1, axis=axis + 1) + np.roll(blocks, -1, axis=axis + 1))
+    return mixed.reshape(shape)
 
 
 # ------------------------------------------------------------------ the real arm
@@ -446,10 +508,12 @@ def run(
     liquid_in: bool = False,
     seen=None,
     preshape: bool = False,
+    below: float | None = None,
 ) -> dict:
     """A side grasp with the real arm and full physics, judged as trial.run judges a top-down one.
 
-    With ``preshape`` (version 2), the fingers close to PRESHAPE_GAP before the arm moves.
+    With ``preshape`` (version 2), the fingers close to PRESHAPE_GAP before the arm moves. ``below``
+    (version 3): grip this far under the rim instead of BELOW_RIM.
     """
     seen = seen or (lambda *_: None)
     model, data, scene = scenes.build(seed, target if liquid_in else None)
@@ -459,7 +523,7 @@ def run(
     arm = min(lab.ARM_NAMES, key=lambda n: np.linalg.norm(data.body(f"{n}/base").xpos[:2] - xy))
     start = {i.name: data.body(i.name).xpos.copy() for i in scene.instances}
     balls = len(liquid.balls_in(model, data, container, target))
-    path = way_in(xy, a, top, step=0.02)
+    path = way_in(xy, a, top, step=0.02, below=below)
     if preshape:
         data.ctrl[lab.gripper_actuator_id(model, arm)] = lab.grip_command(PRESHAPE_GAP, squeeze=0.0)
     try:
@@ -487,7 +551,7 @@ def run(
         seen("closed", model, data)
         touched_closing = sorted(watch.touched - set(touched_going_in))
         force = trial.squeeze_force(model, data, target)
-        watch.move_side(pinch_at(xy, a, top) + [0, 0, LIFT], arm, a, 1.0)
+        watch.move_side(pinch_at(xy, a, top, below) + [0, 0, LIFT], arm, a, 1.0)
         seen("lifted", model, data)
         finite = bool(np.isfinite(data.qpos).all())
     except Unreachable as e:

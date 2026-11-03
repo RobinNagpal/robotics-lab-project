@@ -3,6 +3,7 @@
     python -m grasp.generate_data --split train --count 300
     python -m grasp.generate_data --split train --count 300 --kind side   # side grasps, into data_side/
     python -m grasp.generate_data --split train --count 300 --kind side2  # side grasps v2, into data_side2/
+    python -m grasp.generate_data --split train --count 300 --kind side3  # v2 + 3 grip heights, data_side3/
 
 For each scene, every tube is a target once:
 
@@ -45,19 +46,21 @@ def scene_samples(seed: int, kind: str = "top") -> tuple[np.ndarray, list[dict]]
 
     ``side2`` (version 2): the fingers come in barely open, and each picture is turned to the
     rack under it (side.rack_yaw), with the tubes in it labelled in that picture's directions.
+    ``side3`` (version 3): as side2, labelled at each of side.HEIGHTS (72 labels a tube).
     """
+    rack_turned = kind in ("side2", "side3")
     model, data, scene = scenes.build(seed)
     if kind == "top":
         checker = scenes.Checker(model, data)
     else:
-        checker = side.SideChecker(model, data, preshape=kind == "side2")
+        checker = side.SideChecker(model, data, preshape=rack_turned)
     height = scenes.LOOK_HEIGHT if kind == "top" else side.LOOK_HEIGHT
     camera = scenes.LookCamera(model, data)
     rng = np.random.default_rng(seed + 7_000_000)
     tubes = scenes.tubes(scene)
     truth = {t.name: scenes.rim(data, t) for t in tubes}
     # side2: made per picture instead, in that picture's directions.
-    labels = {} if kind == "side2" else {t.name: checker.labels(*truth[t.name], t.name) for t in tubes}
+    labels = {} if rack_turned else {t.name: checker.labels(*truth[t.name], t.name) for t in tubes}
     # What Step 0 reports for every tube in the scene, missing a few.
     step0 = []
     for t in tubes:
@@ -70,7 +73,7 @@ def scene_samples(seed: int, kind: str = "top") -> tuple[np.ndarray, list[dict]]
         if seen["missed"]:
             continue  # the arm never goes to a tube it does not know about
         frame_yaw = 0.0
-        if kind == "side2":
+        if rack_turned:
             first, _ = camera.look(np.array(seen["xy"]), seen["top"], height)
             frame_yaw = side.rack_yaw(first)
         heights, calib = camera.look(np.array(seen["xy"]), seen["top"], height, yaw=frame_yaw)
@@ -79,8 +82,8 @@ def scene_samples(seed: int, kind: str = "top") -> tuple[np.ndarray, list[dict]]
             xy, top = truth[other.name]
             u, v = calib.project(np.array([[xy[0], xy[1], top]]))[0]
             if EDGE <= u < scenes.LOOK_SIZE - EDGE and EDGE <= v < scenes.LOOK_SIZE - EDGE:
-                if kind == "side2":
-                    lab = checker.labels(xy, top, other.name, frame_yaw)
+                if rack_turned:
+                    lab = checker.labels(xy, top, other.name, frame_yaw, heights=kind == "side3")
                 else:
                     lab = labels[other.name]
                 in_view.append(
@@ -115,7 +118,7 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--split", choices=list(SPLIT_SEEDS), required=True)
-    parser.add_argument("--kind", choices=["top", "side", "side2"], default="top")
+    parser.add_argument("--kind", choices=["top", "side", "side2", "side3"], default="top")
     parser.add_argument("--count", type=int, required=True, help="how many scenes")
     parser.add_argument("--out", type=Path, default=Path("data"))
     parser.add_argument("--workers", type=int, default=max(1, mp.cpu_count() - 2))

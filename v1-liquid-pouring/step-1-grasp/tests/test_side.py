@@ -54,7 +54,8 @@ def look():
 
 def test_side_grasp_in_empty_space_is_clear_every_way(look):
     *_, checker = look
-    assert all(checker.clear(np.array([0.45, 1.1]), side.direction(k), 0.15, "none") for k in range(side.BINS))
+    away = np.array([0.45, 1.1])  # off the table, nothing near
+    assert all(checker.clear(away, side.direction(k), 0.15, "none") for k in range(side.BINS))
 
 
 def test_the_wrist_behind_the_gripper_is_checked(look):
@@ -160,3 +161,48 @@ def test_smoothing_prefers_the_middle_of_a_run_of_clear_directions():
     one = np.zeros((side.BINS, 1, 1))
     one[0, 0, 0] = 1.0
     assert side.smoothed(one)[23, 0, 0] == pytest.approx(0.25)
+
+
+# ------------------------------------------------------------------ version 3
+
+
+def test_labels_at_each_grip_height(look):
+    _, data, scene, checker = look
+    t = scenes.tubes(scene)[0]
+    xy, top = scenes.rim(data, t)
+    labels = checker.labels(xy, top, t.name, heights=True)
+    assert labels.shape == (side.BINS * len(side.HEIGHTS),)
+    # Blocked at one height counts as blocked at every lower one.
+    rows = labels.reshape(len(side.HEIGHTS), side.BINS)
+    assert not (rows[1:] & ~rows[:-1]).any()
+    assert (rows[0] == checker.labels(xy, top, t.name)).all()
+
+
+def test_lower_grip_is_lower_but_never_under_the_rack_limit():
+    assert side.grip_height(0.207, 0.05) == pytest.approx(0.157)
+    assert side.grip_height(0.107, 0.07) == pytest.approx(side.RACK.height + side.ABOVE_RACK)
+
+
+def test_each_height_is_smoothed_and_turned_on_its_own():
+    scores = np.zeros((side.BINS * 3, 1, 1))
+    scores[side.BINS - 1, 0, 0] = 1.0  # the last direction of the first height
+    mixed = side.smoothed(scores)[:, 0, 0]
+    # Its neighbours are the first height's 22nd and 0th, never the second height's 0th.
+    assert mixed[side.BINS - 2] == pytest.approx(0.25) and mixed[0] == pytest.approx(0.25)
+    assert mixed[side.BINS] == 0.0
+
+
+def test_turned_training_picture_keeps_each_height_in_its_block(tmp_path):
+    import json
+
+    from grasp.net import Pictures
+
+    tubes = [{"u": 64.0, "v": 64.0, "labels": [0] * (side.BINS * 3)}]
+    tubes[0]["labels"][side.BINS + 1] = 1  # second height, direction 1
+    (tmp_path / "samples.json").write_text(json.dumps([{"tubes": tubes}]))
+    np.save(tmp_path / "heights.npy", np.zeros((1, 128, 128), np.float16))
+    pictures = Pictures(tmp_path, augment=True, bins=side.BINS * 3, step=side.STEP)
+    for _ in range(10):
+        _, target, _ = pictures[0]
+        on = np.nonzero(target[:, 64, 64].numpy() > 0.5)[0]
+        assert len(on) == 1 and side.BINS <= on[0] < 2 * side.BINS

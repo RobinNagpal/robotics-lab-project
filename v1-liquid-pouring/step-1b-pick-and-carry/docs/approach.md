@@ -124,6 +124,32 @@ but its own tube.
 
 ---
 
+## Version 2: grip heights, and the carry planned before choosing
+
+What changed after version 1 (14 of 30 runs; 21 of 30 now, see [results.md](results.md)). Everything
+above still holds.
+
+| | Version 1 | Version 2 | Why |
+|---|---|---|---|
+| Step 1's network | side grasps version 1: 24 directions | **version 3**: 24 directions at 3 grip heights (3, 5, 7 cm below the rim) | a tall tube held 3 cm under its rim hangs 17 cm below the fingers and is carried 42 cm up, near the arm's awkward pose |
+| The close-up | the table's directions | **turned to the rack** first (its angle read from the close-up itself) | as Step 1 version 2: four of the 24 directions point straight out of the rack |
+| Fingers on the way in | fully open (85 mm) | **opened 35 mm** from the start of the run | as Step 1 version 2: they fit between the tube and its row neighbours |
+| The closing check | from 25% closed, shoved 3 mm either way | from 35 mm open, no shove | Step 1's physics showed the shove is not needed when the fingers arrive barely open |
+| Which grasp | the network's best direction that passes the pick check | the first (direction, height) that passes the pick check **and the whole carry planned ahead**, highest grip first | a grasp that picks cleanly can leave the arm unable to carry the tube; before, that was found out halfway, with the tube in the fingers |
+| Where the source parks | the first spot the arm can reach | the spot its planned carry used | the carry was planned through one spot and then made through another |
+
+**Planning the carry ahead.** For each option, on a copy of the simulation: the arm starts where its
+planned way in ends, the tube is taken to sit in the fingers where it stands now, and every move of the
+script is planned and checked as it will be made (lift, up to the carry height, across while turning,
+down to the pouring point for the receiver; to a parking spot, the waiting place and in to the usual
+meeting distance of 85 mm for the source). The other arm is left where it is, so meeting it is not
+checked (the scripts wait for each other). About 1 to 3 seconds per option.
+
+**Highest grip first.** Higher is better for the pick (lower, the fingers are among the neighbours) and
+for placing the rim (less tube above the fingers to lean). A lower grip is tried only when no direction
+at a higher one can be carried. Trying 5 cm first for every size fixed large tubes but cost medium ones
+(7 of 17 instead of 13): their rims missed the 5 mm limit.
+
 ## Files
 
 | File | What it does |
@@ -133,5 +159,5 @@ but its own tube.
 | `carry/motion.py` | straight-line moves, fingers down or level; solving and checking them (closing fingers too) |
 | `carry/episode.py` | the coordinator, both arms' scripts, grading one run |
 | `carry/evaluate.py` | the 30 runs and their summary |
-| `carry/figures.py` | the pictures in these docs |
+| `carry/figures.py` | the pictures in these docs (a medium and a large run) |
 | `tests/test_carry.py` | perception, choosing the pair, straight and checked moves, one full run |

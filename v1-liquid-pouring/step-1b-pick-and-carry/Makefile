@@ -29,7 +29,7 @@ run: ## One run: find the tubes, choose a pair, pick both, meet at the pouring p
 	$(py) carry.episode --seed $(SEED) --size $(SIZE)
 
 evaluate: ## Every size in SEEDS task scenes (30 runs by default, about 5 minutes)
-	$(py) carry.evaluate --seeds $(SEEDS)
+	$(py) carry.evaluate --seeds $(SEEDS) --out runs/v3
 
 figures: ## Draw the pictures used in the docs, into docs/images/
 	$(py) carry.figures

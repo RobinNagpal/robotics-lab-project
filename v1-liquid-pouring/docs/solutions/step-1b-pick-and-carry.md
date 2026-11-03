@@ -59,16 +59,17 @@ each arm its job, and listens for each arm's short messages ("picked", "waiting"
 | | |
 |---|---|
 | Runs | 30 (10 scenes x 3 sizes asked for) |
-| Successes | **14 of 30**: medium tubes 13 of 17, large tubes **0 of 12** |
-| Liquid lost | none, in any run |
-| In the successful runs | receiver within 0.8 mm (median), source within 3.6 mm, both under 3.5 degrees from upright |
-| Time until Arm B is in place | about 67 s |
+| Successes | **21 of 30** (version 1: 14): medium tubes 13 of 17, large tubes **7 of 12** (version 1: 0) |
+| Liquid lost | in 2 runs (one scene asked twice: both tubes fell over at the meeting) |
+| In the successful runs | receiver within 1.1 mm (median), source within 3.6 mm, both under 4.4 degrees from upright |
+| Time until Arm B is in place | about 68 s |
 
-**The medium pair works; the large pair does not yet.** A tall tube has to be held high to clear the other
-tubes, with 17 cm of it hanging below the fingers, and at those heights the arms cannot find routes they can
-follow smoothly: a joint would have to swing a long way, or a pose is out of reach, or the tube would hit the
-arm's own forearm. The planner refuses those moves before making them. Small tubes are rarely reachable from
-the side between taller neighbours, so the coordinator usually takes the medium pair instead.
+**Medium and large pairs work now.** Version 1 checked only the pick, and a tall tube's carry then failed
+halfway: held high to clear the other tubes, with 17 cm of it below the fingers, the arm met poses where a
+joint would have to swing a long way. Version 2 **plans the whole carry before choosing a grasp**, and Step
+1's network (version 3) offers each direction at three grip heights. **Small tubes** still fall back to the
+medium pair: gripped from the side 8 cm above the table, the arm's wrist would be down among the tall
+neighbours. And in 6 runs a tube came out of the fingers or fell over, which version 1 never did.
 
 ## How it got here
 
@@ -76,7 +77,9 @@ The first version held the tubes **from above** and succeeded 24 times in 30, bu
 cannot be poured: its opening is under the gripper's base. Moving to side grasps meant a second network
 (Step 1) and most of this step's work again: one arm at a time, each arm on its own side, the pouring point
 raised from 25 to 35 cm, the closing fingers checked with room to spare, and the held tube checked against
-its own arm. Details in [results.md](../../step-1b-pick-and-carry/docs/results.md).
+its own arm (14 of 30). Then version 2: Step 1's side network with grip heights, the fingers coming in barely
+open, and the carry planned before choosing (21 of 30). Details in
+[results.md](../../step-1b-pick-and-carry/docs/results.md).
 
 ## Simplifications
 
@@ -86,7 +89,16 @@ its own arm. Details in [results.md](../../step-1b-pick-and-carry/docs/results.m
 
 ## What is next
 
-- **Large tubes:** lower carrying heights where possible, and better starting poses for the arm's joint
-  search at high, level-finger poses.
-- **Step 2, the pour:** Arm B tips the source towards the receiver (a roll of its wrist), watched by a camera,
+Three open problems; [results.md](../../step-1b-pick-and-carry/docs/results.md) ("Open problems and
+suggested fixes") explains each with the fixes suggested.
+
+- **Tubes slipping out or falling over** (6 runs): measured. The tube is not too heavy; it swings out
+  about the line between the two fingertip pads, most easily when one pad is left tipped onto its edge.
+  Squeezing harder made it worse (0 of 8); closing twice moved the failures to other runs (3 of 8 either
+  way). Next: let the simulated pads resist twisting, as real rubber pads do, and move more gently.
+- **Small tubes** (9 of 10 fall back): the arm's wrist would be down among the tall tubes. Suggested: pick a
+  small tube from above, stand it in an empty spot, and take it again from the side.
+- **No scenes held back for grading:** version 2 was tuned on the same 10 scenes it is graded on. Grade on
+  20 new scenes as well.
+- **Then Step 2, the pour:** Arm B tips the source towards the receiver (a roll of its wrist), watched by a camera,
   until the receiver is 50% full.

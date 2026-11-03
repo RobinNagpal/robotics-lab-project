@@ -5,6 +5,7 @@
 data/
 data_side/
 data_side2/
+data_side3/
 runs/
 *.pt
 

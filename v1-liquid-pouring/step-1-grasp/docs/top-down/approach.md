@@ -2,7 +2,7 @@
 
 This page has the exact settings, and why each was chosen. The overview is in
 [step-1-grasp.md](../../../docs/solutions/step-1-grasp.md); how well it works is in [results.md](results.md).
-Side grasps, the second model, are in [side/approach.md](../side/approach.md).
+Side grasps, the second model, are in [side/version1.md](../side/version1.md).
 
 ---
 

@@ -79,7 +79,8 @@ def perception_figure(perception: Perception) -> None:
     img.save(OUT / "perception.png")
 
 
-def run_figure(perception: Perception) -> dict:
+def run_figure(perception: Perception, sizes=(0.15, 0.2, 0.1), name: str = "run.png") -> dict:
+    """The moments of one run (scene 0) as the arms report them, from the front camera."""
     frames: list[Image.Image] = []
     renderer = None
     a, b = episode.RECEIVER_ARM, episode.SOURCE_ARM
@@ -99,8 +100,8 @@ def run_figure(perception: Perception) -> dict:
         t = coordinator.data.time
         frames.append(_caption(Image.fromarray(renderer.render()), f"{t:4.1f} s  {words[(arm, message)]}"))
 
-    result = episode.run_episode(0, [0.15, 0.2, 0.1], perception, episode.load_net(), heard=heard)
-    _grid(frames, 3).save(OUT / "run.png")
+    result = episode.run_episode(0, list(sizes), perception, episode.load_net(), heard=heard)
+    _grid(frames, 3).save(OUT / name)
     return result
 
 
@@ -109,7 +110,8 @@ def main() -> None:
     perception = Perception()
     perception_figure(perception)
     result = run_figure(perception)
-    print(f"pictures written to {OUT}/; the run: done={result['done']}")
+    large = run_figure(perception, (0.2,), "run_large.png")
+    print(f"pictures written to {OUT}/; the runs: medium done={result['done']}, large done={large['done']}")
 
 
 if __name__ == "__main__":

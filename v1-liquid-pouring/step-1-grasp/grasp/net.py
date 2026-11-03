@@ -21,6 +21,7 @@ every tube is 25 mm, so the squeeze is worked out (rules.py).
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 import numpy as np
@@ -116,12 +117,17 @@ class Pictures(Dataset):
         target, weight = label_maps(self.samples[i]["tubes"], h.shape[0], self.bins)
         if self.augment:
             # Turning or mirroring the picture turns or mirrors every grasp in it.
+            # Side grasps, version 3: 24 directions for each grip height, each block turned on its own.
+            per = round(2 * math.pi / self.step) if self.bins > round(2 * math.pi / self.step) else self.bins
+            size = target.shape[-1]
+            target = target.reshape(self.bins // per, per, size, size)
             k = int(self.rng.integers(4))
             h, weight = np.rot90(h, k), np.rot90(weight, k)
-            target = rules.rotate_bins(np.rot90(target, k, axes=(1, 2)), k, step=self.step)
+            target = rules.rotate_bins(np.rot90(target, k, axes=(2, 3)), k, axis=1, step=self.step)
             if self.rng.random() < 0.5:
                 h, weight = h[:, ::-1], weight[:, ::-1]
-                target = rules.mirror_bins(target[:, :, ::-1], step=self.step)
+                target = rules.mirror_bins(target[:, :, :, ::-1], axis=1, step=self.step)
+            target = target.reshape(self.bins, size, size)
             # A depth camera's small noise, about 1 mm.
             h = h + self.rng.normal(0, 0.001, h.shape).astype(np.float32)
         return (
