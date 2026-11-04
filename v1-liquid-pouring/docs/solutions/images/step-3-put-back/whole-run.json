@@ -1,0 +1,185 @@
+{
+ "start": "seed150_size200",
+ "seed": 150,
+ "size": 0.2,
+ "pour": {
+  "start": "seed150_size200",
+  "seed": 150,
+  "size": 0.2,
+  "receiver": "receiver_200",
+  "target_pct": 50.0,
+  "target_balls": 103,
+  "failure": null,
+  "balls": {
+   "receiver": 104,
+   "source": 72,
+   "air": 0,
+   "spilled": 0
+  },
+  "level_pct": 50.5,
+  "within_window": true,
+  "source_start": 176,
+  "topups": 1,
+  "stopped_at_deg": 89.05200000000492,
+  "sim_seconds": 23.98,
+  "wall_seconds": 42.8,
+  "log": [
+   [
+    4.593000000016708,
+    "in position"
+   ],
+   [
+    7.003000000028216,
+    "flow at 82.8 deg"
+   ],
+   [
+    16.503000000073577,
+    "tip back from 89.5 deg, 84.9 balls"
+   ],
+   [
+    17.99300000008069,
+    "top up: 7.8 short"
+   ],
+   [
+    22.00300000009984,
+    "tip back from 89.1 deg, 98.8 balls"
+   ]
+  ],
+  "read_by": "custom",
+  "rule": "flow",
+  "read_level_pct": 51.25
+ },
+ "failure": null,
+ "touching_after_pour": [],
+ "balls_end": {
+  "receiver": 104,
+  "source": 72,
+  "air": 0,
+  "spilled": 0
+ },
+ "level_pct": 50.5,
+ "level_in_window": true,
+ "balls_lost_putting_back": 0,
+ "spilled": 0,
+ "source": {
+  "cell": 8,
+  "off_mm": 2.9,
+  "lean_deg": 6.0,
+  "height_mm": 0.9,
+  "in_cell": true,
+  "own_cell": true,
+  "plan": {
+   "cell": 8,
+   "turn": 0,
+   "share": 0.5,
+   "lift": [
+    0.0,
+    0.0,
+    0.05
+   ],
+   "tried": 0,
+   "seconds": 0.8
+  }
+ },
+ "receiver": {
+  "cell": 9,
+  "off_mm": 2.4,
+  "lean_deg": 5.1,
+  "height_mm": 0.8,
+  "in_cell": true,
+  "plan": {
+   "cell": 9,
+   "turn": 0,
+   "share": 0.5,
+   "lift": [
+    0.0,
+    0.0,
+    0.05
+   ],
+   "tried": 0,
+   "seconds": 0.9
+  }
+ },
+ "touched": [],
+ "touched_leaving_pour": [],
+ "log": [
+  [
+   94.39,
+   "arm1",
+   "upright"
+  ],
+  [
+   96.05,
+   "arm1",
+   "tube [0.536, 0.0, 0.246], 3.5 mm off"
+  ],
+  [
+   99.76,
+   "arm1",
+   "tube [0.486, 0.238, 0.246], 2.3 mm off"
+  ],
+  [
+   106.13,
+   "arm1",
+   "tube [0.486, 0.238, 0.076], 0.5 mm off"
+  ],
+  [
+   106.5,
+   "arm1",
+   "tube [0.486, 0.238, 0.076], 0.3 mm off"
+  ],
+  [
+   109.12,
+   "arm1",
+   "tube [0.486, 0.238, 0.01], 1.7 mm off"
+  ],
+  [
+   109.92,
+   "arm1",
+   "let go"
+  ],
+  [
+   117.26,
+   "arm1",
+   "home"
+  ],
+  [
+   119.32,
+   "arm2",
+   "tube [0.449, 0.002, 0.246], 4.7 mm off"
+  ],
+  [
+   124.68,
+   "arm2",
+   "tube [0.522, -0.341, 0.246], 2.1 mm off"
+  ],
+  [
+   131.05,
+   "arm2",
+   "tube [0.522, -0.341, 0.076], 0.9 mm off"
+  ],
+  [
+   131.35,
+   "arm2",
+   "tube [0.522, -0.341, 0.076], 0.6 mm off"
+  ],
+  [
+   133.98,
+   "arm2",
+   "tube [0.522, -0.341, 0.01], 2.3 mm off"
+  ],
+  [
+   134.78,
+   "arm2",
+   "let go"
+  ],
+  [
+   142.25,
+   "arm2",
+   "home"
+  ]
+ ],
+ "sim_seconds": 143.2,
+ "wall_seconds": 88.0,
+ "done": true
+}

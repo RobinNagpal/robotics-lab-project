@@ -97,6 +97,13 @@ And when the arm tried for real, some grasps failed:
 | Count the directions **from the rack** | four of the 24 now point exactly straight out of the rack |
 | Mix each direction's score with its neighbours' | the arm aims at the middle of a clear range, not its edge |
 
+**Counting directions from the rack.** The model only scores 24 fixed directions, 15 degrees apart, like the
+marks on a clock. What matters is where 0 degrees points. In version 1 it was fixed to the table, but racks stand
+at random angles. For a rack turned 37 degrees, the straight way in is at 37, and the nearest marks are 30 and 45.
+So a clear way in existed, but the model had no option for it. Version 2 first measures how the rack is turned and
+starts counting from the rack's own side, like turning a protractor to line up with the object. Now the marks are
+37, 52, 67 and so on, and four of them always point straight out of the rack.
+
 ![Directions before and after lining up with the rack](../../step-1-grasp/docs/side/images/v2/rack_frame.png)
 
 *Left: the rack's sides (yellow) fall between the directions (grey). Right: the picture is turned to the rack,
@@ -124,7 +131,13 @@ must travel about 42 cm up, held level and far from the arm's base.
 *How high a tall tube has to be carried (top left).*
 
 Up there the arm is close to an awkward pose: a tiny move of the fingers needs a huge turn of a wrist joint,
-about 150 degrees. The arm cannot follow that, so its planner refused the move and the run stopped.
+about 150 degrees. The arm did not physically get stuck: its planner saw that swing coming, refused the move and
+the run stopped.
+
+**The grip height was not simply "wrong".** 3 cm is still the best height for picking, and gripping at 5 cm only
+lowers the fingers by 2 cm. The real cause is the height of the carry combined with the direction the arm gripped
+from: height makes that pose hard to avoid, and the direction decides whether the arm can get through it. Version
+2 chose a grasp by looking only at the pick, so it found this out too late.
 
 There was a smaller problem too. With so little room, being 1 or 2 mm off could clip a neighbour, and the model
 became less sure which tubes were boxed in.
@@ -159,7 +172,7 @@ these 10 scenes did not need them.
 
 ### Problem 1: tubes slip out of the fingers
 
-This is now the biggest cause of lost runs: in 6 of 30, a tube comes loose or falls. Two fingers hold a round
+This is now the biggest cause of lost runs: in 8 of 30, a tube comes loose or falls. Two fingers hold a round
 tube along one thin line, so it can swing like a door on its hinges.
 
 ![The gripper lifts but the tube drops back into its rack](images/step-1-grasp/approach4-problem-slip.gif)
@@ -169,8 +182,8 @@ label still says "source picked": the arm has no way yet to notice that its fing
 
 ### Problem 2: small tubes
 
-In 9 of 10 runs that asked for small tubes, no grasp passed the arm's checks, so the medium pair was taken
-instead.
+In 9 of 10 runs that asked for small tubes, no grasp passed the arm's checks, so another pair was taken instead,
+usually medium.
 
 ![A small tube stands low, among taller neighbours](images/step-1-grasp/small-tube.svg)
 

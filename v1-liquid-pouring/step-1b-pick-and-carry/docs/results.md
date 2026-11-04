@@ -57,20 +57,20 @@ without planning ahead, a 5 cm grip fixed 7 of 10 large runs (Step 1's
 |---|---|
 | The source slipped out of the fingers while being lifted (scene 9 medium, asked twice; scene 3 large) | 3 |
 | Both tubes fell over at the meeting, the source's liquid spilled (scene 6 medium, asked twice) | 2 |
-| The receiver fell over at the pouring point (scene 5 large) | 1 |
+| The receiver fell over at the pouring point (scene 5 large, asked three times) | 3 |
 | The source ended 5.1 mm from its place (the limit is 5) (scene 4 large) | 1 |
-| Small tubes: no side grasp the whole arm can follow, so the medium pair was taken | (9 runs fell back; counted under medium) |
+| Small tubes: no side grasp the whole arm can follow, so another pair was taken | (9 runs fell back; 8 counted under medium, 1 under large) |
 
-**New in this version: tubes coming out of the fingers or falling (6 runs).** Version 1 had none (2 runs
+**New in this version: tubes coming out of the fingers or falling (8 runs).** Version 1 had none (2 runs
 ended tilted). In scene 9, the fingers closed in the right place (1.5 mm off, as in successful runs), the
 passive finger joint then sprang back as the lift began, and the tube stayed in the rack. The likely
 cause is the new way in: the fingers now arrive already opened only 35 mm and close the last few
 millimetres, which changes how the Robotiq linkage wraps round the tube. Not yet confirmed.
 
-**Small tubes** are not a grip-height problem: gripping a short tube level, 8 cm above the table, puts
-the arm's wrist down among the tall neighbours (it touches them), and reaching that low with level
-fingers needs big wrist swings. Step 1's network finds clear directions for 38% of short tubes, but the
-whole arm can follow almost none of them.
+**Small tubes** are not a grip-height problem: a short tube has to be gripped level, 8 cm above the table,
+and the arm cannot reach most of those grasps. Step 1's network finds clear directions for 38% of short
+tubes. In a quick test of 36 small-tube grasps it rated as good, the arm could not get there for 23, 12
+lifted cleanly, 1 did not lift, and none touched a neighbour.
 
 ---
 
@@ -152,7 +152,7 @@ receiver from -y.
 
 Three problems are open. The first two lose runs; the third is about how far the 21 of 30 can be trusted.
 
-### Problem 1: a tube comes out of the fingers or falls over (6 runs)
+### Problem 1: a tube comes out of the fingers or falls over (8 runs)
 
 **What happens.** Three kinds of run, all new in version 2 (version 1 had none):
 
@@ -160,7 +160,7 @@ Three problems are open. The first two lose runs; the third is about how far the
 |---|---|---|
 | The source stays behind when the arm lifts | 9 medium (x2), 3 large | the fingers closed in the right place (1.5 mm off, like the successes), then the passive finger joint sprang back open as the lift began; the tube stayed in the rack |
 | Both tubes fall at the meeting | 6 medium (x2) | all 104 balls spilled; the source came in to 80 mm from the receiver (most runs: 85 mm) |
-| The receiver falls at the pouring point | 5 large | the receiver ended 36 cm away, on its side |
+| The receiver falls at the pouring point | 5 large (x3) | the receiver ended 36 cm away, on its side |
 
 A near miss also belongs here: in scene 4 large the source ended 5.1 mm from its place (the limit is 5 mm).
 
@@ -203,14 +203,15 @@ the two pads are tipped (`pad_tilt_difference`).
 3. **Check the grip before the real lift:** lift 1 cm slowly; a real gripper reports how far its fingers
    closed, and if the tube dropped out they close a few millimetres further. Open, close again, retry once.
 
-### Problem 2: small tubes cannot be taken from the side (9 of 10 runs fall back to medium)
+### Problem 2: small tubes cannot be taken from the side (9 of 10 runs fall back to another pair)
 
 **What happens.** A small tube is 10 cm tall and stands in a rack whose top is 6 cm up, so only about 4 cm
 of it shows, and the fingers must grip it about 8 cm above the table. To do that with the fingers level,
-the arm's wrist, which sits right behind the gripper, comes down to the same height, among the 15 and
-20 cm tubes around it. It touches them, or the arm needs a big wrist swing to get there. Step 1's network
-finds a clear direction for the **fingers** on 38% of small tubes, but the **whole arm** can follow almost
-none of them. It is not a grip-height problem: there is no lower or higher grip to choose.
+the arm's wrist, which sits right behind the gripper, comes down to the same height, and the arm often
+cannot get there. Step 1's network finds a clear direction for the **fingers** on 38% of small tubes, but
+in a quick test of 36 grasps it rated as good, the **whole arm** could not reach 23; 12 lifted cleanly, 1 did
+not lift, and none touched a neighbour. It is not a grip-height problem: there is no lower or higher grip to
+choose.
 
 **Suggested fixes:**
 

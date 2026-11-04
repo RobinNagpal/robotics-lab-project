@@ -1,0 +1,97 @@
+{
+ "train": {
+  "pours": 160,
+  "failed": {
+   "Arm B cannot reach tilt 90.3": 1
+  },
+  "medium / large": [
+   44,
+   116
+  ],
+  "pictures": 30014,
+  "seconds per pour (median)": 19.18,
+  "within 2 % of the target": "155 of 160",
+  "balls spilled (total, most in one pour)": [
+   40,
+   21
+  ],
+  "top-ups": {
+   "1": 115,
+   "0": 38,
+   "2": 7
+  },
+  "pictures by level (%)": {
+   "0-10": 15749,
+   "10-20": 1652,
+   "20-30": 1401,
+   "30-40": 3585,
+   "40-50": 3406,
+   "50-60": 3305,
+   "60-70": 916,
+   "70-80": 0
+  },
+  "pictures with flow over 2 % per second": 8000
+ },
+ "val": {
+  "pours": 36,
+  "failed": {
+   "moving in at tilt 78: [('arm1/gripper/left_coupler": 2
+  },
+  "medium / large": [
+   12,
+   24
+  ],
+  "pictures": 6288,
+  "seconds per pour (median)": 18.59,
+  "within 2 % of the target": "33 of 36",
+  "balls spilled (total, most in one pour)": [
+   1,
+   1
+  ],
+  "top-ups": {
+   "1": 30,
+   "0": 6
+  },
+  "pictures by level (%)": {
+   "0-10": 3279,
+   "10-20": 242,
+   "20-30": 294,
+   "30-40": 531,
+   "40-50": 801,
+   "50-60": 1013,
+   "60-70": 128,
+   "70-80": 0
+  },
+  "pictures with flow over 2 % per second": 1506
+ },
+ "test": {
+  "pours": 40,
+  "failed": {},
+  "medium / large": [
+   14,
+   26
+  ],
+  "pictures": 7696,
+  "seconds per pour (median)": 18.990000000000002,
+  "within 2 % of the target": "39 of 40",
+  "balls spilled (total, most in one pour)": [
+   7,
+   3
+  ],
+  "top-ups": {
+   "1": 33,
+   "0": 7
+  },
+  "pictures by level (%)": {
+   "0-10": 3988,
+   "10-20": 461,
+   "20-30": 430,
+   "30-40": 929,
+   "40-50": 948,
+   "50-60": 837,
+   "60-70": 103,
+   "70-80": 0
+  },
+  "pictures with flow over 2 % per second": 2136
+ }
+}

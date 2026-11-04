@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" width="1000" height="230">
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6675"/></marker></defs>
+<rect width="1000" height="230" rx="10" fill="#ffffff"/>
+<rect x="8" y="14" width="180" height="200" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<circle cx="32" cy="40" r="14" fill="#2f5fa8"/>
+<text x="32" y="45" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">1</text>
+<text x="54" y="46" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="start">Test first</text>
+<text x="20" y="78" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#2f5fa8" font-weight="bold" text-anchor="start">QUESTION</text>
+<text x="20" y="96" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Do the plan's ideas hold?</text>
+<text x="20" y="146" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1e7a4c" font-weight="bold" text-anchor="start">FOUND</text>
+<text x="20" y="164" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Tube slipped: grip fixed</text>
+<text x="20" y="181" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Flow starts at 81-88 deg</text>
+<text x="20" y="198" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Live feedback is needed</text>
+<line x1="190" y1="114" x2="206" y2="114" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="206" y="14" width="180" height="200" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<circle cx="230" cy="40" r="14" fill="#2f5fa8"/>
+<text x="230" y="45" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">2</text>
+<text x="252" y="46" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="start">Where to look</text>
+<text x="218" y="78" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#2f5fa8" font-weight="bold" text-anchor="start">QUESTION</text>
+<text x="218" y="96" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Which camera sees</text>
+<text x="218" y="113" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">the level?</text>
+<text x="218" y="146" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1e7a4c" font-weight="bold" text-anchor="start">FOUND</text>
+<text x="218" y="164" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Front view blocked by</text>
+<text x="218" y="181" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Arm A's own wrist:</text>
+<text x="218" y="198" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">new fixed pour camera</text>
+<line x1="388" y1="114" x2="404" y2="114" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="406" y="14" width="180" height="200" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<circle cx="430" cy="40" r="14" fill="#2f5fa8"/>
+<text x="430" y="45" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">3</text>
+<text x="452" y="46" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="start">Pour on the arms</text>
+<text x="418" y="78" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#2f5fa8" font-weight="bold" text-anchor="start">QUESTION</text>
+<text x="418" y="96" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Pour to a target</text>
+<text x="418" y="113" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">with a perfect scale</text>
+<text x="418" y="146" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1e7a4c" font-weight="bold" text-anchor="start">FOUND</text>
+<text x="418" y="164" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Aim at the rim; follow</text>
+<text x="418" y="181" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">the tube in the fingers:</text>
+<text x="418" y="198" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">0 spilled in tests</text>
+<line x1="588" y1="114" x2="604" y2="114" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="606" y="14" width="180" height="200" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<circle cx="630" cy="40" r="14" fill="#2f5fa8"/>
+<text x="630" y="45" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">4</text>
+<text x="652" y="46" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="start">Training data</text>
+<text x="618" y="78" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#2f5fa8" font-weight="bold" text-anchor="start">QUESTION</text>
+<text x="618" y="96" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Pictures with the</text>
+<text x="618" y="113" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">true answers</text>
+<text x="618" y="146" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1e7a4c" font-weight="bold" text-anchor="start">FOUND</text>
+<text x="618" y="164" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">236 recorded pours,</text>
+<text x="618" y="181" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">44,000 pictures,</text>
+<text x="618" y="198" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">labels from the sim</text>
+<line x1="788" y1="114" x2="804" y2="114" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="806" y="14" width="180" height="200" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<circle cx="830" cy="40" r="14" fill="#2f5fa8"/>
+<text x="830" y="45" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">5</text>
+<text x="852" y="46" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="start">Level network</text>
+<text x="818" y="78" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#2f5fa8" font-weight="bold" text-anchor="start">QUESTION</text>
+<text x="818" y="96" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">Read level and flow</text>
+<text x="818" y="113" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">from the picture</text>
+<text x="818" y="146" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1e7a4c" font-weight="bold" text-anchor="start">FOUND</text>
+<text x="818" y="164" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">CNN: 1.1 points, flow</text>
+<text x="818" y="181" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">6x better than the rule;</text>
+<text x="818" y="198" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="normal" text-anchor="start">ResNet-18: a tie</text>
+</svg>
