@@ -129,7 +129,7 @@ and planning ahead is the one that made the difference in these scenes.
 
 ## What limits this version
 
-- **Tubes slip after gripping:** 6 of 30 runs. See
+- **Tubes slip after gripping:** 8 of 30 runs. See
   [Step 1b's results](../../../step-1b-pick-and-carry/docs/results.md).
 - **Small tubes:** in 9 of 10 runs asking for them, no grasp passed the arm's checks.
 - **The model does not know the arm:** it only judges the gripper and wrist, so it can choose a grasp the arm

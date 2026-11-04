@@ -8,7 +8,7 @@ import pytest
 
 from lab_scene import kinematics, liquid, scene
 from lab_scene.racks import slot_positions
-from lab_scene.settings import LAYOUT, LIQUID, RACK, RECEIVERS, SOURCES
+from lab_scene.settings import LAYOUT, LIQUID, PAD_FRICTION, RACK, RECEIVERS, SOURCES
 
 
 @pytest.fixture(scope="module")
@@ -29,7 +29,7 @@ def test_everything_is_in_the_scene(settled):
         assert gone not in names
     for c in SOURCES + RECEIVERS:
         assert model.body(c.name).id > 0
-    for cam in ("overhead", "front", "arm1/wrist", "arm2/wrist"):
+    for cam in ("overhead", "front", "pour", "arm1/wrist", "arm2/wrist"):
         assert model.camera(cam).id >= 0
 
 
@@ -151,6 +151,13 @@ def test_grip_command_matches_the_measured_finger_gap():
     assert scene.grip_command(0.0251, 0) == pytest.approx(180)
     # Narrower than the tube, but nowhere near fully closed.
     assert 185 < scene.grip_command(0.025) < 200
+
+
+def test_both_grippers_have_the_rubber_pads(settled):
+    model, _, _ = settled
+    for arm in scene.ARM_NAMES:
+        for pad in scene.PAD_GEOMS:
+            assert model.geom(f"{arm}/{scene.GRIPPER_PREFIX}{pad}").friction[0] == PAD_FRICTION
 
 
 @pytest.mark.parametrize("arm", ["arm1", "arm2"])

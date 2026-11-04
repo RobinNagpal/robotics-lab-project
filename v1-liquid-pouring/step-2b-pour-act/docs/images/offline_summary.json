@@ -1,0 +1,1052 @@
+{
+ "act": {
+  "val": {
+   "all": {
+    "ticks": 6532,
+    "next_tick_deg": 0.1017,
+    "next_tick_worst_joint_deg": 0.2427,
+    "whole_second_deg": 0.3118,
+    "finished_right": 0.9701
+   },
+   "move in": {
+    "ticks": 1485,
+    "next_tick_deg": 0.0151,
+    "next_tick_worst_joint_deg": 0.0455,
+    "whole_second_deg": 0.1811,
+    "finished_right": 1.0
+   },
+   "find flow": {
+    "ticks": 1495,
+    "next_tick_deg": 0.1643,
+    "next_tick_worst_joint_deg": 0.3864,
+    "whole_second_deg": 0.3542,
+    "finished_right": 1.0
+   },
+   "pour": {
+    "ticks": 1941,
+    "next_tick_deg": 0.105,
+    "next_tick_worst_joint_deg": 0.2442,
+    "whole_second_deg": 0.3699,
+    "finished_right": 1.0
+   },
+   "tip back": {
+    "ticks": 284,
+    "next_tick_deg": 0.1248,
+    "next_tick_worst_joint_deg": 0.3417,
+    "whole_second_deg": 0.3816,
+    "finished_right": 1.0
+   },
+   "settle": {
+    "ticks": 570,
+    "next_tick_deg": 0.1318,
+    "next_tick_worst_joint_deg": 0.3085,
+    "whole_second_deg": 0.4325,
+    "finished_right": 0.7807
+   },
+   "top up": {
+    "ticks": 427,
+    "next_tick_deg": 0.1359,
+    "next_tick_worst_joint_deg": 0.3217,
+    "whole_second_deg": 0.2853,
+    "finished_right": 0.9719
+   },
+   "done": {
+    "ticks": 330,
+    "next_tick_deg": 0.0726,
+    "next_tick_worst_joint_deg": 0.1688,
+    "whole_second_deg": 0.1318,
+    "finished_right": 0.8242
+   },
+   "clean": {
+    "all": {
+     "ticks": 3389,
+     "next_tick_deg": 0.0644,
+     "next_tick_worst_joint_deg": 0.1562,
+     "whole_second_deg": 0.2997,
+     "finished_right": 0.9726
+    },
+    "move in": {
+     "ticks": 765,
+     "next_tick_deg": 0.0152,
+     "next_tick_worst_joint_deg": 0.0456,
+     "whole_second_deg": 0.1749,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 780,
+     "next_tick_deg": 0.1097,
+     "next_tick_worst_joint_deg": 0.2543,
+     "whole_second_deg": 0.3063,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 965,
+     "next_tick_deg": 0.057,
+     "next_tick_worst_joint_deg": 0.1309,
+     "whole_second_deg": 0.3711,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 153,
+     "next_tick_deg": 0.087,
+     "next_tick_worst_joint_deg": 0.2653,
+     "whole_second_deg": 0.3609,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 310,
+     "next_tick_deg": 0.0548,
+     "next_tick_worst_joint_deg": 0.1342,
+     "whole_second_deg": 0.45,
+     "finished_right": 0.7613
+    },
+    "top up": {
+     "ticks": 246,
+     "next_tick_deg": 0.1335,
+     "next_tick_worst_joint_deg": 0.3315,
+     "whole_second_deg": 0.3183,
+     "finished_right": 0.9675
+    },
+    "done": {
+     "ticks": 170,
+     "next_tick_deg": 0.0166,
+     "next_tick_worst_joint_deg": 0.0353,
+     "whole_second_deg": 0.0703,
+     "finished_right": 0.9353
+    }
+   },
+   "nudged": {
+    "all": {
+     "ticks": 3143,
+     "next_tick_deg": 0.142,
+     "next_tick_worst_joint_deg": 0.3359,
+     "whole_second_deg": 0.3249,
+     "finished_right": 0.9675
+    },
+    "move in": {
+     "ticks": 720,
+     "next_tick_deg": 0.0151,
+     "next_tick_worst_joint_deg": 0.0454,
+     "whole_second_deg": 0.1878,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 715,
+     "next_tick_deg": 0.2239,
+     "next_tick_worst_joint_deg": 0.5305,
+     "whole_second_deg": 0.4065,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 976,
+     "next_tick_deg": 0.1523,
+     "next_tick_worst_joint_deg": 0.3561,
+     "whole_second_deg": 0.3689,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 131,
+     "next_tick_deg": 0.169,
+     "next_tick_worst_joint_deg": 0.4308,
+     "whole_second_deg": 0.4057,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 260,
+     "next_tick_deg": 0.2237,
+     "next_tick_worst_joint_deg": 0.5162,
+     "whole_second_deg": 0.4116,
+     "finished_right": 0.8038
+    },
+    "top up": {
+     "ticks": 181,
+     "next_tick_deg": 0.1392,
+     "next_tick_worst_joint_deg": 0.3084,
+     "whole_second_deg": 0.2404,
+     "finished_right": 0.9779
+    },
+    "done": {
+     "ticks": 160,
+     "next_tick_deg": 0.132,
+     "next_tick_worst_joint_deg": 0.3107,
+     "whole_second_deg": 0.1972,
+     "finished_right": 0.7063
+    }
+   }
+  },
+  "test": {
+   "all": {
+    "ticks": 7198,
+    "next_tick_deg": 0.1057,
+    "next_tick_worst_joint_deg": 0.2656,
+    "whole_second_deg": 0.3273,
+    "finished_right": 0.9683
+   },
+   "move in": {
+    "ticks": 1620,
+    "next_tick_deg": 0.0134,
+    "next_tick_worst_joint_deg": 0.041,
+    "whole_second_deg": 0.1559,
+    "finished_right": 1.0
+   },
+   "find flow": {
+    "ticks": 1304,
+    "next_tick_deg": 0.1947,
+    "next_tick_worst_joint_deg": 0.4537,
+    "whole_second_deg": 0.4248,
+    "finished_right": 1.0
+   },
+   "pour": {
+    "ticks": 2710,
+    "next_tick_deg": 0.0968,
+    "next_tick_worst_joint_deg": 0.2476,
+    "whole_second_deg": 0.3076,
+    "finished_right": 1.0
+   },
+   "tip back": {
+    "ticks": 275,
+    "next_tick_deg": 0.1448,
+    "next_tick_worst_joint_deg": 0.4408,
+    "whole_second_deg": 0.5011,
+    "finished_right": 1.0
+   },
+   "settle": {
+    "ticks": 570,
+    "next_tick_deg": 0.1478,
+    "next_tick_worst_joint_deg": 0.3667,
+    "whole_second_deg": 0.5475,
+    "finished_right": 0.8018
+   },
+   "top up": {
+    "ticks": 359,
+    "next_tick_deg": 0.1665,
+    "next_tick_worst_joint_deg": 0.4379,
+    "whole_second_deg": 0.3625,
+    "finished_right": 0.9582
+   },
+   "done": {
+    "ticks": 360,
+    "next_tick_deg": 0.1075,
+    "next_tick_worst_joint_deg": 0.2647,
+    "whole_second_deg": 0.3766,
+    "finished_right": 0.7222
+   },
+   "clean": {
+    "all": {
+     "ticks": 3907,
+     "next_tick_deg": 0.0739,
+     "next_tick_worst_joint_deg": 0.1838,
+     "whole_second_deg": 0.3243,
+     "finished_right": 0.9688
+    },
+    "move in": {
+     "ticks": 900,
+     "next_tick_deg": 0.0138,
+     "next_tick_worst_joint_deg": 0.042,
+     "whole_second_deg": 0.1925,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 746,
+     "next_tick_deg": 0.2135,
+     "next_tick_worst_joint_deg": 0.485,
+     "whole_second_deg": 0.5892,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 1413,
+     "next_tick_deg": 0.047,
+     "next_tick_worst_joint_deg": 0.1241,
+     "whole_second_deg": 0.2954,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 151,
+     "next_tick_deg": 0.0999,
+     "next_tick_worst_joint_deg": 0.3717,
+     "whole_second_deg": 0.23,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 310,
+     "next_tick_deg": 0.0379,
+     "next_tick_worst_joint_deg": 0.0889,
+     "whole_second_deg": 0.3192,
+     "finished_right": 0.8226
+    },
+    "top up": {
+     "ticks": 187,
+     "next_tick_deg": 0.1035,
+     "next_tick_worst_joint_deg": 0.2672,
+     "whole_second_deg": 0.2799,
+     "finished_right": 0.9733
+    },
+    "done": {
+     "ticks": 200,
+     "next_tick_deg": 0.023,
+     "next_tick_worst_joint_deg": 0.0471,
+     "whole_second_deg": 0.2554,
+     "finished_right": 0.69
+    }
+   },
+   "nudged": {
+    "all": {
+     "ticks": 3291,
+     "next_tick_deg": 0.1433,
+     "next_tick_worst_joint_deg": 0.3627,
+     "whole_second_deg": 0.3307,
+     "finished_right": 0.9678
+    },
+    "move in": {
+     "ticks": 720,
+     "next_tick_deg": 0.0129,
+     "next_tick_worst_joint_deg": 0.0397,
+     "whole_second_deg": 0.1102,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 558,
+     "next_tick_deg": 0.1696,
+     "next_tick_worst_joint_deg": 0.4119,
+     "whole_second_deg": 0.205,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 1297,
+     "next_tick_deg": 0.1512,
+     "next_tick_worst_joint_deg": 0.3822,
+     "whole_second_deg": 0.3209,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 124,
+     "next_tick_deg": 0.1995,
+     "next_tick_worst_joint_deg": 0.5249,
+     "whole_second_deg": 0.8313,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 260,
+     "next_tick_deg": 0.2789,
+     "next_tick_worst_joint_deg": 0.6979,
+     "whole_second_deg": 0.8197,
+     "finished_right": 0.7769
+    },
+    "top up": {
+     "ticks": 172,
+     "next_tick_deg": 0.2348,
+     "next_tick_worst_joint_deg": 0.6234,
+     "whole_second_deg": 0.4524,
+     "finished_right": 0.9419
+    },
+    "done": {
+     "ticks": 160,
+     "next_tick_deg": 0.2132,
+     "next_tick_worst_joint_deg": 0.5367,
+     "whole_second_deg": 0.5281,
+     "finished_right": 0.7625
+    }
+   }
+  }
+ },
+ "mlp": {
+  "val": {
+   "all": {
+    "ticks": 6532,
+    "next_tick_deg": 0.1188,
+    "next_tick_worst_joint_deg": 0.289,
+    "whole_second_deg": 0.3801,
+    "finished_right": 0.9559
+   },
+   "move in": {
+    "ticks": 1485,
+    "next_tick_deg": 0.0216,
+    "next_tick_worst_joint_deg": 0.0595,
+    "whole_second_deg": 0.2305,
+    "finished_right": 1.0
+   },
+   "find flow": {
+    "ticks": 1495,
+    "next_tick_deg": 0.1906,
+    "next_tick_worst_joint_deg": 0.4507,
+    "whole_second_deg": 0.4202,
+    "finished_right": 1.0
+   },
+   "pour": {
+    "ticks": 1941,
+    "next_tick_deg": 0.1082,
+    "next_tick_worst_joint_deg": 0.2537,
+    "whole_second_deg": 0.4127,
+    "finished_right": 1.0
+   },
+   "tip back": {
+    "ticks": 284,
+    "next_tick_deg": 0.2595,
+    "next_tick_worst_joint_deg": 0.7796,
+    "whole_second_deg": 0.6378,
+    "finished_right": 1.0
+   },
+   "settle": {
+    "ticks": 570,
+    "next_tick_deg": 0.1483,
+    "next_tick_worst_joint_deg": 0.3517,
+    "whole_second_deg": 0.5195,
+    "finished_right": 0.8211
+   },
+   "top up": {
+    "ticks": 427,
+    "next_tick_deg": 0.1523,
+    "next_tick_worst_joint_deg": 0.3501,
+    "whole_second_deg": 0.3096,
+    "finished_right": 0.9953
+   },
+   "done": {
+    "ticks": 330,
+    "next_tick_deg": 0.0777,
+    "next_tick_worst_joint_deg": 0.1868,
+    "whole_second_deg": 0.3083,
+    "finished_right": 0.4424
+   },
+   "clean": {
+    "all": {
+     "ticks": 3389,
+     "next_tick_deg": 0.0829,
+     "next_tick_worst_joint_deg": 0.2133,
+     "whole_second_deg": 0.3673,
+     "finished_right": 0.9575
+    },
+    "move in": {
+     "ticks": 765,
+     "next_tick_deg": 0.0216,
+     "next_tick_worst_joint_deg": 0.0597,
+     "whole_second_deg": 0.2282,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 780,
+     "next_tick_deg": 0.1372,
+     "next_tick_worst_joint_deg": 0.3231,
+     "whole_second_deg": 0.3761,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 965,
+     "next_tick_deg": 0.0608,
+     "next_tick_worst_joint_deg": 0.1531,
+     "whole_second_deg": 0.4334,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 153,
+     "next_tick_deg": 0.2526,
+     "next_tick_worst_joint_deg": 0.8146,
+     "whole_second_deg": 0.6231,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 310,
+     "next_tick_deg": 0.071,
+     "next_tick_worst_joint_deg": 0.1862,
+     "whole_second_deg": 0.4932,
+     "finished_right": 0.8
+    },
+    "top up": {
+     "ticks": 246,
+     "next_tick_deg": 0.1442,
+     "next_tick_worst_joint_deg": 0.3566,
+     "whole_second_deg": 0.332,
+     "finished_right": 0.9919
+    },
+    "done": {
+     "ticks": 170,
+     "next_tick_deg": 0.0144,
+     "next_tick_worst_joint_deg": 0.0441,
+     "whole_second_deg": 0.1687,
+     "finished_right": 0.5294
+    }
+   },
+   "nudged": {
+    "all": {
+     "ticks": 3143,
+     "next_tick_deg": 0.1576,
+     "next_tick_worst_joint_deg": 0.3705,
+     "whole_second_deg": 0.3939,
+     "finished_right": 0.9542
+    },
+    "move in": {
+     "ticks": 720,
+     "next_tick_deg": 0.0216,
+     "next_tick_worst_joint_deg": 0.0592,
+     "whole_second_deg": 0.2329,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 715,
+     "next_tick_deg": 0.249,
+     "next_tick_worst_joint_deg": 0.5899,
+     "whole_second_deg": 0.4683,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 976,
+     "next_tick_deg": 0.1551,
+     "next_tick_worst_joint_deg": 0.3531,
+     "whole_second_deg": 0.3923,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 131,
+     "next_tick_deg": 0.2675,
+     "next_tick_worst_joint_deg": 0.7386,
+     "whole_second_deg": 0.6549,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 260,
+     "next_tick_deg": 0.2405,
+     "next_tick_worst_joint_deg": 0.5492,
+     "whole_second_deg": 0.5508,
+     "finished_right": 0.8462
+    },
+    "top up": {
+     "ticks": 181,
+     "next_tick_deg": 0.1634,
+     "next_tick_worst_joint_deg": 0.3414,
+     "whole_second_deg": 0.2791,
+     "finished_right": 1.0
+    },
+    "done": {
+     "ticks": 160,
+     "next_tick_deg": 0.1449,
+     "next_tick_worst_joint_deg": 0.3385,
+     "whole_second_deg": 0.4566,
+     "finished_right": 0.35
+    }
+   }
+  },
+  "test": {
+   "all": {
+    "ticks": 7198,
+    "next_tick_deg": 0.1166,
+    "next_tick_worst_joint_deg": 0.2941,
+    "whole_second_deg": 0.367,
+    "finished_right": 0.9583
+   },
+   "move in": {
+    "ticks": 1620,
+    "next_tick_deg": 0.0221,
+    "next_tick_worst_joint_deg": 0.058,
+    "whole_second_deg": 0.1998,
+    "finished_right": 1.0
+   },
+   "find flow": {
+    "ticks": 1304,
+    "next_tick_deg": 0.2113,
+    "next_tick_worst_joint_deg": 0.4901,
+    "whole_second_deg": 0.484,
+    "finished_right": 1.0
+   },
+   "pour": {
+    "ticks": 2710,
+    "next_tick_deg": 0.0985,
+    "next_tick_worst_joint_deg": 0.2435,
+    "whole_second_deg": 0.323,
+    "finished_right": 1.0
+   },
+   "tip back": {
+    "ticks": 275,
+    "next_tick_deg": 0.2558,
+    "next_tick_worst_joint_deg": 0.8464,
+    "whole_second_deg": 0.7405,
+    "finished_right": 1.0
+   },
+   "settle": {
+    "ticks": 570,
+    "next_tick_deg": 0.1565,
+    "next_tick_worst_joint_deg": 0.4014,
+    "whole_second_deg": 0.5914,
+    "finished_right": 0.8123
+   },
+   "top up": {
+    "ticks": 359,
+    "next_tick_deg": 0.1782,
+    "next_tick_worst_joint_deg": 0.4685,
+    "whole_second_deg": 0.4335,
+    "finished_right": 0.9777
+   },
+   "done": {
+    "ticks": 360,
+    "next_tick_deg": 0.1044,
+    "next_tick_worst_joint_deg": 0.2618,
+    "whole_second_deg": 0.3204,
+    "finished_right": 0.4861
+   },
+   "clean": {
+    "all": {
+     "ticks": 3907,
+     "next_tick_deg": 0.0841,
+     "next_tick_worst_joint_deg": 0.2138,
+     "whole_second_deg": 0.3574,
+     "finished_right": 0.9524
+    },
+    "move in": {
+     "ticks": 900,
+     "next_tick_deg": 0.0227,
+     "next_tick_worst_joint_deg": 0.0588,
+     "whole_second_deg": 0.2217,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 746,
+     "next_tick_deg": 0.2354,
+     "next_tick_worst_joint_deg": 0.5321,
+     "whole_second_deg": 0.6576,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 1413,
+     "next_tick_deg": 0.043,
+     "next_tick_worst_joint_deg": 0.1163,
+     "whole_second_deg": 0.2993,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 151,
+     "next_tick_deg": 0.2171,
+     "next_tick_worst_joint_deg": 0.7595,
+     "whole_second_deg": 0.4277,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 310,
+     "next_tick_deg": 0.0462,
+     "next_tick_worst_joint_deg": 0.1275,
+     "whole_second_deg": 0.3854,
+     "finished_right": 0.8258
+    },
+    "top up": {
+     "ticks": 187,
+     "next_tick_deg": 0.1146,
+     "next_tick_worst_joint_deg": 0.3106,
+     "whole_second_deg": 0.3601,
+     "finished_right": 0.9893
+    },
+    "done": {
+     "ticks": 200,
+     "next_tick_deg": 0.0154,
+     "next_tick_worst_joint_deg": 0.045,
+     "whole_second_deg": 0.1603,
+     "finished_right": 0.35
+    }
+   },
+   "nudged": {
+    "all": {
+     "ticks": 3291,
+     "next_tick_deg": 0.1552,
+     "next_tick_worst_joint_deg": 0.3894,
+     "whole_second_deg": 0.3784,
+     "finished_right": 0.9654
+    },
+    "move in": {
+     "ticks": 720,
+     "next_tick_deg": 0.0214,
+     "next_tick_worst_joint_deg": 0.057,
+     "whole_second_deg": 0.1725,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 558,
+     "next_tick_deg": 0.1791,
+     "next_tick_worst_joint_deg": 0.434,
+     "whole_second_deg": 0.2519,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 1297,
+     "next_tick_deg": 0.1589,
+     "next_tick_worst_joint_deg": 0.382,
+     "whole_second_deg": 0.3488,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 124,
+     "next_tick_deg": 0.3028,
+     "next_tick_worst_joint_deg": 0.9521,
+     "whole_second_deg": 1.1213,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 260,
+     "next_tick_deg": 0.288,
+     "next_tick_worst_joint_deg": 0.7279,
+     "whole_second_deg": 0.837,
+     "finished_right": 0.7962
+    },
+    "top up": {
+     "ticks": 172,
+     "next_tick_deg": 0.2473,
+     "next_tick_worst_joint_deg": 0.6402,
+     "whole_second_deg": 0.5133,
+     "finished_right": 0.9651
+    },
+    "done": {
+     "ticks": 160,
+     "next_tick_deg": 0.2156,
+     "next_tick_worst_joint_deg": 0.5327,
+     "whole_second_deg": 0.5204,
+     "finished_right": 0.6562
+    }
+   }
+  }
+ },
+ "hold_still": {
+  "val": {
+   "all": {
+    "ticks": 6532,
+    "next_tick_deg": 0.2559,
+    "next_tick_worst_joint_deg": 0.8138,
+    "whole_second_deg": 1.1196,
+    "finished_right": 0.9444
+   },
+   "move in": {
+    "ticks": 1485,
+    "next_tick_deg": 0.4315,
+    "next_tick_worst_joint_deg": 1.8989,
+    "whole_second_deg": 2.5394,
+    "finished_right": 1.0
+   },
+   "find flow": {
+    "ticks": 1495,
+    "next_tick_deg": 0.2692,
+    "next_tick_worst_joint_deg": 0.5904,
+    "whole_second_deg": 0.7431,
+    "finished_right": 1.0
+   },
+   "pour": {
+    "ticks": 1941,
+    "next_tick_deg": 0.1051,
+    "next_tick_worst_joint_deg": 0.244,
+    "whole_second_deg": 0.5811,
+    "finished_right": 1.0
+   },
+   "tip back": {
+    "ticks": 284,
+    "next_tick_deg": 0.7595,
+    "next_tick_worst_joint_deg": 2.2149,
+    "whole_second_deg": 1.9145,
+    "finished_right": 1.0
+   },
+   "settle": {
+    "ticks": 570,
+    "next_tick_deg": 0.1246,
+    "next_tick_worst_joint_deg": 0.2829,
+    "whole_second_deg": 0.4772,
+    "finished_right": 0.9421
+   },
+   "top up": {
+    "ticks": 427,
+    "next_tick_deg": 0.2703,
+    "next_tick_worst_joint_deg": 0.6981,
+    "whole_second_deg": 1.0796,
+    "finished_right": 1.0
+   },
+   "done": {
+    "ticks": 330,
+    "next_tick_deg": 0.0666,
+    "next_tick_worst_joint_deg": 0.1549,
+    "whole_second_deg": 0.0806,
+    "finished_right": 0.0
+   },
+   "clean": {
+    "all": {
+     "ticks": 3389,
+     "next_tick_deg": 0.2205,
+     "next_tick_worst_joint_deg": 0.7399,
+     "whole_second_deg": 1.1015,
+     "finished_right": 0.9448
+    },
+    "move in": {
+     "ticks": 765,
+     "next_tick_deg": 0.4313,
+     "next_tick_worst_joint_deg": 1.8985,
+     "whole_second_deg": 2.5336,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 780,
+     "next_tick_deg": 0.2237,
+     "next_tick_worst_joint_deg": 0.4922,
+     "whole_second_deg": 0.6961,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 965,
+     "next_tick_deg": 0.0493,
+     "next_tick_worst_joint_deg": 0.126,
+     "whole_second_deg": 0.5898,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 153,
+     "next_tick_deg": 0.7346,
+     "next_tick_worst_joint_deg": 2.1868,
+     "whole_second_deg": 1.7049,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 310,
+     "next_tick_deg": 0.0349,
+     "next_tick_worst_joint_deg": 0.083,
+     "whole_second_deg": 0.4789,
+     "finished_right": 0.9452
+    },
+    "top up": {
+     "ticks": 246,
+     "next_tick_deg": 0.2932,
+     "next_tick_worst_joint_deg": 0.7695,
+     "whole_second_deg": 1.1109,
+     "finished_right": 1.0
+    },
+    "done": {
+     "ticks": 170,
+     "next_tick_deg": 0.0,
+     "next_tick_worst_joint_deg": 0.0,
+     "whole_second_deg": 0.0,
+     "finished_right": 0.0
+    }
+   },
+   "nudged": {
+    "all": {
+     "ticks": 3143,
+     "next_tick_deg": 0.2939,
+     "next_tick_worst_joint_deg": 0.8934,
+     "whole_second_deg": 1.1391,
+     "finished_right": 0.944
+    },
+    "move in": {
+     "ticks": 720,
+     "next_tick_deg": 0.4316,
+     "next_tick_worst_joint_deg": 1.8992,
+     "whole_second_deg": 2.5455,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 715,
+     "next_tick_deg": 0.3188,
+     "next_tick_worst_joint_deg": 0.6975,
+     "whole_second_deg": 0.7944,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 976,
+     "next_tick_deg": 0.1603,
+     "next_tick_worst_joint_deg": 0.3607,
+     "whole_second_deg": 0.5724,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 131,
+     "next_tick_deg": 0.7885,
+     "next_tick_worst_joint_deg": 2.2478,
+     "whole_second_deg": 2.1594,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 260,
+     "next_tick_deg": 0.2317,
+     "next_tick_worst_joint_deg": 0.5214,
+     "whole_second_deg": 0.4752,
+     "finished_right": 0.9385
+    },
+    "top up": {
+     "ticks": 181,
+     "next_tick_deg": 0.239,
+     "next_tick_worst_joint_deg": 0.601,
+     "whole_second_deg": 1.0371,
+     "finished_right": 1.0
+    },
+    "done": {
+     "ticks": 160,
+     "next_tick_deg": 0.1373,
+     "next_tick_worst_joint_deg": 0.3195,
+     "whole_second_deg": 0.1663,
+     "finished_right": 0.0
+    }
+   }
+  },
+  "test": {
+   "all": {
+    "ticks": 7198,
+    "next_tick_deg": 0.2472,
+    "next_tick_worst_joint_deg": 0.8138,
+    "whole_second_deg": 1.0616,
+    "finished_right": 0.945
+   },
+   "move in": {
+    "ticks": 1620,
+    "next_tick_deg": 0.4298,
+    "next_tick_worst_joint_deg": 1.8953,
+    "whole_second_deg": 2.5055,
+    "finished_right": 1.0
+   },
+   "find flow": {
+    "ticks": 1304,
+    "next_tick_deg": 0.2927,
+    "next_tick_worst_joint_deg": 0.6509,
+    "whole_second_deg": 0.749,
+    "finished_right": 1.0
+   },
+   "pour": {
+    "ticks": 2710,
+    "next_tick_deg": 0.1021,
+    "next_tick_worst_joint_deg": 0.2481,
+    "whole_second_deg": 0.4802,
+    "finished_right": 1.0
+   },
+   "tip back": {
+    "ticks": 275,
+    "next_tick_deg": 0.7345,
+    "next_tick_worst_joint_deg": 2.4553,
+    "whole_second_deg": 1.9153,
+    "finished_right": 1.0
+   },
+   "settle": {
+    "ticks": 570,
+    "next_tick_deg": 0.143,
+    "next_tick_worst_joint_deg": 0.3532,
+    "whole_second_deg": 0.5528,
+    "finished_right": 0.9368
+   },
+   "top up": {
+    "ticks": 359,
+    "next_tick_deg": 0.2962,
+    "next_tick_worst_joint_deg": 0.8447,
+    "whole_second_deg": 1.0806,
+    "finished_right": 1.0
+   },
+   "done": {
+    "ticks": 360,
+    "next_tick_deg": 0.0967,
+    "next_tick_worst_joint_deg": 0.2401,
+    "whole_second_deg": 0.2069,
+    "finished_right": 0.0
+   },
+   "clean": {
+    "all": {
+     "ticks": 3907,
+     "next_tick_deg": 0.2216,
+     "next_tick_worst_joint_deg": 0.7515,
+     "whole_second_deg": 1.0644,
+     "finished_right": 0.9437
+    },
+    "move in": {
+     "ticks": 900,
+     "next_tick_deg": 0.4312,
+     "next_tick_worst_joint_deg": 1.898,
+     "whole_second_deg": 2.5379,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 746,
+     "next_tick_deg": 0.3309,
+     "next_tick_worst_joint_deg": 0.7384,
+     "whole_second_deg": 0.9147,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 1413,
+     "next_tick_deg": 0.0468,
+     "next_tick_worst_joint_deg": 0.1191,
+     "whole_second_deg": 0.4597,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 151,
+     "next_tick_deg": 0.7194,
+     "next_tick_worst_joint_deg": 2.3382,
+     "whole_second_deg": 1.6532,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 310,
+     "next_tick_deg": 0.0202,
+     "next_tick_worst_joint_deg": 0.0461,
+     "whole_second_deg": 0.2934,
+     "finished_right": 0.9355
+    },
+    "top up": {
+     "ticks": 187,
+     "next_tick_deg": 0.2662,
+     "next_tick_worst_joint_deg": 0.7555,
+     "whole_second_deg": 1.0802,
+     "finished_right": 1.0
+    },
+    "done": {
+     "ticks": 200,
+     "next_tick_deg": 0.0,
+     "next_tick_worst_joint_deg": 0.0,
+     "whole_second_deg": 0.0,
+     "finished_right": 0.0
+    }
+   },
+   "nudged": {
+    "all": {
+     "ticks": 3291,
+     "next_tick_deg": 0.2776,
+     "next_tick_worst_joint_deg": 0.8878,
+     "whole_second_deg": 1.0583,
+     "finished_right": 0.9465
+    },
+    "move in": {
+     "ticks": 720,
+     "next_tick_deg": 0.4281,
+     "next_tick_worst_joint_deg": 1.8919,
+     "whole_second_deg": 2.4649,
+     "finished_right": 1.0
+    },
+    "find flow": {
+     "ticks": 558,
+     "next_tick_deg": 0.2418,
+     "next_tick_worst_joint_deg": 0.534,
+     "whole_second_deg": 0.5276,
+     "finished_right": 1.0
+    },
+    "pour": {
+     "ticks": 1297,
+     "next_tick_deg": 0.1623,
+     "next_tick_worst_joint_deg": 0.3886,
+     "whole_second_deg": 0.5027,
+     "finished_right": 1.0
+    },
+    "tip back": {
+     "ticks": 124,
+     "next_tick_deg": 0.7529,
+     "next_tick_worst_joint_deg": 2.5979,
+     "whole_second_deg": 2.2345,
+     "finished_right": 1.0
+    },
+    "settle": {
+     "ticks": 260,
+     "next_tick_deg": 0.2894,
+     "next_tick_worst_joint_deg": 0.7192,
+     "whole_second_deg": 0.8622,
+     "finished_right": 0.9385
+    },
+    "top up": {
+     "ticks": 172,
+     "next_tick_deg": 0.3289,
+     "next_tick_worst_joint_deg": 0.9417,
+     "whole_second_deg": 1.0811,
+     "finished_right": 1.0
+    },
+    "done": {
+     "ticks": 160,
+     "next_tick_deg": 0.2176,
+     "next_tick_worst_joint_deg": 0.5403,
+     "whole_second_deg": 0.4656,
+     "finished_right": 0.0
+    }
+   }
+  }
+ }
+}

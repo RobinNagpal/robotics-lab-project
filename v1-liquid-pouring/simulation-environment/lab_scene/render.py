@@ -14,7 +14,7 @@ from PIL import Image
 from . import scene
 from .settings import IMAGE_SIZE
 
-CAMERAS = ("front", "overhead", "arm1/wrist", "arm2/wrist")
+CAMERAS = ("front", "overhead", "pour", "arm1/wrist", "arm2/wrist")
 
 
 def main() -> None:

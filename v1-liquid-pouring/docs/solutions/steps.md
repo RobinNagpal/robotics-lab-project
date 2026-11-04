@@ -81,9 +81,10 @@ after a failed pick is not yet.)
 
 ## Step 2: Tilt and Pour Until the Receiver Reaches 50%
 
-Planned, not built yet: [step-2-pour.md](step-2-pour.md) (the plan, with the decisions still open).
-The weight from Arm A's wrist (programmed) is compared with a camera CNN (learned), both feeding the
-same controller.
+Built for medium and large tubes: [step-2-pour.md](step-2-pour.md). A fixed pour camera watches the receiver;
+a programmed pour (reading the true ball count) made the training pictures, and a CNN learned to read the
+level, the flow and the balls still falling from them. Pouring with the CNN's reading lands within 48 to 52% in
+12 of 17 test scenes (a perfect scale: 17 of 17).
 
 1. **Tilt slowly at first.** The angle at which the liquid starts to flow depends on how full the source is,
    and that is not known.
@@ -100,6 +101,10 @@ same controller.
 ---
 
 ## Step 3: Return the Source to Its Rack
+
+Built, with Steps 4 and 5: [step-3-put-back.md](step-3-put-back.md). On 6 test scenes the whole run (with the CNN
+pouring) put the source back in its own cell and the receiver in the destination rack every time; 4 of the 6
+receivers were within 48 to 52%.
 
 1. Make sure the source is fully upright so nothing falls out.
 2. Arm B moves it back to its cell in the source rack, puts it down gently and lets go.

@@ -108,11 +108,12 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--seeds", type=int, default=10)
+    parser.add_argument("--first", type=int, default=0, help="the first scene's seed")
     parser.add_argument("--workers", type=int, default=max(1, mp.cpu_count() - 2))
     parser.add_argument("--out", type=Path, default=Path("runs"))
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
-    jobs = [(seed, size) for seed in range(args.seeds) for size in SIZES]
+    jobs = [(seed, size) for seed in range(args.first, args.first + args.seeds) for size in SIZES]
     start, results = time.time(), []
     with mp.get_context("spawn").Pool(args.workers) as pool:
         for i, r in enumerate(pool.imap_unordered(_job, jobs), start=1):

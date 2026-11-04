@@ -67,9 +67,9 @@ each arm its job, and listens for each arm's short messages ("picked", "waiting"
 **Medium and large pairs work now.** Version 1 checked only the pick, and a tall tube's carry then failed
 halfway: held high to clear the other tubes, with 17 cm of it below the fingers, the arm met poses where a
 joint would have to swing a long way. Version 2 **plans the whole carry before choosing a grasp**, and Step
-1's network (version 3) offers each direction at three grip heights. **Small tubes** still fall back to the
-medium pair: gripped from the side 8 cm above the table, the arm's wrist would be down among the tall
-neighbours. And in 6 runs a tube came out of the fingers or fell over, which version 1 never did.
+1's network (version 3) offers each direction at three grip heights. **Small tubes** still fall back to
+another pair, usually medium: gripped from the side 8 cm above the table, most grasps are out of the arm's
+reach. And in 8 runs a tube came out of the fingers or fell over, which version 1 never did.
 
 ## How it got here
 
@@ -92,13 +92,14 @@ open, and the carry planned before choosing (21 of 30). Details in
 Three open problems; [results.md](../../step-1b-pick-and-carry/docs/results.md) ("Open problems and
 suggested fixes") explains each with the fixes suggested.
 
-- **Tubes slipping out or falling over** (6 runs): measured. The tube is not too heavy; it swings out
+- **Tubes slipping out or falling over** (8 runs): measured. The tube is not too heavy; it swings out
   about the line between the two fingertip pads, most easily when one pad is left tipped onto its edge.
   Squeezing harder made it worse (0 of 8); closing twice moved the failures to other runs (3 of 8 either
   way). Next: let the simulated pads resist twisting, as real rubber pads do, and move more gently.
-- **Small tubes** (9 of 10 fall back): the arm's wrist would be down among the tall tubes. Suggested: pick a
-  small tube from above, stand it in an empty spot, and take it again from the side.
+- **Small tubes** (9 of 10 fall back): the arm cannot reach most grasps (23 of 36 in a quick test). Suggested:
+  pick a small tube from above, stand it in an empty spot, and take it again from the side.
 - **No scenes held back for grading:** version 2 was tuned on the same 10 scenes it is graded on. Grade on
   20 new scenes as well.
-- **Then Step 2, the pour:** Arm B tips the source towards the receiver (a roll of its wrist), watched by a camera,
-  until the receiver is 50% full.
+
+**Then Step 2, the pour:** Arm B tips the source towards the receiver (a roll of its wrist), watched by a camera,
+until the receiver is 50% full.

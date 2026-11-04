@@ -28,6 +28,8 @@ from .settings import (
     LAYOUT,
     LIQUID,
     OVERHEAD,
+    PAD_FRICTION,
+    POUR_CAMERA,
     RECEIVERS,
     SOURCES,
     TABLE,
@@ -48,6 +50,7 @@ GRIPPER_PREFIX = "gripper/"
 GRIPPER_ACTUATOR = GRIPPER_PREFIX + "fingers_actuator"
 # The point halfway between the fingertips, within one arm.
 PINCH_SITE = GRIPPER_PREFIX + "pinch"
+PAD_GEOMS = ("right_pad1", "right_pad2", "left_pad1", "left_pad2")
 ARM_NAMES = tuple(a.name for a in ARMS)
 # The gap between the finger pads (m) for a gripper command, measured with
 # nothing between the fingers.
@@ -117,7 +120,7 @@ def build(seed: int) -> tuple[mujoco.MjModel, Truth]:
         friction=[TABLE.friction, 0.005, 0.0001],
         rgba=list(TABLE.rgba),
     )
-    for cam in (OVERHEAD, FRONT):
+    for cam in (OVERHEAD, FRONT, POUR_CAMERA):
         world.add_camera(name=cam.name, pos=list(cam.pos), xyaxes=list(cam.xyaxes), fovy=cam.fovy)
     for rack in RACKS:
         add_rack(spec, rack, getattr(LAYOUT, rack))
@@ -170,6 +173,8 @@ def arm_with_gripper() -> mujoco.MjSpec:
     arm.option.cone = mujoco.mjtCone.mjCONE_ELLIPTIC
     arm.option.impratio = 10
     gripper = mujoco.MjSpec.from_file(str(GRIPPER_XML))
+    for pad in PAD_GEOMS:
+        gripper.geom(pad).friction[0] = PAD_FRICTION
     arm.attach(gripper, prefix=GRIPPER_PREFIX, site=arm.site("attachment_site"))
     # A real UR controller cancels gravity itself; the model's position
     # actuators do not, and the arm would sag below every target.

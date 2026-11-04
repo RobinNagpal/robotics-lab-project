@@ -33,6 +33,18 @@ Moving an arm needs some care:
   should point (straight down unless told otherwise). Holding a tube from above puts the
   gripper right over its rim, where the source has to pour in, so at the pouring point the
   receiver arm should hold its tube from the side. Both arms reach the pouring point either way.
+
+## Cameras
+
+| Camera | Where | Used for |
+|---|---|---|
+| `overhead` | 1.2 m above the table, looking straight down | finding the racks and tubes (Step 0) |
+| `front` | the long side of the table, where a person would stand | people watching |
+| `pour` | 1.2 m from the pouring point, level with the receiver, at the corner between the empty rack and arm 1; a narrow lens (30 cm of view at the receiver, about 0.6 mm per pixel) | reading the receiver's level during the pour (Step 2) |
+| `arm1/wrist`, `arm2/wrist` | on each arm's wrist, looking along the fingers | close views while picking |
+
+The `pour` camera was chosen by testing 576 places: from the front, the receiver arm's own wrist
+hangs in front of the receiver. Details: [step-2-pour-camera.md](../../docs/solutions/step-2-pour-camera.md).
 - **Keep the joint angles real.** When working out the joint angles for a gripper position
   (**inverse kinematics**), the answer can spin a joint through several full turns, which a real arm cannot do.
   The solver keeps each joint within its limits and as close as possible to where it already is.
@@ -50,6 +62,10 @@ Two things make the difference between lifting a tube and throwing it across the
   cell (72 mm) apart in a row, a finger hit the next tube on the way down. So tubes in one
   row stand at least three cells apart. Also keep the finger pads above the rack's top plate:
   for the short tube, grip higher than 3 cm below its rim.
+- **Rubber pads need real grip.** The gripper model's pads press only about 3 N and have a
+  friction of 0.6 to 0.7, and a tube turned in the fingers once tilted past 60 to 80 degrees.
+  `PAD_FRICTION` sets them to 1.2. Details:
+  [step-2-pour-approaches.md](../../docs/solutions/step-2-pour-approaches.md).
 
 Even so, gripping is not fully reliable yet: in a run of 48 picks (every tube, both arms,
 4 seeds) 2 still blew up. Those happen as the tube wakes from sleep under the fingers (see

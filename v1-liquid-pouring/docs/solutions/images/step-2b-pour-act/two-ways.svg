@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340">
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6675"/></marker></defs>
+<rect width="1000" height="340" rx="10" fill="#ffffff"/>
+<text x="16" y="30" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="start">Step 2: the programmed pour</text>
+<text x="16" y="48" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#5b6675" font-weight="normal" text-anchor="start">Only the level reading is learned; every move is worked out by code</text>
+<rect x="8" y="62" width="150" height="100" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="83.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Pour camera</text>
+<text x="83.0" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">receiver strip</text>
+<line x1="160" y1="112" x2="174" y2="112" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="176" y="62" width="150" height="100" rx="10" fill="#fbe9ec" stroke="#d5dbe3"/>
+<text x="251.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Level network</text>
+<text x="251.0" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">level, flow,</text>
+<text x="251.0" y="125" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">balls in the air</text>
+<line x1="328" y1="112" x2="342" y2="112" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="344" y="62" width="150" height="100" rx="10" fill="#eef0f3" stroke="#d5dbe3"/>
+<text x="419.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Pour rules</text>
+<text x="419.0" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">find the flow, pour</text>
+<text x="419.0" y="125" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">slowly, tip back</text>
+<text x="419.0" y="142" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">early, top up</text>
+<line x1="496" y1="112" x2="510" y2="112" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="512" y="62" width="150" height="100" rx="10" fill="#eef0f3" stroke="#d5dbe3"/>
+<text x="587.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Tilt and lip plan</text>
+<text x="587.0" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">tilt angle, lip 15 mm</text>
+<text x="587.0" y="125" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">out, 20 mm above</text>
+<line x1="664" y1="112" x2="678" y2="112" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="680" y="62" width="150" height="100" rx="10" fill="#eef0f3" stroke="#d5dbe3"/>
+<text x="755.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Arm maths</text>
+<text x="755.0" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">inverse kinematics,</text>
+<text x="755.0" y="125" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">tube-in-fingers fix</text>
+<line x1="832" y1="112" x2="846" y2="112" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="848" y="62" width="150" height="100" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="923.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Arm B</text>
+<text x="923.0" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">6 joint targets,</text>
+<text x="923.0" y="125" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">every 0.01 s</text>
+<text x="16" y="200" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1f2733" font-weight="bold" text-anchor="start">Step 2b: the learned pour</text>
+<text x="16" y="218" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#5b6675" font-weight="normal" text-anchor="start">One policy goes straight from what the cameras see to Arm B's joint targets</text>
+<rect x="8" y="232" width="320" height="96" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="168.0" y="256" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">What it sees, every 0.1 s</text>
+<text x="168" y="278" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">receiver strip (3 pictures) + whole pour</text>
+<text x="168" y="295" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">picture + wrist camera + Arm B's joints</text>
+<text x="168" y="312" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">+ the target level</text>
+<line x1="330" y1="280" x2="362" y2="280" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="364" y="232" width="300" height="96" rx="10" fill="#fbe9ec" stroke="#d5dbe3"/>
+<text x="514.0" y="256" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Policy: ACT or CNN + MLP</text>
+<text x="514.0" y="278" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">copied from the programmed pour</text>
+<text x="514.0" y="295" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">(imitation learning)</text>
+<line x1="666" y1="280" x2="698" y2="280" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="700" y="232" width="292" height="96" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="846.0" y="256" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Arm B</text>
+<text x="846.0" y="278" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">its 6 joint targets for the next 1 s,</text>
+<text x="846.0" y="295" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">and "finished?"</text>
+<rect x="760" y="18" width="18" height="18" rx="10" fill="#fbe9ec" stroke="#d5dbe3"/>
+<text x="784" y="32" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="start">learned</text>
+<rect x="875" y="18" width="18" height="18" rx="10" fill="#eef0f3" stroke="#d5dbe3"/>
+<text x="899" y="32" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="start">programmed</text>
+</svg>

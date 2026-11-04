@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6675"/></marker></defs>
+<rect width="1000" height="300" rx="10" fill="#ffffff"/>
+<rect x="8" y="16" width="150" height="50" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="83" y="46" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Receiver strip</text>
+<line x1="160" y1="41.0" x2="184" y2="41.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="186" y="16" width="170" height="50" rx="10" fill="#eef0f3" stroke="#d5dbe3"/>
+<text x="271" y="46" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">Level network (frozen)</text>
+<line x1="358" y1="41.0" x2="382" y2="41.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="384" y="16" width="270" height="50" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="519" y="38" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">1,536 numbers</text>
+<text x="519" y="55" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1f2733" font-weight="normal" text-anchor="middle">12 rows x 128</text>
+<line x1="656" y1="41.0" x2="684" y2="131" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="8" y="76" width="150" height="50" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="83" y="106" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Whole pour picture</text>
+<line x1="160" y1="101.0" x2="184" y2="101.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="186" y="76" width="170" height="50" rx="10" fill="#fbe9ec" stroke="#d5dbe3"/>
+<text x="271" y="106" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">Small CNN</text>
+<line x1="358" y1="101.0" x2="382" y2="101.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="384" y="76" width="270" height="50" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="519" y="98" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">256 numbers</text>
+<text x="519" y="115" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1f2733" font-weight="normal" text-anchor="middle">where each of 128 features is strongest</text>
+<line x1="656" y1="101.0" x2="684" y2="131" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="8" y="136" width="150" height="50" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="83" y="166" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Wrist camera</text>
+<line x1="160" y1="161.0" x2="184" y2="161.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="186" y="136" width="170" height="50" rx="10" fill="#fbe9ec" stroke="#d5dbe3"/>
+<text x="271" y="166" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">Small CNN</text>
+<line x1="358" y1="161.0" x2="382" y2="161.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="384" y="136" width="270" height="50" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="519" y="158" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">256 numbers</text>
+<text x="519" y="175" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1f2733" font-weight="normal" text-anchor="middle">where each of 128 features is strongest</text>
+<line x1="656" y1="161.0" x2="684" y2="131" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="8" y="196" width="150" height="50" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="83" y="226" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1f2733" font-weight="bold" text-anchor="middle">Joints, target</text>
+<line x1="160" y1="221.0" x2="184" y2="221.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="186" y="196" width="170" height="50" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="271" y="226" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">as they are</text>
+<line x1="358" y1="221.0" x2="382" y2="221.0" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="384" y="196" width="270" height="50" rx="10" fill="#f6f8fb" stroke="#d5dbe3"/>
+<text x="519" y="218" font-family="Helvetica,Arial,sans-serif" font-size="12.5" fill="#1f2733" font-weight="bold" text-anchor="middle">13 numbers</text>
+<text x="519" y="235" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1f2733" font-weight="normal" text-anchor="middle"></text>
+<line x1="656" y1="221.0" x2="684" y2="131" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="686" y="40" width="140" height="170" rx="10" fill="#fbe9ec" stroke="#d5dbe3"/>
+<text x="756.0" y="64" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#1f2733" font-weight="bold" text-anchor="middle">Two dense</text>
+<text x="756.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">layers</text>
+<text x="756.0" y="103" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle"></text>
+<text x="756.0" y="120" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">2,061 numbers</text>
+<text x="756.0" y="137" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">-&gt; 1,024</text>
+<text x="756.0" y="154" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">-&gt; 1,024</text>
+<line x1="828" y1="125" x2="848" y2="125" stroke="#5b6675" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="850" y="40" width="142" height="170" rx="10" fill="#eaf1fb" stroke="#d5dbe3"/>
+<text x="921.0" y="64" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#1f2733" font-weight="bold" text-anchor="middle">Out</text>
+<text x="921.0" y="86" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">for each of the</text>
+<text x="921.0" y="103" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">next 10 ticks:</text>
+<text x="921.0" y="120" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle"></text>
+<text x="921.0" y="137" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">6 joint targets</text>
+<text x="921.0" y="154" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1f2733" font-weight="normal" text-anchor="middle">+ finished?</text>
+<text x="8" y="280" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#5b6675" font-weight="normal" text-anchor="start">"Where each feature is strongest" is a spatial softmax (Levine et al., 2016): for each of the 128 features, its average place in the picture.</text>
+<text x="780" y="262" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#5b6675" font-weight="normal" text-anchor="start">5.0 M weights (4.1 M trained)</text>
+</svg>

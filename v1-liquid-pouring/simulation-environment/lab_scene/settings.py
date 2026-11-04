@@ -61,6 +61,9 @@ class Material:
 GLASS = Material(friction=0.5, rgba=(0.85, 0.92, 0.95, 0.30))
 RACK_PLASTIC = Material(friction=0.6, rgba=(0.20, 0.45, 0.80, 1.0))
 TABLE = Material(friction=0.7, rgba=(0.82, 0.82, 0.80, 1.0))
+# The Robotiq's rubber pads. The gripper model's own 0.6 to 0.7 let a tilted tube turn in the
+# fingers: its pads press about 3 N, a real 2F-85 at least 20 N. See docs/solutions/step-2-pour-approaches.md.
+PAD_FRICTION = 1.2
 
 
 @dataclass(frozen=True)
@@ -208,4 +211,10 @@ OVERHEAD = Camera("overhead", pos=(0.40, 0.0, 1.20), xyaxes=(0, -1, 0, 1, 0, 0),
 # From the long side of the table, between the two arms, where a person
 # watching would stand; the arms are left and right of the picture.
 FRONT = Camera("front", pos=(0.45, -1.05, 0.60), xyaxes=(1, 0, 0, 0, 0.464, 0.886), fovy=55.0)
+# Watches the receiver fill during the pour: 1.2 m out from the pouring point, level with the
+# receiver's middle, at the corner between the empty rack and Arm B (arm1). From the front, Arm A's
+# own wrist hangs in front of the receiver; from here nothing covers it at any tilt of the source,
+# and no arm comes within about 75 cm. A narrow lens (30 cm of view at the receiver) gives about
+# 0.6 mm per pixel. See docs/solutions/step-2-pour-camera.md.
+POUR_CAMERA = Camera("pour", pos=(-0.40, -0.85, 0.28), xyaxes=(0.7071, -0.7071, 0, 0, 0, 1), fovy=14.3)
 IMAGE_SIZE = (640, 480)
