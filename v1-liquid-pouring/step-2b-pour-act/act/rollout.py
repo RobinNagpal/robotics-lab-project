@@ -101,8 +101,14 @@ def run(
     target_pct: float = 50.0,
     guard: bool = True,
     movie: list | None = None,
+    sim: dict | None = None,
 ) -> tuple[dict, dict]:
-    """One learned pour from a saved start. Returns (what happened, what it did every tick)."""
+    """One learned pour from a saved start. Returns (what happened, what it did every tick).
+
+    ``sim``: if given, the model, the simulation and the scene's notes are left in it, as Step 2's
+    programmed pour does, so that the next step (putting the tubes back) can go on from where the
+    pour ends.
+    """
     model, data, containers, meta = start.load(path)
     receiver, source = meta["receiver"], meta["source"]
     rc = containers[receiver]
@@ -110,6 +116,8 @@ def run(
     target = int(round(np.interp(target_pct, levels, counts)))
     balls = Balls(model, containers)
     balls.track(data, receiver, source)
+    if sim is not None:
+        sim.update(model=model, data=data, containers=containers, meta=meta, balls=balls)
     eyes = Eyes(model, data, receiver, rc.height)
     check = Guard(model, source, receiver) if guard else None
     actuators = lab.arm_actuator_ids(model, ARM)

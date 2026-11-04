@@ -102,13 +102,26 @@ def run_one(
 
     wall = time.time()
     meta = json.loads(start.with_suffix(".json").read_text())
-    source, receiver = meta["source"], meta["receiver"]
     perception = perception or Perception()
-    seen = step0(meta["seed"], source, perception)
+    seen = step0(meta["seed"], meta["source"], perception)
     sim: dict = {}
     poured, _ = pour.run(
         start, target, record=False, reader=reader or NetReader(), rule=rule, sim=sim, on_frame=on_frame
     )
+    return put_back(start, meta, seen, poured, sim, on_frame=on_frame, wall=wall)
+
+
+def put_back(
+    start: Path, meta: dict, seen: dict, poured: dict, sim: dict, on_frame=None, wall: float | None = None
+) -> dict:
+    """Steps 3 to 5, from where the pour ends: both tubes back in racks, then the check.
+
+    ``seen`` is Step 0's table (``step0``), ``poured`` what the pour reported, and ``sim`` the
+    simulation the pour left (with ``move_in``, Arm B's way in, which the source leaves by backwards).
+    Any pour that fills these in can be followed by this.
+    """
+    wall = time.time() if wall is None else wall
+    source, receiver = meta["source"], meta["receiver"]
     poured.pop("settings", None)
     model, data = sim["model"], sim["data"]
     result = {

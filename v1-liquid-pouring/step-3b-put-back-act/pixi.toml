@@ -1,0 +1,26 @@
+[workspace]
+name = "step-3b-put-back-act"
+version = "0.1.0"
+description = "The whole liquid pouring task with a learned pour (Step 2b: ACT or the CNN + MLP) instead of the programmed one, then both tubes put back in racks (Step 3's code)"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+# The simulation's glassware code reads meshes with it.
+trimesh = ">=4.0"
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3"
+# Step 0's detector, YOLO11-seg; brings PyTorch (for the grasp network, the level network and ACT) and OpenCV.
+ultralytics = ">=8.3,<9"
+
+[activation.env]
+# The simulation, Step 0 (finding the tubes), Step 1 (the grasp network), Step 1b (pick and carry),
+# Step 2 (the pour and the level network), Step 2b (the learned pour) and Step 3 (putting back) next
+# door. Their code is only read, never changed.
+PYTHONPATH = "$PIXI_PROJECT_ROOT/../simulation-environment:$PIXI_PROJECT_ROOT/../step-0-detect-and-classify:$PIXI_PROJECT_ROOT/../step-1-grasp:$PIXI_PROJECT_ROOT/../step-1b-pick-and-carry:$PIXI_PROJECT_ROOT/../step-2-pour:$PIXI_PROJECT_ROOT/../step-2b-pour-act:$PIXI_PROJECT_ROOT/../step-3-put-back:$PIXI_PROJECT_ROOT"
