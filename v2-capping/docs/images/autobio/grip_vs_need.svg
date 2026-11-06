@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="720" height="330" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>How much twist each grip holds, against what the cap needs</title>
+  <style>
+    .surface { fill: #fcfcfb; }
+    .ink { fill: #0b0b0b; }
+    .ink2 { fill: #52514e; }
+    .grid { stroke: #e4e3df; stroke-width: 1; }
+    .axis { stroke: #c9c8c2; stroke-width: 1; }
+    .bar { fill: #2a78d6; }
+    .ref { stroke: #0b0b0b; stroke-width: 2; }
+    @media (prefers-color-scheme: dark) {
+      .surface { fill: #1a1a19; }
+      .ink { fill: #f0efec; }
+      .ink2 { fill: #c3c2b7; }
+      .grid { stroke: #33322f; }
+      .axis { stroke: #4a4945; }
+      .bar { fill: #3987e5; }
+      .ref { stroke: #f0efec; }
+    }
+  </style>
+  <rect class="surface" x="0" y="0" width="720" height="330" rx="8"/>
+  <text class="ink" x="20" y="28" font-size="16" font-weight="600">How much twist each grip holds before it slips (N m)</text>
+  <!-- plot: x = 280 + 600 * value -->
+  <line class="grid" x1="400" y1="80" x2="400" y2="285"/>
+  <line class="grid" x1="520" y1="80" x2="520" y2="285"/>
+  <line class="axis" x1="280" y1="80" x2="280" y2="285"/>
+  <text class="ink2" x="280" y="304" font-size="12" text-anchor="middle">0</text>
+  <text class="ink2" x="400" y="304" font-size="12" text-anchor="middle">0.2</text>
+  <text class="ink2" x="520" y="304" font-size="12" text-anchor="middle">0.4</text>
+  <text class="ink2" x="640" y="304" font-size="12" text-anchor="middle">0.6</text>
+  <text class="ink2" x="700" y="320" font-size="12" text-anchor="end">twist, N m</text>
+  <!-- reference lines -->
+  <line class="ref" x1="370" y1="64" x2="370" y2="285"/>
+  <text class="ink" x="374" y="60" font-size="12">AutoBio's loose cap needs 0.15</text>
+  <line class="ref" x1="640" y1="44" x2="640" y2="285"/>
+  <text class="ink" x="636" y="40" font-size="12" text-anchor="end">our tight cap needs 0.6</text>
+  <!-- bars: 22px thick, 4px rounded end, square at the baseline -->
+  <text class="ink" x="20" y="105" font-size="13">AutoBio: arm 2 holding the tube</text>
+  <path class="bar" d="M280 90 H474 a4 4 0 0 1 4 4 V108 a4 4 0 0 1 -4 4 H280 Z"/>
+  <text class="ink" x="484" y="105" font-size="12">0.33</text>
+  <text class="ink" x="20" y="153" font-size="13">AutoBio: arm 1 holding the cap</text>
+  <path class="bar" d="M280 138 H390 a4 4 0 0 1 4 4 V156 a4 4 0 0 1 -4 4 H280 Z"/>
+  <text class="ink" x="400" y="153" font-size="12">0.19</text>
+  <text class="ink" x="20" y="201" font-size="13">Ours: 2F-85 holding the tube</text>
+  <path class="bar" d="M280 186 H396 a4 4 0 0 1 4 4 V204 a4 4 0 0 1 -4 4 H280 Z"/>
+  <text class="ink" x="406" y="201" font-size="12">0.20</text>
+  <text class="ink" x="20" y="249" font-size="13">AutoBio's tube grip, friction doubled</text>
+  <path class="bar" d="M280 234 H666 a4 4 0 0 1 4 4 V252 a4 4 0 0 1 -4 4 H280 Z"/>
+  <text class="ink" x="676" y="249" font-size="12">0.65</text>
+</svg>

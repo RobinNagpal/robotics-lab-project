@@ -1,0 +1,102 @@
+{
+ "done": true,
+ "failure": null,
+ "cap_off": true,
+ "cap_on_holder": true,
+ "tube_in_rack": {
+  "cell": 9,
+  "off_mm": 1.7,
+  "lean_deg": 0.2,
+  "in_cell": true
+ },
+ "touched": [],
+ "tube_held": true,
+ "quarters": 0,
+ "seal_torque_Nm": null,
+ "tube_turned_deg": 0.6,
+ "unscrew_seconds": 30.9,
+ "sim_seconds": 131.4,
+ "grip_holds_Nm": {},
+ "messages": [
+  [
+   0.5,
+   "arm1",
+   "waiting"
+  ],
+  [
+   21.4,
+   "arm2",
+   "picked"
+  ],
+  [
+   29.6,
+   "arm2",
+   "ready"
+  ],
+  [
+   30.2,
+   "arm2",
+   "holding tight"
+  ],
+  [
+   30.2,
+   "arm1",
+   "found the cap"
+  ],
+  [
+   42.5,
+   "arm1",
+   "gripped the cap"
+  ],
+  [
+   73.4,
+   "arm1",
+   "cap off"
+  ],
+  [
+   87.0,
+   "arm1",
+   "cap put down"
+  ],
+  [
+   97.5,
+   "arm1",
+   "home"
+  ],
+  [
+   99.8,
+   "arm2",
+   "put back: tube [0.45, 0.002, 0.25], 4.1 mm off"
+  ],
+  [
+   105.1,
+   "arm2",
+   "put back: tube [0.522, -0.341, 0.25], 2.3 mm off"
+  ],
+  [
+   111.7,
+   "arm2",
+   "put back: tube [0.522, -0.341, 0.076], 0.7 mm off"
+  ],
+  [
+   112.0,
+   "arm2",
+   "put back: tube [0.522, -0.341, 0.076], 0.1 mm off"
+  ],
+  [
+   114.6,
+   "arm2",
+   "put back: tube [0.522, -0.341, 0.01], 1.8 mm off"
+  ],
+  [
+   115.4,
+   "arm2",
+   "put back: let go"
+  ],
+  [
+   130.4,
+   "arm2",
+   "put back: home"
+  ]
+ ]
+}

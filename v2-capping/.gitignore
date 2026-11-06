@@ -1,0 +1,21 @@
+# pixi
+.pixi/
+
+# the cap's mesh, made on first use
+assets/
+
+# pictures written by `make render`, and trial reports
+figures/
+runs/
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# MuJoCo
+MUJOCO_LOG.TXT
+
+# macOS
+.DS_Store
