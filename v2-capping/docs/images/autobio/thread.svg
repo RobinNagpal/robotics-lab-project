@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>AutoBio's screw thread and the copy used here</title>
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#2a78d6"/></marker>
+  </defs>
+  <style>
+    .surface { fill: #fcfcfb; } .ink { fill: #0b0b0b; } .ink2 { fill: #52514e; }
+    .tube { fill: #dbe8f5; stroke: #7a7972; stroke-width: 2; } .cap { fill: #eb6834; }
+    .thread { stroke: #52514e; stroke-width: 2; fill: none; } .box { fill: none; stroke: #c9c8c2; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .surface { fill: #1a1a19; } .ink { fill: #f0efec; } .ink2 { fill: #c3c2b7; }
+      .tube { fill: #26384d; stroke: #9d9c94; } .cap { fill: #d95926; } .thread { stroke: #c3c2b7; } .box { stroke: #4a4945; }
+    }
+  </style>
+  <rect class="surface" x="0" y="0" width="720" height="300" rx="8"/>
+  <rect class="box" x="14" y="14" width="338" height="272" rx="6"/>
+  <rect class="box" x="368" y="14" width="338" height="272" rx="6"/>
+  <text class="ink" x="30" y="40" font-size="15" font-weight="600">AutoBio (needs Linux)</text>
+  <text class="ink" x="384" y="40" font-size="15" font-weight="600">The copy here (runs on a Mac)</text>
+  <!-- left: real thread -->
+  <rect class="tube" x="70" y="120" width="70" height="150"/>
+  <path class="thread" d="M70 126 L140 120 M70 134 L140 128 M70 142 L140 136 M70 150 L140 144 M70 158 L140 152"/>
+  <text class="ink2" x="150" y="140" font-size="12">a real screw shape on the tube</text>
+  <text class="ink2" x="150" y="156" font-size="12">and inside the cap, made by</text>
+  <text class="ink2" x="150" y="172" font-size="12">AutoBio's add-on program</text>
+  <text class="ink2" x="150" y="188" font-size="12">(a plugin) that only runs</text>
+  <text class="ink2" x="150" y="204" font-size="12">on Linux</text>
+  <rect class="cap" x="60" y="70" width="90" height="34" rx="3" opacity="0.9"/>
+  <text class="ink" x="105" y="92" font-size="12" text-anchor="middle">cap</text>
+  <text class="ink2" x="160" y="86" font-size="12">(lifted, to show the thread)</text>
+  <!-- right: joints -->
+  <rect class="tube" x="424" y="120" width="70" height="150"/>
+  <rect class="cap" x="414" y="84" width="90" height="34" rx="3"/>
+  <text class="ink" x="459" y="106" font-size="12" text-anchor="middle">cap</text>
+  <path d="M 420 74 A 50 14 0 0 0 500 74" fill="none" stroke="#2a78d6" stroke-width="2.5" marker-end="url(#g)"/>
+  <line x1="530" y1="118" x2="530" y2="76" stroke="#2a78d6" stroke-width="2.5" marker-end="url(#g)"/>
+  <text class="ink" x="459" y="62" font-size="12" text-anchor="middle">it can only turn...</text>
+  <text class="ink" x="540" y="94" font-size="12">...and rises 3 mm</text>
+  <text class="ink" x="540" y="110" font-size="12">with each turn</text>
+  <text class="ink2" x="510" y="150" font-size="12">no screw shape: the</text>
+  <text class="ink2" x="510" y="166" font-size="12">cap behaves like one,</text>
+  <text class="ink2" x="510" y="182" font-size="12">tied to the tube by</text>
+  <text class="ink2" x="510" y="198" font-size="12">two linked joints</text>
+  <text class="ink2" x="510" y="226" font-size="12">after about 1.7 turns</text>
+  <text class="ink2" x="510" y="242" font-size="12">it comes free</text>
+</svg>

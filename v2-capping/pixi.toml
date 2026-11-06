@@ -1,0 +1,27 @@
+[workspace]
+name = "v2-capping"
+version = "0.1.0"
+description = "v2 of the lab task: screw caps on the tubes, which come off only by turning, tested with the v1 arm and gripper"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+# Reads the glassware meshes and writes the cap's mesh.
+trimesh = ">=4.0"
+# Saves the rendered pictures.
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3"
+# Step 0's detector (YOLO11-seg) for the uncapping run; brings PyTorch (Step 1's grasp network) and OpenCV.
+ultralytics = ">=8.3,<9"
+
+[activation.env]
+# The v1 lab scene (arms, racks, tubes, liquid) next door, used as it is; v2 only adds caps to it. The
+# uncapping run also uses v1's Step 0 (finding the tubes), Step 1 (the grasp network), Step 1b (pick and
+# carry) and Step 3 (putting a tube in a rack), read only.
+PYTHONPATH = "$PIXI_PROJECT_ROOT/../v1-liquid-pouring/simulation-environment:$PIXI_PROJECT_ROOT/../v1-liquid-pouring/step-0-detect-and-classify:$PIXI_PROJECT_ROOT/../v1-liquid-pouring/step-1-grasp:$PIXI_PROJECT_ROOT/../v1-liquid-pouring/step-1b-pick-and-carry:$PIXI_PROJECT_ROOT/../v1-liquid-pouring/step-3-put-back:$PIXI_PROJECT_ROOT"
