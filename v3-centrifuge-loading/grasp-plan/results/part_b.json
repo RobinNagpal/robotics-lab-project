@@ -1,0 +1,48 @@
+[
+ {
+  "tube": "sample0",
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/right_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "tube": "blank0",
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ }
+]

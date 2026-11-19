@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# MuJoCo's log
+MUJOCO_LOG.TXT
+
+# SAM 3's saved outlines: a cache that step-0-find/sam.py rebuilds for free (about 5 s a picture)
+step-0-find/results/sam_raw/

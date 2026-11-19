@@ -1,0 +1,395 @@
+[
+ {
+  "seed": 0,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [
+   195,
+   210
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [
+   195,
+   210
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.6,
+   "what": "arm/gripper/left_spring_link - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   3
+  ],
+  "approaches_ok": [
+   0,
+   300,
+   315,
+   330,
+   345
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   3
+  ],
+  "approaches_ok": [
+   0,
+   300,
+   315,
+   330,
+   345
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   3
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -2.8,
+   "what": "arm/gripper/right_spring_link - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": 0.3,
+   "what": "arm/gripper/base - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -8.7,
+   "what": "arm/gripper/base - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -13.0,
+   "what": "arm/gripper/left_follower - blank0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "approaches_ok": [
+   75,
+   90
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "approaches_ok": [
+   75,
+   90
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -2.8,
+   "what": "arm/gripper/right_spring_link - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": 0.4,
+   "what": "arm/gripper/base - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.8,
+   "what": "arm/gripper/left_follower - blank1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.8,
+   "what": "arm/gripper/left_follower - blank1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "approaches_ok": [
+   210,
+   225
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "approaches_ok": [
+   225
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.4,
+   "what": "arm/gripper/base - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -5.9,
+   "what": "arm/gripper/left_spring_link - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "approaches_ok": [
+   90
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 4.7,
+   "what": "arm/gripper/right_follower - blank0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "approaches_ok": [
+   90
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 4.7,
+   "what": "arm/gripper/right_follower - blank0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -2.8,
+   "what": "arm/gripper/right_spring_link - supply_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "below_rim_mm": 25.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.0,
+   "what": "arm/wrist_2_link - sample_rack",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "below_rim_mm": 35.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.8,
+   "what": "arm/gripper/left_follower - blank0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "below_rim_mm": 45.0,
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "approaches_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.8,
+   "what": "arm/gripper/left_follower - blank0",
+   "note": ""
+  }
+ }
+]
