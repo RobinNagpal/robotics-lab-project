@@ -1,0 +1,1333 @@
+[
+ {
+  "seed": 0,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   3
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/right_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   7
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 5.0,
+   "what": "arm/gripper/left_pad - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "tube": "sample2",
+  "cell": [
+   "sample_rack",
+   6
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/left_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "tube": "sample3",
+  "cell": [
+   "sample_rack",
+   5
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/left_follower - sample3",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   0
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 0,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   2
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   1
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 5.0,
+   "what": "arm/gripper/left_pad - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   2
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/left_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "tube": "sample2",
+  "cell": [
+   "sample_rack",
+   5
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/right_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   3
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   0
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 1,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   7
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   7
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/right_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   1
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/right_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "tube": "sample2",
+  "cell": [
+   "sample_rack",
+   5
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/right_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 2,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   1
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   0
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.6,
+   "what": "arm/gripper/left_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   1
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.6,
+   "what": "arm/gripper/left_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   1
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 3,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   3
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   0
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.6,
+   "what": "arm/gripper/left_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   1
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 5.0,
+   "what": "arm/gripper/left_pad - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "tube": "sample2",
+  "cell": [
+   "sample_rack",
+   5
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/right_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "tube": "sample3",
+  "cell": [
+   "sample_rack",
+   3
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/right_follower - sample3",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 4,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   7
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   6
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/left_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   5
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 5.0,
+   "what": "arm/gripper/left_pad - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "sample2",
+  "cell": [
+   "sample_rack",
+   4
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.6,
+   "what": "arm/gripper/left_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "sample3",
+  "cell": [
+   "sample_rack",
+   1
+  ],
+  "turns_ok": [
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/right_follower - sample3",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "sample4",
+  "cell": [
+   "sample_rack",
+   7
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/left_follower - sample4",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   5
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   2
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 5,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   2
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/right_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   5
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/right_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "tube": "sample2",
+  "cell": [
+   "sample_rack",
+   7
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/right_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   4
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   0
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 6,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   2
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "tube": "sample0",
+  "cell": [
+   "sample_rack",
+   0
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.8,
+   "what": "arm/gripper/left_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "tube": "sample1",
+  "cell": [
+   "sample_rack",
+   6
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 9.7,
+   "what": "arm/gripper/right_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "tube": "water",
+  "cell": [
+   "supply_rack",
+   6
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "tube": "blank0",
+  "cell": [
+   "supply_rack",
+   7
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "seed": 7,
+  "tube": "blank1",
+  "cell": [
+   "supply_rack",
+   1
+  ],
+  "turns_ok": [
+   0,
+   15,
+   30,
+   45,
+   60,
+   75,
+   90,
+   105,
+   120,
+   135,
+   150,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ }
+]

@@ -1,0 +1,6563 @@
+{
+ "seed": 1,
+ "rate_deg_s": 2.0,
+ "pour_hand_deg": -75.0,
+ "empty_g": 11.58,
+ "empty_steady": true,
+ "end": {
+  "in_receiver": 18,
+  "in_source": 0,
+  "air": 0,
+  "spilled": 108,
+  "grams": 17.45
+ },
+ "ball_g": 0.3265,
+ "wall_s": 57.2,
+ "stages": {
+  "start": [
+   0,
+   126,
+   0,
+   0
+  ],
+  "picked": [
+   0,
+   126,
+   0,
+   0
+  ],
+  "moved in": [
+   0,
+   126,
+   0,
+   0
+  ]
+ },
+ "rows": [
+  {
+   "t": 32.09,
+   "tilt": 52.2,
+   "tube_tilt": 50.38,
+   "lip_err_mm": [
+    -0.7,
+    1.8,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.19,
+   "tilt": 52.4,
+   "tube_tilt": 50.47,
+   "lip_err_mm": [
+    -0.7,
+    1.8,
+    1.3
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.29,
+   "tilt": 52.6,
+   "tube_tilt": 50.59,
+   "lip_err_mm": [
+    -0.7,
+    1.9,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.39,
+   "tilt": 52.8,
+   "tube_tilt": 50.74,
+   "lip_err_mm": [
+    -0.8,
+    1.9,
+    0.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.49,
+   "tilt": 53.0,
+   "tube_tilt": 50.89,
+   "lip_err_mm": [
+    -0.8,
+    2.0,
+    0.6
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.59,
+   "tilt": 53.2,
+   "tube_tilt": 51.06,
+   "lip_err_mm": [
+    -0.8,
+    2.0,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.69,
+   "tilt": 53.4,
+   "tube_tilt": 51.23,
+   "lip_err_mm": [
+    -0.8,
+    2.1,
+    0.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.79,
+   "tilt": 53.6,
+   "tube_tilt": 51.41,
+   "lip_err_mm": [
+    -0.8,
+    2.2,
+    0.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.89,
+   "tilt": 53.8,
+   "tube_tilt": 51.59,
+   "lip_err_mm": [
+    -0.8,
+    2.2,
+    0.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 32.99,
+   "tilt": 54.0,
+   "tube_tilt": 51.77,
+   "lip_err_mm": [
+    -0.8,
+    2.3,
+    0.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.09,
+   "tilt": 54.2,
+   "tube_tilt": 51.94,
+   "lip_err_mm": [
+    -0.8,
+    2.3,
+    0.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.19,
+   "tilt": 54.4,
+   "tube_tilt": 52.12,
+   "lip_err_mm": [
+    -0.8,
+    2.4,
+    0.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.29,
+   "tilt": 54.6,
+   "tube_tilt": 52.3,
+   "lip_err_mm": [
+    -0.8,
+    2.4,
+    0.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.39,
+   "tilt": 54.8,
+   "tube_tilt": 52.48,
+   "lip_err_mm": [
+    -0.9,
+    2.5,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.49,
+   "tilt": 55.0,
+   "tube_tilt": 52.66,
+   "lip_err_mm": [
+    -0.9,
+    2.5,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.59,
+   "tilt": 55.2,
+   "tube_tilt": 52.84,
+   "lip_err_mm": [
+    -0.9,
+    2.6,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.69,
+   "tilt": 55.4,
+   "tube_tilt": 53.02,
+   "lip_err_mm": [
+    -0.9,
+    2.7,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.79,
+   "tilt": 55.6,
+   "tube_tilt": 53.21,
+   "lip_err_mm": [
+    -0.9,
+    2.7,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.89,
+   "tilt": 55.8,
+   "tube_tilt": 53.39,
+   "lip_err_mm": [
+    -0.9,
+    2.8,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 33.99,
+   "tilt": 56.0,
+   "tube_tilt": 53.57,
+   "lip_err_mm": [
+    -0.9,
+    2.8,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.09,
+   "tilt": 56.2,
+   "tube_tilt": 53.75,
+   "lip_err_mm": [
+    -0.9,
+    2.9,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.19,
+   "tilt": 56.4,
+   "tube_tilt": 53.93,
+   "lip_err_mm": [
+    -0.9,
+    2.9,
+    0.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.29,
+   "tilt": 56.6,
+   "tube_tilt": 54.11,
+   "lip_err_mm": [
+    -0.9,
+    3.0,
+    0.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.39,
+   "tilt": 56.8,
+   "tube_tilt": 54.29,
+   "lip_err_mm": [
+    -0.9,
+    3.0,
+    0.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.49,
+   "tilt": 57.0,
+   "tube_tilt": 54.47,
+   "lip_err_mm": [
+    -1.0,
+    3.1,
+    0.7
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.59,
+   "tilt": 57.2,
+   "tube_tilt": 54.65,
+   "lip_err_mm": [
+    -1.0,
+    3.2,
+    0.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.69,
+   "tilt": 57.4,
+   "tube_tilt": 54.83,
+   "lip_err_mm": [
+    -1.0,
+    3.2,
+    0.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.79,
+   "tilt": 57.6,
+   "tube_tilt": 55.01,
+   "lip_err_mm": [
+    -1.0,
+    3.3,
+    0.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.89,
+   "tilt": 57.8,
+   "tube_tilt": 55.19,
+   "lip_err_mm": [
+    -1.0,
+    3.3,
+    0.7
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 34.99,
+   "tilt": 58.0,
+   "tube_tilt": 55.38,
+   "lip_err_mm": [
+    -1.0,
+    3.4,
+    0.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.09,
+   "tilt": 58.2,
+   "tube_tilt": 55.56,
+   "lip_err_mm": [
+    -1.0,
+    3.4,
+    0.7
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.19,
+   "tilt": 58.4,
+   "tube_tilt": 55.74,
+   "lip_err_mm": [
+    -1.0,
+    3.5,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.29,
+   "tilt": 58.6,
+   "tube_tilt": 55.92,
+   "lip_err_mm": [
+    -1.0,
+    3.5,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.39,
+   "tilt": 58.8,
+   "tube_tilt": 56.1,
+   "lip_err_mm": [
+    -1.0,
+    3.6,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.49,
+   "tilt": 59.0,
+   "tube_tilt": 56.28,
+   "lip_err_mm": [
+    -1.1,
+    3.6,
+    0.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.59,
+   "tilt": 59.2,
+   "tube_tilt": 56.47,
+   "lip_err_mm": [
+    -1.1,
+    3.7,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.69,
+   "tilt": 59.4,
+   "tube_tilt": 56.65,
+   "lip_err_mm": [
+    -1.1,
+    3.7,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.79,
+   "tilt": 59.6,
+   "tube_tilt": 56.83,
+   "lip_err_mm": [
+    -1.1,
+    3.8,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.89,
+   "tilt": 59.8,
+   "tube_tilt": 57.01,
+   "lip_err_mm": [
+    -1.1,
+    3.8,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 35.99,
+   "tilt": 60.0,
+   "tube_tilt": 57.19,
+   "lip_err_mm": [
+    -1.1,
+    3.9,
+    0.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.09,
+   "tilt": 60.2,
+   "tube_tilt": 57.37,
+   "lip_err_mm": [
+    -1.1,
+    3.9,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.19,
+   "tilt": 60.4,
+   "tube_tilt": 57.56,
+   "lip_err_mm": [
+    -1.1,
+    4.0,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.29,
+   "tilt": 60.6,
+   "tube_tilt": 57.74,
+   "lip_err_mm": [
+    -1.1,
+    4.0,
+    0.9
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.39,
+   "tilt": 60.8,
+   "tube_tilt": 57.92,
+   "lip_err_mm": [
+    -1.1,
+    4.0,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.49,
+   "tilt": 61.0,
+   "tube_tilt": 58.1,
+   "lip_err_mm": [
+    -1.1,
+    4.1,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.59,
+   "tilt": 61.2,
+   "tube_tilt": 58.28,
+   "lip_err_mm": [
+    -1.1,
+    4.1,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.69,
+   "tilt": 61.4,
+   "tube_tilt": 58.46,
+   "lip_err_mm": [
+    -1.2,
+    4.2,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.79,
+   "tilt": 61.6,
+   "tube_tilt": 58.65,
+   "lip_err_mm": [
+    -1.2,
+    4.2,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.89,
+   "tilt": 61.8,
+   "tube_tilt": 58.83,
+   "lip_err_mm": [
+    -1.2,
+    4.3,
+    0.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.99,
+   "tilt": 62.0,
+   "tube_tilt": 59.01,
+   "lip_err_mm": [
+    -1.2,
+    4.3,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.09,
+   "tilt": 62.2,
+   "tube_tilt": 59.19,
+   "lip_err_mm": [
+    -1.2,
+    4.4,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.19,
+   "tilt": 62.4,
+   "tube_tilt": 59.37,
+   "lip_err_mm": [
+    -1.2,
+    4.4,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.29,
+   "tilt": 62.6,
+   "tube_tilt": 59.55,
+   "lip_err_mm": [
+    -1.2,
+    4.5,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.39,
+   "tilt": 62.8,
+   "tube_tilt": 59.74,
+   "lip_err_mm": [
+    -1.2,
+    4.5,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.49,
+   "tilt": 63.0,
+   "tube_tilt": 59.92,
+   "lip_err_mm": [
+    -1.2,
+    4.6,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.59,
+   "tilt": 63.2,
+   "tube_tilt": 60.1,
+   "lip_err_mm": [
+    -1.2,
+    4.6,
+    1.0
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.69,
+   "tilt": 63.4,
+   "tube_tilt": 60.28,
+   "lip_err_mm": [
+    -1.2,
+    4.7,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.79,
+   "tilt": 63.6,
+   "tube_tilt": 60.46,
+   "lip_err_mm": [
+    -1.2,
+    4.7,
+    1.0
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.89,
+   "tilt": 63.8,
+   "tube_tilt": 60.64,
+   "lip_err_mm": [
+    -1.3,
+    4.8,
+    1.1
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.99,
+   "tilt": 64.0,
+   "tube_tilt": 60.82,
+   "lip_err_mm": [
+    -1.3,
+    4.8,
+    1.1
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.09,
+   "tilt": 64.2,
+   "tube_tilt": 61.0,
+   "lip_err_mm": [
+    -1.3,
+    4.9,
+    1.1
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.19,
+   "tilt": 64.4,
+   "tube_tilt": 61.18,
+   "lip_err_mm": [
+    -1.3,
+    4.9,
+    1.1
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.29,
+   "tilt": 64.6,
+   "tube_tilt": 61.37,
+   "lip_err_mm": [
+    -1.3,
+    4.9,
+    1.1
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.39,
+   "tilt": 64.8,
+   "tube_tilt": 61.55,
+   "lip_err_mm": [
+    -1.3,
+    5.0,
+    1.1
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.49,
+   "tilt": 65.0,
+   "tube_tilt": 61.73,
+   "lip_err_mm": [
+    -1.3,
+    5.0,
+    1.1
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.59,
+   "tilt": 65.2,
+   "tube_tilt": 61.91,
+   "lip_err_mm": [
+    -1.3,
+    5.1,
+    1.1
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.69,
+   "tilt": 65.4,
+   "tube_tilt": 62.09,
+   "lip_err_mm": [
+    -1.3,
+    5.2,
+    1.2
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.79,
+   "tilt": 65.6,
+   "tube_tilt": 62.27,
+   "lip_err_mm": [
+    -1.3,
+    5.2,
+    1.2
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.89,
+   "tilt": 65.8,
+   "tube_tilt": 62.45,
+   "lip_err_mm": [
+    -1.3,
+    5.2,
+    1.2
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.99,
+   "tilt": 66.0,
+   "tube_tilt": 62.63,
+   "lip_err_mm": [
+    -1.3,
+    5.3,
+    1.2
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.09,
+   "tilt": 66.2,
+   "tube_tilt": 62.81,
+   "lip_err_mm": [
+    -1.3,
+    5.3,
+    1.2
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.19,
+   "tilt": 66.4,
+   "tube_tilt": 62.99,
+   "lip_err_mm": [
+    -1.4,
+    5.4,
+    1.2
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.29,
+   "tilt": 66.6,
+   "tube_tilt": 63.17,
+   "lip_err_mm": [
+    -1.4,
+    5.4,
+    1.2
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.39,
+   "tilt": 66.8,
+   "tube_tilt": 63.34,
+   "lip_err_mm": [
+    -1.4,
+    5.5,
+    1.2
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.49,
+   "tilt": 67.0,
+   "tube_tilt": 63.52,
+   "lip_err_mm": [
+    -1.4,
+    5.5,
+    1.2
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.59,
+   "tilt": 67.2,
+   "tube_tilt": 63.7,
+   "lip_err_mm": [
+    -1.4,
+    5.6,
+    1.3
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.69,
+   "tilt": 67.4,
+   "tube_tilt": 63.88,
+   "lip_err_mm": [
+    -1.4,
+    5.6,
+    1.3
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.79,
+   "tilt": 67.6,
+   "tube_tilt": 64.06,
+   "lip_err_mm": [
+    -1.4,
+    5.6,
+    1.3
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.89,
+   "tilt": 67.8,
+   "tube_tilt": 64.24,
+   "lip_err_mm": [
+    -1.4,
+    5.7,
+    1.3
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.99,
+   "tilt": 68.0,
+   "tube_tilt": 64.42,
+   "lip_err_mm": [
+    -1.4,
+    5.7,
+    1.3
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.09,
+   "tilt": 68.2,
+   "tube_tilt": 64.6,
+   "lip_err_mm": [
+    -1.4,
+    5.8,
+    1.3
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.19,
+   "tilt": 68.4,
+   "tube_tilt": 64.78,
+   "lip_err_mm": [
+    -1.4,
+    5.8,
+    1.3
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.29,
+   "tilt": 68.6,
+   "tube_tilt": 64.96,
+   "lip_err_mm": [
+    -1.4,
+    5.9,
+    1.3
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.39,
+   "tilt": 68.8,
+   "tube_tilt": 65.14,
+   "lip_err_mm": [
+    -1.4,
+    5.9,
+    1.4
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.49,
+   "tilt": 69.0,
+   "tube_tilt": 65.31,
+   "lip_err_mm": [
+    -1.5,
+    6.0,
+    1.4
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.59,
+   "tilt": 69.2,
+   "tube_tilt": 65.49,
+   "lip_err_mm": [
+    -1.5,
+    6.0,
+    1.4
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.69,
+   "tilt": 69.4,
+   "tube_tilt": 65.67,
+   "lip_err_mm": [
+    -1.5,
+    6.1,
+    1.4
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.79,
+   "tilt": 69.6,
+   "tube_tilt": 65.85,
+   "lip_err_mm": [
+    -1.5,
+    6.1,
+    1.4
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.89,
+   "tilt": 69.8,
+   "tube_tilt": 66.02,
+   "lip_err_mm": [
+    -1.5,
+    6.2,
+    1.4
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.99,
+   "tilt": 70.0,
+   "tube_tilt": 66.2,
+   "lip_err_mm": [
+    -1.5,
+    6.2,
+    1.4
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.09,
+   "tilt": 70.2,
+   "tube_tilt": 66.38,
+   "lip_err_mm": [
+    -1.5,
+    6.3,
+    1.4
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.19,
+   "tilt": 70.4,
+   "tube_tilt": 66.56,
+   "lip_err_mm": [
+    -1.5,
+    6.3,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.29,
+   "tilt": 70.6,
+   "tube_tilt": 66.74,
+   "lip_err_mm": [
+    -1.5,
+    6.3,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.39,
+   "tilt": 70.8,
+   "tube_tilt": 66.92,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.49,
+   "tilt": 71.0,
+   "tube_tilt": 67.1,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.59,
+   "tilt": 71.2,
+   "tube_tilt": 67.29,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.69,
+   "tilt": 71.4,
+   "tube_tilt": 67.48,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.79,
+   "tilt": 71.6,
+   "tube_tilt": 67.67,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.89,
+   "tilt": 71.8,
+   "tube_tilt": 67.86,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.99,
+   "tilt": 72.0,
+   "tube_tilt": 68.05,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.09,
+   "tilt": 72.2,
+   "tube_tilt": 68.24,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.19,
+   "tilt": 72.4,
+   "tube_tilt": 68.43,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.29,
+   "tilt": 72.6,
+   "tube_tilt": 68.62,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.39,
+   "tilt": 72.8,
+   "tube_tilt": 68.81,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.49,
+   "tilt": 73.0,
+   "tube_tilt": 69.0,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.59,
+   "tilt": 73.2,
+   "tube_tilt": 69.19,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.69,
+   "tilt": 73.4,
+   "tube_tilt": 69.38,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.5
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.79,
+   "tilt": 73.6,
+   "tube_tilt": 69.57,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.6
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.89,
+   "tilt": 73.8,
+   "tube_tilt": 69.76,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.99,
+   "tilt": 74.0,
+   "tube_tilt": 69.95,
+   "lip_err_mm": [
+    -1.5,
+    6.4,
+    1.6
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.09,
+   "tilt": 74.2,
+   "tube_tilt": 70.14,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.19,
+   "tilt": 74.4,
+   "tube_tilt": 70.33,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.29,
+   "tilt": 74.6,
+   "tube_tilt": 70.52,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.39,
+   "tilt": 74.8,
+   "tube_tilt": 70.71,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.49,
+   "tilt": 75.0,
+   "tube_tilt": 70.9,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.59,
+   "tilt": 75.2,
+   "tube_tilt": 71.09,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.69,
+   "tilt": 75.4,
+   "tube_tilt": 71.28,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.79,
+   "tilt": 75.6,
+   "tube_tilt": 71.47,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.89,
+   "tilt": 75.8,
+   "tube_tilt": 71.66,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.99,
+   "tilt": 76.0,
+   "tube_tilt": 71.85,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.09,
+   "tilt": 76.2,
+   "tube_tilt": 72.05,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.19,
+   "tilt": 76.4,
+   "tube_tilt": 72.24,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.29,
+   "tilt": 76.6,
+   "tube_tilt": 72.43,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.39,
+   "tilt": 76.8,
+   "tube_tilt": 72.62,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.49,
+   "tilt": 77.0,
+   "tube_tilt": 72.8,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.6
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.59,
+   "tilt": 77.2,
+   "tube_tilt": 73.0,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.69,
+   "tilt": 77.4,
+   "tube_tilt": 73.19,
+   "lip_err_mm": [
+    -1.4,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.79,
+   "tilt": 77.6,
+   "tube_tilt": 73.38,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.89,
+   "tilt": 77.8,
+   "tube_tilt": 73.57,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.99,
+   "tilt": 78.0,
+   "tube_tilt": 73.76,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.09,
+   "tilt": 78.2,
+   "tube_tilt": 73.95,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.19,
+   "tilt": 78.4,
+   "tube_tilt": 74.14,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.29,
+   "tilt": 78.6,
+   "tube_tilt": 74.33,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.39,
+   "tilt": 78.8,
+   "tube_tilt": 74.52,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.49,
+   "tilt": 79.0,
+   "tube_tilt": 74.71,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.59,
+   "tilt": 79.2,
+   "tube_tilt": 74.9,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.69,
+   "tilt": 79.4,
+   "tube_tilt": 75.09,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.79,
+   "tilt": 79.6,
+   "tube_tilt": 75.28,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.89,
+   "tilt": 79.8,
+   "tube_tilt": 75.48,
+   "lip_err_mm": [
+    -1.3,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.99,
+   "tilt": 80.0,
+   "tube_tilt": 75.67,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.7
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.09,
+   "tilt": 80.2,
+   "tube_tilt": 75.86,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.19,
+   "tilt": 80.4,
+   "tube_tilt": 76.05,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.7
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.29,
+   "tilt": 80.6,
+   "tube_tilt": 76.24,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.39,
+   "tilt": 80.8,
+   "tube_tilt": 76.43,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.7
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.49,
+   "tilt": 81.0,
+   "tube_tilt": 76.62,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.59,
+   "tilt": 81.2,
+   "tube_tilt": 76.81,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.69,
+   "tilt": 81.4,
+   "tube_tilt": 77.0,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.79,
+   "tilt": 81.6,
+   "tube_tilt": 77.19,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.89,
+   "tilt": 81.8,
+   "tube_tilt": 77.38,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.99,
+   "tilt": 82.0,
+   "tube_tilt": 77.57,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.09,
+   "tilt": 82.2,
+   "tube_tilt": 77.76,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.19,
+   "tilt": 82.4,
+   "tube_tilt": 77.95,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.29,
+   "tilt": 82.6,
+   "tube_tilt": 78.14,
+   "lip_err_mm": [
+    -1.2,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.39,
+   "tilt": 82.8,
+   "tube_tilt": 78.34,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.49,
+   "tilt": 83.0,
+   "tube_tilt": 78.53,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.59,
+   "tilt": 83.2,
+   "tube_tilt": 78.72,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.69,
+   "tilt": 83.4,
+   "tube_tilt": 78.91,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.79,
+   "tilt": 83.6,
+   "tube_tilt": 79.1,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.89,
+   "tilt": 83.8,
+   "tube_tilt": 79.29,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.99,
+   "tilt": 84.0,
+   "tube_tilt": 79.48,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.09,
+   "tilt": 84.2,
+   "tube_tilt": 79.67,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.19,
+   "tilt": 84.4,
+   "tube_tilt": 79.86,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.29,
+   "tilt": 84.6,
+   "tube_tilt": 80.05,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.39,
+   "tilt": 84.8,
+   "tube_tilt": 80.24,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.49,
+   "tilt": 85.0,
+   "tube_tilt": 80.43,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.59,
+   "tilt": 85.2,
+   "tube_tilt": 80.62,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.69,
+   "tilt": 85.4,
+   "tube_tilt": 80.81,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.8
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 125,
+   "air": 1,
+   "spilled": 0
+  },
+  {
+   "t": 48.79,
+   "tilt": 85.6,
+   "tube_tilt": 81.0,
+   "lip_err_mm": [
+    -1.1,
+    6.4,
+    1.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 124,
+   "air": 2,
+   "spilled": 0
+  },
+  {
+   "t": 48.89,
+   "tilt": 85.8,
+   "tube_tilt": 81.19,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 124,
+   "air": 2,
+   "spilled": 0
+  },
+  {
+   "t": 48.99,
+   "tilt": 86.0,
+   "tube_tilt": 81.38,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 124,
+   "air": 2,
+   "spilled": 0
+  },
+  {
+   "t": 49.09,
+   "tilt": 86.2,
+   "tube_tilt": 81.57,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 11.510000000000002,
+   "in_receiver": 0,
+   "in_source": 123,
+   "air": 3,
+   "spilled": 0
+  },
+  {
+   "t": 49.19,
+   "tilt": 86.4,
+   "tube_tilt": 81.76,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 15.83,
+   "in_receiver": 2,
+   "in_source": 123,
+   "air": 0,
+   "spilled": 1
+  },
+  {
+   "t": 49.29,
+   "tilt": 86.6,
+   "tube_tilt": 81.95,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 12.140000000000002,
+   "in_receiver": 2,
+   "in_source": 122,
+   "air": 1,
+   "spilled": 1
+  },
+  {
+   "t": 49.39,
+   "tilt": 86.8,
+   "tube_tilt": 82.14,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 12.860000000000001,
+   "in_receiver": 2,
+   "in_source": 120,
+   "air": 3,
+   "spilled": 1
+  },
+  {
+   "t": 49.49,
+   "tilt": 87.0,
+   "tube_tilt": 82.33,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 12.270000000000001,
+   "in_receiver": 3,
+   "in_source": 120,
+   "air": 2,
+   "spilled": 1
+  },
+  {
+   "t": 49.59,
+   "tilt": 87.2,
+   "tube_tilt": 82.52,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 17.09,
+   "in_receiver": 3,
+   "in_source": 119,
+   "air": 1,
+   "spilled": 3
+  },
+  {
+   "t": 49.69,
+   "tilt": 87.4,
+   "tube_tilt": 82.71,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 18.240000000000002,
+   "in_receiver": 3,
+   "in_source": 117,
+   "air": 3,
+   "spilled": 3
+  },
+  {
+   "t": 49.79,
+   "tilt": 87.6,
+   "tube_tilt": 82.9,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 12.370000000000001,
+   "in_receiver": 4,
+   "in_source": 113,
+   "air": 6,
+   "spilled": 3
+  },
+  {
+   "t": 49.89,
+   "tilt": 87.8,
+   "tube_tilt": 83.09,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 22.67,
+   "in_receiver": 4,
+   "in_source": 110,
+   "air": 8,
+   "spilled": 4
+  },
+  {
+   "t": 49.99,
+   "tilt": 88.0,
+   "tube_tilt": 83.28,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 12.490000000000002,
+   "in_receiver": 5,
+   "in_source": 108,
+   "air": 6,
+   "spilled": 7
+  },
+  {
+   "t": 50.09,
+   "tilt": 88.2,
+   "tube_tilt": 83.47,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 11.200000000000001,
+   "in_receiver": 5,
+   "in_source": 107,
+   "air": 5,
+   "spilled": 9
+  },
+  {
+   "t": 50.19,
+   "tilt": 88.4,
+   "tube_tilt": 83.66,
+   "lip_err_mm": [
+    -1.0,
+    6.4,
+    1.9
+   ],
+   "grams": 12.71,
+   "in_receiver": 6,
+   "in_source": 104,
+   "air": 5,
+   "spilled": 11
+  },
+  {
+   "t": 50.29,
+   "tilt": 88.6,
+   "tube_tilt": 83.85,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    1.9
+   ],
+   "grams": 9.56,
+   "in_receiver": 7,
+   "in_source": 102,
+   "air": 5,
+   "spilled": 12
+  },
+  {
+   "t": 50.39,
+   "tilt": 88.8,
+   "tube_tilt": 84.04,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    1.9
+   ],
+   "grams": 12.650000000000002,
+   "in_receiver": 7,
+   "in_source": 99,
+   "air": 6,
+   "spilled": 14
+  },
+  {
+   "t": 50.49,
+   "tilt": 89.0,
+   "tube_tilt": 84.23,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    1.9
+   ],
+   "grams": 14.310000000000002,
+   "in_receiver": 7,
+   "in_source": 98,
+   "air": 6,
+   "spilled": 15
+  },
+  {
+   "t": 50.59,
+   "tilt": 89.2,
+   "tube_tilt": 84.42,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    1.9
+   ],
+   "grams": 14.5,
+   "in_receiver": 7,
+   "in_source": 96,
+   "air": 4,
+   "spilled": 19
+  },
+  {
+   "t": 50.69,
+   "tilt": 89.4,
+   "tube_tilt": 84.62,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    1.9
+   ],
+   "grams": 14.08,
+   "in_receiver": 7,
+   "in_source": 95,
+   "air": 4,
+   "spilled": 20
+  },
+  {
+   "t": 50.79,
+   "tilt": 89.6,
+   "tube_tilt": 84.8,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    1.9
+   ],
+   "grams": 14.51,
+   "in_receiver": 7,
+   "in_source": 95,
+   "air": 3,
+   "spilled": 21
+  },
+  {
+   "t": 50.89,
+   "tilt": 89.8,
+   "tube_tilt": 84.99,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    2.0
+   ],
+   "grams": 14.390000000000002,
+   "in_receiver": 7,
+   "in_source": 95,
+   "air": 1,
+   "spilled": 23
+  },
+  {
+   "t": 50.99,
+   "tilt": 90.0,
+   "tube_tilt": 85.18,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    2.0
+   ],
+   "grams": 14.190000000000001,
+   "in_receiver": 8,
+   "in_source": 95,
+   "air": 0,
+   "spilled": 23
+  },
+  {
+   "t": 51.09,
+   "tilt": 90.2,
+   "tube_tilt": 85.37,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    2.0
+   ],
+   "grams": 13.49,
+   "in_receiver": 8,
+   "in_source": 95,
+   "air": 0,
+   "spilled": 23
+  },
+  {
+   "t": 51.19,
+   "tilt": 90.4,
+   "tube_tilt": 85.56,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    2.0
+   ],
+   "grams": 14.38,
+   "in_receiver": 8,
+   "in_source": 95,
+   "air": 0,
+   "spilled": 23
+  },
+  {
+   "t": 51.29,
+   "tilt": 90.6,
+   "tube_tilt": 85.75,
+   "lip_err_mm": [
+    -0.9,
+    6.4,
+    2.0
+   ],
+   "grams": 14.190000000000001,
+   "in_receiver": 8,
+   "in_source": 95,
+   "air": 0,
+   "spilled": 23
+  },
+  {
+   "t": 51.39,
+   "tilt": 90.8,
+   "tube_tilt": 85.94,
+   "lip_err_mm": [
+    -0.8,
+    6.4,
+    2.0
+   ],
+   "grams": 14.17,
+   "in_receiver": 8,
+   "in_source": 94,
+   "air": 1,
+   "spilled": 23
+  },
+  {
+   "t": 51.49,
+   "tilt": 91.0,
+   "tube_tilt": 86.13,
+   "lip_err_mm": [
+    -0.8,
+    6.5,
+    2.0
+   ],
+   "grams": 14.180000000000001,
+   "in_receiver": 8,
+   "in_source": 94,
+   "air": 1,
+   "spilled": 23
+  },
+  {
+   "t": 51.59,
+   "tilt": 91.2,
+   "tube_tilt": 86.32,
+   "lip_err_mm": [
+    -0.8,
+    6.5,
+    2.0
+   ],
+   "grams": 14.520000000000001,
+   "in_receiver": 8,
+   "in_source": 89,
+   "air": 6,
+   "spilled": 23
+  },
+  {
+   "t": 51.69,
+   "tilt": 91.4,
+   "tube_tilt": 86.51,
+   "lip_err_mm": [
+    -0.8,
+    6.5,
+    2.0
+   ],
+   "grams": 14.32,
+   "in_receiver": 9,
+   "in_source": 87,
+   "air": 7,
+   "spilled": 23
+  },
+  {
+   "t": 51.79,
+   "tilt": 91.6,
+   "tube_tilt": 86.7,
+   "lip_err_mm": [
+    -0.8,
+    6.5,
+    2.0
+   ],
+   "grams": 13.000000000000002,
+   "in_receiver": 10,
+   "in_source": 80,
+   "air": 10,
+   "spilled": 26
+  },
+  {
+   "t": 51.89,
+   "tilt": 91.8,
+   "tube_tilt": 86.89,
+   "lip_err_mm": [
+    -0.8,
+    6.5,
+    2.0
+   ],
+   "grams": 23.740000000000002,
+   "in_receiver": 11,
+   "in_source": 77,
+   "air": 9,
+   "spilled": 29
+  },
+  {
+   "t": 51.99,
+   "tilt": 92.0,
+   "tube_tilt": 87.08,
+   "lip_err_mm": [
+    -0.8,
+    6.5,
+    2.0
+   ],
+   "grams": 16.03,
+   "in_receiver": 11,
+   "in_source": 74,
+   "air": 8,
+   "spilled": 33
+  },
+  {
+   "t": 52.09,
+   "tilt": 92.2,
+   "tube_tilt": 87.27,
+   "lip_err_mm": [
+    -0.8,
+    6.5,
+    2.0
+   ],
+   "grams": 16.130000000000003,
+   "in_receiver": 11,
+   "in_source": 68,
+   "air": 9,
+   "spilled": 38
+  },
+  {
+   "t": 52.19,
+   "tilt": 92.4,
+   "tube_tilt": 87.47,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.0
+   ],
+   "grams": 13.9,
+   "in_receiver": 12,
+   "in_source": 64,
+   "air": 10,
+   "spilled": 40
+  },
+  {
+   "t": 52.29,
+   "tilt": 92.6,
+   "tube_tilt": 87.66,
+   "lip_err_mm": [
+    -0.7,
+    6.5,
+    2.0
+   ],
+   "grams": 15.67,
+   "in_receiver": 12,
+   "in_source": 62,
+   "air": 7,
+   "spilled": 45
+  },
+  {
+   "t": 52.39,
+   "tilt": 92.8,
+   "tube_tilt": 87.85,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.0
+   ],
+   "grams": 18.99,
+   "in_receiver": 12,
+   "in_source": 59,
+   "air": 5,
+   "spilled": 50
+  },
+  {
+   "t": 52.49,
+   "tilt": 93.0,
+   "tube_tilt": 88.04,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.0
+   ],
+   "grams": 15.520000000000001,
+   "in_receiver": 12,
+   "in_source": 57,
+   "air": 5,
+   "spilled": 52
+  },
+  {
+   "t": 52.59,
+   "tilt": 93.2,
+   "tube_tilt": 88.23,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.0
+   ],
+   "grams": 15.84,
+   "in_receiver": 12,
+   "in_source": 54,
+   "air": 6,
+   "spilled": 54
+  },
+  {
+   "t": 52.69,
+   "tilt": 93.4,
+   "tube_tilt": 88.42,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.0
+   ],
+   "grams": 16.18,
+   "in_receiver": 12,
+   "in_source": 52,
+   "air": 7,
+   "spilled": 55
+  },
+  {
+   "t": 52.79,
+   "tilt": 93.6,
+   "tube_tilt": 88.61,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.1
+   ],
+   "grams": 16.46,
+   "in_receiver": 12,
+   "in_source": 50,
+   "air": 6,
+   "spilled": 58
+  },
+  {
+   "t": 52.89,
+   "tilt": 93.8,
+   "tube_tilt": 88.81,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.1
+   ],
+   "grams": 16.42,
+   "in_receiver": 12,
+   "in_source": 50,
+   "air": 2,
+   "spilled": 62
+  },
+  {
+   "t": 52.99,
+   "tilt": 94.0,
+   "tube_tilt": 89.0,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.1
+   ],
+   "grams": 16.14,
+   "in_receiver": 12,
+   "in_source": 47,
+   "air": 4,
+   "spilled": 63
+  },
+  {
+   "t": 53.09,
+   "tilt": 94.2,
+   "tube_tilt": 89.19,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.1
+   ],
+   "grams": 19.26,
+   "in_receiver": 13,
+   "in_source": 43,
+   "air": 6,
+   "spilled": 64
+  },
+  {
+   "t": 53.19,
+   "tilt": 94.4,
+   "tube_tilt": 89.38,
+   "lip_err_mm": [
+    -0.7,
+    6.4,
+    2.1
+   ],
+   "grams": 16.26,
+   "in_receiver": 14,
+   "in_source": 41,
+   "air": 5,
+   "spilled": 66
+  },
+  {
+   "t": 53.29,
+   "tilt": 94.6,
+   "tube_tilt": 89.58,
+   "lip_err_mm": [
+    -0.6,
+    6.4,
+    2.1
+   ],
+   "grams": 16.380000000000003,
+   "in_receiver": 14,
+   "in_source": 39,
+   "air": 4,
+   "spilled": 69
+  },
+  {
+   "t": 53.39,
+   "tilt": 94.8,
+   "tube_tilt": 89.77,
+   "lip_err_mm": [
+    -0.6,
+    6.4,
+    2.1
+   ],
+   "grams": 16.3,
+   "in_receiver": 15,
+   "in_source": 38,
+   "air": 4,
+   "spilled": 69
+  },
+  {
+   "t": 53.49,
+   "tilt": 95.0,
+   "tube_tilt": 89.96,
+   "lip_err_mm": [
+    -0.6,
+    6.4,
+    2.1
+   ],
+   "grams": 17.61,
+   "in_receiver": 15,
+   "in_source": 36,
+   "air": 3,
+   "spilled": 72
+  },
+  {
+   "t": 53.59,
+   "tilt": 95.2,
+   "tube_tilt": 90.16,
+   "lip_err_mm": [
+    -0.6,
+    6.3,
+    2.1
+   ],
+   "grams": 16.200000000000003,
+   "in_receiver": 15,
+   "in_source": 32,
+   "air": 6,
+   "spilled": 73
+  },
+  {
+   "t": 53.69,
+   "tilt": 95.4,
+   "tube_tilt": 90.35,
+   "lip_err_mm": [
+    -0.6,
+    6.3,
+    2.1
+   ],
+   "grams": 29.470000000000002,
+   "in_receiver": 16,
+   "in_source": 29,
+   "air": 6,
+   "spilled": 75
+  },
+  {
+   "t": 53.79,
+   "tilt": 95.6,
+   "tube_tilt": 90.54,
+   "lip_err_mm": [
+    -0.6,
+    6.3,
+    2.1
+   ],
+   "grams": 16.91,
+   "in_receiver": 17,
+   "in_source": 24,
+   "air": 8,
+   "spilled": 77
+  },
+  {
+   "t": 53.89,
+   "tilt": 95.8,
+   "tube_tilt": 90.74,
+   "lip_err_mm": [
+    -0.6,
+    6.3,
+    2.1
+   ],
+   "grams": 34.050000000000004,
+   "in_receiver": 17,
+   "in_source": 22,
+   "air": 8,
+   "spilled": 79
+  },
+  {
+   "t": 53.99,
+   "tilt": 96.0,
+   "tube_tilt": 90.94,
+   "lip_err_mm": [
+    -0.6,
+    6.3,
+    2.1
+   ],
+   "grams": 21.840000000000003,
+   "in_receiver": 18,
+   "in_source": 19,
+   "air": 7,
+   "spilled": 82
+  },
+  {
+   "t": 54.09,
+   "tilt": 96.2,
+   "tube_tilt": 91.13,
+   "lip_err_mm": [
+    -0.6,
+    6.3,
+    2.1
+   ],
+   "grams": 21.050000000000004,
+   "in_receiver": 18,
+   "in_source": 16,
+   "air": 7,
+   "spilled": 85
+  },
+  {
+   "t": 54.19,
+   "tilt": 96.4,
+   "tube_tilt": 91.32,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 18.12,
+   "in_receiver": 18,
+   "in_source": 14,
+   "air": 6,
+   "spilled": 88
+  },
+  {
+   "t": 54.29,
+   "tilt": 96.6,
+   "tube_tilt": 91.51,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.8,
+   "in_receiver": 18,
+   "in_source": 12,
+   "air": 5,
+   "spilled": 91
+  },
+  {
+   "t": 54.39,
+   "tilt": 96.8,
+   "tube_tilt": 91.71,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 18.44,
+   "in_receiver": 18,
+   "in_source": 9,
+   "air": 6,
+   "spilled": 93
+  },
+  {
+   "t": 54.49,
+   "tilt": 97.0,
+   "tube_tilt": 91.9,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 16.960000000000004,
+   "in_receiver": 18,
+   "in_source": 8,
+   "air": 5,
+   "spilled": 95
+  },
+  {
+   "t": 54.59,
+   "tilt": 97.2,
+   "tube_tilt": 92.09,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 15.940000000000003,
+   "in_receiver": 18,
+   "in_source": 5,
+   "air": 6,
+   "spilled": 97
+  },
+  {
+   "t": 54.69,
+   "tilt": 97.4,
+   "tube_tilt": 92.29,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 3,
+   "air": 5,
+   "spilled": 100
+  },
+  {
+   "t": 54.79,
+   "tilt": 97.6,
+   "tube_tilt": 92.48,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.890000000000004,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 5,
+   "spilled": 103
+  },
+  {
+   "t": 54.89,
+   "tilt": 97.8,
+   "tube_tilt": 92.67,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.19,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 3,
+   "spilled": 105
+  },
+  {
+   "t": 54.99,
+   "tilt": 98.0,
+   "tube_tilt": 92.87,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.09,
+   "tilt": 98.2,
+   "tube_tilt": 93.06,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.19,
+   "tilt": 98.4,
+   "tube_tilt": 93.25,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.29,
+   "tilt": 98.6,
+   "tube_tilt": 93.44,
+   "lip_err_mm": [
+    -0.5,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.39,
+   "tilt": 98.8,
+   "tube_tilt": 93.64,
+   "lip_err_mm": [
+    -0.4,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.49,
+   "tilt": 99.0,
+   "tube_tilt": 93.83,
+   "lip_err_mm": [
+    -0.4,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.59,
+   "tilt": 99.2,
+   "tube_tilt": 94.02,
+   "lip_err_mm": [
+    -0.4,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.69,
+   "tilt": 99.4,
+   "tube_tilt": 94.22,
+   "lip_err_mm": [
+    -0.4,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.79,
+   "tilt": 99.6,
+   "tube_tilt": 94.41,
+   "lip_err_mm": [
+    -0.4,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.89,
+   "tilt": 99.8,
+   "tube_tilt": 94.6,
+   "lip_err_mm": [
+    -0.4,
+    6.3,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 55.99,
+   "tilt": 100.0,
+   "tube_tilt": 94.79,
+   "lip_err_mm": [
+    -0.4,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.09,
+   "tilt": 100.2,
+   "tube_tilt": 94.99,
+   "lip_err_mm": [
+    -0.4,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.19,
+   "tilt": 100.4,
+   "tube_tilt": 95.18,
+   "lip_err_mm": [
+    -0.4,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.29,
+   "tilt": 100.6,
+   "tube_tilt": 95.37,
+   "lip_err_mm": [
+    -0.4,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.39,
+   "tilt": 100.8,
+   "tube_tilt": 95.56,
+   "lip_err_mm": [
+    -0.4,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.49,
+   "tilt": 101.0,
+   "tube_tilt": 95.76,
+   "lip_err_mm": [
+    -0.4,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.59,
+   "tilt": 101.2,
+   "tube_tilt": 95.95,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.69,
+   "tilt": 101.4,
+   "tube_tilt": 96.14,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.79,
+   "tilt": 101.6,
+   "tube_tilt": 96.33,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.89,
+   "tilt": 101.8,
+   "tube_tilt": 96.53,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 56.99,
+   "tilt": 102.0,
+   "tube_tilt": 96.72,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.09,
+   "tilt": 102.2,
+   "tube_tilt": 96.91,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.19,
+   "tilt": 102.4,
+   "tube_tilt": 97.11,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.29,
+   "tilt": 102.6,
+   "tube_tilt": 97.3,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.39,
+   "tilt": 102.8,
+   "tube_tilt": 97.49,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.49,
+   "tilt": 103.0,
+   "tube_tilt": 97.69,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.59,
+   "tilt": 103.2,
+   "tube_tilt": 97.88,
+   "lip_err_mm": [
+    -0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.69,
+   "tilt": 103.4,
+   "tube_tilt": 98.07,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.470000000000002,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.79,
+   "tilt": 103.6,
+   "tube_tilt": 98.26,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.89,
+   "tilt": 103.8,
+   "tube_tilt": 98.46,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 57.99,
+   "tilt": 104.0,
+   "tube_tilt": 98.65,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.09,
+   "tilt": 104.2,
+   "tube_tilt": 98.85,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.19,
+   "tilt": 104.4,
+   "tube_tilt": 99.04,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.29,
+   "tilt": 104.6,
+   "tube_tilt": 99.23,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.39,
+   "tilt": 104.8,
+   "tube_tilt": 99.43,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.49,
+   "tilt": 105.0,
+   "tube_tilt": 99.62,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.59,
+   "tilt": 105.2,
+   "tube_tilt": 99.81,
+   "lip_err_mm": [
+    -0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.69,
+   "tilt": 105.4,
+   "tube_tilt": 100.01,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.79,
+   "tilt": 105.6,
+   "tube_tilt": 100.2,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.89,
+   "tilt": 105.8,
+   "tube_tilt": 100.4,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 58.99,
+   "tilt": 106.0,
+   "tube_tilt": 100.59,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.09,
+   "tilt": 106.2,
+   "tube_tilt": 100.79,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.19,
+   "tilt": 106.4,
+   "tube_tilt": 100.98,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.29,
+   "tilt": 106.6,
+   "tube_tilt": 101.17,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.39,
+   "tilt": 106.8,
+   "tube_tilt": 101.37,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.49,
+   "tilt": 107.0,
+   "tube_tilt": 101.56,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.59,
+   "tilt": 107.2,
+   "tube_tilt": 101.76,
+   "lip_err_mm": [
+    -0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.69,
+   "tilt": 107.4,
+   "tube_tilt": 101.95,
+   "lip_err_mm": [
+    -0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.79,
+   "tilt": 107.6,
+   "tube_tilt": 102.15,
+   "lip_err_mm": [
+    -0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.89,
+   "tilt": 107.8,
+   "tube_tilt": 102.34,
+   "lip_err_mm": [
+    -0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 59.99,
+   "tilt": 108.0,
+   "tube_tilt": 102.54,
+   "lip_err_mm": [
+    -0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.09,
+   "tilt": 108.2,
+   "tube_tilt": 102.73,
+   "lip_err_mm": [
+    -0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.19,
+   "tilt": 108.4,
+   "tube_tilt": 102.93,
+   "lip_err_mm": [
+    0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.29,
+   "tilt": 108.6,
+   "tube_tilt": 103.12,
+   "lip_err_mm": [
+    0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.39,
+   "tilt": 108.8,
+   "tube_tilt": 103.31,
+   "lip_err_mm": [
+    0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.49,
+   "tilt": 109.0,
+   "tube_tilt": 103.5,
+   "lip_err_mm": [
+    0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.59,
+   "tilt": 109.2,
+   "tube_tilt": 103.7,
+   "lip_err_mm": [
+    0.0,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.69,
+   "tilt": 109.4,
+   "tube_tilt": 103.89,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.79,
+   "tilt": 109.6,
+   "tube_tilt": 104.08,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.89,
+   "tilt": 109.8,
+   "tube_tilt": 104.27,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 60.99,
+   "tilt": 110.0,
+   "tube_tilt": 104.46,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.09,
+   "tilt": 110.2,
+   "tube_tilt": 104.65,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.19,
+   "tilt": 110.4,
+   "tube_tilt": 104.85,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.29,
+   "tilt": 110.6,
+   "tube_tilt": 105.04,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.39,
+   "tilt": 110.8,
+   "tube_tilt": 105.23,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.49,
+   "tilt": 111.0,
+   "tube_tilt": 105.42,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.59,
+   "tilt": 111.2,
+   "tube_tilt": 105.61,
+   "lip_err_mm": [
+    0.1,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.69,
+   "tilt": 111.4,
+   "tube_tilt": 105.8,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.79,
+   "tilt": 111.6,
+   "tube_tilt": 106.0,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.89,
+   "tilt": 111.8,
+   "tube_tilt": 106.19,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 61.99,
+   "tilt": 112.0,
+   "tube_tilt": 106.38,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.09,
+   "tilt": 112.2,
+   "tube_tilt": 106.57,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.19,
+   "tilt": 112.4,
+   "tube_tilt": 106.76,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.29,
+   "tilt": 112.6,
+   "tube_tilt": 106.95,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.39,
+   "tilt": 112.8,
+   "tube_tilt": 107.14,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.49,
+   "tilt": 113.0,
+   "tube_tilt": 107.33,
+   "lip_err_mm": [
+    0.2,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.59,
+   "tilt": 113.2,
+   "tube_tilt": 107.52,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.69,
+   "tilt": 113.4,
+   "tube_tilt": 107.71,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.79,
+   "tilt": 113.6,
+   "tube_tilt": 107.9,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.89,
+   "tilt": 113.8,
+   "tube_tilt": 108.1,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 62.99,
+   "tilt": 114.0,
+   "tube_tilt": 108.29,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.09,
+   "tilt": 114.2,
+   "tube_tilt": 108.48,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.1
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.19,
+   "tilt": 114.4,
+   "tube_tilt": 108.67,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.29,
+   "tilt": 114.6,
+   "tube_tilt": 108.86,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.39,
+   "tilt": 114.8,
+   "tube_tilt": 109.05,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.49,
+   "tilt": 115.0,
+   "tube_tilt": 109.24,
+   "lip_err_mm": [
+    0.3,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.59,
+   "tilt": 115.2,
+   "tube_tilt": 109.43,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.69,
+   "tilt": 115.4,
+   "tube_tilt": 109.63,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.79,
+   "tilt": 115.6,
+   "tube_tilt": 109.82,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.89,
+   "tilt": 115.8,
+   "tube_tilt": 110.01,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 63.99,
+   "tilt": 116.0,
+   "tube_tilt": 110.2,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.09,
+   "tilt": 116.2,
+   "tube_tilt": 110.38,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.19,
+   "tilt": 116.4,
+   "tube_tilt": 110.58,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.29,
+   "tilt": 116.6,
+   "tube_tilt": 110.77,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.39,
+   "tilt": 116.8,
+   "tube_tilt": 110.96,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.49,
+   "tilt": 117.0,
+   "tube_tilt": 111.15,
+   "lip_err_mm": [
+    0.4,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.59,
+   "tilt": 117.2,
+   "tube_tilt": 111.34,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.69,
+   "tilt": 117.4,
+   "tube_tilt": 111.53,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.79,
+   "tilt": 117.6,
+   "tube_tilt": 111.72,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.89,
+   "tilt": 117.8,
+   "tube_tilt": 111.91,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 64.99,
+   "tilt": 118.0,
+   "tube_tilt": 112.1,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.09,
+   "tilt": 118.2,
+   "tube_tilt": 112.29,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.19,
+   "tilt": 118.4,
+   "tube_tilt": 112.48,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.29,
+   "tilt": 118.6,
+   "tube_tilt": 112.67,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.39,
+   "tilt": 118.8,
+   "tube_tilt": 112.86,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.49,
+   "tilt": 119.0,
+   "tube_tilt": 113.05,
+   "lip_err_mm": [
+    0.5,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.59,
+   "tilt": 119.2,
+   "tube_tilt": 113.24,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.69,
+   "tilt": 119.4,
+   "tube_tilt": 113.44,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.79,
+   "tilt": 119.6,
+   "tube_tilt": 113.62,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.89,
+   "tilt": 119.8,
+   "tube_tilt": 113.82,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 65.99,
+   "tilt": 120.0,
+   "tube_tilt": 114.01,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.09,
+   "tilt": 120.2,
+   "tube_tilt": 114.2,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.19,
+   "tilt": 120.4,
+   "tube_tilt": 114.38,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.29,
+   "tilt": 120.6,
+   "tube_tilt": 114.57,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.39,
+   "tilt": 120.8,
+   "tube_tilt": 114.76,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.49,
+   "tilt": 121.0,
+   "tube_tilt": 114.95,
+   "lip_err_mm": [
+    0.6,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.59,
+   "tilt": 121.2,
+   "tube_tilt": 115.14,
+   "lip_err_mm": [
+    0.7,
+    6.2,
+    2.0
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.69,
+   "tilt": 121.4,
+   "tube_tilt": 115.33,
+   "lip_err_mm": [
+    0.7,
+    6.2,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.79,
+   "tilt": 121.6,
+   "tube_tilt": 115.53,
+   "lip_err_mm": [
+    0.7,
+    6.2,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.89,
+   "tilt": 121.8,
+   "tube_tilt": 115.71,
+   "lip_err_mm": [
+    0.7,
+    6.2,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 66.99,
+   "tilt": 122.0,
+   "tube_tilt": 115.9,
+   "lip_err_mm": [
+    0.7,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.09,
+   "tilt": 122.2,
+   "tube_tilt": 116.09,
+   "lip_err_mm": [
+    0.7,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.19,
+   "tilt": 122.4,
+   "tube_tilt": 116.28,
+   "lip_err_mm": [
+    0.7,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.29,
+   "tilt": 122.6,
+   "tube_tilt": 116.47,
+   "lip_err_mm": [
+    0.7,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.39,
+   "tilt": 122.8,
+   "tube_tilt": 116.66,
+   "lip_err_mm": [
+    0.7,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.49,
+   "tilt": 123.0,
+   "tube_tilt": 116.86,
+   "lip_err_mm": [
+    0.7,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.59,
+   "tilt": 123.2,
+   "tube_tilt": 117.04,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.69,
+   "tilt": 123.4,
+   "tube_tilt": 117.23,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.79,
+   "tilt": 123.6,
+   "tube_tilt": 117.42,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.89,
+   "tilt": 123.8,
+   "tube_tilt": 117.61,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 67.99,
+   "tilt": 124.0,
+   "tube_tilt": 117.8,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.09,
+   "tilt": 124.2,
+   "tube_tilt": 117.99,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.19,
+   "tilt": 124.4,
+   "tube_tilt": 118.18,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.29,
+   "tilt": 124.6,
+   "tube_tilt": 118.37,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.39,
+   "tilt": 124.8,
+   "tube_tilt": 118.56,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.49,
+   "tilt": 125.0,
+   "tube_tilt": 118.75,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.9
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.59,
+   "tilt": 125.2,
+   "tube_tilt": 118.94,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.69,
+   "tilt": 125.4,
+   "tube_tilt": 119.13,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.79,
+   "tilt": 125.6,
+   "tube_tilt": 119.32,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.89,
+   "tilt": 125.8,
+   "tube_tilt": 119.51,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 68.99,
+   "tilt": 126.0,
+   "tube_tilt": 119.69,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.09,
+   "tilt": 126.2,
+   "tube_tilt": 119.88,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.19,
+   "tilt": 126.4,
+   "tube_tilt": 120.07,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.29,
+   "tilt": 126.6,
+   "tube_tilt": 120.26,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.39,
+   "tilt": 126.8,
+   "tube_tilt": 120.45,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.49,
+   "tilt": 127.0,
+   "tube_tilt": 120.64,
+   "lip_err_mm": [
+    0.9,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.59,
+   "tilt": 127.2,
+   "tube_tilt": 120.83,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.69,
+   "tilt": 127.4,
+   "tube_tilt": 121.02,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.79,
+   "tilt": 127.6,
+   "tube_tilt": 121.21,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.89,
+   "tilt": 127.8,
+   "tube_tilt": 121.4,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 69.99,
+   "tilt": 128.0,
+   "tube_tilt": 121.58,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.09,
+   "tilt": 128.2,
+   "tube_tilt": 121.77,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.19,
+   "tilt": 128.4,
+   "tube_tilt": 121.96,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.29,
+   "tilt": 128.6,
+   "tube_tilt": 122.15,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.39,
+   "tilt": 128.8,
+   "tube_tilt": 122.34,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.49,
+   "tilt": 129.0,
+   "tube_tilt": 122.53,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.59,
+   "tilt": 129.2,
+   "tube_tilt": 122.72,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.69,
+   "tilt": 129.4,
+   "tube_tilt": 122.9,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.79,
+   "tilt": 129.6,
+   "tube_tilt": 123.09,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.89,
+   "tilt": 129.8,
+   "tube_tilt": 123.28,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 70.99,
+   "tilt": 130.0,
+   "tube_tilt": 123.47,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.09,
+   "tilt": 130.2,
+   "tube_tilt": 123.65,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.19,
+   "tilt": 130.4,
+   "tube_tilt": 123.84,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.29,
+   "tilt": 130.6,
+   "tube_tilt": 124.03,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.39,
+   "tilt": 130.8,
+   "tube_tilt": 124.22,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.49,
+   "tilt": 131.0,
+   "tube_tilt": 124.41,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.59,
+   "tilt": 131.2,
+   "tube_tilt": 124.6,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.7
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.69,
+   "tilt": 131.4,
+   "tube_tilt": 124.78,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.7
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.79,
+   "tilt": 131.6,
+   "tube_tilt": 124.97,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.89,
+   "tilt": 131.8,
+   "tube_tilt": 125.16,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 71.99,
+   "tilt": 132.0,
+   "tube_tilt": 125.35,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.7
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.09,
+   "tilt": 132.2,
+   "tube_tilt": 125.53,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.7
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.19,
+   "tilt": 132.4,
+   "tube_tilt": 125.72,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.29,
+   "tilt": 132.6,
+   "tube_tilt": 125.91,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.39,
+   "tilt": 132.8,
+   "tube_tilt": 126.1,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.6
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.49,
+   "tilt": 133.0,
+   "tube_tilt": 126.29,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.59,
+   "tilt": 133.2,
+   "tube_tilt": 126.47,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.69,
+   "tilt": 133.4,
+   "tube_tilt": 126.66,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.79,
+   "tilt": 133.6,
+   "tube_tilt": 126.85,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.89,
+   "tilt": 133.8,
+   "tube_tilt": 127.04,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 72.99,
+   "tilt": 134.0,
+   "tube_tilt": 127.22,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.09,
+   "tilt": 134.2,
+   "tube_tilt": 127.41,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.19,
+   "tilt": 134.4,
+   "tube_tilt": 127.6,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.6
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.29,
+   "tilt": 134.6,
+   "tube_tilt": 127.78,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.39,
+   "tilt": 134.8,
+   "tube_tilt": 127.97,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.49,
+   "tilt": 135.0,
+   "tube_tilt": 128.16,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.6
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.59,
+   "tilt": 131.0,
+   "tube_tilt": 127.46,
+   "lip_err_mm": [
+    1.4,
+    6.3,
+    1.5
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.69,
+   "tilt": 127.0,
+   "tube_tilt": 125.56,
+   "lip_err_mm": [
+    1.4,
+    6.3,
+    1.5
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.79,
+   "tilt": 123.0,
+   "tube_tilt": 122.92,
+   "lip_err_mm": [
+    1.3,
+    6.3,
+    1.5
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.89,
+   "tilt": 119.0,
+   "tube_tilt": 119.83,
+   "lip_err_mm": [
+    1.2,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 73.99,
+   "tilt": 115.0,
+   "tube_tilt": 116.46,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.6
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.09,
+   "tilt": 111.0,
+   "tube_tilt": 112.91,
+   "lip_err_mm": [
+    1.1,
+    6.3,
+    1.6
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.19,
+   "tilt": 107.0,
+   "tube_tilt": 109.25,
+   "lip_err_mm": [
+    1.0,
+    6.3,
+    1.7
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.29,
+   "tilt": 103.0,
+   "tube_tilt": 105.52,
+   "lip_err_mm": [
+    0.8,
+    6.3,
+    1.7
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.39,
+   "tilt": 99.0,
+   "tube_tilt": 101.75,
+   "lip_err_mm": [
+    0.7,
+    6.3,
+    1.8
+   ],
+   "grams": 17.44,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.49,
+   "tilt": 95.0,
+   "tube_tilt": 97.96,
+   "lip_err_mm": [
+    0.6,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.59,
+   "tilt": 91.0,
+   "tube_tilt": 94.14,
+   "lip_err_mm": [
+    0.5,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.69,
+   "tilt": 87.0,
+   "tube_tilt": 90.32,
+   "lip_err_mm": [
+    0.4,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.79,
+   "tilt": 83.0,
+   "tube_tilt": 86.49,
+   "lip_err_mm": [
+    0.2,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.89,
+   "tilt": 79.0,
+   "tube_tilt": 82.66,
+   "lip_err_mm": [
+    0.1,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 74.99,
+   "tilt": 75.0,
+   "tube_tilt": 78.83,
+   "lip_err_mm": [
+    -0.0,
+    6.3,
+    1.9
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 75.09,
+   "tilt": 71.0,
+   "tube_tilt": 75.0,
+   "lip_err_mm": [
+    -0.2,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 75.19,
+   "tilt": 67.0,
+   "tube_tilt": 71.18,
+   "lip_err_mm": [
+    -0.3,
+    6.3,
+    1.9
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 75.29,
+   "tilt": 63.0,
+   "tube_tilt": 67.36,
+   "lip_err_mm": [
+    -0.4,
+    6.3,
+    1.8
+   ],
+   "grams": 17.46,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 75.39,
+   "tilt": 59.0,
+   "tube_tilt": 63.56,
+   "lip_err_mm": [
+    -0.6,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  },
+  {
+   "t": 75.49,
+   "tilt": 55.0,
+   "tube_tilt": 59.77,
+   "lip_err_mm": [
+    -0.7,
+    6.3,
+    1.8
+   ],
+   "grams": 17.45,
+   "in_receiver": 18,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 108
+  }
+ ]
+}

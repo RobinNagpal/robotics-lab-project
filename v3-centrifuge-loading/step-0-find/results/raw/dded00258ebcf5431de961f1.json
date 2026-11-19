@@ -1,0 +1,9 @@
+{
+ "model": "gemini-robotics-er-2-preview",
+ "thinking": "medium",
+ "prompt": "The blue racks hold 50 ml centrifuge tubes. A tube is one of three kinds: \"sample\" (it has an orange screw cap; it holds a coloured liquid), \"water\" (open, no cap, full of small blue balls), \"empty\" (open, no cap, nothing inside). Point to the top of every tube standing in the racks in this picture (at most 20). Answer with a JSON list and nothing else, one entry per tube: [{\"point\": [y, x], \"label\": \"<kind> <colour>\", \"kind\": \"<kind>\", \"colour\": \"<colour>\"}]. The points are in [y, x] format normalized to 0-1000. colour is the colour of the liquid inside: one of red, yellow, green, purple, orange, blue, or none if empty.",
+ "text": "```json\n[\n  {\"point\": [426, 297], \"label\": \"sample purple\", \"kind\": \"sample\", \"colour\": \"purple\"},\n  {\"point\": [426, 429], \"label\": \"sample green\", \"kind\": \"sample\", \"colour\": \"green\"},\n  {\"point\": [426, 563], \"label\": \"sample yellow\", \"kind\": \"sample\", \"colour\": \"yellow\"},\n  {\"point\": [332, 452], \"label\": \"water blue\", \"kind\": \"water\", \"colour\": \"blue\"},\n  {\"point\": [386, 560], \"label\": \"sample red\", \"kind\": \"sample\", \"colour\": \"red\"},\n  {\"point\": [331, 637], \"label\": \"empty none\", \"kind\": \"empty\", \"colour\": \"none\"},\n  {\"point\": [331, 725], \"label\": \"empty none\", \"kind\": \"empty\", \"colour\": \"none\"}\n]\n```",
+ "seconds": 10.621691708000071,
+ "tokens_in": 1242,
+ "tokens_out": 1784
+}

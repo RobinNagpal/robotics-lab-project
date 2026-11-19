@@ -1,0 +1,27 @@
+[workspace]
+name = "step-1-learn"
+version = "0.1.0"
+description = "Step 1's learned models: SmolVLA (LeRobot) trained on the programmed arm's demonstrations, run in the MuJoCo scene"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+# PyTorch from conda-forge, not pip: pip's wheel brings its own OpenMP, which clashes with NumPy's (as in the
+# simulation's "sam" environment). The conda-forge build for Apple silicon uses the Mac's GPU (MPS).
+pytorch = ">=2.7,<2.16"
+torchvision = "*"
+numpy = ">=2.0,<2.3"
+pillow = ">=10"
+# Video encoding and decoding for LeRobot's dataset format.
+ffmpeg = "*"
+# The decoder LeRobot reads its videos with, built against conda-forge's PyTorch and FFmpeg (pip's wheel is
+# built for pip's PyTorch and does not load here).
+torchcodec = "*"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+# The same MuJoCo as the simulation (below 4.0), to run the trained model in the scene.
+mujoco = ">=3.3,<4"
+lerobot = { version = "==0.7.0", extras = ["smolvla", "training"] }
