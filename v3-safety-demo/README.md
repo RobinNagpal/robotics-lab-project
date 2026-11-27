@@ -3,6 +3,7 @@
 A sample ML safety evaluation on the v3 centrifuge simulation: a camera model spots a person's hand reaching
 into the robot's area and slows or stops the arm, and we test it the way a notified body would ask us to.
 
+- [docs/where-we-are.md](docs/where-we-are.md): **start here**: what is done, what is waiting, what to run next
 - [docs/plan.md](docs/plan.md): the plan (what, why, what we test, what we deliver)
 - [docs/steps.md](docs/steps.md): the work broken into steps and two parallel tracks, and where each stands
 - [docs/camera-check.md](docs/camera-check.md): which camera the safety feature uses, with the go / no-go pictures
