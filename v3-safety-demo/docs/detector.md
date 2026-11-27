@@ -3,7 +3,7 @@
 27 November 2026
 
 How the ML safety feature decides, from the safety camera, whether a hand is in the warning zone or the stop
-zone. Results are in [detector-results.md](detector-results.md) once the first model is evaluated.
+zone. Results: [detector-results.md](detector-results.md).
 
 ## In one paragraph
 
@@ -11,7 +11,7 @@ The safety camera is an **RGB-D camera** (colour plus depth) on the ceiling, loo
 **YOLO** (the ML part) finds hands in the colour picture and draws a box around each. A **fixed rule** (no ML)
 then takes the depth inside each box, works out where the hand is in space, and picks the zone from how close it
 comes to the arm's base. The ML only finds hands; it never decides the zone on its own, which keeps the decision
-easy to check.
+easy to check. Results are in [detector-results.md](detector-results.md).
 
 ## The pieces
 
@@ -72,8 +72,10 @@ cm up, so take the closest that could be. Run with perfect boxes on the 3,000 te
 
 So with a plain camera, the arm would slow down for nothing about a third of the time. With depth, the rule turns
 every pixel in the box into a point in space and takes the closest one to the arm's base, leaving out the bare
-table around the hand. Real 3D safety cameras measure depth (stereo or time of flight); in the simulation,
-MuJoCo renders it. The worst-case rule stays as the fallback for a box with no usable depth.
+table around the hand, minus a 2 cm safety margin (the depth picture's precision). Real 3D safety cameras measure
+depth (stereo or time of flight); in the simulation, MuJoCo renders it. The worst-case rule stays as the fallback
+for a box with no usable depth. With perfect boxes, this rule raises a false alarm on 2.7% of clear pictures
+(0.2% without the margin, but then 2 hands right on the warning zone's edge are missed).
 
 **Decided (27 Nov):** RGB-D safety camera, YOLO finds the hand, the rule decides the zone. The other option, YOLO
 learning the zone itself (three classes: hand clear, warning, stop), was not taken: it would put the decision on
@@ -84,9 +86,9 @@ the ML alone.
 These are real gaps of this design, written down so that the manufacturer file and the Package 1 review deal
 with them openly.
 
-1. **Only hands are detected, not arms.** The zones count any part of the person. In 6 of the 3,000 test
+1. **Only hands are detected, not arms.** The zones count any part of the person. In 7 of the 3,000 test
    pictures the forearm or upper arm crosses into the warning zone while the hand stays outside it (a reach that
-   comes in at a slant), and a hand detector cannot see that. All 6 are warning-zone cases, none in the stop zone.
+   comes in at a slant), and a hand detector cannot see that. All 7 are warning-zone cases, none in the stop zone.
    Options if it matters: a second class "arm" in YOLO, or zones defined for hands only (and said so in the
    manufacturer file). **Decided (27 Nov):** keep it as a documented limitation.
 2. **Hands hidden under the robot.** In 3 of the 3,000 test pictures a hand in the stop zone is under the robot

@@ -144,8 +144,9 @@ def test_outline_distance():
 
 
 def test_depth_rule_matches_truth(world):
-    """With the true box and the depth picture, the rule's reach is within 2 cm below the truth (never above
-    it when the closest point of the hand shows), and its zone is never safer."""
+    """With the true box and the depth picture, the rule's reach is never above the truth (the 2 cm margin
+    covers the depth's precision), and usually close to it: a box that overlaps the robot or a rack takes
+    their nearer points, which is cautious, not wrong."""
     import box_zone
     import cameras
     import dataset
@@ -158,7 +159,7 @@ def test_depth_rule_matches_truth(world):
     seg.enable_segmentation_rendering()
     dep = mujoco.Renderer(model, height=h, width=w)
     dep.enable_depth_rendering()
-    checked = 0
+    below = []
     for _ in range(25):
         hand.set_look(model, hand.Look.draw(rng))
         goal, r = hand.draw_reach(rng, model, data, 0.0, 0.0)
@@ -173,9 +174,9 @@ def test_depth_rule_matches_truth(world):
         pts = zones.person_points(model, data)[: 8 + 10 * (len(skin) - 1)]
         hand_reach = np.linalg.norm(pts[:, :2], axis=1).min()
         got = box_zone.depth_reach(model, data, box, depth)
-        assert got <= hand_reach + 0.02
-        assert got >= hand_reach - 0.15  # not wildly cautious: the box's own corners only
-        checked += 1
+        assert got <= hand_reach
+        below.append(hand_reach - got)
     seg.close()
     dep.close()
-    assert checked >= 15
+    assert len(below) >= 15
+    assert np.median(below) < 0.06

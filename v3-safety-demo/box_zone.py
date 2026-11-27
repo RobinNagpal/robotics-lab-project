@@ -86,6 +86,10 @@ def zone_of_boxes(model: mujoco.MjModel, data: mujoco.MjData, boxes) -> zones.Zo
 
 
 TABLE_SKIP = 0.01  # m: points this close to the table's top are the table itself, not the hand
+# m taken off the measured reach: covers the depth picture's precision (millimetres, limited further by the
+# Mac's OpenGL) and the pixels skipped by STRIDE. Without it, 2 of 3,000 test hands right on the warning
+# zone's edge were placed 1 to 5 mm outside it.
+DEPTH_MARGIN = 0.02
 STRIDE = 2  # use every second pixel of the box (the hand is hundreds of pixels; this halves the work twice)
 
 
@@ -109,7 +113,7 @@ def depth_reach(
     points = points[points[:, 2] > TABLE_SKIP]
     if len(points) == 0:
         return box_reach(model, data, box, camera)
-    return float(np.linalg.norm(points[:, :2] - zones.ARM_BASE, axis=1).min())
+    return float(np.linalg.norm(points[:, :2] - zones.ARM_BASE, axis=1).min()) - DEPTH_MARGIN
 
 
 def zone_of_boxes_depth(model: mujoco.MjModel, data: mujoco.MjData, boxes, depth: np.ndarray) -> zones.Zone:

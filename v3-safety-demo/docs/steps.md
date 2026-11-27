@@ -49,7 +49,9 @@ Done when: the go / no-go images are reviewed.
 
 ## Track A: pictures and detector v1 (phase 2)
 
-**Status (27 Nov): dataset rendered, v1 training.** Approach and decisions: [detector.md](detector.md).
+**Status (27 Nov): v1 trained and evaluated** ([detector-results.md](detector-results.md)): missed 21 of 840
+stop-zone hands (2.5%), false alarm on 2.7% of clear pictures. Next: v2 with more hands near the robot.
+Approach and decisions: [detector.md](detector.md).
 
 1. **Record real v3 jobs** (`record_jobs.py`): 8 scenes, the state every 0.25 s; seeds 0 to 3 for training,
    4 to 7 for testing only.
