@@ -20,6 +20,7 @@ import numpy as np
 from . import centrifuge, liquid
 from .scene import Truth, slot_site
 from .settings import BALANCE_TOLERANCE, LIQUID, ROTOR, TUBE
+from .tubes import cap_on
 
 # A tube counts as in a hole when its tip is this close to the hole's bottom and its axis this close to the
 # hole's.
@@ -32,7 +33,7 @@ def tube_mass(model: mujoco.MjModel, data: mujoco.MjData, truth: Truth, name: st
     if name in truth.samples:
         own = truth.samples[name].body_mass
     elif name in truth.blanks:
-        own = truth.blanks[name]
+        own = truth.blanks[name] + (TUBE.cap_mass if cap_on(model, name) else 0.0)
     else:
         own = TUBE.body_mass
     return own + len(liquid.balls_in(model, data, TUBE, name)) * LIQUID.ball_mass

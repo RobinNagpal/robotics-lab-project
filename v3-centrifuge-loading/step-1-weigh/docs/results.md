@@ -7,6 +7,12 @@ How it works: [approach.md](approach.md). Measured 2026-11-18. Part A (the progr
 **60 of 60**, weight error median 0.002 g, max 0.006 g; back in its cell within 1.0 mm and 1.92°. The old
 scene's run is `results/evaluation_programmed_one_water_tube.json`.
 
+**2026-11-23:** run again after the gripper's pads got twist friction (`settings.PAD_TORSION`, needed by
+Step 4; [insert-test.md](../../step-4-load-rotor/docs/insert-test.md)): the same **60 of 60**, weight error
+median 0.002 g, max 0.006 g; back in its cell within 1.73 mm and 2.09°; nothing else moved
+(`results/evaluation_pad_torsion.log`). SmolVLA's training data was recorded before this change. The tube
+is held upright there, where twisting hardly matters, so it was not re-recorded.
+
 ## In short
 
 **60 of 60 sample tubes weighed and put back** on 20 test seeds (5 per job), with nothing else on the bench
@@ -81,5 +87,7 @@ The run saves every tube's numbers in `results/evaluation_programmed.json`.
 
 - Demonstrations are recorded ([dataset.md](dataset.md)): 120 training episodes (clean and nudged) for
   SmolVLA, then π0.5.
+- **2026-11-20:** SmolVLA's first training run (2 h on this Mac, 2 passes) fails all 6 test tries: it knows the
+  route but not the grip. Full write-up: [smolvla-first-run.md](smolvla-first-run.md).
 - The same grip and moves load the rotor in Step 4: the next physics question is whether a tube held only by
   its cap stays lined up at 35° in a hole with 0.9 mm to spare.

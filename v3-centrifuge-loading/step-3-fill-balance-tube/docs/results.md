@@ -4,6 +4,36 @@ How it works: [approach.md](approach.md). Measured 2026-11-19 on the programmed 
 `results/evaluation_programmed.json` (every pour round of every tube), the earlier run in
 `results/evaluation_run1.json`, the bench tests in `results/tilt_study_*.json`.
 
+## Update 2026-11-23: rerun with the pads' twist friction
+
+Step 4 found that the gripper model's pads had no grip against twisting, so the scene's pads now have it
+(`settings.PAD_TORSION`, see [step-4-load-rotor/docs/insert-test.md](../../step-4-load-rotor/docs/insert-test.md)).
+Step 3 was run again on the same 20 seeds.
+
+The first rerun broke one seed. On seed 5 the water tube slid 12 mm up the fingers while pouring. It was let
+go at the planned height, fell 12 mm crooked into the rack's small seat, and the simulation blew up (396 balls
+spilled). The pads now resist twisting, which uses up part of their grip, so the tube slid more along the
+fingers. Without twist friction, the loose grip had let the tube swing straight as it went in. Fix
+(`moves.lower_until_touch`): put the water tube back by lowering it until the wrist force sensor feels it
+touch the seat (at most 2 cm lower, as far as clear of the rack's plate). Let go, rise back to the planned
+height, then back out.
+
+| | Before (no twist friction) | Twist friction, first rerun | **Twist friction + feeling for the seat** |
+|---|---|---|---|
+| Filled with no refused move | 30 of 30 | 29 of 30 (seed 5 blew up) | **30 of 30** |
+| Within 0.5 g / 0.3 g of target | 27 / 20 | 22 / 17 | 23 / 19 |
+| Off target, median / worst | 0.24 / 1.56 g | 0.23 / 1.28 g | **0.13 / 1.28 g** |
+| Rotor balanced (true weights) | 18 of 20 | 17 of 20 | **18 of 20** (median 0.31 g, worst 1.12 g) |
+| Balls spilled | 73 (3.7 a seed) | 539 | 154 (median 7 a seed, at most 19) |
+| Tubes back in their cells (3 mm, 3°) | 14 of 20 seeds | 17 of 20 | **18 of 20** (2 water tubes lean 3.8 and 5.1°) |
+| Something else on the bench moved | 0 | 1 | 0 |
+
+The step works as before. Rotors are balanced as often, more tubes are put back straight, and nothing is
+knocked. The spill is about twice as large, still a few balls a seed: big bursts bouncing out of the balance
+tube. Run-to-run changes are large here: the same seed often ends a ball or two different. Logs:
+`results/evaluation_pad_torsion.log` (with the fix), `results/evaluation_pad_torsion_before_fix.log`. The
+tables below are the 2026-11-19 run without twist friction.
+
 ## Words used here
 
 | Word | Meaning |

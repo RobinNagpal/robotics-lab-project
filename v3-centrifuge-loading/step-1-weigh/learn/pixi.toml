@@ -20,8 +20,11 @@ ffmpeg = "*"
 torchcodec = "*"
 pytest = "*"
 ruff = "*"
+trimesh = ">=4.0"
+matplotlib = ">=3.11.2,<4"
 
 [pypi-dependencies]
 # The same MuJoCo as the simulation (below 4.0), to run the trained model in the scene.
 mujoco = ">=3.3,<4"
 lerobot = { version = "==0.7.0", extras = ["smolvla", "training"] }
+manifold3d = ">=2.5"

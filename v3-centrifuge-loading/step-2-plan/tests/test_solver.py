@@ -5,6 +5,7 @@ from __future__ import annotations
 import pytest
 
 from solver import (
+    CAP_G,
     EMPTY_TUBE_G,
     MAX_WATER_G,
     TOLERANCE_G,
@@ -28,7 +29,7 @@ def check_rules(plan) -> None:
         assert sum(n in loaded for n in neighbours(t.hole)) < 2, plan.describe()
         loaded.add(t.hole)
     for t in plan.balance_tubes:
-        assert EMPTY_TUBE_G < t.grams < EMPTY_TUBE_G + MAX_WATER_G
+        assert EMPTY_TUBE_G + CAP_G < t.grams < EMPTY_TUBE_G + MAX_WATER_G + CAP_G
 
 
 def test_two_pairs_go_opposite_each_other_with_no_balance_tube():

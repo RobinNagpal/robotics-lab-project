@@ -1,0 +1,29 @@
+{
+ "seed": 14,
+ "scenario": "triangle",
+ "plan": [
+  {
+   "hole": 0,
+   "name": "sample0",
+   "tube": "sample0",
+   "balance": false,
+   "grams": 26.67
+  },
+  {
+   "hole": 2,
+   "name": "sample1",
+   "tube": "sample1",
+   "balance": false,
+   "grams": 26.6
+  },
+  {
+   "hole": 4,
+   "name": "sample2",
+   "tube": "sample2",
+   "balance": false,
+   "grams": 26.9
+  }
+ ],
+ "fills": [],
+ "wall_seconds": 6.0
+}

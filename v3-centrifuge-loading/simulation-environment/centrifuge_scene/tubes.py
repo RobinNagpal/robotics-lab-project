@@ -86,8 +86,13 @@ def add_tube(
     quat: list[float] | None = None,
     free: bool = True,
     tube: Tube = TUBE,
+    cap_later: bool = False,
 ) -> mujoco.MjsBody:
-    """Add a tube with its tip at ``pos``, free or fixed where it stands, its mass spread over its walls."""
+    """Add a tube with its tip at ``pos``, free or fixed where it stands, its mass spread over its walls.
+
+    ``cap_later`` (an open tube that Step 3 caps once filled): the cap is built but switched off (not drawn,
+    nothing touches it, no mass) until ``put_cap_on`` switches it on.
+    """
     add_meshes(spec)
     body = parent.add_body(name=name, pos=pos, quat=quat or [1, 0, 0, 0])
     if free:
@@ -122,7 +127,7 @@ def add_tube(
         body.add_geom(
             name=f"{name}_wall{i}", type=mujoco.mjtGeom.mjGEOM_BOX, size=half, pos=p, quat=q, **common
         )
-    if capped:
+    if capped or cap_later:
         # AutoBio's cap mesh points down from its top; turned over, its top is the tube's capped height.
         top = tube.capped_height
         body.add_geom(
@@ -134,7 +139,7 @@ def add_tube(
             rgba=list(CAP_PLASTIC.rgba),
             contype=0,
             conaffinity=0,
-            group=2,
+            group=2 if capped else HIDDEN_GROUP,
             mass=0,
         )
         body.add_geom(
@@ -142,12 +147,59 @@ def add_tube(
             type=mujoco.mjtGeom.mjGEOM_CYLINDER,
             size=[tube.cap_radius, tube.cap_height / 2, 0],
             pos=[0, 0, top - tube.cap_height / 2],
-            mass=tube.cap_mass,
+            mass=tube.cap_mass if capped else 0,
             friction=[CAP_PLASTIC.friction, 0.005, 0.0001],
             group=3,
             rgba=[0.5, 0.5, 0.5, 0.3],
+            # Switched off: a collision bit nothing else has, so it touches nothing (with both 0, MuJoCo
+            # leaves it out of the body's collision tree, and switching it on later would do nothing).
+            contype=1 if capped else OFF_BIT,
+            conaffinity=1 if capped else 0,
         )
     return body
+
+
+# Geoms in this group are never drawn (cameras draw groups 0 to 2).
+HIDDEN_GROUP = 5
+OFF_BIT = 1 << 4
+
+
+def cap_on(model: mujoco.MjModel, name: str) -> bool:
+    """Whether tube ``name`` has its cap on (built capped, or capped later)."""
+    try:
+        return bool(model.geom_conaffinity[model.geom(f"{name}_cap").id])
+    except KeyError:
+        return False
+
+
+def put_cap_on(model: mujoco.MjModel, data: mujoco.MjData, name: str, tube: Tube = TUBE) -> None:
+    """Switch on the cap of a tube built with ``cap_later``: drawn, touched, and its mass added.
+
+    This stands in for the cap's thread catching: the cap the arm carries is let go here, and from now on the
+    tube is a capped tube like a sample, 2 g heavier.
+    """
+    if cap_on(model, name):
+        return
+    model.geom_group[model.geom(f"{name}_cap_visual").id] = 2
+    cap = model.geom(f"{name}_cap").id
+    model.geom_contype[cap] = 1
+    model.geom_conaffinity[cap] = 1
+    b = model.body(name).id
+    m_old, m_cap = float(model.body_mass[b]), tube.cap_mass
+    p_old = model.body_ipos[b].copy()
+    c = np.array([0.0, 0.0, tube.capped_height - tube.cap_height / 2])  # the cap's centre, tube's frame
+
+    # Only the mass and the three inertia values change (the tube is round about its axis, so the inertia's
+    # axes stay the tube's own). The balance point is left where it was, 8 mm below where the cap would put
+    # it: changed while the simulation runs (body_ipos, or turning body_iquat), MuJoCo flung the tube across
+    # the bench at the next grip. The weight, and so the rotor's balance, get the cap's full 2 g.
+    d = c - p_old
+    r, h = tube.cap_radius, tube.cap_height
+    cap_own = np.array([m_cap * (3 * r**2 + h**2) / 12] * 2 + [m_cap * r**2 / 2])
+    model.body_inertia[b] += cap_own + m_cap * (float(d @ d) - d**2)
+    model.body_mass[b] = m_old + m_cap
+    model.body_subtreemass[b] += m_cap
+    model.body_subtreemass[0] += m_cap
 
 
 def top_of(tube: Tube, capped: bool) -> float:

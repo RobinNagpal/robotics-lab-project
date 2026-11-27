@@ -67,8 +67,8 @@ def second_target(plan: solver.Plan, weights: dict[str, float], first: str, firs
     rx = sum(m * solver.DIRECTIONS[k][0] for k, m in masses.items())
     ry = sum(m * solver.DIRECTIONS[k][1] for k, m in masses.items())
     ex, ey = solver.DIRECTIONS[other.hole]
-    lo = solver.EMPTY_TUBE_G + solver.TUBE_SPREAD_G
-    hi = solver.EMPTY_TUBE_G - solver.TUBE_SPREAD_G + solver.MAX_WATER_G
+    lo = solver.EMPTY_TUBE_G + solver.TUBE_SPREAD_G + solver.CAP_G
+    hi = solver.EMPTY_TUBE_G - solver.TUBE_SPREAD_G + solver.MAX_WATER_G + solver.CAP_G
     return min(hi, max(lo, -(rx * ex + ry * ey)))
 
 

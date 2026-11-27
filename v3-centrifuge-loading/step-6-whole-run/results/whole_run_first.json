@@ -1,0 +1,1117 @@
+[
+ {
+  "seed": 0,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 38.08,
+   "sample_rack/5": 34.79,
+   "sample_rack/6": 37.7,
+   "sample_rack/7": 35.17
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.004,
+   "sample_rack/5": -0.004,
+   "sample_rack/6": 0.004,
+   "sample_rack/7": -0.005
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 38.08,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/5",
+    "grams": 34.79,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/6",
+    "grams": 37.7,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 35.17,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.38 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 34.99 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.38,
+  "examiner_g": 34.99,
+  "tubes_planned": 4,
+  "tubes_seated": 3,
+  "all_samples_loaded": false,
+  "balanced": false,
+  "balls_spilled": 66,
+  "sim_blew_up": true,
+  "sim_seconds": 226.0,
+  "wall_seconds": 180.7,
+  "success": false,
+  "step0_seconds": 11.5
+ },
+ {
+  "seed": 1,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 45.27,
+   "sample_rack/3": 40.58,
+   "sample_rack/5": 40.22
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.002,
+   "sample_rack/3": 0.001,
+   "sample_rack/5": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 45.45,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 45.27,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/3",
+    "grams": 40.58,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/5",
+    "grams": 40.22,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 45.47
+  },
+  "report": "Balanced: 0.31 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.31 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.312,
+  "examiner_g": 0.312,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 2,
+  "sim_blew_up": false,
+  "sim_seconds": 394.8,
+  "wall_seconds": 363.4,
+  "success": false,
+  "step0_seconds": 0.0
+ },
+ {
+  "seed": 2,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 42.27,
+   "sample_rack/5": 42.3,
+   "sample_rack/7": 42.44
+  },
+  "step1_error_g": {
+   "sample_rack/1": 0.005,
+   "sample_rack/5": -0.004,
+   "sample_rack/7": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 42.27,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 42.3,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 42.44,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.16 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.16 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.157,
+  "examiner_g": 0.158,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 161.1,
+  "wall_seconds": 140.1,
+  "success": true,
+  "step0_seconds": 4.4
+ },
+ {
+  "seed": 3,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 25.35,
+   "sample_rack/1": 41.93
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.004,
+   "sample_rack/1": -0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 25.35,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 41.93,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 25.35,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/1",
+    "grams": 41.93,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 25.21,
+   "balance B": 42.09
+  },
+  "report": "Balanced: 0.26 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.26 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.26,
+  "examiner_g": 0.257,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 7,
+  "sim_blew_up": false,
+  "sim_seconds": 460.5,
+  "wall_seconds": 367.7,
+  "success": false,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 4,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 35.14,
+   "sample_rack/1": 35.28,
+   "sample_rack/3": 44.86,
+   "sample_rack/5": 45.28
+  },
+  "step1_error_g": {
+   "sample_rack/0": -0.002,
+   "sample_rack/1": -0.0,
+   "sample_rack/3": -0.001,
+   "sample_rack/5": -0.005
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 35.14,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/3",
+    "grams": 44.86,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/1",
+    "grams": 35.28,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/5",
+    "grams": 45.28,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.37 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.38 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.37,
+  "examiner_g": 0.375,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 229.9,
+  "wall_seconds": 195.5,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 5,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 38.28,
+   "sample_rack/6": 41.84,
+   "sample_rack/7": 38.51
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.002,
+   "sample_rack/6": -0.004,
+   "sample_rack/7": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 4,
+    "name": "balance A",
+    "grams": 41.73,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 38.28,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/6",
+    "grams": 41.84,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/7",
+    "grams": 38.51,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 41.91
+  },
+  "report": "Balanced: 0.27 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.27 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.272,
+  "examiner_g": 0.269,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 2,
+  "sim_blew_up": false,
+  "sim_seconds": 372.4,
+  "wall_seconds": 314.6,
+  "success": false,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 6,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/2": 33.56,
+   "sample_rack/5": 33.46,
+   "sample_rack/7": 33.47
+  },
+  "step1_error_g": {
+   "sample_rack/2": -0.005,
+   "sample_rack/5": 0.002,
+   "sample_rack/7": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/2",
+    "grams": 33.56,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 33.46,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 33.47,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.10 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.10 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.095,
+  "examiner_g": 0.101,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 158.8,
+  "wall_seconds": 103.2,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 7,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 37.75,
+   "sample_rack/6": 45.09
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.004,
+   "sample_rack/6": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 37.75,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 45.09,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 37.75,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/6",
+    "grams": 45.09,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 38.37,
+   "balance B": 45.31
+  },
+  "report": "Balanced: 0.54 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.55 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.544,
+  "examiner_g": 0.55,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 6,
+  "sim_blew_up": false,
+  "sim_seconds": 506.5,
+  "wall_seconds": 431.9,
+  "success": false,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 8,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 46.03,
+   "sample_rack/2": 26.85,
+   "sample_rack/5": 46.12,
+   "sample_rack/6": 27.2
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.006,
+   "sample_rack/2": 0.0,
+   "sample_rack/5": -0.001,
+   "sample_rack/6": 0.004
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 46.03,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/2",
+    "grams": 26.85,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/5",
+    "grams": 46.12,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/6",
+    "grams": 27.2,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.31 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.315,
+  "examiner_g": 0.312,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 228.1,
+  "wall_seconds": 168.2,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 9,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 33.17,
+   "sample_rack/6": 43.28,
+   "sample_rack/7": 32.89
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.005,
+   "sample_rack/6": 0.0,
+   "sample_rack/7": -0.0
+  },
+  "step2_plan": [
+   {
+    "hole": 4,
+    "name": "balance A",
+    "grams": 43.42,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 33.17,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/6",
+    "grams": 43.28,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/7",
+    "grams": 32.89,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 43.5
+  },
+  "report": "Balanced: 0.26 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.26 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.255,
+  "examiner_g": 0.258,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 8,
+  "sim_blew_up": false,
+  "sim_seconds": 401.5,
+  "wall_seconds": 331.6,
+  "success": false,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 10,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/2": 40.82,
+   "sample_rack/4": 41.15,
+   "sample_rack/5": 41.59
+  },
+  "step1_error_g": {
+   "sample_rack/2": 0.0,
+   "sample_rack/4": -0.0,
+   "sample_rack/5": 0.004
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/2",
+    "grams": 40.82,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/4",
+    "grams": 41.15,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/5",
+    "grams": 41.59,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.67 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.67 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.669,
+  "examiner_g": 0.666,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 159.3,
+  "wall_seconds": 125.3,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 11,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 34.62,
+   "sample_rack/4": 41.44
+  },
+  "step1_error_g": {
+   "sample_rack/3": 0.001,
+   "sample_rack/4": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 34.62,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 41.44,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 34.62,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/4",
+    "grams": 41.44,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 34.57,
+   "balance B": 41.35
+  },
+  "report": "Balanced: 0.08 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.08 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.078,
+  "examiner_g": 0.079,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 14,
+  "sim_blew_up": false,
+  "sim_seconds": 486.2,
+  "wall_seconds": 405.7,
+  "success": false,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 12,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 28.96,
+   "sample_rack/5": 45.39,
+   "sample_rack/6": 45.88,
+   "sample_rack/7": 29.09
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.006,
+   "sample_rack/5": 0.005,
+   "sample_rack/6": 0.002,
+   "sample_rack/7": -0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 28.96,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 45.39,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/7",
+    "grams": 29.09,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/6",
+    "grams": 45.88,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.44 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.44 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.44,
+  "examiner_g": 0.444,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 215.5,
+  "wall_seconds": 175.0,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 13,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 24.64,
+   "sample_rack/5": 24.78,
+   "sample_rack/7": 42.03
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.004,
+   "sample_rack/5": 0.0,
+   "sample_rack/7": -0.002
+  },
+  "step2_plan": [
+   {
+    "hole": 1,
+    "name": "balance A",
+    "grams": 17.32,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 24.64,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 24.78,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 42.03,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 17.58
+  },
+  "report": "Balanced: 0.29 g out (limit 1.0 g), 4 tubes in holes 0, 1, 2, 4; examiner 0.28 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.287,
+  "examiner_g": 0.284,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 305.3,
+  "wall_seconds": 214.5,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 14,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 26.6,
+   "sample_rack/4": 26.9,
+   "sample_rack/6": 26.67
+  },
+  "step1_error_g": {
+   "sample_rack/0": -0.004,
+   "sample_rack/4": -0.002,
+   "sample_rack/6": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 26.6,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/4",
+    "grams": 26.9,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/6",
+    "grams": 26.67,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.27 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.27 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.272,
+  "examiner_g": 0.272,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 160.5,
+  "wall_seconds": 83.4,
+  "success": true,
+  "step0_seconds": 4.8
+ },
+ {
+  "seed": 15,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 44.71,
+   "sample_rack/5": 39.25
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.001,
+   "sample_rack/5": 0.0
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 44.71,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 39.25,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 44.71,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 39.25,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 45.09,
+   "balance B": 39.65
+  },
+  "report": "Balanced: 0.39 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.39 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.39,
+  "examiner_g": 0.387,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 7,
+  "sim_blew_up": false,
+  "sim_seconds": 494.6,
+  "wall_seconds": 413.5,
+  "success": false,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 16,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 36.47,
+   "sample_rack/3": 42.42,
+   "sample_rack/5": 36.46,
+   "sample_rack/7": 42.09
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.0,
+   "sample_rack/3": -0.005,
+   "sample_rack/5": -0.004,
+   "sample_rack/7": -0.002
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 36.47,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/3",
+    "grams": 42.42,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/5",
+    "grams": 36.46,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/7",
+    "grams": 42.09,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.33 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.33 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.325,
+  "examiner_g": 0.33,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 214.7,
+  "wall_seconds": 181.6,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 17,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 31.86,
+   "sample_rack/2": 31.49,
+   "sample_rack/7": 40.91
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.003,
+   "sample_rack/2": -0.003,
+   "sample_rack/7": 0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 4,
+    "name": "balance A",
+    "grams": 41.1,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 31.86,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/7",
+    "grams": 40.91,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/2",
+    "grams": 31.49,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 41.09
+  },
+  "report": "Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.32 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.32,
+  "examiner_g": 0.315,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 14,
+  "sim_blew_up": false,
+  "sim_seconds": 419.2,
+  "wall_seconds": 318.9,
+  "success": false,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 18,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 43.74,
+   "sample_rack/3": 43.68,
+   "sample_rack/5": 43.89
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.003,
+   "sample_rack/3": -0.002,
+   "sample_rack/5": 0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 43.74,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/3",
+    "grams": 43.68,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/5",
+    "grams": 43.89,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "report": "Balanced: 0.19 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.18 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.187,
+  "examiner_g": 0.182,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 160.7,
+  "wall_seconds": 139.3,
+  "success": true,
+  "step0_seconds": 4.9
+ },
+ {
+  "seed": 19,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 32.7,
+   "sample_rack/6": 36.55
+  },
+  "step1_error_g": {
+   "sample_rack/3": 0.002,
+   "sample_rack/6": -0.002
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 32.7,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 36.55,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 32.7,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/6",
+    "grams": 36.55,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 33.14,
+   "balance B": 37.31
+  },
+  "report": "Balanced: 0.66 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.66 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.661,
+  "examiner_g": 0.657,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 13,
+  "sim_blew_up": false,
+  "sim_seconds": 462.0,
+  "wall_seconds": 343.0,
+  "success": false,
+  "step0_seconds": 4.9
+ }
+]

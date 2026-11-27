@@ -1,0 +1,862 @@
+{
+ "seed": 4,
+ "hole": 4,
+ "mode": "force",
+ "miss_mm": 0.0,
+ "squeeze_mm": 2.0,
+ "pad_torsion": 0.02,
+ "tube": "sample0",
+ "in_fingers_after_pick_deg": 0.83,
+ "turn_deg": -45,
+ "planned_gap_mm": 3.1,
+ "way_in": "4 poses, chosen gap 3.4 mm",
+ "in_fingers_on_arrival_deg": 0.61,
+ "in_fingers_tilted_deg": 0.78,
+ "tube_vs_hole_before_slide_deg": 0.78,
+ "slide_stop": "reached the end of the slide",
+ "slide_seconds": 9.15,
+ "pauses": 2,
+ "peak_axial_N": 5.88,
+ "peak_side_N": 11.98,
+ "worst_in_fingers_deg": 1.34,
+ "final_shift_mm": 0.0,
+ "backed_out": true,
+ "tip_to_bottom_mm": 0.5,
+ "tip_along_axis_mm": 0.34,
+ "axis_vs_hole_deg": 0.06,
+ "seated": true,
+ "balls_spilled": 0,
+ "sim_blew_up": false,
+ "sim_seconds": 27.5,
+ "wall_seconds": 30.0,
+ "slide_log": [
+  {
+   "t": 0.0,
+   "target_back_mm": 100.0,
+   "tip_to_bottom_mm": 100.2,
+   "axial_N": 0.0,
+   "side_N": 0.0,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.79
+  },
+  {
+   "t": 0.1,
+   "target_back_mm": 97.0,
+   "tip_to_bottom_mm": 99.5,
+   "axial_N": -0.13,
+   "side_N": 0.26,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.81
+  },
+  {
+   "t": 0.2,
+   "target_back_mm": 94.0,
+   "tip_to_bottom_mm": 97.9,
+   "axial_N": -0.21,
+   "side_N": 0.42,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.83
+  },
+  {
+   "t": 0.3,
+   "target_back_mm": 91.0,
+   "tip_to_bottom_mm": 95.7,
+   "axial_N": -0.26,
+   "side_N": 0.51,
+   "shift_mm": 0.02,
+   "in_fingers_deg": 0.84
+  },
+  {
+   "t": 0.4,
+   "target_back_mm": 89.2,
+   "tip_to_bottom_mm": 93.5,
+   "axial_N": -0.23,
+   "side_N": 0.47,
+   "shift_mm": 0.08,
+   "in_fingers_deg": 0.86
+  },
+  {
+   "t": 0.5,
+   "target_back_mm": 88.2,
+   "tip_to_bottom_mm": 91.7,
+   "axial_N": -0.19,
+   "side_N": 0.37,
+   "shift_mm": 0.03,
+   "in_fingers_deg": 0.88
+  },
+  {
+   "t": 0.6,
+   "target_back_mm": 87.2,
+   "tip_to_bottom_mm": 90.1,
+   "axial_N": -0.16,
+   "side_N": 0.31,
+   "shift_mm": 0.01,
+   "in_fingers_deg": 0.89
+  },
+  {
+   "t": 0.7,
+   "target_back_mm": 86.2,
+   "tip_to_bottom_mm": 88.8,
+   "axial_N": -0.14,
+   "side_N": 0.27,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.91
+  },
+  {
+   "t": 0.8,
+   "target_back_mm": 85.2,
+   "tip_to_bottom_mm": 87.6,
+   "axial_N": -0.12,
+   "side_N": 0.25,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.93
+  },
+  {
+   "t": 0.9,
+   "target_back_mm": 84.2,
+   "tip_to_bottom_mm": 86.5,
+   "axial_N": -0.12,
+   "side_N": 0.23,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.94
+  },
+  {
+   "t": 1.0,
+   "target_back_mm": 83.2,
+   "tip_to_bottom_mm": 85.4,
+   "axial_N": -0.11,
+   "side_N": 0.22,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.96
+  },
+  {
+   "t": 1.1,
+   "target_back_mm": 82.2,
+   "tip_to_bottom_mm": 84.4,
+   "axial_N": -0.11,
+   "side_N": 0.22,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.98
+  },
+  {
+   "t": 1.2,
+   "target_back_mm": 81.2,
+   "tip_to_bottom_mm": 83.4,
+   "axial_N": -0.11,
+   "side_N": 0.21,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.0
+  },
+  {
+   "t": 1.3,
+   "target_back_mm": 80.2,
+   "tip_to_bottom_mm": 82.4,
+   "axial_N": -0.1,
+   "side_N": 0.21,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.01
+  },
+  {
+   "t": 1.4,
+   "target_back_mm": 79.2,
+   "tip_to_bottom_mm": 81.4,
+   "axial_N": -0.1,
+   "side_N": 0.21,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.02
+  },
+  {
+   "t": 1.5,
+   "target_back_mm": 78.2,
+   "tip_to_bottom_mm": 80.4,
+   "axial_N": -0.1,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.04
+  },
+  {
+   "t": 1.6,
+   "target_back_mm": 77.2,
+   "tip_to_bottom_mm": 79.4,
+   "axial_N": -0.1,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.06
+  },
+  {
+   "t": 1.7,
+   "target_back_mm": 76.2,
+   "tip_to_bottom_mm": 78.4,
+   "axial_N": -0.1,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.07
+  },
+  {
+   "t": 1.8,
+   "target_back_mm": 75.2,
+   "tip_to_bottom_mm": 77.4,
+   "axial_N": -0.1,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.09
+  },
+  {
+   "t": 1.9,
+   "target_back_mm": 74.2,
+   "tip_to_bottom_mm": 76.4,
+   "axial_N": -0.1,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.11
+  },
+  {
+   "t": 2.0,
+   "target_back_mm": 73.2,
+   "tip_to_bottom_mm": 75.4,
+   "axial_N": -0.1,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.12
+  },
+  {
+   "t": 2.1,
+   "target_back_mm": 72.2,
+   "tip_to_bottom_mm": 74.4,
+   "axial_N": -0.1,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.14
+  },
+  {
+   "t": 2.2,
+   "target_back_mm": 71.2,
+   "tip_to_bottom_mm": 73.4,
+   "axial_N": -0.1,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.15
+  },
+  {
+   "t": 2.3,
+   "target_back_mm": 70.2,
+   "tip_to_bottom_mm": 72.4,
+   "axial_N": -0.1,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.17
+  },
+  {
+   "t": 2.4,
+   "target_back_mm": 69.2,
+   "tip_to_bottom_mm": 71.4,
+   "axial_N": -0.1,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.18
+  },
+  {
+   "t": 2.5,
+   "target_back_mm": 68.2,
+   "tip_to_bottom_mm": 70.4,
+   "axial_N": -0.1,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.2
+  },
+  {
+   "t": 2.6,
+   "target_back_mm": 67.2,
+   "tip_to_bottom_mm": 69.4,
+   "axial_N": -0.1,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.21
+  },
+  {
+   "t": 2.7,
+   "target_back_mm": 66.2,
+   "tip_to_bottom_mm": 68.4,
+   "axial_N": -0.1,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.23
+  },
+  {
+   "t": 2.8,
+   "target_back_mm": 65.2,
+   "tip_to_bottom_mm": 67.4,
+   "axial_N": -0.09,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.24
+  },
+  {
+   "t": 2.9,
+   "target_back_mm": 64.2,
+   "tip_to_bottom_mm": 66.4,
+   "axial_N": -0.09,
+   "side_N": 0.18,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.26
+  },
+  {
+   "t": 3.0,
+   "target_back_mm": 63.2,
+   "tip_to_bottom_mm": 65.4,
+   "axial_N": -0.09,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.28
+  },
+  {
+   "t": 3.1,
+   "target_back_mm": 62.2,
+   "tip_to_bottom_mm": 64.4,
+   "axial_N": -0.09,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.3
+  },
+  {
+   "t": 3.2,
+   "target_back_mm": 61.2,
+   "tip_to_bottom_mm": 63.4,
+   "axial_N": -0.09,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.32
+  },
+  {
+   "t": 3.3,
+   "target_back_mm": 60.2,
+   "tip_to_bottom_mm": 62.4,
+   "axial_N": -0.09,
+   "side_N": 0.18,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.33
+  },
+  {
+   "t": 3.4,
+   "target_back_mm": 59.2,
+   "tip_to_bottom_mm": 61.4,
+   "axial_N": -0.02,
+   "side_N": 0.07,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 1.34
+  },
+  {
+   "t": 3.5,
+   "target_back_mm": 58.2,
+   "tip_to_bottom_mm": 60.4,
+   "axial_N": 0.52,
+   "side_N": 1.18,
+   "shift_mm": 0.11,
+   "in_fingers_deg": 1.31
+  },
+  {
+   "t": 3.6,
+   "target_back_mm": 57.2,
+   "tip_to_bottom_mm": 59.4,
+   "axial_N": 1.06,
+   "side_N": 2.36,
+   "shift_mm": 0.4,
+   "in_fingers_deg": 1.2
+  },
+  {
+   "t": 3.7,
+   "target_back_mm": 56.2,
+   "tip_to_bottom_mm": 58.3,
+   "axial_N": 1.53,
+   "side_N": 3.39,
+   "shift_mm": 0.71,
+   "in_fingers_deg": 1.04
+  },
+  {
+   "t": 3.8,
+   "target_back_mm": 55.2,
+   "tip_to_bottom_mm": 57.2,
+   "axial_N": 1.66,
+   "side_N": 3.67,
+   "shift_mm": 0.93,
+   "in_fingers_deg": 0.82
+  },
+  {
+   "t": 3.9,
+   "target_back_mm": 54.2,
+   "tip_to_bottom_mm": 56.1,
+   "axial_N": 1.89,
+   "side_N": 4.17,
+   "shift_mm": 1.07,
+   "in_fingers_deg": 0.6
+  },
+  {
+   "t": 4.0,
+   "target_back_mm": 53.4,
+   "tip_to_bottom_mm": 55.2,
+   "axial_N": 4.54,
+   "side_N": 9.61,
+   "shift_mm": 1.58,
+   "in_fingers_deg": 0.29
+  },
+  {
+   "t": 4.1,
+   "target_back_mm": 52.5,
+   "tip_to_bottom_mm": 54.1,
+   "axial_N": 1.83,
+   "side_N": 3.91,
+   "shift_mm": 1.22,
+   "in_fingers_deg": 0.1
+  },
+  {
+   "t": 4.2,
+   "target_back_mm": 51.5,
+   "tip_to_bottom_mm": 53.1,
+   "axial_N": 0.52,
+   "side_N": 1.45,
+   "shift_mm": 1.0,
+   "in_fingers_deg": 0.22
+  },
+  {
+   "t": 4.3,
+   "target_back_mm": 50.5,
+   "tip_to_bottom_mm": 52.2,
+   "axial_N": 1.32,
+   "side_N": 2.88,
+   "shift_mm": 0.73,
+   "in_fingers_deg": 0.35
+  },
+  {
+   "t": 4.4,
+   "target_back_mm": 49.5,
+   "tip_to_bottom_mm": 51.2,
+   "axial_N": -0.09,
+   "side_N": 0.17,
+   "shift_mm": 0.47,
+   "in_fingers_deg": 0.42
+  },
+  {
+   "t": 4.5,
+   "target_back_mm": 48.5,
+   "tip_to_bottom_mm": 50.4,
+   "axial_N": -0.02,
+   "side_N": 0.12,
+   "shift_mm": 0.16,
+   "in_fingers_deg": 0.41
+  },
+  {
+   "t": 4.6,
+   "target_back_mm": 47.5,
+   "tip_to_bottom_mm": 49.5,
+   "axial_N": -0.02,
+   "side_N": 0.12,
+   "shift_mm": 0.06,
+   "in_fingers_deg": 0.41
+  },
+  {
+   "t": 4.7,
+   "target_back_mm": 46.5,
+   "tip_to_bottom_mm": 48.6,
+   "axial_N": -0.03,
+   "side_N": 0.12,
+   "shift_mm": 0.02,
+   "in_fingers_deg": 0.41
+  },
+  {
+   "t": 4.8,
+   "target_back_mm": 45.5,
+   "tip_to_bottom_mm": 47.7,
+   "axial_N": -0.03,
+   "side_N": 0.12,
+   "shift_mm": 0.01,
+   "in_fingers_deg": 0.41
+  },
+  {
+   "t": 4.9,
+   "target_back_mm": 44.5,
+   "tip_to_bottom_mm": 46.7,
+   "axial_N": -0.02,
+   "side_N": 0.12,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.41
+  },
+  {
+   "t": 5.0,
+   "target_back_mm": 43.5,
+   "tip_to_bottom_mm": 45.7,
+   "axial_N": -0.02,
+   "side_N": 0.13,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.41
+  },
+  {
+   "t": 5.1,
+   "target_back_mm": 42.5,
+   "tip_to_bottom_mm": 44.7,
+   "axial_N": -0.02,
+   "side_N": 0.13,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.41
+  },
+  {
+   "t": 5.2,
+   "target_back_mm": 41.5,
+   "tip_to_bottom_mm": 43.7,
+   "axial_N": -0.02,
+   "side_N": 0.13,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.42
+  },
+  {
+   "t": 5.3,
+   "target_back_mm": 40.5,
+   "tip_to_bottom_mm": 42.8,
+   "axial_N": -0.02,
+   "side_N": 0.13,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.42
+  },
+  {
+   "t": 5.4,
+   "target_back_mm": 39.5,
+   "tip_to_bottom_mm": 41.8,
+   "axial_N": -0.02,
+   "side_N": 0.14,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.43
+  },
+  {
+   "t": 5.5,
+   "target_back_mm": 38.5,
+   "tip_to_bottom_mm": 40.8,
+   "axial_N": -0.02,
+   "side_N": 0.13,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.43
+  },
+  {
+   "t": 5.6,
+   "target_back_mm": 37.5,
+   "tip_to_bottom_mm": 39.8,
+   "axial_N": -0.02,
+   "side_N": 0.13,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.43
+  },
+  {
+   "t": 5.7,
+   "target_back_mm": 36.5,
+   "tip_to_bottom_mm": 38.8,
+   "axial_N": -0.01,
+   "side_N": 0.14,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.44
+  },
+  {
+   "t": 5.8,
+   "target_back_mm": 35.5,
+   "tip_to_bottom_mm": 37.8,
+   "axial_N": 0.0,
+   "side_N": 0.17,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.45
+  },
+  {
+   "t": 5.9,
+   "target_back_mm": 34.5,
+   "tip_to_bottom_mm": 36.8,
+   "axial_N": 0.01,
+   "side_N": 0.17,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.45
+  },
+  {
+   "t": 6.0,
+   "target_back_mm": 33.5,
+   "tip_to_bottom_mm": 35.8,
+   "axial_N": 0.01,
+   "side_N": 0.18,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.46
+  },
+  {
+   "t": 6.1,
+   "target_back_mm": 32.5,
+   "tip_to_bottom_mm": 34.8,
+   "axial_N": 0.01,
+   "side_N": 0.18,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.47
+  },
+  {
+   "t": 6.2,
+   "target_back_mm": 31.5,
+   "tip_to_bottom_mm": 33.8,
+   "axial_N": 0.02,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.47
+  },
+  {
+   "t": 6.3,
+   "target_back_mm": 30.5,
+   "tip_to_bottom_mm": 32.8,
+   "axial_N": 0.01,
+   "side_N": 0.18,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.48
+  },
+  {
+   "t": 6.4,
+   "target_back_mm": 29.5,
+   "tip_to_bottom_mm": 31.8,
+   "axial_N": 0.02,
+   "side_N": 0.19,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.49
+  },
+  {
+   "t": 6.5,
+   "target_back_mm": 28.5,
+   "tip_to_bottom_mm": 30.8,
+   "axial_N": 0.02,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.5
+  },
+  {
+   "t": 6.6,
+   "target_back_mm": 27.5,
+   "tip_to_bottom_mm": 29.8,
+   "axial_N": 0.02,
+   "side_N": 0.21,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.51
+  },
+  {
+   "t": 6.7,
+   "target_back_mm": 26.5,
+   "tip_to_bottom_mm": 28.8,
+   "axial_N": 0.02,
+   "side_N": 0.2,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.52
+  },
+  {
+   "t": 6.8,
+   "target_back_mm": 25.5,
+   "tip_to_bottom_mm": 27.8,
+   "axial_N": 0.03,
+   "side_N": 0.22,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.53
+  },
+  {
+   "t": 6.9,
+   "target_back_mm": 24.5,
+   "tip_to_bottom_mm": 26.8,
+   "axial_N": 0.04,
+   "side_N": 0.24,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.54
+  },
+  {
+   "t": 7.0,
+   "target_back_mm": 23.5,
+   "tip_to_bottom_mm": 25.8,
+   "axial_N": 0.03,
+   "side_N": 0.23,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.55
+  },
+  {
+   "t": 7.1,
+   "target_back_mm": 22.5,
+   "tip_to_bottom_mm": 24.8,
+   "axial_N": 0.05,
+   "side_N": 0.26,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.56
+  },
+  {
+   "t": 7.2,
+   "target_back_mm": 21.5,
+   "tip_to_bottom_mm": 23.8,
+   "axial_N": 0.05,
+   "side_N": 0.26,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.57
+  },
+  {
+   "t": 7.3,
+   "target_back_mm": 20.5,
+   "tip_to_bottom_mm": 22.8,
+   "axial_N": 0.05,
+   "side_N": 0.27,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.58
+  },
+  {
+   "t": 7.4,
+   "target_back_mm": 19.5,
+   "tip_to_bottom_mm": 21.8,
+   "axial_N": 0.05,
+   "side_N": 0.27,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.59
+  },
+  {
+   "t": 7.5,
+   "target_back_mm": 18.5,
+   "tip_to_bottom_mm": 20.8,
+   "axial_N": 0.06,
+   "side_N": 0.28,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.6
+  },
+  {
+   "t": 7.6,
+   "target_back_mm": 17.5,
+   "tip_to_bottom_mm": 19.8,
+   "axial_N": 0.05,
+   "side_N": 0.27,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.61
+  },
+  {
+   "t": 7.7,
+   "target_back_mm": 16.5,
+   "tip_to_bottom_mm": 18.8,
+   "axial_N": 0.06,
+   "side_N": 0.29,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.62
+  },
+  {
+   "t": 7.8,
+   "target_back_mm": 15.5,
+   "tip_to_bottom_mm": 17.8,
+   "axial_N": 0.06,
+   "side_N": 0.29,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.63
+  },
+  {
+   "t": 7.9,
+   "target_back_mm": 14.5,
+   "tip_to_bottom_mm": 16.8,
+   "axial_N": 0.07,
+   "side_N": 0.3,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.65
+  },
+  {
+   "t": 8.0,
+   "target_back_mm": 13.5,
+   "tip_to_bottom_mm": 15.8,
+   "axial_N": 0.07,
+   "side_N": 0.3,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.66
+  },
+  {
+   "t": 8.1,
+   "target_back_mm": 12.5,
+   "tip_to_bottom_mm": 14.8,
+   "axial_N": 0.07,
+   "side_N": 0.3,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.67
+  },
+  {
+   "t": 8.2,
+   "target_back_mm": 11.5,
+   "tip_to_bottom_mm": 13.8,
+   "axial_N": 0.07,
+   "side_N": 0.31,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.68
+  },
+  {
+   "t": 8.3,
+   "target_back_mm": 10.5,
+   "tip_to_bottom_mm": 12.8,
+   "axial_N": 0.08,
+   "side_N": 0.33,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.69
+  },
+  {
+   "t": 8.4,
+   "target_back_mm": 9.5,
+   "tip_to_bottom_mm": 11.8,
+   "axial_N": 0.08,
+   "side_N": 0.33,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.7
+  },
+  {
+   "t": 8.5,
+   "target_back_mm": 8.5,
+   "tip_to_bottom_mm": 10.8,
+   "axial_N": 0.08,
+   "side_N": 0.34,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.71
+  },
+  {
+   "t": 8.6,
+   "target_back_mm": 7.5,
+   "tip_to_bottom_mm": 9.8,
+   "axial_N": 0.11,
+   "side_N": 0.39,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.72
+  },
+  {
+   "t": 8.7,
+   "target_back_mm": 6.5,
+   "tip_to_bottom_mm": 8.8,
+   "axial_N": 0.11,
+   "side_N": 0.41,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.73
+  },
+  {
+   "t": 8.8,
+   "target_back_mm": 5.5,
+   "tip_to_bottom_mm": 7.9,
+   "axial_N": 0.11,
+   "side_N": 0.41,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.74
+  },
+  {
+   "t": 8.9,
+   "target_back_mm": 4.5,
+   "tip_to_bottom_mm": 6.9,
+   "axial_N": 0.11,
+   "side_N": 0.41,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.75
+  },
+  {
+   "t": 9.0,
+   "target_back_mm": 3.5,
+   "tip_to_bottom_mm": 5.9,
+   "axial_N": 0.12,
+   "side_N": 0.44,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.77
+  },
+  {
+   "t": 9.1,
+   "target_back_mm": 2.5,
+   "tip_to_bottom_mm": 4.9,
+   "axial_N": 0.12,
+   "side_N": 0.44,
+   "shift_mm": 0.0,
+   "in_fingers_deg": 0.78
+  }
+ ]
+}

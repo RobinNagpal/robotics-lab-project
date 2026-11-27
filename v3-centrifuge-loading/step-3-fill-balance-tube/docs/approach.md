@@ -104,6 +104,27 @@ the straight body. Held 6 mm under the rim (the grip Step 4 needs in the rotor),
 a full tube pivoted in the fingers when it rubbed the rack's hole (0.9 mm wider than the tube), and stood back in
 its cell 4.5° off upright. Step 4 will take it from the rack with the grip the rotor needs.
 
+## The cap (the whole run)
+
+Real labs cap every tube before spinning it, so in the whole run (Step 6) Step 3 caps each balance tube once
+it is filled (`fill(..., cap=i)`, code in `cap.py`). The water goes to the plan's weight less the cap's 2 g
+(the maker's figure). Once the water tube is back in its cell, the arm:
+
+1. takes a spare cap off its peg on the balance's base (fingers down, as it grips a sample's cap);
+2. brings it down onto the balance tube in the holder, turning it half a turn over the last 6 mm;
+3. opens, rises, reads the balance again (now with the cap: this is the reading the report uses);
+4. carries the capped tube back to its cell by the cap, as Step 1 puts a sample back.
+
+Step 4 then loads it like a sample, by its cap. The thread is not simulated: see the simulation environment's
+notes ([simulation-environment.md](../../simulation-environment/docs/simulation-environment.md#6-the-liquid-v1s-balls)).
+
+The whole run also stops a pour once it is within 0.4 g under its target (`Filler.close_enough_g`). Step 3's own
+evaluation still stops only within half a ball (0.16 g). The last ball is the riskiest round: on seed 13 with
+the cap, a round meant to add one ball (0.35 g short) brought 10 (3.3 g over). Step 3 allows 0.5 g either way.
+
+Tested so far on scene 13 only: 3.60 g of water (target 3.95 g), 16.97 g with the cap (target 17.32 g),
+loaded by its cap and seen seated by the rotor camera. Not yet run on all 20 scenes.
+
 ## What is reused
 
 - Step 1's arm: inverse kinematics, the straight moves checked for collisions, reading the balance.

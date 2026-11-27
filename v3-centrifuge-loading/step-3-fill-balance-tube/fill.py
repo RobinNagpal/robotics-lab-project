@@ -6,6 +6,7 @@ For one balance tube (docs/approach.md):
     water tube (side grip): supply rack ──► above the balance ──► tipped, its lip just above the balance tube
         ──► tip on until water flows ──► pour, watching the balance ──► tip back early ──► settle, read
         ──► short? a small extra pour ──► upright ──► back to its cell
+    with a cap (``cap``, the whole run): a spare cap off its peg ──► onto the balance tube ──► read again
     balance tube ──► back to its cell in the supply rack (Step 4 takes it from there to the rotor)
 
 What the arm uses: the bench layout (cells, holder), which cells hold the empty tubes and the water (Step 0),
@@ -22,8 +23,6 @@ from centrifuge_scene.racks import cell_centres, floor_height
 from centrifuge_scene.scale import Balance, pan_top
 from centrifuge_scene.settings import HOME, LAYOUT, TUBE
 from motion import MARGIN, OPEN, SAFE, Arm, Blocked, fingers_down, turn_between
-from weigh import TRAVEL, TURNS, tube_at
-
 from moves import (
     DROP,
     HOLD_BODY,
@@ -33,6 +32,7 @@ from moves import (
     HeldAt,
     close_on_open_tube,
     hand_rot,
+    lower_until_touch,
     move_pose,
     plan_pose,
     reach,
@@ -42,6 +42,9 @@ from moves import (
     side_rot,
     top_grip_height,
 )
+from weigh import TRAVEL, TURNS, tube_at
+
+from cap import CAP_G, Capper
 
 # --- where the water tube is held to pour ---------------------------------------------------------------
 # The water tube's lip (the point of its rim nearest the balance tube) goes this far above the balance
@@ -110,7 +113,9 @@ class Fill:
     target_g: float
     empty_g: float | None = None
     poured_g: float | None = None  # the settled reading when the pour ended
-    final_g: float | None = None  # read again once the water tube is back in its cell
+    final_g: float | None = None  # read again once the water tube is back in its cell (and the cap is on)
+    capped: bool = False  # a spare cap was put on (then final_g includes it)
+    water_g: float | None = None  # with a cap: the reading before it went on
     steady: bool = False
     over: bool = False
     rounds: list[Round] = field(default_factory=list)
@@ -153,6 +158,10 @@ class Filler:
         self.gaps: list[float] = []
         self.on_tick = None  # called every CONTROL s while tipping, with (filler, tilt): for recording
         self.samples: list[float] = []  # the balance read every CONTROL s during the pour
+        # Stop pouring once this close under the target (g), or None: only within half a ball. The last ball
+        # is the riskiest round: it can bring 10 (docs/results.md). The whole run uses 0.4 g (Step 3 allows
+        # 0.5).
+        self.close_enough_g: float | None = None
 
     # --- the balance -------------------------------------------------------------------------------------
 
@@ -336,7 +345,11 @@ class Filler:
         self.gaps.append(reach(arm, np.array([*lift[0][:2], TRAVEL]), rot))
         self.gaps.append(move_pose(arm, lift[0], rot))
         self.gaps.append(move_pose(arm, come_in[-1] + [0, 0, DROP], rot, allow=(self.supply,)))
+        # Down until the tube is felt to touch its seat: it may have slid up the fingers while pouring.
+        self.lowered = lower_until_touch(arm, rot, allow=(self.supply,))
         arm.open()
+        # Back up to the planned height first (lower, the fingers pass the rack's plate too close), then out.
+        self.gaps.append(move_pose(arm, come_in[-1] + [0, 0, DROP], rot, allow=(tube,)))
         self.gaps.append(move_pose(arm, come_in[1] + [0, 0, DROP], rot, allow=(tube,)))
         self.gaps.append(move_pose(arm, come_in[0], rot))
 
@@ -436,7 +449,7 @@ class Filler:
         restart = APPROACH_TILT
         for _ in range(MAX_ROUNDS):
             short = target_g - settled
-            if short <= ball / 2:
+            if short <= ball / 2 or (self.close_enough_g is not None and short <= self.close_enough_g):
                 fill.over = short < -ball / 2
                 break
             # Back up to just short of where water last flowed, fast; then creep until a ball lands.
@@ -487,9 +500,12 @@ class Filler:
 
     # --- one balance tube --------------------------------------------------------------------------------
 
-    def fill(self, blank_cell: int, water_cell: int, target_g: float) -> Fill:
+    def fill(self, blank_cell: int, water_cell: int, target_g: float, cap: int | None = None) -> Fill:
         """Fill the empty tube in supply ``blank_cell`` from the water tube in ``water_cell`` to ``target_g``,
-        and put both back in their cells. Errors are caught and reported."""
+        and put both back in their cells. Errors are caught and reported.
+
+        ``cap``: put spare cap ``cap`` on it once filled (cap.py). The water then goes to ``target_g`` less
+        the cap's 2 g, so the capped tube weighs ``target_g``."""
         arm = self.arm
         result = Fill(blank_cell, water_cell, round(target_g, 2))
         start = arm.time
@@ -507,13 +523,25 @@ class Filler:
             approach = self.pick_side(wxy, water)
             self.move_in()
             self.check_tilts(MOVE_IN_TILT, MAX_TILT)
-            self.pour(target_g, result.empty_g, result)
+            self.pour(target_g - (CAP_G if cap is not None else 0.0), result.empty_g, result)
             self.away_from_pour()
             self.place_side(wxy, approach)
             result.final_g, result.steady = self.read_steady()
-            # The filled tube back to its cell, held by its top as it was picked.
-            self.pick_top(self.holder_xy, pan_top(), blank, self.on_balance)
-            self.place_top(bxy, floor_height(), supply, turn)
+            if cap is None:
+                # The filled tube back to its cell, held by its top as it was picked.
+                self.pick_top(self.holder_xy, pan_top(), blank, self.on_balance)
+                self.place_top(bxy, floor_height(), supply, turn)
+            else:
+                # A cap on it, read again, and back to its cell by the cap.
+                result.water_g = result.final_g
+                capper = Capper(arm)
+                self.hand_down()
+                capper.pick_cap(cap)
+                capper.put_on(blank, arm.model.body(blank).name)
+                result.capped = True
+                result.final_g, result.steady = self.read_steady()
+                capper.back_to_cell(blank, self.supply, bxy)
+                self.gaps += capper.gaps
         except Blocked as e:
             result.error = str(e)
         result.seconds = round(arm.time - start, 1)

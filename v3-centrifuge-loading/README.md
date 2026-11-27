@@ -7,12 +7,12 @@ decide and check, and **Physical Intelligence's π0.5** to move the arm.
 
 ![The scene](simulation-environment/images/front.png)
 
-**Status:** the simulation is built and tested. The grips are checked against the whole job before building
-([grip plan](grasp-plan/docs/results.md)). Step 2's solver is built ([results](step-2-plan/docs/results.md)). Step 1's programmed arm weighs and puts
-back 60 of 60 tubes on 20 seeds ([results](step-1-weigh/docs/results.md)).
-Step 0 is measured ([results](step-0-find/docs/results.md)):
-with the high rack camera, Gemini (4 seeds) and SAM 3 (20 seeds) find every tube and say what it is. SAM 3's outlines with the depth picture also give each tube's 3D place and direction, even knocked over
-(a point cloud and a fitted cylinder). The other steps are planned (each has an `approach.md`).
+**Status (2026-11-23):** the whole job runs end to end, programmed (no learned model, no Gemini yet): on 20
+scenes every tube is found (SAM 3), weighed, planned, filled, loaded and the rotor balanced, and the robot's own
+report agrees with the examiner ([Step 6 results](step-6-whole-run/docs/results.md)). The lid is left open: as
+the centrifuge stands, the arm cannot reach to push it shut ([lid study](step-5-close-and-report/docs/lid-reach.md)).
+Gemini waits for its quota; SmolVLA had one short training run for Step 1. Day-to-day state:
+[docs/where-we-are.md](docs/where-we-are.md).
 
 ## Where to read
 

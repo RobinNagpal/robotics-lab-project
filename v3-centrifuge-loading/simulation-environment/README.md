@@ -28,7 +28,7 @@ In the window, press Tab and turn on geom group 3 to see the collision walls.
 |---|---|
 | Arm | 1 x UR5e with a Robotiq 2F-85 gripper, a wrist camera and a wrist force/torque sensor |
 | Centrifuge | AutoBio's Eppendorf 5430 housing and lid, with our six-place rotor: holes leaning 35° |
-| Balance | A lab balance reading to 0.01 g, with a holder a tube stands in |
+| Balance | A lab balance reading to 0.01 g, with a holder a tube stands in, and two pegs on its base holding spare caps for the balance tubes |
 | Sample rack | 2 to 4 capped 50 ml sample tubes, each with a different coloured liquid |
 | Supply rack | 2 open tubes of water, always in the corner cells 0 and 3 with the cells beside them empty, and 2 empty open tubes (for balance tubes) in cells 5 and 6 |
 | Cameras | `overhead`, `racks_high` and `racks_low` (on the racks, for Step 0), `front`, `rotor` (looks into the open centrifuge), `arm/wrist` |

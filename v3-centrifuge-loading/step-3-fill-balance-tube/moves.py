@@ -232,3 +232,54 @@ def top_grip_height(surface: float) -> float:
 def side_grip_height(surface: float) -> float:
     """The pinch point's height for an open tube standing on ``surface``, held from the side."""
     return surface + REST + TUBE.height - SIDE_DEPTH
+
+
+# Standing a held tube down: how far below the planned height the hand may go looking for the seat, how fast,
+# and the change in the wrist force (N) that means the tube's tip has touched it.
+TOUCH_EXTRA = 0.020
+TOUCH_SPEED = 0.01  # m/s
+TOUCH_FORCE = 1.0
+
+
+def lower_until_touch(arm: Arm, rot: np.ndarray, allow: Iterable[int] = (), extra: float = TOUCH_EXTRA) -> float:
+    """Lower the held tube straight down until the wrist force sensor feels it touch what it stands on, at
+    most ``extra`` m below where the hand is. Returns how far it went down (m).
+
+    A tube can slide along the fingers while it is tipped to pour (12 mm on seed 5 once the pads resisted
+    twisting): let go at the planned height, it then falls that far, lands crooked in the rack's small seat
+    and the simulation blows up. Feeling for the seat does not need to know where the tube sits in the hand.
+    """
+    data = arm.data
+    start = arm.pinch()
+    # Only as far down as is clear (the hand comes close to the rack's top plate).
+    low = start.copy()
+    for d in np.arange(0.002, extra + 1e-9, 0.002):
+        try:
+            q = arm.solve(start - [0, 0, d], rot, data.qpos[arm.joints].copy())
+        except Blocked:
+            break
+        if arm.clearance([q], allow)[0] < SAFE:
+            break
+        low = start - [0, 0, d]
+
+    def force() -> np.ndarray:
+        return data.site("arm/wrist_ft").xmat.reshape(3, 3) @ data.sensor("arm/wrist_force").data
+
+    still = []
+    for _ in range(10):
+        arm.step(10)
+        still.append(force().copy())
+    base = np.mean(still, axis=0)
+    q = data.qpos[arm.joints].copy()
+    z = start[2]
+    while z > low[2]:
+        if np.linalg.norm(force() - base) > TOUCH_FORCE:
+            break
+        z = max(low[2], z - TOUCH_SPEED * 0.01)
+        q = arm.solve(np.array([*start[:2], z]), rot, q)
+        data.ctrl[arm.actuators] = q
+        arm.step(10)
+    # Hold where the arm is (it trails its targets), so it does not press the tube on into the seat.
+    data.ctrl[arm.actuators] = data.qpos[arm.joints]
+    arm.wait(0.2)
+    return float(start[2] - arm.pinch()[2])

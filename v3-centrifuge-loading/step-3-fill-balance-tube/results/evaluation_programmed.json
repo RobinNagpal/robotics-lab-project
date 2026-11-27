@@ -14,143 +14,127 @@
     "water_cell": 0,
     "target_g": 45.09,
     "empty_g": 11.58,
-    "poured_g": 45.54,
-    "final_g": 45.53,
+    "poured_g": 45.21,
+    "final_g": 45.21,
     "steady": true,
-    "over": true,
+    "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 80.9,
+      "flow_deg": 81.3,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.58,
-      "after_g": 16.15
+      "after_g": 16.47
      },
      {
-      "start_deg": 78.9,
-      "flow_deg": 82.4,
+      "start_deg": 79.3,
+      "flow_deg": 84.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 16.15,
-      "after_g": 17.13
+      "before_g": 16.47,
+      "after_g": 27.58
      },
      {
-      "start_deg": 80.4,
-      "flow_deg": 83.7,
+      "start_deg": 82.7,
+      "flow_deg": 86.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 17.13,
-      "after_g": 22.03
+      "before_g": 27.58,
+      "after_g": 31.17
      },
      {
-      "start_deg": 81.7,
-      "flow_deg": 84.8,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 22.03,
-      "after_g": 22.35
-     },
-     {
-      "start_deg": 82.8,
-      "flow_deg": 86.0,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 22.35,
-      "after_g": 25.62
-     },
-     {
-      "start_deg": 84.0,
-      "flow_deg": 87.6,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 25.62,
-      "after_g": 34.43
-     },
-     {
-      "start_deg": 85.6,
+      "start_deg": 84.8,
       "flow_deg": 88.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 34.43,
-      "after_g": 37.37
+      "before_g": 31.17,
+      "after_g": 39.01
      },
      {
       "start_deg": 86.1,
-      "flow_deg": 89.7,
+      "flow_deg": 88.6,
       "let_run": true,
-      "stopped_deg": 89.67000000002457,
-      "before_g": 37.37,
+      "stopped_deg": null,
+      "before_g": 39.01,
+      "after_g": 39.66
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 89.6,
+      "let_run": true,
+      "stopped_deg": 89.63100000002146,
+      "before_g": 39.66,
       "after_g": 43.25
      },
      {
-      "start_deg": 87.7,
-      "flow_deg": 89.4,
+      "start_deg": 87.6,
+      "flow_deg": 87.9,
       "let_run": false,
-      "stopped_deg": 89.40100000002418,
+      "stopped_deg": 87.85600000002101,
       "before_g": 43.25,
       "after_g": 43.58
      },
      {
-      "start_deg": 87.4,
-      "flow_deg": 90.3,
+      "start_deg": 85.9,
+      "flow_deg": 89.0,
       "let_run": false,
-      "stopped_deg": 90.34100000002384,
+      "stopped_deg": 88.99700000002068,
       "before_g": 43.58,
+      "after_g": 43.9
+     },
+     {
+      "start_deg": 87.0,
+      "flow_deg": 89.1,
+      "let_run": false,
+      "stopped_deg": 89.1000000000203,
+      "before_g": 43.9,
       "after_g": 44.23
      },
      {
-      "start_deg": 88.3,
-      "flow_deg": 89.8,
+      "start_deg": 87.1,
+      "flow_deg": 89.0,
       "let_run": false,
-      "stopped_deg": 89.81700000002344,
+      "stopped_deg": 89.02300000001992,
       "before_g": 44.23,
-      "after_g": 44.56
-     },
-     {
-      "start_deg": 87.8,
-      "flow_deg": 90.0,
-      "let_run": false,
-      "stopped_deg": 89.97400000002307,
-      "before_g": 44.56,
       "after_g": 44.88
      },
      {
-      "start_deg": 88.0,
-      "flow_deg": 90.3,
+      "start_deg": 87.0,
+      "flow_deg": 89.8,
       "let_run": false,
-      "stopped_deg": 90.3470000000227,
+      "stopped_deg": 89.84300000001957,
       "before_g": 44.88,
-      "after_g": 45.54
+      "after_g": 45.21
      }
     ],
-    "seconds": 195.8,
-    "smallest_gap_mm": 5.3,
+    "seconds": 187.1,
+    "smallest_gap_mm": 10.0,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 45.09,
-    "read_g": 45.53,
-    "true_g": 45.536,
-    "off_true_g": 0.446
+    "read_g": 45.21,
+    "true_g": 45.209,
+    "off_true_g": 0.119
    }
   ],
-  "imbalance_g": 0.542,
-  "spilled": 3,
+  "imbalance_g": 0.333,
+  "spilled": 0,
   "back": {
    "blank0": {
-    "off_mm": 0.33,
-    "tilt_deg": 1.42
+    "off_mm": 0.24,
+    "tilt_deg": 1.35
    },
    "water0": {
-    "off_mm": 3.1,
-    "tilt_deg": 4.32
+    "off_mm": 3.54,
+    "tilt_deg": 5.13
    }
   },
   "back_ok": false,
   "disturbed": [],
-  "wall_seconds": 190.1
+  "wall_seconds": 183.3
  },
  {
   "seed": 3,
@@ -166,86 +150,94 @@
     "water_cell": 0,
     "target_g": 25.35,
     "empty_g": 11.49,
-    "poured_g": 25.53,
-    "final_g": 25.53,
+    "poured_g": 25.21,
+    "final_g": 25.21,
     "steady": true,
-    "over": true,
+    "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 76.5,
+      "flow_deg": 76.6,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.49,
       "after_g": 12.8
      },
      {
-      "start_deg": 74.5,
-      "flow_deg": 81.4,
+      "start_deg": 74.6,
+      "flow_deg": 80.8,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 12.8,
-      "after_g": 16.39
+      "after_g": 16.07
      },
      {
-      "start_deg": 79.4,
-      "flow_deg": 83.7,
+      "start_deg": 78.8,
+      "flow_deg": 83.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 16.39,
-      "after_g": 17.7
+      "before_g": 16.07,
+      "after_g": 21.94
      },
      {
-      "start_deg": 81.7,
-      "flow_deg": 81.7,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 17.7,
-      "after_g": 19.33
-     },
-     {
-      "start_deg": 79.7,
-      "flow_deg": 84.3,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 19.33,
-      "after_g": 19.99
-     },
-     {
-      "start_deg": 82.3,
+      "start_deg": 81.6,
       "flow_deg": 85.1,
-      "let_run": true,
-      "stopped_deg": 85.05300000001819,
-      "before_g": 19.99,
-      "after_g": 22.6
+      "let_run": false,
+      "stopped_deg": 85.14000000001516,
+      "before_g": 21.94,
+      "after_g": 23.57
      },
      {
       "start_deg": 83.1,
-      "flow_deg": 87.7,
+      "flow_deg": 83.8,
       "let_run": false,
-      "stopped_deg": 87.67300000002103,
-      "before_g": 22.6,
-      "after_g": 25.53
+      "stopped_deg": 83.75500000001473,
+      "before_g": 23.57,
+      "after_g": 23.9
+     },
+     {
+      "start_deg": 81.8,
+      "flow_deg": 85.5,
+      "let_run": false,
+      "stopped_deg": 85.51700000001442,
+      "before_g": 23.9,
+      "after_g": 24.23
+     },
+     {
+      "start_deg": 83.5,
+      "flow_deg": 84.1,
+      "let_run": false,
+      "stopped_deg": 84.12000000001399,
+      "before_g": 24.23,
+      "after_g": 24.88
+     },
+     {
+      "start_deg": 82.1,
+      "flow_deg": 85.1,
+      "let_run": false,
+      "stopped_deg": 85.06600000001364,
+      "before_g": 24.88,
+      "after_g": 25.21
      }
     ],
-    "seconds": 126.9,
+    "seconds": 137.9,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 25.35,
-    "read_g": 25.53,
-    "true_g": 25.535,
-    "off_true_g": 0.185
+    "read_g": 25.21,
+    "true_g": 25.208,
+    "off_true_g": -0.142
    },
    {
     "blank_cell": 6,
     "water_cell": 3,
-    "target_g": 42.02,
+    "target_g": 41.86,
     "empty_g": 11.4,
-    "poured_g": 42.09,
-    "final_g": 42.09,
+    "poured_g": 41.77,
+    "final_g": 41.77,
     "steady": true,
     "over": false,
     "rounds": [
@@ -255,140 +247,124 @@
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.4,
-      "after_g": 12.7
+      "after_g": 13.03
      },
      {
       "start_deg": 73.8,
-      "flow_deg": 79.3,
+      "flow_deg": 81.0,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.7,
-      "after_g": 13.36
+      "before_g": 13.03,
+      "after_g": 13.68
      },
      {
-      "start_deg": 77.3,
-      "flow_deg": 82.9,
+      "start_deg": 79.0,
+      "flow_deg": 83.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.36,
-      "after_g": 14.34
+      "before_g": 13.68,
+      "after_g": 17.6
      },
      {
-      "start_deg": 80.9,
-      "flow_deg": 85.0,
+      "start_deg": 81.2,
+      "flow_deg": 83.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 14.34,
-      "after_g": 23.48
+      "before_g": 17.6,
+      "after_g": 21.19
      },
      {
-      "start_deg": 83.0,
-      "flow_deg": 86.9,
+      "start_deg": 81.8,
+      "flow_deg": 86.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 23.48,
-      "after_g": 31.97
+      "before_g": 21.19,
+      "after_g": 28.05
      },
      {
-      "start_deg": 84.9,
+      "start_deg": 84.2,
       "flow_deg": 87.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 31.97,
-      "after_g": 32.62
+      "before_g": 28.05,
+      "after_g": 36.87
      },
      {
       "start_deg": 85.6,
-      "flow_deg": 89.2,
+      "flow_deg": 89.3,
       "let_run": true,
-      "stopped_deg": 89.15700000002266,
-      "before_g": 32.62,
-      "after_g": 38.83
+      "stopped_deg": 89.27600000002275,
+      "before_g": 36.87,
+      "after_g": 39.81
      },
      {
-      "start_deg": 87.2,
-      "flow_deg": 87.9,
+      "start_deg": 87.3,
+      "flow_deg": 88.8,
       "let_run": false,
-      "stopped_deg": 87.8500000000227,
-      "before_g": 38.83,
-      "after_g": 39.48
+      "stopped_deg": 88.77400000002336,
+      "before_g": 39.81,
+      "after_g": 40.46
      },
      {
-      "start_deg": 85.9,
-      "flow_deg": 89.0,
+      "start_deg": 86.8,
+      "flow_deg": 88.5,
       "let_run": false,
-      "stopped_deg": 89.02100000002451,
-      "before_g": 39.48,
-      "after_g": 40.13
-     },
-     {
-      "start_deg": 87.0,
-      "flow_deg": 89.1,
-      "let_run": false,
-      "stopped_deg": 89.13000000002414,
-      "before_g": 40.13,
+      "stopped_deg": 88.45700000002297,
+      "before_g": 40.46,
       "after_g": 40.79
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 89.4,
+      "start_deg": 86.5,
+      "flow_deg": 88.8,
       "let_run": false,
-      "stopped_deg": 89.40700000002377,
+      "stopped_deg": 88.83000000002261,
       "before_g": 40.79,
-      "after_g": 41.44
+      "after_g": 41.11
      },
      {
-      "start_deg": 87.4,
-      "flow_deg": 89.9,
-      "let_run": false,
-      "stopped_deg": 89.87000000002341,
-      "before_g": 41.44,
-      "after_g": 41.77
-     },
-     {
-      "start_deg": 87.9,
+      "start_deg": 86.8,
       "flow_deg": 89.0,
       "let_run": false,
-      "stopped_deg": 89.028000000023,
-      "before_g": 41.77,
-      "after_g": 42.09
+      "stopped_deg": 89.01100000002224,
+      "before_g": 41.11,
+      "after_g": 41.77
      }
     ],
-    "seconds": 170.3,
-    "smallest_gap_mm": 5.3,
+    "seconds": 159.0,
+    "smallest_gap_mm": 10.0,
     "error": "",
     "balance_tube": "balance B",
     "blank": "blank1",
     "water": "water1",
     "planned_g": 41.93,
-    "read_g": 42.09,
-    "true_g": 42.092,
-    "off_true_g": 0.072
+    "read_g": 41.77,
+    "true_g": 41.766,
+    "off_true_g": -0.094
    }
   ],
-  "imbalance_g": 0.176,
-  "spilled": 9,
+  "imbalance_g": 0.155,
+  "spilled": 5,
   "back": {
    "blank0": {
-    "off_mm": 0.39,
-    "tilt_deg": 1.37
+    "off_mm": 0.77,
+    "tilt_deg": 1.22
    },
    "blank1": {
-    "off_mm": 0.25,
-    "tilt_deg": 1.49
+    "off_mm": 0.3,
+    "tilt_deg": 1.79
    },
    "water0": {
-    "off_mm": 0.4,
-    "tilt_deg": 1.38
+    "off_mm": 1.3,
+    "tilt_deg": 1.67
    },
    "water1": {
-    "off_mm": 0.08,
-    "tilt_deg": 1.19
+    "off_mm": 0.73,
+    "tilt_deg": 1.73
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 270.5
+  "wall_seconds": 286.0
  },
  {
   "seed": 5,
@@ -405,151 +381,135 @@
     "water_cell": 0,
     "target_g": 41.95,
     "empty_g": 11.65,
-    "poured_g": 42.34,
-    "final_g": 42.35,
+    "poured_g": 42.02,
+    "final_g": 42.02,
     "steady": true,
-    "over": true,
+    "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 77.0,
+      "flow_deg": 76.9,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.65,
-      "after_g": 12.3
+      "after_g": 11.98
      },
      {
-      "start_deg": 75.0,
-      "flow_deg": 79.2,
+      "start_deg": 74.9,
+      "flow_deg": 80.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.3,
-      "after_g": 12.96
+      "before_g": 11.98,
+      "after_g": 13.93
      },
      {
-      "start_deg": 77.2,
-      "flow_deg": 80.8,
+      "start_deg": 78.2,
+      "flow_deg": 82.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.96,
-      "after_g": 15.57
+      "before_g": 13.93,
+      "after_g": 19.81
      },
      {
-      "start_deg": 78.8,
-      "flow_deg": 84.2,
+      "start_deg": 80.6,
+      "flow_deg": 84.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 15.57,
-      "after_g": 21.12
+      "before_g": 19.81,
+      "after_g": 21.77
      },
      {
-      "start_deg": 82.2,
-      "flow_deg": 85.8,
+      "start_deg": 82.7,
+      "flow_deg": 86.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 21.12,
-      "after_g": 24.71
+      "before_g": 21.77,
+      "after_g": 31.57
      },
      {
-      "start_deg": 83.8,
-      "flow_deg": 87.1,
+      "start_deg": 84.7,
+      "flow_deg": 89.1,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 24.71,
-      "after_g": 32.55
+      "stopped_deg": 89.07800000002106,
+      "before_g": 31.57,
+      "after_g": 38.43
      },
      {
-      "start_deg": 85.1,
-      "flow_deg": 88.7,
-      "let_run": true,
-      "stopped_deg": 88.73000000002236,
-      "before_g": 32.55,
-      "after_g": 39.08
-     },
-     {
-      "start_deg": 86.7,
-      "flow_deg": 87.3,
+      "start_deg": 87.1,
+      "flow_deg": 89.4,
       "let_run": false,
-      "stopped_deg": 87.26900000002229,
-      "before_g": 39.08,
+      "stopped_deg": 89.4440000000223,
+      "before_g": 38.43,
       "after_g": 39.41
      },
      {
-      "start_deg": 85.3,
-      "flow_deg": 89.4,
-      "let_run": false,
-      "stopped_deg": 89.44800000002482,
-      "before_g": 39.41,
-      "after_g": 39.73
-     },
-     {
       "start_deg": 87.4,
-      "flow_deg": 87.9,
+      "flow_deg": 89.8,
       "let_run": false,
-      "stopped_deg": 87.9100000000247,
-      "before_g": 39.73,
+      "stopped_deg": 89.7540000000235,
+      "before_g": 39.41,
       "after_g": 40.06
      },
      {
-      "start_deg": 85.9,
-      "flow_deg": 88.9,
+      "start_deg": 87.8,
+      "flow_deg": 87.9,
       "let_run": false,
-      "stopped_deg": 88.88000000002435,
+      "stopped_deg": 87.92800000002305,
       "before_g": 40.06,
-      "after_g": 40.38
-     },
-     {
-      "start_deg": 86.9,
-      "flow_deg": 89.3,
-      "let_run": false,
-      "stopped_deg": 89.29500000002399,
-      "before_g": 40.38,
       "after_g": 41.04
      },
      {
-      "start_deg": 87.3,
-      "flow_deg": 89.4,
+      "start_deg": 85.9,
+      "flow_deg": 88.6,
       "let_run": false,
-      "stopped_deg": 89.35000000002361,
+      "stopped_deg": 88.6430000000227,
       "before_g": 41.04,
+      "after_g": 41.37
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.90200000002233,
+      "before_g": 41.37,
       "after_g": 41.69
      },
      {
-      "start_deg": 87.4,
-      "flow_deg": 89.5,
+      "start_deg": 86.9,
+      "flow_deg": 90.3,
       "let_run": false,
-      "stopped_deg": 89.45900000002324,
+      "stopped_deg": 90.346000000022,
       "before_g": 41.69,
-      "after_g": 42.34
+      "after_g": 42.02
      }
     ],
-    "seconds": 186.8,
-    "smallest_gap_mm": 6.6,
+    "seconds": 187.8,
+    "smallest_gap_mm": 6.3,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 41.95,
-    "read_g": 42.35,
-    "true_g": 42.344,
-    "off_true_g": 0.394
+    "read_g": 42.02,
+    "true_g": 42.018,
+    "off_true_g": 0.068
    }
   ],
-  "imbalance_g": 0.433,
-  "spilled": 6,
+  "imbalance_g": 0.206,
+  "spilled": 11,
   "back": {
    "blank0": {
-    "off_mm": 0.49,
-    "tilt_deg": 1.59
+    "off_mm": 0.42,
+    "tilt_deg": 1.75
    },
    "water0": {
-    "off_mm": 3.66,
-    "tilt_deg": 5.25
+    "off_mm": 0.75,
+    "tilt_deg": 0.72
    }
   },
-  "back_ok": false,
+  "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 177.3
+  "wall_seconds": 177.2
  },
  {
   "seed": 7,
@@ -565,237 +525,293 @@
     "water_cell": 0,
     "target_g": 37.75,
     "empty_g": 11.35,
-    "poured_g": 38.13,
-    "final_g": 38.13,
+    "poured_g": 38.45,
+    "final_g": 38.45,
     "steady": true,
     "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 79.4,
+      "flow_deg": 79.3,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.35,
       "after_g": 14.29
      },
      {
-      "start_deg": 77.4,
-      "flow_deg": 80.9,
+      "start_deg": 77.3,
+      "flow_deg": 81.4,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 14.29,
       "after_g": 16.25
      },
      {
-      "start_deg": 78.9,
-      "flow_deg": 83.1,
+      "start_deg": 79.4,
+      "flow_deg": 82.7,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 16.25,
-      "after_g": 21.15
+      "after_g": 20.17
      },
      {
-      "start_deg": 81.1,
-      "flow_deg": 85.9,
+      "start_deg": 80.7,
+      "flow_deg": 84.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 21.15,
-      "after_g": 29.64
+      "before_g": 20.17,
+      "after_g": 24.74
      },
      {
-      "start_deg": 83.9,
-      "flow_deg": 87.5,
+      "start_deg": 82.1,
+      "flow_deg": 86.3,
       "let_run": true,
-      "stopped_deg": 87.48700000001838,
-      "before_g": 29.64,
-      "after_g": 34.86
+      "stopped_deg": null,
+      "before_g": 24.74,
+      "after_g": 31.6
      },
      {
-      "start_deg": 85.5,
+      "start_deg": 84.3,
+      "flow_deg": 88.0,
+      "let_run": true,
+      "stopped_deg": 87.99300000002029,
+      "before_g": 31.6,
+      "after_g": 34.21
+     },
+     {
+      "start_deg": 86.0,
       "flow_deg": 86.9,
       "let_run": false,
-      "stopped_deg": 86.88700000001893,
-      "before_g": 34.86,
-      "after_g": 35.19
+      "stopped_deg": 86.89600000002048,
+      "before_g": 34.21,
+      "after_g": 34.54
      },
      {
       "start_deg": 84.9,
-      "flow_deg": 89.7,
+      "flow_deg": 87.6,
       "let_run": false,
-      "stopped_deg": 89.6890000000219,
-      "before_g": 35.19,
-      "after_g": 36.82
+      "stopped_deg": 87.57700000002194,
+      "before_g": 34.54,
+      "after_g": 35.52
      },
      {
-      "start_deg": 87.7,
-      "flow_deg": 87.9,
+      "start_deg": 85.6,
+      "flow_deg": 87.7,
       "let_run": false,
-      "stopped_deg": 87.88700000002146,
-      "before_g": 36.82,
-      "after_g": 38.13
+      "stopped_deg": 87.67000000002298,
+      "before_g": 35.52,
+      "after_g": 36.17
+     },
+     {
+      "start_deg": 85.7,
+      "flow_deg": 87.7,
+      "let_run": false,
+      "stopped_deg": 87.7160000000226,
+      "before_g": 36.17,
+      "after_g": 37.15
+     },
+     {
+      "start_deg": 85.7,
+      "flow_deg": 88.7,
+      "let_run": false,
+      "stopped_deg": 88.70100000002226,
+      "before_g": 37.15,
+      "after_g": 38.45
      }
     ],
-    "seconds": 134.6,
+    "seconds": 160.3,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 37.75,
-    "read_g": 38.13,
-    "true_g": 38.127,
-    "off_true_g": 0.377
+    "read_g": 38.45,
+    "true_g": 38.454,
+    "off_true_g": 0.704
    },
    {
     "blank_cell": 5,
     "water_cell": 3,
-    "target_g": 45.28,
+    "target_g": 45.44,
     "empty_g": 11.6,
-    "poured_g": 45.23,
-    "final_g": 45.23,
+    "poured_g": 45.56,
+    "final_g": 45.56,
     "steady": true,
     "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 77.0,
+      "flow_deg": 75.1,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.6,
+      "after_g": 11.92
+     },
+     {
+      "start_deg": 73.1,
+      "flow_deg": 78.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.92,
       "after_g": 12.25
      },
      {
-      "start_deg": 75.0,
-      "flow_deg": 79.9,
+      "start_deg": 76.1,
+      "flow_deg": 82.5,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 12.25,
-      "after_g": 13.55
+      "after_g": 18.78
      },
      {
-      "start_deg": 77.9,
-      "flow_deg": 82.7,
+      "start_deg": 80.5,
+      "flow_deg": 84.3,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.55,
-      "after_g": 15.19
+      "before_g": 18.78,
+      "after_g": 20.41
      },
      {
-      "start_deg": 80.7,
-      "flow_deg": 84.2,
+      "start_deg": 82.3,
+      "flow_deg": 85.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 15.19,
-      "after_g": 21.06
+      "before_g": 20.41,
+      "after_g": 22.7
      },
      {
-      "start_deg": 82.2,
-      "flow_deg": 85.9,
+      "start_deg": 83.2,
+      "flow_deg": 86.4,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 21.06,
-      "after_g": 30.54
+      "before_g": 22.7,
+      "after_g": 29.56
      },
      {
-      "start_deg": 83.9,
+      "start_deg": 84.4,
       "flow_deg": 87.3,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 30.54,
-      "after_g": 32.49
+      "before_g": 29.56,
+      "after_g": 33.15
      },
      {
       "start_deg": 85.3,
-      "flow_deg": 89.1,
+      "flow_deg": 88.8,
       "let_run": true,
-      "stopped_deg": 89.12900000002264,
-      "before_g": 32.49,
+      "stopped_deg": null,
+      "before_g": 33.15,
+      "after_g": 38.37
+     },
+     {
+      "start_deg": 86.8,
+      "flow_deg": 89.8,
+      "let_run": true,
+      "stopped_deg": 89.81900000002622,
+      "before_g": 38.37,
       "after_g": 42.29
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 89.7,
+      "start_deg": 87.8,
+      "flow_deg": 90.2,
       "let_run": false,
-      "stopped_deg": 89.70500000002403,
+      "stopped_deg": 90.21300000002748,
       "before_g": 42.29,
-      "after_g": 42.95
+      "after_g": 42.62
      },
      {
-      "start_deg": 87.7,
-      "flow_deg": 88.2,
+      "start_deg": 88.2,
+      "flow_deg": 90.6,
       "let_run": false,
-      "stopped_deg": 88.1530000000239,
-      "before_g": 42.95,
+      "stopped_deg": 90.57900000002871,
+      "before_g": 42.62,
       "after_g": 43.27
      },
      {
-      "start_deg": 86.2,
-      "flow_deg": 89.0,
+      "start_deg": 88.6,
+      "flow_deg": 90.2,
       "let_run": false,
-      "stopped_deg": 88.95300000002544,
+      "stopped_deg": 90.16100000002939,
       "before_g": 43.27,
       "after_g": 43.6
      },
      {
-      "start_deg": 87.0,
-      "flow_deg": 90.5,
+      "start_deg": 88.2,
+      "flow_deg": 90.0,
       "let_run": false,
-      "stopped_deg": 90.49600000002512,
+      "stopped_deg": 90.021000000029,
       "before_g": 43.6,
       "after_g": 43.92
      },
      {
-      "start_deg": 88.5,
-      "flow_deg": 88.7,
+      "start_deg": 88.0,
+      "flow_deg": 89.9,
       "let_run": false,
-      "stopped_deg": 88.69100000002467,
+      "stopped_deg": 89.93200000002862,
       "before_g": 43.92,
+      "after_g": 44.25
+     },
+     {
+      "start_deg": 87.9,
+      "flow_deg": 90.2,
+      "let_run": false,
+      "stopped_deg": 90.19400000002825,
+      "before_g": 44.25,
       "after_g": 44.9
      },
      {
-      "start_deg": 86.7,
-      "flow_deg": 90.0,
+      "start_deg": 88.2,
+      "flow_deg": 90.4,
       "let_run": false,
-      "stopped_deg": 89.95800000002434,
+      "stopped_deg": 90.36000000002788,
       "before_g": 44.9,
       "after_g": 45.23
+     },
+     {
+      "start_deg": 88.4,
+      "flow_deg": 90.8,
+      "let_run": false,
+      "stopped_deg": 90.83500000002752,
+      "before_g": 45.23,
+      "after_g": 45.56
      }
     ],
-    "seconds": 172.0,
-    "smallest_gap_mm": 6.4,
+    "seconds": 213.9,
+    "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance B",
     "blank": "blank1",
     "water": "water1",
     "planned_g": 45.09,
-    "read_g": 45.23,
-    "true_g": 45.229,
-    "off_true_g": -0.051
+    "read_g": 45.56,
+    "true_g": 45.556,
+    "off_true_g": 0.116
    }
   ],
-  "imbalance_g": 0.334,
-  "spilled": 4,
+  "imbalance_g": 0.623,
+  "spilled": 9,
   "back": {
    "blank0": {
-    "off_mm": 0.19,
-    "tilt_deg": 1.5
+    "off_mm": 0.29,
+    "tilt_deg": 1.77
    },
    "blank1": {
-    "off_mm": 0.51,
-    "tilt_deg": 1.63
+    "off_mm": 0.41,
+    "tilt_deg": 1.64
    },
    "water0": {
-    "off_mm": 0.46,
-    "tilt_deg": 1.37
+    "off_mm": 0.19,
+    "tilt_deg": 1.34
    },
    "water1": {
-    "off_mm": 2.35,
-    "tilt_deg": 4.23
+    "off_mm": 0.23,
+    "tilt_deg": 1.27
    }
   },
-  "back_ok": false,
+  "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 284.6
+  "wall_seconds": 339.3
  },
  {
   "seed": 9,
@@ -812,143 +828,159 @@
     "water_cell": 0,
     "target_g": 43.43,
     "empty_g": 11.48,
-    "poured_g": 43.81,
-    "final_g": 43.81,
+    "poured_g": 43.48,
+    "final_g": 43.48,
     "steady": true,
-    "over": true,
+    "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 77.8,
+      "flow_deg": 75.5,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.48,
-      "after_g": 13.44
+      "after_g": 13.11
      },
      {
-      "start_deg": 75.8,
-      "flow_deg": 81.2,
+      "start_deg": 73.5,
+      "flow_deg": 80.4,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.44,
-      "after_g": 13.77
+      "before_g": 13.11,
+      "after_g": 14.09
      },
      {
-      "start_deg": 79.2,
-      "flow_deg": 83.0,
+      "start_deg": 78.4,
+      "flow_deg": 82.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.77,
-      "after_g": 18.67
+      "before_g": 14.09,
+      "after_g": 17.03
      },
      {
-      "start_deg": 81.0,
-      "flow_deg": 85.4,
+      "start_deg": 80.1,
+      "flow_deg": 84.0,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 18.67,
-      "after_g": 27.15
+      "before_g": 17.03,
+      "after_g": 18.34
      },
      {
-      "start_deg": 83.4,
-      "flow_deg": 83.5,
+      "start_deg": 82.0,
+      "flow_deg": 85.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 27.15,
-      "after_g": 27.48
+      "before_g": 18.34,
+      "after_g": 24.54
      },
      {
-      "start_deg": 81.5,
-      "flow_deg": 86.7,
+      "start_deg": 83.7,
+      "flow_deg": 87.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 27.48,
-      "after_g": 30.75
+      "before_g": 24.54,
+      "after_g": 34.99
      },
      {
-      "start_deg": 84.7,
-      "flow_deg": 87.7,
+      "start_deg": 85.5,
+      "flow_deg": 88.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 30.75,
-      "after_g": 35.97
+      "before_g": 34.99,
+      "after_g": 36.95
      },
      {
-      "start_deg": 85.7,
-      "flow_deg": 89.1,
+      "start_deg": 86.5,
+      "flow_deg": 90.1,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 35.97,
-      "after_g": 38.58
+      "stopped_deg": 90.06200000002485,
+      "before_g": 36.95,
+      "after_g": 40.54
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 90.2,
-      "let_run": true,
-      "stopped_deg": 90.15500000002646,
-      "before_g": 38.58,
+      "start_deg": 88.1,
+      "flow_deg": 90.4,
+      "let_run": false,
+      "stopped_deg": 90.39300000002606,
+      "before_g": 40.54,
+      "after_g": 41.2
+     },
+     {
+      "start_deg": 88.4,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.90400000002597,
+      "before_g": 41.2,
+      "after_g": 41.52
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 90.3,
+      "let_run": false,
+      "stopped_deg": 90.29700000002565,
+      "before_g": 41.52,
+      "after_g": 41.85
+     },
+     {
+      "start_deg": 88.3,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.5190000000252,
+      "before_g": 41.85,
       "after_g": 42.18
      },
      {
-      "start_deg": 88.2,
-      "flow_deg": 89.4,
+      "start_deg": 86.5,
+      "flow_deg": 90.6,
       "let_run": false,
-      "stopped_deg": 89.40600000002605,
+      "stopped_deg": 90.6200000000249,
       "before_g": 42.18,
-      "after_g": 42.5
-     },
-     {
-      "start_deg": 87.4,
-      "flow_deg": 89.7,
-      "let_run": false,
-      "stopped_deg": 89.74300000002569,
-      "before_g": 42.5,
       "after_g": 42.83
      },
      {
-      "start_deg": 87.7,
-      "flow_deg": 89.9,
+      "start_deg": 88.6,
+      "flow_deg": 89.8,
       "let_run": false,
-      "stopped_deg": 89.86700000002531,
+      "stopped_deg": 89.81100000002449,
       "before_g": 42.83,
-      "after_g": 43.15
+      "after_g": 43.16
      },
      {
-      "start_deg": 87.9,
-      "flow_deg": 90.4,
+      "start_deg": 87.8,
+      "flow_deg": 90.3,
       "let_run": false,
-      "stopped_deg": 90.43200000002496,
-      "before_g": 43.15,
-      "after_g": 43.81
+      "stopped_deg": 90.25600000002413,
+      "before_g": 43.16,
+      "after_g": 43.48
      }
     ],
-    "seconds": 177.5,
-    "smallest_gap_mm": 5.3,
+    "seconds": 199.9,
+    "smallest_gap_mm": 6.6,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 43.43,
-    "read_g": 43.81,
-    "true_g": 43.808,
-    "off_true_g": 0.378
+    "read_g": 43.48,
+    "true_g": 43.482,
+    "off_true_g": 0.052
    }
   ],
-  "imbalance_g": 0.458,
-  "spilled": 6,
+  "imbalance_g": 0.254,
+  "spilled": 13,
   "back": {
    "blank0": {
-    "off_mm": 0.24,
-    "tilt_deg": 1.56
+    "off_mm": 0.31,
+    "tilt_deg": 1.17
    },
    "water0": {
-    "off_mm": 0.27,
-    "tilt_deg": 1.66
+    "off_mm": 2.1,
+    "tilt_deg": 3.84
    }
   },
-  "back_ok": true,
+  "back_ok": false,
   "disturbed": [],
-  "wall_seconds": 162.2
+  "wall_seconds": 183.2
  },
  {
   "seed": 11,
@@ -964,237 +996,253 @@
     "water_cell": 0,
     "target_g": 41.44,
     "empty_g": 11.39,
-    "poured_g": 41.43,
-    "final_g": 41.43,
-    "steady": true,
-    "over": false,
-    "rounds": [
-     {
-      "start_deg": 70.0,
-      "flow_deg": 78.6,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 11.39,
-      "after_g": 14.33
-     },
-     {
-      "start_deg": 76.6,
-      "flow_deg": 82.1,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 14.33,
-      "after_g": 18.57
-     },
-     {
-      "start_deg": 80.1,
-      "flow_deg": 85.7,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 18.57,
-      "after_g": 29.35
-     },
-     {
-      "start_deg": 83.7,
-      "flow_deg": 86.4,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 29.35,
-      "after_g": 30.98
-     },
-     {
-      "start_deg": 84.4,
-      "flow_deg": 84.4,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 30.98,
-      "after_g": 31.31
-     },
-     {
-      "start_deg": 82.4,
-      "flow_deg": 87.1,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 31.31,
-      "after_g": 34.58
-     },
-     {
-      "start_deg": 85.1,
-      "flow_deg": 88.5,
-      "let_run": true,
-      "stopped_deg": 88.54100000002222,
-      "before_g": 34.58,
-      "after_g": 38.49
-     },
-     {
-      "start_deg": 86.5,
-      "flow_deg": 88.7,
-      "let_run": false,
-      "stopped_deg": 88.71800000002332,
-      "before_g": 38.49,
-      "after_g": 38.82
-     },
-     {
-      "start_deg": 86.7,
-      "flow_deg": 87.3,
-      "let_run": false,
-      "stopped_deg": 87.29200000002328,
-      "before_g": 38.82,
-      "after_g": 39.14
-     },
-     {
-      "start_deg": 85.3,
-      "flow_deg": 88.2,
-      "let_run": false,
-      "stopped_deg": 88.21800000002492,
-      "before_g": 39.14,
-      "after_g": 39.8
-     },
-     {
-      "start_deg": 86.2,
-      "flow_deg": 88.5,
-      "let_run": false,
-      "stopped_deg": 88.50100000002455,
-      "before_g": 39.8,
-      "after_g": 40.45
-     },
-     {
-      "start_deg": 86.5,
-      "flow_deg": 89.8,
-      "let_run": false,
-      "stopped_deg": 89.81300000002422,
-      "before_g": 40.45,
-      "after_g": 40.78
-     },
-     {
-      "start_deg": 87.8,
-      "flow_deg": 88.0,
-      "let_run": false,
-      "stopped_deg": 87.97200000002377,
-      "before_g": 40.78,
-      "after_g": 41.43
-     }
-    ],
-    "seconds": 172.2,
-    "smallest_gap_mm": 9.9,
-    "error": "",
-    "balance_tube": "balance A",
-    "blank": "blank0",
-    "water": "water0",
-    "planned_g": 41.44,
-    "read_g": 41.43,
-    "true_g": 41.43,
-    "off_true_g": -0.01
-   },
-   {
-    "blank_cell": 6,
-    "water_cell": 3,
-    "target_g": 34.61,
-    "empty_g": 11.63,
-    "poured_g": 34.82,
-    "final_g": 34.82,
+    "poured_g": 41.76,
+    "final_g": 41.76,
     "steady": true,
     "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 76.1,
+      "flow_deg": 81.4,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.63,
-      "after_g": 12.94
+      "before_g": 11.39,
+      "after_g": 19.23
      },
      {
-      "start_deg": 74.1,
-      "flow_deg": 80.2,
+      "start_deg": 79.4,
+      "flow_deg": 83.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.94,
-      "after_g": 13.92
+      "before_g": 19.23,
+      "after_g": 19.55
      },
      {
-      "start_deg": 78.2,
+      "start_deg": 81.1,
+      "flow_deg": 83.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.55,
+      "after_g": 20.21
+     },
+     {
+      "start_deg": 81.3,
       "flow_deg": 85.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.92,
-      "after_g": 25.67
+      "before_g": 20.21,
+      "after_g": 23.8
      },
      {
       "start_deg": 83.1,
-      "flow_deg": 87.0,
+      "flow_deg": 85.8,
       "let_run": true,
-      "stopped_deg": 86.98100000001648,
-      "before_g": 25.67,
-      "after_g": 30.9
+      "stopped_deg": null,
+      "before_g": 23.8,
+      "after_g": 27.72
      },
      {
-      "start_deg": 85.0,
+      "start_deg": 83.8,
+      "flow_deg": 86.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.72,
+      "after_g": 28.37
+     },
+     {
+      "start_deg": 84.1,
+      "flow_deg": 84.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 28.37,
+      "after_g": 28.7
+     },
+     {
+      "start_deg": 82.1,
       "flow_deg": 88.1,
-      "let_run": false,
-      "stopped_deg": 88.13800000001828,
-      "before_g": 30.9,
-      "after_g": 32.86
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 28.7,
+      "after_g": 37.19
      },
      {
       "start_deg": 86.1,
-      "flow_deg": 88.2,
-      "let_run": false,
-      "stopped_deg": 88.1720000000179,
-      "before_g": 32.86,
-      "after_g": 33.51
+      "flow_deg": 89.2,
+      "let_run": true,
+      "stopped_deg": 89.18900000002577,
+      "before_g": 37.19,
+      "after_g": 39.14
      },
      {
-      "start_deg": 86.2,
-      "flow_deg": 88.5,
+      "start_deg": 87.2,
+      "flow_deg": 90.2,
       "let_run": false,
-      "stopped_deg": 88.51200000001754,
-      "before_g": 33.51,
-      "after_g": 34.16
+      "stopped_deg": 90.15700000002744,
+      "before_g": 39.14,
+      "after_g": 39.8
      },
      {
-      "start_deg": 86.5,
-      "flow_deg": 86.8,
+      "start_deg": 88.2,
+      "flow_deg": 88.3,
       "let_run": false,
-      "stopped_deg": 86.8030000000171,
-      "before_g": 34.16,
-      "after_g": 34.82
+      "stopped_deg": 88.32800000002699,
+      "before_g": 39.8,
+      "after_g": 40.12
+     },
+     {
+      "start_deg": 86.3,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.33100000002665,
+      "before_g": 40.12,
+      "after_g": 41.1
+     },
+     {
+      "start_deg": 87.3,
+      "flow_deg": 89.4,
+      "let_run": false,
+      "stopped_deg": 89.38900000002627,
+      "before_g": 41.1,
+      "after_g": 41.76
      }
     ],
-    "seconds": 133.5,
-    "smallest_gap_mm": 6.5,
+    "seconds": 175.6,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 41.44,
+    "read_g": 41.76,
+    "true_g": 41.757,
+    "off_true_g": 0.317
+   },
+   {
+    "blank_cell": 6,
+    "water_cell": 3,
+    "target_g": 34.78,
+    "empty_g": 11.63,
+    "poured_g": 35.47,
+    "final_g": 35.47,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 75.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.63,
+      "after_g": 12.29
+     },
+     {
+      "start_deg": 73.4,
+      "flow_deg": 80.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.29,
+      "after_g": 13.92
+     },
+     {
+      "start_deg": 78.3,
+      "flow_deg": 82.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.92,
+      "after_g": 17.84
+     },
+     {
+      "start_deg": 80.7,
+      "flow_deg": 83.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 17.84,
+      "after_g": 19.14
+     },
+     {
+      "start_deg": 81.2,
+      "flow_deg": 86.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.14,
+      "after_g": 30.9
+     },
+     {
+      "start_deg": 84.1,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.89500000002022,
+      "before_g": 30.9,
+      "after_g": 32.53
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 86.7,
+      "let_run": false,
+      "stopped_deg": 86.66500000002031,
+      "before_g": 32.53,
+      "after_g": 32.86
+     },
+     {
+      "start_deg": 84.7,
+      "flow_deg": 88.3,
+      "let_run": false,
+      "stopped_deg": 88.33400000002,
+      "before_g": 32.86,
+      "after_g": 33.84
+     },
+     {
+      "start_deg": 86.3,
+      "flow_deg": 86.9,
+      "let_run": false,
+      "stopped_deg": 86.85600000001956,
+      "before_g": 33.84,
+      "after_g": 34.17
+     },
+     {
+      "start_deg": 84.9,
+      "flow_deg": 88.4,
+      "let_run": false,
+      "stopped_deg": 88.38100000001924,
+      "before_g": 34.17,
+      "after_g": 35.47
+     }
+    ],
+    "seconds": 160.6,
+    "smallest_gap_mm": 10.0,
     "error": "",
     "balance_tube": "balance B",
     "blank": "blank1",
     "water": "water1",
     "planned_g": 34.62,
-    "read_g": 34.82,
-    "true_g": 34.819,
-    "off_true_g": 0.209
+    "read_g": 35.47,
+    "true_g": 35.472,
+    "off_true_g": 0.692
    }
   ],
-  "imbalance_g": 0.205,
-  "spilled": 4,
+  "imbalance_g": 0.746,
+  "spilled": 5,
   "back": {
    "blank0": {
-    "off_mm": 0.3,
-    "tilt_deg": 1.81
+    "off_mm": 0.42,
+    "tilt_deg": 2.01
    },
    "blank1": {
-    "off_mm": 0.11,
-    "tilt_deg": 1.46
+    "off_mm": 0.29,
+    "tilt_deg": 1.69
    },
    "water0": {
-    "off_mm": 0.17,
-    "tilt_deg": 1.63
+    "off_mm": 0.25,
+    "tilt_deg": 1.42
    },
    "water1": {
-    "off_mm": 0.25,
-    "tilt_deg": 1.79
+    "off_mm": 0.44,
+    "tilt_deg": 1.83
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 282.6
+  "wall_seconds": 325.2
  },
  {
   "seed": 13,
@@ -1211,71 +1259,71 @@
     "water_cell": 0,
     "target_g": 17.32,
     "empty_g": 11.37,
-    "poured_g": 18.89,
-    "final_g": 18.89,
+    "poured_g": 17.91,
+    "final_g": 17.91,
     "steady": true,
     "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 73.5,
+      "flow_deg": 73.4,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.37,
       "after_g": 12.03
      },
      {
-      "start_deg": 71.5,
-      "flow_deg": 80.6,
+      "start_deg": 71.4,
+      "flow_deg": 80.5,
       "let_run": true,
-      "stopped_deg": 80.62100000000885,
+      "stopped_deg": 80.51600000000877,
       "before_g": 12.03,
       "after_g": 15.95
      },
      {
-      "start_deg": 78.6,
-      "flow_deg": 82.8,
+      "start_deg": 78.5,
+      "flow_deg": 83.3,
       "let_run": false,
-      "stopped_deg": 82.77000000000855,
+      "stopped_deg": 83.3160000000085,
       "before_g": 15.95,
       "after_g": 16.93
      },
      {
-      "start_deg": 80.8,
-      "flow_deg": 82.9,
+      "start_deg": 81.3,
+      "flow_deg": 81.5,
       "let_run": false,
-      "stopped_deg": 82.92100000000818,
+      "stopped_deg": 81.51100000000805,
       "before_g": 16.93,
-      "after_g": 18.89
+      "after_g": 17.91
      }
     ],
-    "seconds": 112.6,
-    "smallest_gap_mm": 10.0,
+    "seconds": 108.1,
+    "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 17.32,
-    "read_g": 18.89,
-    "true_g": 18.885,
-    "off_true_g": 1.565
+    "read_g": 17.91,
+    "true_g": 17.905,
+    "off_true_g": 0.585
    }
   ],
-  "imbalance_g": 1.566,
+  "imbalance_g": 0.595,
   "spilled": 0,
   "back": {
    "blank0": {
-    "off_mm": 0.19,
-    "tilt_deg": 1.29
+    "off_mm": 0.33,
+    "tilt_deg": 1.62
    },
    "water0": {
-    "off_mm": 0.25,
-    "tilt_deg": 1.58
+    "off_mm": 0.24,
+    "tilt_deg": 1.45
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 105.0
+  "wall_seconds": 104.9
  },
  {
   "seed": 15,
@@ -1290,9 +1338,9 @@
     "blank_cell": 6,
     "water_cell": 0,
     "target_g": 39.25,
-    "empty_g": 11.57,
-    "poured_g": 39.65,
-    "final_g": 39.65,
+    "empty_g": 11.56,
+    "poured_g": 39.98,
+    "final_g": 39.97,
     "steady": true,
     "over": true,
     "rounds": [
@@ -1301,241 +1349,193 @@
       "flow_deg": 81.3,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.57,
-      "after_g": 17.12
+      "before_g": 11.56,
+      "after_g": 15.81
      },
      {
       "start_deg": 79.3,
-      "flow_deg": 84.2,
+      "flow_deg": 85.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 17.12,
-      "after_g": 21.36
+      "before_g": 15.81,
+      "after_g": 23.32
      },
      {
-      "start_deg": 82.2,
-      "flow_deg": 85.8,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 21.36,
-      "after_g": 23.65
-     },
-     {
-      "start_deg": 83.8,
-      "flow_deg": 83.8,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 23.65,
-      "after_g": 24.3
-     },
-     {
-      "start_deg": 81.8,
-      "flow_deg": 85.9,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 24.3,
-      "after_g": 26.59
-     },
-     {
-      "start_deg": 83.9,
+      "start_deg": 83.5,
       "flow_deg": 86.9,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 26.59,
-      "after_g": 29.2
+      "before_g": 23.32,
+      "after_g": 28.54
      },
      {
       "start_deg": 84.9,
-      "flow_deg": 87.2,
+      "flow_deg": 88.4,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 29.2,
-      "after_g": 30.18
+      "stopped_deg": 88.39500000001749,
+      "before_g": 28.54,
+      "after_g": 36.71
      },
      {
-      "start_deg": 85.2,
-      "flow_deg": 85.2,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 30.18,
-      "after_g": 30.83
-     },
-     {
-      "start_deg": 83.2,
-      "flow_deg": 88.2,
-      "let_run": true,
-      "stopped_deg": 88.17400000002505,
-      "before_g": 30.83,
-      "after_g": 37.04
-     },
-     {
-      "start_deg": 86.2,
-      "flow_deg": 88.6,
+      "start_deg": 86.4,
+      "flow_deg": 88.5,
       "let_run": false,
-      "stopped_deg": 88.63800000002635,
-      "before_g": 37.04,
+      "stopped_deg": 88.46000000001851,
+      "before_g": 36.71,
+      "after_g": 37.36
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.47600000001813,
+      "before_g": 37.36,
       "after_g": 37.69
      },
      {
-      "start_deg": 86.6,
-      "flow_deg": 86.9,
+      "start_deg": 86.5,
+      "flow_deg": 87.9,
       "let_run": false,
-      "stopped_deg": 86.8660000000259,
+      "stopped_deg": 87.88000000001773,
       "before_g": 37.69,
+      "after_g": 38.01
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 89.2,
+      "let_run": false,
+      "stopped_deg": 89.2310000000174,
+      "before_g": 38.01,
       "after_g": 38.67
      },
      {
-      "start_deg": 84.9,
-      "flow_deg": 88.6,
+      "start_deg": 87.2,
+      "flow_deg": 87.4,
       "let_run": false,
-      "stopped_deg": 88.6190000000256,
+      "stopped_deg": 87.43500000001696,
       "before_g": 38.67,
       "after_g": 38.99
      },
      {
-      "start_deg": 86.6,
-      "flow_deg": 89.7,
+      "start_deg": 85.4,
+      "flow_deg": 89.2,
       "let_run": false,
-      "stopped_deg": 89.67000000002525,
+      "stopped_deg": 89.18800000001664,
       "before_g": 38.99,
-      "after_g": 39.65
+      "after_g": 39.98
      }
     ],
-    "seconds": 170.0,
-    "smallest_gap_mm": 5.3,
+    "seconds": 165.1,
+    "smallest_gap_mm": 6.6,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 39.25,
-    "read_g": 39.65,
-    "true_g": 39.648,
-    "off_true_g": 0.398
+    "read_g": 39.97,
+    "true_g": 39.974,
+    "off_true_g": 0.724
    },
    {
     "blank_cell": 5,
     "water_cell": 3,
-    "target_g": 44.91,
+    "target_g": 45.07,
     "empty_g": 11.45,
     "poured_g": 45.09,
     "final_g": 45.09,
     "steady": true,
-    "over": true,
+    "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 77.0,
+      "flow_deg": 79.5,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.45,
-      "after_g": 11.78
-     },
-     {
-      "start_deg": 75.0,
-      "flow_deg": 80.7,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 11.78,
       "after_g": 12.76
      },
      {
-      "start_deg": 78.7,
-      "flow_deg": 83.6,
+      "start_deg": 77.5,
+      "flow_deg": 80.3,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 12.76,
-      "after_g": 21.25
+      "after_g": 13.41
      },
      {
-      "start_deg": 81.6,
-      "flow_deg": 84.5,
+      "start_deg": 78.3,
+      "flow_deg": 83.3,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 21.25,
-      "after_g": 24.51
+      "before_g": 13.41,
+      "after_g": 20.92
      },
      {
-      "start_deg": 82.5,
-      "flow_deg": 85.5,
+      "start_deg": 81.3,
+      "flow_deg": 85.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 24.51,
+      "before_g": 20.92,
       "after_g": 27.78
      },
      {
-      "start_deg": 83.5,
-      "flow_deg": 86.8,
+      "start_deg": 83.1,
+      "flow_deg": 87.2,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 27.78,
-      "after_g": 32.03
+      "after_g": 35.29
      },
      {
-      "start_deg": 84.8,
-      "flow_deg": 88.4,
+      "start_deg": 85.2,
+      "flow_deg": 88.7,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 32.03,
-      "after_g": 38.23
+      "stopped_deg": 88.68600000002078,
+      "before_g": 35.29,
+      "after_g": 41.82
      },
      {
-      "start_deg": 86.4,
-      "flow_deg": 89.9,
-      "let_run": true,
-      "stopped_deg": 89.90100000002474,
-      "before_g": 38.23,
-      "after_g": 42.47
+      "start_deg": 86.7,
+      "flow_deg": 89.5,
+      "let_run": false,
+      "stopped_deg": 89.50700000002234,
+      "before_g": 41.82,
+      "after_g": 42.48
      },
      {
-      "start_deg": 87.9,
+      "start_deg": 87.5,
+      "flow_deg": 90.1,
+      "let_run": false,
+      "stopped_deg": 90.06200000002372,
+      "before_g": 42.48,
+      "after_g": 43.13
+     },
+     {
+      "start_deg": 88.1,
       "flow_deg": 88.3,
       "let_run": false,
-      "stopped_deg": 88.3490000000246,
-      "before_g": 42.47,
-      "after_g": 42.8
+      "stopped_deg": 88.31100000002327,
+      "before_g": 43.13,
+      "after_g": 43.46
      },
      {
       "start_deg": 86.3,
-      "flow_deg": 89.0,
+      "flow_deg": 90.7,
       "let_run": false,
-      "stopped_deg": 89.01600000002605,
-      "before_g": 42.8,
-      "after_g": 43.45
+      "stopped_deg": 90.65200000002298,
+      "before_g": 43.46,
+      "after_g": 44.44
      },
      {
-      "start_deg": 87.0,
-      "flow_deg": 89.1,
+      "start_deg": 88.7,
+      "flow_deg": 88.8,
       "let_run": false,
-      "stopped_deg": 89.07100000002568,
-      "before_g": 43.45,
-      "after_g": 43.78
-     },
-     {
-      "start_deg": 87.1,
-      "flow_deg": 89.2,
-      "let_run": false,
-      "stopped_deg": 89.2220000000253,
-      "before_g": 43.78,
-      "after_g": 44.11
-     },
-     {
-      "start_deg": 87.2,
-      "flow_deg": 89.9,
-      "let_run": false,
-      "stopped_deg": 89.90700000002495,
-      "before_g": 44.11,
-      "after_g": 44.43
-     },
-     {
-      "start_deg": 87.9,
-      "flow_deg": 90.3,
-      "let_run": false,
-      "stopped_deg": 90.30700000002459,
-      "before_g": 44.43,
+      "stopped_deg": 88.82300000002253,
+      "before_g": 44.44,
       "after_g": 45.09
      }
     ],
-    "seconds": 188.8,
+    "seconds": 160.7,
     "smallest_gap_mm": 10.0,
     "error": "",
     "balance_tube": "balance B",
@@ -1544,32 +1544,32 @@
     "planned_g": 44.71,
     "read_g": 45.09,
     "true_g": 45.087,
-    "off_true_g": 0.177
+    "off_true_g": 0.017
    }
   ],
-  "imbalance_g": 0.387,
-  "spilled": 3,
+  "imbalance_g": 0.628,
+  "spilled": 10,
   "back": {
    "blank0": {
-    "off_mm": 0.01,
-    "tilt_deg": 1.34
+    "off_mm": 0.05,
+    "tilt_deg": 1.03
    },
    "blank1": {
-    "off_mm": 0.19,
-    "tilt_deg": 1.4
+    "off_mm": 0.2,
+    "tilt_deg": 1.24
    },
    "water0": {
-    "off_mm": 3.28,
-    "tilt_deg": 4.88
+    "off_mm": 0.34,
+    "tilt_deg": 1.69
    },
    "water1": {
-    "off_mm": 0.28,
-    "tilt_deg": 1.34
+    "off_mm": 0.24,
+    "tilt_deg": 1.18
    }
   },
-  "back_ok": false,
+  "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 335.4
+  "wall_seconds": 311.7
  },
  {
   "seed": 17,
@@ -1593,102 +1593,118 @@
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 74.9,
+      "flow_deg": 78.2,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.38,
-      "after_g": 12.36
+      "after_g": 13.33
      },
      {
-      "start_deg": 72.9,
-      "flow_deg": 78.1,
+      "start_deg": 76.2,
+      "flow_deg": 81.0,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.36,
-      "after_g": 14.31
+      "before_g": 13.33,
+      "after_g": 15.62
      },
      {
-      "start_deg": 76.1,
-      "flow_deg": 81.3,
+      "start_deg": 79.0,
+      "flow_deg": 82.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 14.31,
-      "after_g": 18.56
+      "before_g": 15.62,
+      "after_g": 18.23
      },
      {
-      "start_deg": 79.3,
-      "flow_deg": 83.8,
+      "start_deg": 80.6,
+      "flow_deg": 84.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 18.56,
-      "after_g": 21.5
+      "before_g": 18.23,
+      "after_g": 20.19
      },
      {
-      "start_deg": 81.8,
+      "start_deg": 82.2,
       "flow_deg": 86.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 21.5,
-      "after_g": 29.01
+      "before_g": 20.19,
+      "after_g": 27.38
      },
      {
       "start_deg": 84.2,
-      "flow_deg": 87.1,
+      "flow_deg": 88.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 29.01,
-      "after_g": 32.6
+      "before_g": 27.38,
+      "after_g": 37.17
      },
      {
-      "start_deg": 85.1,
-      "flow_deg": 88.5,
-      "let_run": true,
-      "stopped_deg": 88.45000000002216,
-      "before_g": 32.6,
+      "start_deg": 86.6,
+      "flow_deg": 88.6,
+      "let_run": false,
+      "stopped_deg": 88.56200000002224,
+      "before_g": 37.17,
+      "after_g": 37.83
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 87.5,
+      "let_run": false,
+      "stopped_deg": 87.54200000002248,
+      "before_g": 37.83,
       "after_g": 38.15
      },
      {
-      "start_deg": 86.5,
-      "flow_deg": 87.0,
+      "start_deg": 85.5,
+      "flow_deg": 88.7,
       "let_run": false,
-      "stopped_deg": 86.95400000002206,
+      "stopped_deg": 88.74100000002431,
       "before_g": 38.15,
       "after_g": 38.48
      },
      {
-      "start_deg": 85.0,
-      "flow_deg": 88.2,
+      "start_deg": 86.7,
+      "flow_deg": 87.5,
       "let_run": false,
-      "stopped_deg": 88.20900000002393,
+      "stopped_deg": 87.45500000002437,
       "before_g": 38.48,
+      "after_g": 38.8
+     },
+     {
+      "start_deg": 85.5,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.51500000002403,
+      "before_g": 38.8,
       "after_g": 39.13
      },
      {
-      "start_deg": 86.2,
-      "flow_deg": 89.3,
+      "start_deg": 86.5,
+      "flow_deg": 88.6,
       "let_run": false,
-      "stopped_deg": 89.3020000000236,
+      "stopped_deg": 88.60900000002366,
       "before_g": 39.13,
-      "after_g": 39.78
+      "after_g": 39.46
      },
      {
-      "start_deg": 87.3,
+      "start_deg": 86.6,
       "flow_deg": 89.3,
       "let_run": false,
-      "stopped_deg": 89.28200000002322,
-      "before_g": 39.78,
-      "after_g": 40.43
+      "stopped_deg": 89.2790000000233,
+      "before_g": 39.46,
+      "after_g": 40.44
      },
      {
       "start_deg": 87.3,
-      "flow_deg": 87.5,
+      "flow_deg": 89.8,
       "let_run": false,
-      "stopped_deg": 87.46500000002277,
-      "before_g": 40.43,
+      "stopped_deg": 89.75700000002294,
+      "before_g": 40.44,
       "after_g": 41.09
      }
     ],
-    "seconds": 163.5,
+    "seconds": 194.9,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance A",
@@ -1701,20 +1717,20 @@
    }
   ],
   "imbalance_g": 0.482,
-  "spilled": 2,
+  "spilled": 9,
   "back": {
    "blank0": {
-    "off_mm": 0.3,
-    "tilt_deg": 1.53
+    "off_mm": 0.27,
+    "tilt_deg": 1.88
    },
    "water0": {
-    "off_mm": 0.25,
-    "tilt_deg": 1.21
+    "off_mm": 0.14,
+    "tilt_deg": 1.26
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 155.9
+  "wall_seconds": 190.8
  },
  {
   "seed": 19,
@@ -1730,8 +1746,126 @@
     "water_cell": 0,
     "target_g": 32.7,
     "empty_g": 11.58,
-    "poured_g": 33.46,
-    "final_g": 33.46,
+    "poured_g": 32.81,
+    "final_g": 32.81,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 73.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.58,
+      "after_g": 12.24
+     },
+     {
+      "start_deg": 71.0,
+      "flow_deg": 78.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.24,
+      "after_g": 12.57
+     },
+     {
+      "start_deg": 76.0,
+      "flow_deg": 79.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.57,
+      "after_g": 13.87
+     },
+     {
+      "start_deg": 77.6,
+      "flow_deg": 81.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.87,
+      "after_g": 15.83
+     },
+     {
+      "start_deg": 79.3,
+      "flow_deg": 82.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.83,
+      "after_g": 18.12
+     },
+     {
+      "start_deg": 80.1,
+      "flow_deg": 83.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.12,
+      "after_g": 22.03
+     },
+     {
+      "start_deg": 81.4,
+      "flow_deg": 84.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 22.03,
+      "after_g": 24.32
+     },
+     {
+      "start_deg": 82.9,
+      "flow_deg": 85.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.32,
+      "after_g": 26.93
+     },
+     {
+      "start_deg": 83.7,
+      "flow_deg": 87.7,
+      "let_run": true,
+      "stopped_deg": 87.71900000002472,
+      "before_g": 26.93,
+      "after_g": 30.85
+     },
+     {
+      "start_deg": 85.7,
+      "flow_deg": 86.1,
+      "let_run": false,
+      "stopped_deg": 86.12100000002428,
+      "before_g": 30.85,
+      "after_g": 31.5
+     },
+     {
+      "start_deg": 84.1,
+      "flow_deg": 86.0,
+      "let_run": false,
+      "stopped_deg": 86.0380000000239,
+      "before_g": 31.5,
+      "after_g": 32.16
+     },
+     {
+      "start_deg": 84.0,
+      "flow_deg": 88.7,
+      "let_run": false,
+      "stopped_deg": 88.66100000002362,
+      "before_g": 32.16,
+      "after_g": 32.81
+     }
+    ],
+    "seconds": 157.5,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 32.7,
+    "read_g": 32.81,
+    "true_g": 32.809,
+    "off_true_g": 0.109
+   },
+   {
+    "blank_cell": 6,
+    "water_cell": 3,
+    "target_g": 36.6,
+    "empty_g": 11.51,
+    "poured_g": 36.98,
+    "final_g": 36.98,
     "steady": true,
     "over": true,
     "rounds": [
@@ -1740,177 +1874,67 @@
       "flow_deg": 73.4,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.58,
-      "after_g": 11.91
+      "before_g": 11.51,
+      "after_g": 11.84
      },
      {
       "start_deg": 71.4,
-      "flow_deg": 78.5,
+      "flow_deg": 78.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.91,
-      "after_g": 12.24
+      "before_g": 11.84,
+      "after_g": 14.12
      },
      {
-      "start_deg": 76.5,
-      "flow_deg": 80.3,
+      "start_deg": 76.8,
+      "flow_deg": 83.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.24,
-      "after_g": 16.16
+      "before_g": 14.12,
+      "after_g": 18.04
      },
      {
-      "start_deg": 78.3,
-      "flow_deg": 84.8,
+      "start_deg": 81.6,
+      "flow_deg": 83.9,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 16.16,
-      "after_g": 24.97
+      "before_g": 18.04,
+      "after_g": 22.29
      },
      {
-      "start_deg": 82.8,
-      "flow_deg": 86.1,
-      "let_run": true,
-      "stopped_deg": 86.05200000001736,
-      "before_g": 24.97,
-      "after_g": 30.2
-     },
-     {
-      "start_deg": 84.1,
-      "flow_deg": 86.0,
-      "let_run": false,
-      "stopped_deg": 85.99100000001829,
-      "before_g": 30.2,
-      "after_g": 30.52
-     },
-     {
-      "start_deg": 84.0,
-      "flow_deg": 87.8,
-      "let_run": false,
-      "stopped_deg": 87.82000000002057,
-      "before_g": 30.52,
-      "after_g": 32.16
-     },
-     {
-      "start_deg": 85.8,
-      "flow_deg": 87.6,
-      "let_run": false,
-      "stopped_deg": 87.57500000002018,
-      "before_g": 32.16,
-      "after_g": 33.46
-     }
-    ],
-    "seconds": 131.9,
-    "smallest_gap_mm": 5.3,
-    "error": "",
-    "balance_tube": "balance A",
-    "blank": "blank0",
-    "water": "water0",
-    "planned_g": 32.7,
-    "read_g": 33.46,
-    "true_g": 33.462,
-    "off_true_g": 0.762
-   },
-   {
-    "blank_cell": 6,
-    "water_cell": 3,
-    "target_g": 36.93,
-    "empty_g": 11.51,
-    "poured_g": 36.98,
-    "final_g": 36.98,
-    "steady": true,
-    "over": false,
-    "rounds": [
-     {
-      "start_deg": 70.0,
-      "flow_deg": 79.6,
+      "start_deg": 81.9,
+      "flow_deg": 86.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.51,
-      "after_g": 13.14
+      "before_g": 22.29,
+      "after_g": 31.1
      },
      {
-      "start_deg": 77.6,
-      "flow_deg": 82.7,
+      "start_deg": 84.2,
+      "flow_deg": 88.5,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 13.14,
-      "after_g": 15.76
-     },
-     {
-      "start_deg": 80.7,
-      "flow_deg": 84.4,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 15.76,
-      "after_g": 22.61
-     },
-     {
-      "start_deg": 82.4,
-      "flow_deg": 85.6,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 22.61,
-      "after_g": 26.21
-     },
-     {
-      "start_deg": 83.6,
-      "flow_deg": 86.0,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 26.21,
-      "after_g": 27.84
-     },
-     {
-      "start_deg": 84.0,
-      "flow_deg": 87.5,
-      "let_run": true,
-      "stopped_deg": 87.51000000001994,
-      "before_g": 27.84,
-      "after_g": 34.04
-     },
-     {
-      "start_deg": 85.5,
-      "flow_deg": 87.7,
-      "let_run": false,
-      "stopped_deg": 87.70800000002106,
-      "before_g": 34.04,
-      "after_g": 35.02
-     },
-     {
-      "start_deg": 85.7,
-      "flow_deg": 88.6,
-      "let_run": false,
-      "stopped_deg": 88.56100000002071,
-      "before_g": 35.02,
+      "stopped_deg": 88.49700000002065,
+      "before_g": 31.1,
       "after_g": 35.35
      },
      {
-      "start_deg": 86.6,
-      "flow_deg": 86.8,
+      "start_deg": 86.5,
+      "flow_deg": 86.7,
       "let_run": false,
-      "stopped_deg": 86.83100000002027,
+      "stopped_deg": 86.6980000000202,
       "before_g": 35.35,
-      "after_g": 36.33
+      "after_g": 36.0
      },
      {
-      "start_deg": 84.8,
-      "flow_deg": 88.1,
-      "let_run": false,
-      "stopped_deg": 88.12200000001994,
-      "before_g": 36.33,
-      "after_g": 36.66
-     },
-     {
-      "start_deg": 86.1,
+      "start_deg": 84.7,
       "flow_deg": 88.2,
       "let_run": false,
-      "stopped_deg": 88.21600000001956,
-      "before_g": 36.66,
+      "stopped_deg": 88.24400000001988,
+      "before_g": 36.0,
       "after_g": 36.98
      }
     ],
-    "seconds": 173.8,
+    "seconds": 133.9,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance B",
@@ -1918,33 +1942,33 @@
     "water": "water1",
     "planned_g": 36.55,
     "read_g": 36.98,
-    "true_g": 36.655,
-    "off_true_g": -0.275
+    "true_g": 36.981,
+    "off_true_g": 0.381
    }
   ],
-  "imbalance_g": 0.719,
-  "spilled": 11,
+  "imbalance_g": 0.386,
+  "spilled": 7,
   "back": {
    "blank0": {
-    "off_mm": 0.06,
-    "tilt_deg": 0.45
+    "off_mm": 0.21,
+    "tilt_deg": 1.56
    },
    "blank1": {
-    "off_mm": 0.28,
-    "tilt_deg": 1.52
+    "off_mm": 0.41,
+    "tilt_deg": 1.31
    },
    "water0": {
-    "off_mm": 0.16,
-    "tilt_deg": 1.15
+    "off_mm": 0.4,
+    "tilt_deg": 1.75
    },
    "water1": {
-    "off_mm": 0.26,
-    "tilt_deg": 1.15
+    "off_mm": 0.1,
+    "tilt_deg": 1.24
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 273.3
+  "wall_seconds": 282.9
  },
  {
   "seed": 21,
@@ -1961,103 +1985,127 @@
     "water_cell": 0,
     "target_g": 41.32,
     "empty_g": 11.55,
-    "poured_g": 41.59,
-    "final_g": 41.59,
+    "poured_g": 41.27,
+    "final_g": 41.27,
     "steady": true,
-    "over": true,
+    "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 76.3,
+      "flow_deg": 81.2,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.55,
-      "after_g": 13.18
+      "after_g": 16.78
      },
      {
-      "start_deg": 74.3,
-      "flow_deg": 83.9,
+      "start_deg": 79.2,
+      "flow_deg": 80.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.18,
-      "after_g": 21.35
+      "before_g": 16.78,
+      "after_g": 17.1
      },
      {
-      "start_deg": 81.9,
-      "flow_deg": 85.8,
+      "start_deg": 78.1,
+      "flow_deg": 83.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 21.35,
-      "after_g": 22.66
+      "before_g": 17.1,
+      "after_g": 18.41
      },
      {
-      "start_deg": 83.8,
-      "flow_deg": 86.1,
+      "start_deg": 81.1,
+      "flow_deg": 85.0,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 22.66,
-      "after_g": 28.86
+      "before_g": 18.41,
+      "after_g": 21.68
      },
      {
-      "start_deg": 84.1,
-      "flow_deg": 87.5,
+      "start_deg": 83.0,
+      "flow_deg": 86.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 28.86,
-      "after_g": 33.43
+      "before_g": 21.68,
+      "after_g": 31.15
      },
      {
-      "start_deg": 85.5,
-      "flow_deg": 88.8,
+      "start_deg": 84.6,
+      "flow_deg": 88.4,
       "let_run": true,
-      "stopped_deg": 88.83300000002089,
-      "before_g": 33.43,
-      "after_g": 40.61
+      "stopped_deg": 88.4270000000206,
+      "before_g": 31.15,
+      "after_g": 38.33
      },
      {
-      "start_deg": 86.8,
-      "flow_deg": 87.0,
+      "start_deg": 86.4,
+      "flow_deg": 88.9,
       "let_run": false,
-      "stopped_deg": 86.98900000002044,
-      "before_g": 40.61,
+      "stopped_deg": 88.86300000002188,
+      "before_g": 38.33,
+      "after_g": 38.66
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.25000000002314,
+      "before_g": 38.66,
+      "after_g": 39.63
+     },
+     {
+      "start_deg": 87.3,
+      "flow_deg": 87.4,
+      "let_run": false,
+      "stopped_deg": 87.43600000002269,
+      "before_g": 39.63,
+      "after_g": 40.29
+     },
+     {
+      "start_deg": 85.4,
+      "flow_deg": 89.2,
+      "let_run": false,
+      "stopped_deg": 89.20400000002238,
+      "before_g": 40.29,
       "after_g": 40.94
      },
      {
-      "start_deg": 85.0,
-      "flow_deg": 89.6,
+      "start_deg": 87.2,
+      "flow_deg": 89.8,
       "let_run": false,
-      "stopped_deg": 89.61200000002016,
+      "stopped_deg": 89.77500000002202,
       "before_g": 40.94,
-      "after_g": 41.59
+      "after_g": 41.27
      }
     ],
-    "seconds": 147.1,
+    "seconds": 173.6,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 41.32,
-    "read_g": 41.59,
-    "true_g": 41.594,
-    "off_true_g": 0.274
+    "read_g": 41.27,
+    "true_g": 41.268,
+    "off_true_g": -0.052
    }
   ],
-  "imbalance_g": 0.309,
-  "spilled": 1,
+  "imbalance_g": 0.15,
+  "spilled": 6,
   "back": {
    "blank0": {
-    "off_mm": 0.3,
-    "tilt_deg": 1.52
+    "off_mm": 0.27,
+    "tilt_deg": 1.57
    },
    "water0": {
-    "off_mm": 0.3,
-    "tilt_deg": 1.65
+    "off_mm": 0.38,
+    "tilt_deg": 1.76
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 145.1
+  "wall_seconds": 167.6
  },
  {
   "seed": 23,
@@ -2073,205 +2121,205 @@
     "water_cell": 0,
     "target_g": 23.84,
     "empty_g": 11.41,
-    "poured_g": 23.82,
-    "final_g": 23.82,
+    "poured_g": 25.13,
+    "final_g": 25.13,
     "steady": true,
-    "over": false,
+    "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 75.9,
+      "flow_deg": 78.2,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.41,
       "after_g": 13.04
      },
      {
-      "start_deg": 73.9,
-      "flow_deg": 82.2,
+      "start_deg": 76.2,
+      "flow_deg": 81.6,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 13.04,
-      "after_g": 15.65
+      "after_g": 16.64
      },
      {
-      "start_deg": 80.2,
-      "flow_deg": 83.8,
+      "start_deg": 79.6,
+      "flow_deg": 82.9,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 15.65,
-      "after_g": 20.23
-     },
-     {
-      "start_deg": 81.8,
-      "flow_deg": 84.6,
-      "let_run": false,
-      "stopped_deg": 84.61500000001479,
-      "before_g": 20.23,
+      "stopped_deg": 82.93300000001204,
+      "before_g": 16.64,
       "after_g": 20.88
      },
      {
-      "start_deg": 82.6,
+      "start_deg": 80.9,
+      "flow_deg": 81.7,
+      "let_run": false,
+      "stopped_deg": 81.71000000001214,
+      "before_g": 20.88,
+      "after_g": 21.21
+     },
+     {
+      "start_deg": 79.7,
       "flow_deg": 86.3,
       "let_run": false,
-      "stopped_deg": 86.346000000017,
-      "before_g": 20.88,
-      "after_g": 23.17
+      "stopped_deg": 86.26900000001638,
+      "before_g": 21.21,
+      "after_g": 22.84
      },
      {
       "start_deg": 84.3,
-      "flow_deg": 84.6,
+      "flow_deg": 84.4,
       "let_run": false,
-      "stopped_deg": 84.60400000001655,
-      "before_g": 23.17,
+      "stopped_deg": 84.39500000001593,
+      "before_g": 22.84,
       "after_g": 23.49
      },
      {
-      "start_deg": 82.6,
-      "flow_deg": 84.7,
+      "start_deg": 82.4,
+      "flow_deg": 86.5,
       "let_run": false,
-      "stopped_deg": 84.67400000001618,
+      "stopped_deg": 86.50500000001563,
       "before_g": 23.49,
-      "after_g": 23.82
+      "after_g": 25.13
      }
     ],
-    "seconds": 123.4,
+    "seconds": 132.9,
     "smallest_gap_mm": 10.0,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 23.84,
-    "read_g": 23.82,
-    "true_g": 23.819,
-    "off_true_g": -0.021
+    "read_g": 25.13,
+    "true_g": 25.125,
+    "off_true_g": 1.285
    },
    {
     "blank_cell": 5,
     "water_cell": 3,
-    "target_g": 39.17,
-    "empty_g": 11.41,
-    "poured_g": 39.17,
-    "final_g": 39.17,
+    "target_g": 39.83,
+    "empty_g": 11.42,
+    "poured_g": 39.82,
+    "final_g": 39.83,
     "steady": true,
     "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 80.4,
+      "flow_deg": 80.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.41,
-      "after_g": 14.35
+      "before_g": 11.42,
+      "after_g": 13.37
      },
      {
-      "start_deg": 78.4,
-      "flow_deg": 83.0,
+      "start_deg": 78.5,
+      "flow_deg": 82.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 14.35,
-      "after_g": 17.95
+      "before_g": 13.37,
+      "after_g": 16.64
      },
      {
-      "start_deg": 81.0,
-      "flow_deg": 84.9,
+      "start_deg": 80.5,
+      "flow_deg": 84.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 17.95,
-      "after_g": 25.13
+      "before_g": 16.64,
+      "after_g": 24.81
      },
      {
-      "start_deg": 82.9,
-      "flow_deg": 87.6,
+      "start_deg": 82.8,
+      "flow_deg": 85.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 25.13,
-      "after_g": 35.25
+      "before_g": 24.81,
+      "after_g": 27.09
      },
      {
-      "start_deg": 85.6,
+      "start_deg": 83.8,
+      "flow_deg": 88.0,
+      "let_run": true,
+      "stopped_deg": 87.99100000001874,
+      "before_g": 27.09,
+      "after_g": 36.89
+     },
+     {
+      "start_deg": 86.0,
+      "flow_deg": 88.7,
+      "let_run": false,
+      "stopped_deg": 88.68600000002021,
+      "before_g": 36.89,
+      "after_g": 37.87
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 87.8,
+      "let_run": false,
+      "stopped_deg": 87.8380000000198,
+      "before_g": 37.87,
+      "after_g": 38.19
+     },
+     {
+      "start_deg": 85.8,
       "flow_deg": 88.9,
       "let_run": false,
-      "stopped_deg": 88.9010000000194,
-      "before_g": 35.25,
-      "after_g": 37.21
-     },
-     {
-      "start_deg": 86.9,
-      "flow_deg": 87.1,
-      "let_run": false,
-      "stopped_deg": 87.09600000001895,
-      "before_g": 37.21,
-      "after_g": 37.54
-     },
-     {
-      "start_deg": 85.1,
-      "flow_deg": 88.6,
-      "let_run": false,
-      "stopped_deg": 88.59400000001862,
-      "before_g": 37.54,
-      "after_g": 37.86
-     },
-     {
-      "start_deg": 86.6,
-      "flow_deg": 86.8,
-      "let_run": false,
-      "stopped_deg": 86.78900000001818,
-      "before_g": 37.86,
-      "after_g": 38.52
-     },
-     {
-      "start_deg": 84.8,
-      "flow_deg": 87.5,
-      "let_run": false,
-      "stopped_deg": 87.53400000001783,
-      "before_g": 38.52,
+      "stopped_deg": 88.92500000001947,
+      "before_g": 38.19,
       "after_g": 38.84
      },
      {
-      "start_deg": 85.5,
-      "flow_deg": 88.6,
+      "start_deg": 86.9,
+      "flow_deg": 87.9,
       "let_run": false,
-      "stopped_deg": 88.59700000001749,
+      "stopped_deg": 87.94500000001905,
       "before_g": 38.84,
       "after_g": 39.17
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 89.2,
+      "let_run": false,
+      "stopped_deg": 89.15800000001872,
+      "before_g": 39.17,
+      "after_g": 39.82
      }
     ],
-    "seconds": 165.3,
-    "smallest_gap_mm": 10.0,
+    "seconds": 158.9,
+    "smallest_gap_mm": 7.4,
     "error": "",
     "balance_tube": "balance B",
     "blank": "blank1",
     "water": "water1",
     "planned_g": 39.18,
-    "read_g": 39.17,
-    "true_g": 39.171,
-    "off_true_g": 0.001
+    "read_g": 39.83,
+    "true_g": 39.824,
+    "off_true_g": -0.006
    }
   ],
-  "imbalance_g": 0.016,
-  "spilled": 1,
+  "imbalance_g": 1.115,
+  "spilled": 4,
   "back": {
    "blank0": {
-    "off_mm": 0.16,
-    "tilt_deg": 1.27
+    "off_mm": 0.35,
+    "tilt_deg": 1.37
    },
    "blank1": {
-    "off_mm": 0.18,
-    "tilt_deg": 1.73
+    "off_mm": 0.32,
+    "tilt_deg": 1.47
    },
    "water0": {
-    "off_mm": 0.14,
-    "tilt_deg": 1.15
+    "off_mm": 0.15,
+    "tilt_deg": 1.22
    },
    "water1": {
-    "off_mm": 0.23,
-    "tilt_deg": 1.68
+    "off_mm": 0.07,
+    "tilt_deg": 1.52
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 267.6
+  "wall_seconds": 277.9
  },
  {
   "seed": 25,
@@ -2295,87 +2343,87 @@
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 76.6,
+      "flow_deg": 80.8,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.42,
-      "after_g": 12.4
-     },
-     {
-      "start_deg": 74.6,
-      "flow_deg": 79.0,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 12.4,
       "after_g": 14.03
      },
      {
-      "start_deg": 77.0,
-      "flow_deg": 82.2,
+      "start_deg": 78.8,
+      "flow_deg": 82.4,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 14.03,
-      "after_g": 17.62
+      "after_g": 16.97
      },
      {
-      "start_deg": 80.2,
-      "flow_deg": 84.5,
+      "start_deg": 80.4,
+      "flow_deg": 84.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 17.62,
-      "after_g": 25.79
+      "before_g": 16.97,
+      "after_g": 22.85
      },
      {
-      "start_deg": 82.5,
-      "flow_deg": 85.7,
+      "start_deg": 82.8,
+      "flow_deg": 86.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 25.79,
-      "after_g": 29.05
+      "before_g": 22.85,
+      "after_g": 27.09
      },
      {
-      "start_deg": 83.7,
-      "flow_deg": 87.8,
+      "start_deg": 84.5,
+      "flow_deg": 87.6,
       "let_run": true,
-      "stopped_deg": 87.81100000002016,
-      "before_g": 29.05,
+      "stopped_deg": 87.58500000001845,
+      "before_g": 27.09,
+      "after_g": 31.99
+     },
+     {
+      "start_deg": 85.6,
+      "flow_deg": 88.1,
+      "let_run": false,
+      "stopped_deg": 88.07000000001977,
+      "before_g": 31.99,
       "after_g": 32.64
      },
      {
-      "start_deg": 85.8,
-      "flow_deg": 86.6,
+      "start_deg": 86.1,
+      "flow_deg": 88.4,
       "let_run": false,
-      "stopped_deg": 86.59500000002026,
+      "stopped_deg": 88.422000000021,
       "before_g": 32.64,
+      "after_g": 33.62
+     },
+     {
+      "start_deg": 86.4,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.24300000002061,
+      "before_g": 33.62,
       "after_g": 33.95
      },
      {
-      "start_deg": 84.6,
-      "flow_deg": 85.7,
+      "start_deg": 86.2,
+      "flow_deg": 88.5,
       "let_run": false,
-      "stopped_deg": 85.66000000001985,
+      "stopped_deg": 88.46600000002024,
       "before_g": 33.95,
-      "after_g": 34.28
-     },
-     {
-      "start_deg": 83.7,
-      "flow_deg": 85.9,
-      "let_run": false,
-      "stopped_deg": 85.90100000001948,
-      "before_g": 34.28,
       "after_g": 34.6
      },
      {
-      "start_deg": 83.9,
-      "flow_deg": 86.7,
+      "start_deg": 86.5,
+      "flow_deg": 88.5,
       "let_run": false,
-      "stopped_deg": 86.70900000001913,
+      "stopped_deg": 88.47000000001987,
       "before_g": 34.6,
       "after_g": 34.93
      }
     ],
-    "seconds": 152.2,
-    "smallest_gap_mm": 5.3,
+    "seconds": 157.7,
+    "smallest_gap_mm": 5.4,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
@@ -2387,20 +2435,20 @@
    }
   ],
   "imbalance_g": 0.257,
-  "spilled": 0,
+  "spilled": 12,
   "back": {
    "blank0": {
-    "off_mm": 0.33,
-    "tilt_deg": 1.48
+    "off_mm": 0.47,
+    "tilt_deg": 1.96
    },
    "water0": {
-    "off_mm": 0.21,
-    "tilt_deg": 0.81
+    "off_mm": 0.28,
+    "tilt_deg": 1.18
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 143.2
+  "wall_seconds": 142.0
  },
  {
   "seed": 27,
@@ -2423,95 +2471,95 @@
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 75.3,
+      "flow_deg": 80.5,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.35,
-      "after_g": 11.68
+      "after_g": 12.33
      },
      {
-      "start_deg": 73.3,
-      "flow_deg": 76.4,
+      "start_deg": 78.5,
+      "flow_deg": 79.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.68,
-      "after_g": 12.01
+      "before_g": 12.33,
+      "after_g": 14.29
      },
      {
-      "start_deg": 74.4,
-      "flow_deg": 81.1,
+      "start_deg": 77.7,
+      "flow_deg": 80.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.01,
-      "after_g": 15.93
+      "before_g": 14.29,
+      "after_g": 15.27
      },
      {
-      "start_deg": 79.1,
-      "flow_deg": 83.3,
+      "start_deg": 78.7,
+      "flow_deg": 83.0,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 15.93,
-      "after_g": 22.46
+      "before_g": 15.27,
+      "after_g": 17.88
      },
      {
-      "start_deg": 81.3,
-      "flow_deg": 84.3,
+      "start_deg": 81.0,
+      "flow_deg": 85.0,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 22.46,
-      "after_g": 22.78
+      "before_g": 17.88,
+      "after_g": 19.19
      },
      {
-      "start_deg": 82.3,
-      "flow_deg": 85.1,
+      "start_deg": 83.0,
+      "flow_deg": 86.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 22.78,
-      "after_g": 26.37
+      "before_g": 19.19,
+      "after_g": 27.68
      },
      {
-      "start_deg": 83.1,
-      "flow_deg": 86.5,
+      "start_deg": 84.7,
+      "flow_deg": 88.5,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 26.37,
-      "after_g": 30.62
+      "stopped_deg": 88.48500000002218,
+      "before_g": 27.68,
+      "after_g": 36.17
      },
      {
-      "start_deg": 84.5,
-      "flow_deg": 87.5,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 30.62,
-      "after_g": 33.88
-     },
-     {
-      "start_deg": 85.5,
+      "start_deg": 86.5,
       "flow_deg": 88.9,
-      "let_run": true,
-      "stopped_deg": 88.85300000002553,
-      "before_g": 33.88,
-      "after_g": 37.8
+      "let_run": false,
+      "stopped_deg": 88.85100000002342,
+      "before_g": 36.17,
+      "after_g": 36.5
      },
      {
       "start_deg": 86.9,
-      "flow_deg": 87.1,
+      "flow_deg": 89.0,
       "let_run": false,
-      "stopped_deg": 87.05700000002508,
-      "before_g": 37.8,
-      "after_g": 38.13
+      "stopped_deg": 88.96500000002447,
+      "before_g": 36.5,
+      "after_g": 37.15
      },
      {
-      "start_deg": 85.1,
-      "flow_deg": 88.4,
+      "start_deg": 87.0,
+      "flow_deg": 89.8,
       "let_run": false,
-      "stopped_deg": 88.35100000002475,
-      "before_g": 38.13,
+      "stopped_deg": 89.77200000002603,
+      "before_g": 37.15,
+      "after_g": 38.46
+     },
+     {
+      "start_deg": 87.8,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.34700000002563,
+      "before_g": 38.46,
       "after_g": 39.11
      }
     ],
-    "seconds": 149.4,
-    "smallest_gap_mm": 7.6,
+    "seconds": 151.8,
+    "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
@@ -2526,79 +2574,79 @@
     "water_cell": 3,
     "target_g": 23.2,
     "empty_g": 11.41,
-    "poured_g": 23.49,
-    "final_g": 23.49,
+    "poured_g": 23.17,
+    "final_g": 23.16,
     "steady": true,
-    "over": true,
+    "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 73.7,
+      "flow_deg": 80.6,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.41,
-      "after_g": 11.74
+      "after_g": 16.31
      },
      {
-      "start_deg": 71.7,
-      "flow_deg": 81.0,
+      "start_deg": 78.6,
+      "flow_deg": 83.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.74,
-      "after_g": 14.68
+      "before_g": 16.31,
+      "after_g": 18.92
      },
      {
-      "start_deg": 79.0,
-      "flow_deg": 84.0,
+      "start_deg": 81.2,
+      "flow_deg": 85.6,
       "let_run": true,
-      "stopped_deg": 84.03900000001283,
-      "before_g": 14.68,
-      "after_g": 21.86
+      "stopped_deg": 85.55100000001391,
+      "before_g": 18.92,
+      "after_g": 21.21
      },
      {
-      "start_deg": 82.0,
-      "flow_deg": 85.4,
+      "start_deg": 83.6,
+      "flow_deg": 86.2,
       "let_run": false,
-      "stopped_deg": 85.43500000001251,
-      "before_g": 21.86,
-      "after_g": 23.49
+      "stopped_deg": 86.24800000001356,
+      "before_g": 21.21,
+      "after_g": 23.17
      }
     ],
-    "seconds": 105.1,
-    "smallest_gap_mm": 5.4,
+    "seconds": 108.4,
+    "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance B",
     "blank": "blank1",
     "water": "water1",
     "planned_g": 23.24,
-    "read_g": 23.49,
-    "true_g": 23.491,
-    "off_true_g": 0.291
+    "read_g": 23.16,
+    "true_g": 23.165,
+    "off_true_g": -0.035
    }
   ],
-  "imbalance_g": 0.293,
-  "spilled": 2,
+  "imbalance_g": 0.076,
+  "spilled": 19,
   "back": {
    "blank0": {
-    "off_mm": 0.44,
-    "tilt_deg": 1.83
+    "off_mm": 0.31,
+    "tilt_deg": 1.45
    },
    "blank1": {
-    "off_mm": 0.42,
-    "tilt_deg": 1.43
+    "off_mm": 0.28,
+    "tilt_deg": 1.41
    },
    "water0": {
-    "off_mm": 0.27,
-    "tilt_deg": 1.56
+    "off_mm": 0.07,
+    "tilt_deg": 1.53
    },
    "water1": {
-    "off_mm": 0.43,
-    "tilt_deg": 1.94
+    "off_mm": 0.22,
+    "tilt_deg": 1.38
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 237.2
+  "wall_seconds": 242.6
  },
  {
   "seed": 29,
@@ -2616,150 +2664,118 @@
     "target_g": 44.78,
     "empty_g": 11.42,
     "poured_g": 45.06,
-    "final_g": 45.06,
+    "final_g": 45.05,
     "steady": true,
     "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 82.5,
+      "flow_deg": 82.9,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.42,
-      "after_g": 15.66
+      "after_g": 13.38
      },
      {
-      "start_deg": 80.5,
+      "start_deg": 80.9,
+      "flow_deg": 84.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.38,
+      "after_g": 21.87
+     },
+     {
+      "start_deg": 82.1,
       "flow_deg": 85.9,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 15.66,
-      "after_g": 27.42
+      "before_g": 21.87,
+      "after_g": 24.16
      },
      {
       "start_deg": 83.9,
-      "flow_deg": 86.6,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 27.42,
-      "after_g": 28.4
-     },
-     {
-      "start_deg": 84.6,
-      "flow_deg": 84.8,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 28.4,
-      "after_g": 28.73
-     },
-     {
-      "start_deg": 82.8,
       "flow_deg": 87.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 28.73,
-      "after_g": 33.3
+      "before_g": 24.16,
+      "after_g": 32.97
      },
      {
       "start_deg": 85.5,
-      "flow_deg": 88.8,
+      "flow_deg": 89.1,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 33.3,
-      "after_g": 40.81
-     },
-     {
-      "start_deg": 86.8,
-      "flow_deg": 89.8,
-      "let_run": false,
-      "stopped_deg": 89.75200000002309,
-      "before_g": 40.81,
-      "after_g": 41.79
-     },
-     {
-      "start_deg": 87.8,
-      "flow_deg": 90.1,
-      "let_run": false,
-      "stopped_deg": 90.0900000000243,
-      "before_g": 41.79,
-      "after_g": 42.44
-     },
-     {
-      "start_deg": 88.1,
-      "flow_deg": 88.6,
-      "let_run": false,
-      "stopped_deg": 88.55900000002418,
-      "before_g": 42.44,
+      "stopped_deg": 89.13200000001956,
+      "before_g": 32.97,
       "after_g": 42.77
      },
      {
-      "start_deg": 86.6,
-      "flow_deg": 89.6,
+      "start_deg": 87.1,
+      "flow_deg": 89.5,
       "let_run": false,
-      "stopped_deg": 89.63900000002593,
+      "stopped_deg": 89.51900000002081,
       "before_g": 42.77,
       "after_g": 43.42
      },
      {
-      "start_deg": 87.6,
+      "start_deg": 87.5,
       "flow_deg": 89.3,
       "let_run": false,
-      "stopped_deg": 89.26800000002554,
+      "stopped_deg": 89.27100000002042,
       "before_g": 43.42,
       "after_g": 43.75
      },
      {
       "start_deg": 87.3,
-      "flow_deg": 89.1,
+      "flow_deg": 89.9,
       "let_run": false,
-      "stopped_deg": 89.10700000002515,
+      "stopped_deg": 89.89600000002007,
       "before_g": 43.75,
-      "after_g": 44.07
+      "after_g": 44.08
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 89.1,
+      "start_deg": 87.9,
+      "flow_deg": 89.9,
       "let_run": false,
-      "stopped_deg": 89.05400000002477,
-      "before_g": 44.07,
+      "stopped_deg": 89.88800000001969,
+      "before_g": 44.08,
       "after_g": 44.4
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 90.2,
+      "start_deg": 87.9,
+      "flow_deg": 90.1,
       "let_run": false,
-      "stopped_deg": 90.23700000002444,
+      "stopped_deg": 90.06000000001931,
       "before_g": 44.4,
       "after_g": 45.06
      }
     ],
-    "seconds": 195.9,
+    "seconds": 174.9,
     "smallest_gap_mm": 9.9,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 44.78,
-    "read_g": 45.06,
+    "read_g": 45.05,
     "true_g": 45.055,
     "off_true_g": 0.275
    }
   ],
   "imbalance_g": 0.289,
-  "spilled": 1,
+  "spilled": 3,
   "back": {
    "blank0": {
-    "off_mm": 0.46,
-    "tilt_deg": 1.95
+    "off_mm": 0.35,
+    "tilt_deg": 1.65
    },
    "water0": {
-    "off_mm": 0.33,
-    "tilt_deg": 1.16
+    "off_mm": 0.16,
+    "tilt_deg": 1.66
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 184.9
+  "wall_seconds": 164.1
  },
  {
   "seed": 31,
@@ -2775,110 +2791,142 @@
     "water_cell": 0,
     "target_g": 44.25,
     "empty_g": 11.36,
-    "poured_g": 44.34,
+    "poured_g": 44.35,
     "final_g": 44.35,
     "steady": true,
     "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 75.0,
+      "flow_deg": 74.6,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.36,
-      "after_g": 11.69
+      "after_g": 12.02
      },
      {
-      "start_deg": 73.0,
-      "flow_deg": 76.0,
+      "start_deg": 72.6,
+      "flow_deg": 79.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.69,
-      "after_g": 13.65
+      "before_g": 12.02,
+      "after_g": 15.94
      },
      {
-      "start_deg": 74.0,
-      "flow_deg": 83.2,
+      "start_deg": 77.7,
+      "flow_deg": 81.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.65,
-      "after_g": 19.53
+      "before_g": 15.94,
+      "after_g": 16.59
      },
      {
-      "start_deg": 81.2,
-      "flow_deg": 85.4,
+      "start_deg": 79.1,
+      "flow_deg": 83.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 19.53,
-      "after_g": 25.4
+      "before_g": 16.59,
+      "after_g": 20.83
      },
      {
-      "start_deg": 83.4,
-      "flow_deg": 86.4,
+      "start_deg": 81.1,
+      "flow_deg": 85.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 25.4,
-      "after_g": 27.37
+      "before_g": 20.83,
+      "after_g": 26.06
      },
      {
-      "start_deg": 84.4,
-      "flow_deg": 88.1,
+      "start_deg": 83.1,
+      "flow_deg": 86.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 27.37,
-      "after_g": 38.14
+      "before_g": 26.06,
+      "after_g": 29.0
      },
      {
-      "start_deg": 86.1,
-      "flow_deg": 88.6,
+      "start_deg": 84.6,
+      "flow_deg": 87.8,
       "let_run": true,
-      "stopped_deg": 88.59700000002226,
-      "before_g": 38.14,
-      "after_g": 41.73
+      "stopped_deg": null,
+      "before_g": 29.0,
+      "after_g": 33.57
      },
      {
-      "start_deg": 86.6,
-      "flow_deg": 89.1,
+      "start_deg": 85.8,
+      "flow_deg": 88.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 33.57,
+      "after_g": 37.16
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 88.7,
+      "let_run": true,
+      "stopped_deg": 88.72700000002544,
+      "before_g": 37.16,
+      "after_g": 40.43
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 89.9,
       "let_run": false,
-      "stopped_deg": 89.14500000002363,
-      "before_g": 41.73,
+      "stopped_deg": 89.87000000002723,
+      "before_g": 40.43,
+      "after_g": 41.4
+     },
+     {
+      "start_deg": 87.9,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.16400000002699,
+      "before_g": 41.4,
       "after_g": 42.06
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 89.1,
+      "start_deg": 86.2,
+      "flow_deg": 89.7,
       "let_run": false,
-      "stopped_deg": 89.1400000000246,
+      "stopped_deg": 89.69900000002906,
       "before_g": 42.06,
+      "after_g": 42.71
+     },
+     {
+      "start_deg": 87.7,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.93600000002861,
+      "before_g": 42.71,
       "after_g": 43.04
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 89.4,
+      "start_deg": 85.9,
+      "flow_deg": 89.8,
       "let_run": false,
-      "stopped_deg": 89.36300000002423,
+      "stopped_deg": 89.8000000000283,
       "before_g": 43.04,
-      "after_g": 43.69
+      "after_g": 43.36
      },
      {
-      "start_deg": 87.4,
-      "flow_deg": 89.1,
+      "start_deg": 87.8,
+      "flow_deg": 88.0,
       "let_run": false,
-      "stopped_deg": 89.07900000002384,
-      "before_g": 43.69,
+      "stopped_deg": 87.97700000002786,
+      "before_g": 43.36,
       "after_g": 44.02
      },
      {
-      "start_deg": 87.1,
-      "flow_deg": 90.0,
+      "start_deg": 86.0,
+      "flow_deg": 88.9,
       "let_run": false,
-      "stopped_deg": 90.0160000000235,
+      "stopped_deg": 88.92000000002751,
       "before_g": 44.02,
-      "after_g": 44.34
+      "after_g": 44.35
      }
     ],
-    "seconds": 184.4,
-    "smallest_gap_mm": 10.0,
+    "seconds": 206.2,
+    "smallest_gap_mm": 7.2,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
@@ -2900,63 +2948,87 @@
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 76.0,
+      "flow_deg": 73.6,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.4,
       "after_g": 11.73
      },
      {
-      "start_deg": 74.0,
-      "flow_deg": 82.9,
+      "start_deg": 71.6,
+      "flow_deg": 79.6,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.73,
-      "after_g": 18.26
+      "after_g": 13.69
      },
      {
-      "start_deg": 80.9,
-      "flow_deg": 85.4,
+      "start_deg": 77.6,
+      "flow_deg": 82.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 18.26,
-      "after_g": 27.73
+      "before_g": 13.69,
+      "after_g": 18.59
      },
      {
-      "start_deg": 83.4,
-      "flow_deg": 87.3,
+      "start_deg": 80.2,
+      "flow_deg": 84.5,
       "let_run": true,
-      "stopped_deg": 87.31000000001671,
-      "before_g": 27.73,
-      "after_g": 33.6
+      "stopped_deg": null,
+      "before_g": 18.59,
+      "after_g": 19.24
      },
      {
-      "start_deg": 85.3,
-      "flow_deg": 86.9,
+      "start_deg": 82.5,
+      "flow_deg": 85.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.24,
+      "after_g": 27.08
+     },
+     {
+      "start_deg": 83.7,
+      "flow_deg": 86.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.08,
+      "after_g": 30.67
+     },
+     {
+      "start_deg": 84.4,
+      "flow_deg": 84.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 30.67,
+      "after_g": 30.99
+     },
+     {
+      "start_deg": 82.4,
+      "flow_deg": 88.2,
+      "let_run": true,
+      "stopped_deg": 88.1790000000235,
+      "before_g": 30.99,
+      "after_g": 34.59
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 86.4,
       "let_run": false,
-      "stopped_deg": 86.86400000001737,
-      "before_g": 33.6,
-      "after_g": 33.93
+      "stopped_deg": 86.38600000002306,
+      "before_g": 34.59,
+      "after_g": 34.92
      },
      {
-      "start_deg": 84.9,
+      "start_deg": 84.4,
       "flow_deg": 88.0,
       "let_run": false,
-      "stopped_deg": 87.95400000001703,
-      "before_g": 33.93,
-      "after_g": 34.91
-     },
-     {
-      "start_deg": 86.0,
-      "flow_deg": 88.1,
-      "let_run": false,
-      "stopped_deg": 88.11100000001666,
-      "before_g": 34.91,
+      "stopped_deg": 87.98000000002274,
+      "before_g": 34.92,
       "after_g": 35.89
      }
     ],
-    "seconds": 133.3,
-    "smallest_gap_mm": 10.0,
+    "seconds": 147.1,
+    "smallest_gap_mm": 6.6,
     "error": "",
     "balance_tube": "balance B",
     "blank": "blank1",
@@ -2968,28 +3040,28 @@
    }
   ],
   "imbalance_g": 0.171,
-  "spilled": 0,
+  "spilled": 7,
   "back": {
    "blank0": {
-    "off_mm": 0.53,
-    "tilt_deg": 1.94
+    "off_mm": 0.39,
+    "tilt_deg": 1.89
    },
    "blank1": {
-    "off_mm": 0.05,
-    "tilt_deg": 1.6
+    "off_mm": 0.54,
+    "tilt_deg": 1.55
    },
    "water0": {
-    "off_mm": 3.69,
-    "tilt_deg": 5.22
+    "off_mm": 0.76,
+    "tilt_deg": 1.66
    },
    "water1": {
-    "off_mm": 0.29,
-    "tilt_deg": 1.13
+    "off_mm": 0.32,
+    "tilt_deg": 1.5
    }
   },
-  "back_ok": false,
+  "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 285.8
+  "wall_seconds": 345.6
  },
  {
   "seed": 33,
@@ -3007,126 +3079,150 @@
     "target_g": 43.55,
     "empty_g": 11.5,
     "poured_g": 43.51,
-    "final_g": 43.5,
+    "final_g": 43.51,
     "steady": true,
     "over": false,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 75.9,
+      "flow_deg": 79.5,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.5,
-      "after_g": 12.48
+      "after_g": 15.1
      },
      {
-      "start_deg": 73.9,
-      "flow_deg": 79.7,
+      "start_deg": 77.5,
+      "flow_deg": 83.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.48,
-      "after_g": 13.46
+      "before_g": 15.1,
+      "after_g": 19.34
      },
      {
-      "start_deg": 77.7,
-      "flow_deg": 81.1,
+      "start_deg": 81.5,
+      "flow_deg": 85.1,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 13.46,
-      "after_g": 14.77
+      "before_g": 19.34,
+      "after_g": 24.24
      },
      {
-      "start_deg": 79.1,
-      "flow_deg": 82.5,
+      "start_deg": 83.1,
+      "flow_deg": 85.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 14.77,
-      "after_g": 16.4
+      "before_g": 24.24,
+      "after_g": 26.53
      },
      {
-      "start_deg": 80.5,
-      "flow_deg": 84.1,
+      "start_deg": 83.7,
+      "flow_deg": 86.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 16.4,
-      "after_g": 18.04
-     },
-     {
-      "start_deg": 82.1,
-      "flow_deg": 85.8,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 18.04,
+      "before_g": 26.53,
       "after_g": 28.48
      },
      {
-      "start_deg": 83.8,
-      "flow_deg": 87.7,
+      "start_deg": 84.7,
+      "flow_deg": 87.8,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 28.48,
-      "after_g": 36.98
+      "after_g": 35.02
      },
      {
-      "start_deg": 85.7,
-      "flow_deg": 89.2,
+      "start_deg": 85.8,
+      "flow_deg": 88.7,
       "let_run": true,
-      "stopped_deg": 89.16600000002421,
-      "before_g": 36.98,
+      "stopped_deg": 88.70200000002234,
+      "before_g": 35.02,
+      "after_g": 40.57
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 88.0,
+      "let_run": false,
+      "stopped_deg": 88.01800000002282,
+      "before_g": 40.57,
+      "after_g": 40.89
+     },
+     {
+      "start_deg": 86.0,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.20200000002393,
+      "before_g": 40.89,
+      "after_g": 41.22
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.54000000002515,
+      "before_g": 41.22,
       "after_g": 41.55
      },
      {
-      "start_deg": 87.2,
+      "start_deg": 86.5,
       "flow_deg": 89.6,
       "let_run": false,
-      "stopped_deg": 89.63700000002552,
+      "stopped_deg": 89.59200000002687,
       "before_g": 41.55,
       "after_g": 42.2
      },
      {
       "start_deg": 87.6,
-      "flow_deg": 87.9,
+      "flow_deg": 87.8,
       "let_run": false,
-      "stopped_deg": 87.92500000002508,
+      "stopped_deg": 87.80500000002642,
       "before_g": 42.2,
-      "after_g": 42.85
+      "after_g": 42.53
      },
      {
-      "start_deg": 85.9,
-      "flow_deg": 89.7,
+      "start_deg": 85.8,
+      "flow_deg": 89.4,
       "let_run": false,
-      "stopped_deg": 89.65700000002477,
-      "before_g": 42.85,
+      "stopped_deg": 89.4140000000261,
+      "before_g": 42.53,
+      "after_g": 43.18
+     },
+     {
+      "start_deg": 87.4,
+      "flow_deg": 87.6,
+      "let_run": false,
+      "stopped_deg": 87.63900000002566,
+      "before_g": 43.18,
       "after_g": 43.51
      }
     ],
-    "seconds": 162.7,
+    "seconds": 174.7,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 43.55,
-    "read_g": 43.5,
+    "read_g": 43.51,
     "true_g": 43.505,
     "off_true_g": -0.045
    }
   ],
   "imbalance_g": 0.054,
-  "spilled": 1,
+  "spilled": 2,
   "back": {
    "blank0": {
-    "off_mm": 0.19,
-    "tilt_deg": 1.62
+    "off_mm": 0.28,
+    "tilt_deg": 1.45
    },
    "water0": {
-    "off_mm": 0.3,
-    "tilt_deg": 1.5
+    "off_mm": 0.16,
+    "tilt_deg": 1.31
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 165.5
+  "wall_seconds": 177.0
  },
  {
   "seed": 35,
@@ -3142,165 +3238,213 @@
     "water_cell": 0,
     "target_g": 30.94,
     "empty_g": 11.49,
-    "poured_g": 32.38,
-    "final_g": 32.38,
+    "poured_g": 31.4,
+    "final_g": 31.41,
     "steady": true,
     "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 74.0,
+      "flow_deg": 79.9,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.49,
-      "after_g": 11.81
+      "after_g": 15.4
      },
      {
-      "start_deg": 72.0,
-      "flow_deg": 82.3,
+      "start_deg": 77.9,
+      "flow_deg": 84.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.81,
-      "after_g": 17.69
+      "before_g": 15.4,
+      "after_g": 18.02
      },
      {
-      "start_deg": 80.3,
-      "flow_deg": 83.6,
+      "start_deg": 82.6,
+      "flow_deg": 86.1,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 17.69,
-      "after_g": 21.61
+      "stopped_deg": 86.10400000001431,
+      "before_g": 18.02,
+      "after_g": 28.47
      },
      {
-      "start_deg": 81.6,
-      "flow_deg": 86.0,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 21.61,
-      "after_g": 26.18
-     },
-     {
-      "start_deg": 84.0,
-      "flow_deg": 87.3,
-      "let_run": true,
-      "stopped_deg": 87.27000000001823,
-      "before_g": 26.18,
+      "start_deg": 84.1,
+      "flow_deg": 87.8,
+      "let_run": false,
+      "stopped_deg": 87.83500000001652,
+      "before_g": 28.47,
       "after_g": 29.45
      },
      {
-      "start_deg": 85.3,
-      "flow_deg": 87.1,
+      "start_deg": 85.8,
+      "flow_deg": 86.0,
       "let_run": false,
-      "stopped_deg": 87.07000000001784,
+      "stopped_deg": 86.00600000001607,
       "before_g": 29.45,
-      "after_g": 30.42
+      "after_g": 30.1
      },
      {
-      "start_deg": 85.1,
-      "flow_deg": 88.8,
+      "start_deg": 84.0,
+      "flow_deg": 86.0,
       "let_run": false,
-      "stopped_deg": 88.78400000001753,
-      "before_g": 30.42,
-      "after_g": 32.38
+      "stopped_deg": 85.96800000001569,
+      "before_g": 30.1,
+      "after_g": 30.43
+     },
+     {
+      "start_deg": 84.0,
+      "flow_deg": 87.2,
+      "let_run": false,
+      "stopped_deg": 87.18700000001536,
+      "before_g": 30.43,
+      "after_g": 31.4
      }
     ],
-    "seconds": 135.5,
-    "smallest_gap_mm": 5.3,
+    "seconds": 142.3,
+    "smallest_gap_mm": 5.6,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 30.94,
-    "read_g": 32.38,
-    "true_g": 32.384,
-    "off_true_g": 1.444
+    "read_g": 31.41,
+    "true_g": 31.405,
+    "off_true_g": 0.465
    },
    {
     "blank_cell": 6,
     "water_cell": 3,
-    "target_g": 26.44,
+    "target_g": 25.96,
     "empty_g": 11.62,
-    "poured_g": 26.32,
-    "final_g": 26.32,
+    "poured_g": 26.97,
+    "final_g": 26.97,
     "steady": true,
-    "over": false,
+    "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 76.9,
+      "flow_deg": 76.7,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.62,
-      "after_g": 12.93
+      "after_g": 12.28
      },
      {
-      "start_deg": 74.9,
-      "flow_deg": 80.9,
+      "start_deg": 74.7,
+      "flow_deg": 78.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.93,
-      "after_g": 15.21
+      "before_g": 12.28,
+      "after_g": 12.6
      },
      {
-      "start_deg": 78.9,
-      "flow_deg": 84.1,
+      "start_deg": 76.7,
+      "flow_deg": 79.6,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 15.21,
-      "after_g": 22.07
+      "before_g": 12.6,
+      "after_g": 15.87
      },
      {
-      "start_deg": 82.1,
-      "flow_deg": 85.9,
+      "start_deg": 77.6,
+      "flow_deg": 79.8,
       "let_run": true,
-      "stopped_deg": 85.8960000000157,
-      "before_g": 22.07,
-      "after_g": 24.36
+      "stopped_deg": null,
+      "before_g": 15.87,
+      "after_g": 16.52
      },
      {
-      "start_deg": 83.9,
-      "flow_deg": 87.7,
+      "start_deg": 77.8,
+      "flow_deg": 82.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.52,
+      "after_g": 20.44
+     },
+     {
+      "start_deg": 80.7,
+      "flow_deg": 84.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.44,
+      "after_g": 21.09
+     },
+     {
+      "start_deg": 82.4,
+      "flow_deg": 86.6,
+      "let_run": true,
+      "stopped_deg": 86.63000000002086,
+      "before_g": 21.09,
+      "after_g": 23.05
+     },
+     {
+      "start_deg": 84.6,
+      "flow_deg": 85.4,
       "let_run": false,
-      "stopped_deg": 87.71800000001798,
-      "before_g": 24.36,
-      "after_g": 26.32
+      "stopped_deg": 85.40700000002096,
+      "before_g": 23.05,
+      "after_g": 23.38
+     },
+     {
+      "start_deg": 83.4,
+      "flow_deg": 87.0,
+      "let_run": false,
+      "stopped_deg": 87.02600000002309,
+      "before_g": 23.38,
+      "after_g": 24.03
+     },
+     {
+      "start_deg": 85.0,
+      "flow_deg": 87.8,
+      "let_run": false,
+      "stopped_deg": 87.79500000002274,
+      "before_g": 24.03,
+      "after_g": 25.01
+     },
+     {
+      "start_deg": 85.8,
+      "flow_deg": 87.2,
+      "let_run": false,
+      "stopped_deg": 87.20500000002234,
+      "before_g": 25.01,
+      "after_g": 26.97
      }
     ],
-    "seconds": 106.2,
+    "seconds": 153.1,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance B",
     "blank": "blank1",
     "water": "water1",
     "planned_g": 25.72,
-    "read_g": 26.32,
-    "true_g": 26.317,
-    "off_true_g": -0.123
+    "read_g": 26.97,
+    "true_g": 26.97,
+    "off_true_g": 1.01
    }
   ],
-  "imbalance_g": 1.259,
-  "spilled": 5,
+  "imbalance_g": 1.097,
+  "spilled": 17,
   "back": {
    "blank0": {
-    "off_mm": 0.03,
-    "tilt_deg": 0.99
+    "off_mm": 0.16,
+    "tilt_deg": 1.61
    },
    "blank1": {
-    "off_mm": 0.47,
-    "tilt_deg": 1.74
+    "off_mm": 0.48,
+    "tilt_deg": 1.65
    },
    "water0": {
-    "off_mm": 0.31,
-    "tilt_deg": 1.41
+    "off_mm": 0.27,
+    "tilt_deg": 0.8
    },
    "water1": {
-    "off_mm": 0.31,
-    "tilt_deg": 0.77
+    "off_mm": 0.04,
+    "tilt_deg": 1.74
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 217.9
+  "wall_seconds": 272.5
  },
  {
   "seed": 37,
@@ -3317,111 +3461,167 @@
     "water_cell": 0,
     "target_g": 39.34,
     "empty_g": 11.38,
-    "poured_g": 39.79,
-    "final_g": 39.79,
+    "poured_g": 40.12,
+    "final_g": 40.12,
     "steady": true,
     "over": true,
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 77.3,
+      "flow_deg": 76.7,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.38,
       "after_g": 11.71
      },
      {
-      "start_deg": 75.3,
-      "flow_deg": 79.1,
+      "start_deg": 74.7,
+      "flow_deg": 78.6,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.71,
-      "after_g": 12.04
+      "after_g": 12.69
      },
      {
-      "start_deg": 77.1,
-      "flow_deg": 82.7,
+      "start_deg": 76.6,
+      "flow_deg": 80.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.04,
-      "after_g": 18.57
+      "before_g": 12.69,
+      "after_g": 13.02
      },
      {
-      "start_deg": 80.7,
-      "flow_deg": 84.9,
+      "start_deg": 78.5,
+      "flow_deg": 82.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 18.57,
-      "after_g": 19.22
+      "before_g": 13.02,
+      "after_g": 16.93
      },
      {
-      "start_deg": 82.9,
-      "flow_deg": 86.9,
+      "start_deg": 80.5,
+      "flow_deg": 84.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 19.22,
-      "after_g": 30.65
+      "before_g": 16.93,
+      "after_g": 21.18
      },
      {
-      "start_deg": 84.9,
-      "flow_deg": 88.8,
+      "start_deg": 82.8,
+      "flow_deg": 82.8,
       "let_run": true,
-      "stopped_deg": 88.82600000002088,
-      "before_g": 30.65,
-      "after_g": 38.49
+      "stopped_deg": null,
+      "before_g": 21.18,
+      "after_g": 21.83
      },
      {
-      "start_deg": 86.8,
+      "start_deg": 80.8,
+      "flow_deg": 87.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 21.83,
+      "after_g": 32.28
+     },
+     {
+      "start_deg": 85.0,
+      "flow_deg": 88.6,
+      "let_run": true,
+      "stopped_deg": 88.62700000002383,
+      "before_g": 32.28,
+      "after_g": 36.2
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 88.1,
+      "let_run": false,
+      "stopped_deg": 88.11800000002444,
+      "before_g": 36.2,
+      "after_g": 37.18
+     },
+     {
+      "start_deg": 86.1,
+      "flow_deg": 87.3,
+      "let_run": false,
+      "stopped_deg": 87.2590000000248,
+      "before_g": 37.18,
+      "after_g": 37.51
+     },
+     {
+      "start_deg": 85.3,
+      "flow_deg": 87.6,
+      "let_run": false,
+      "stopped_deg": 87.62000000002443,
+      "before_g": 37.51,
+      "after_g": 37.84
+     },
+     {
+      "start_deg": 85.6,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.17900000002408,
+      "before_g": 37.84,
+      "after_g": 38.16
+     },
+     {
+      "start_deg": 86.2,
       "flow_deg": 88.9,
       "let_run": false,
-      "stopped_deg": 88.89900000002051,
-      "before_g": 38.49,
-      "after_g": 38.81
+      "stopped_deg": 88.86700000002372,
+      "before_g": 38.16,
+      "after_g": 38.48
      },
      {
       "start_deg": 86.9,
-      "flow_deg": 88.0,
+      "flow_deg": 88.3,
       "let_run": false,
-      "stopped_deg": 88.0060000000201,
+      "stopped_deg": 88.27700000002332,
+      "before_g": 38.48,
+      "after_g": 38.81
+     },
+     {
+      "start_deg": 86.3,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.51500000002295,
       "before_g": 38.81,
       "after_g": 39.14
      },
      {
-      "start_deg": 86.0,
-      "flow_deg": 89.3,
+      "start_deg": 86.5,
+      "flow_deg": 89.5,
       "let_run": false,
-      "stopped_deg": 89.33900000001977,
+      "stopped_deg": 89.53000000002261,
       "before_g": 39.14,
-      "after_g": 39.79
+      "after_g": 40.12
      }
     ],
-    "seconds": 154.5,
-    "smallest_gap_mm": 6.2,
+    "seconds": 202.7,
+    "smallest_gap_mm": 10.0,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
     "water": "water0",
     "planned_g": 39.34,
-    "read_g": 39.79,
-    "true_g": 39.791,
-    "off_true_g": 0.451
+    "read_g": 40.12,
+    "true_g": 40.118,
+    "off_true_g": 0.778
    }
   ],
-  "imbalance_g": 0.455,
-  "spilled": 6,
+  "imbalance_g": 0.781,
+  "spilled": 1,
   "back": {
    "blank0": {
-    "off_mm": 0.24,
-    "tilt_deg": 1.79
+    "off_mm": 0.12,
+    "tilt_deg": 1.54
    },
    "water0": {
-    "off_mm": 3.36,
-    "tilt_deg": 4.86
+    "off_mm": 0.34,
+    "tilt_deg": 1.07
    }
   },
-  "back_ok": false,
+  "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 149.6
+  "wall_seconds": 195.3
  },
  {
   "seed": 39,
@@ -3436,7 +3636,7 @@
     "blank_cell": 5,
     "water_cell": 0,
     "target_g": 45.72,
-    "empty_g": 11.39,
+    "empty_g": 11.4,
     "poured_g": 45.68,
     "final_g": 45.68,
     "steady": true,
@@ -3444,127 +3644,95 @@
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 76.3,
+      "flow_deg": 79.5,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 11.39,
-      "after_g": 12.38
+      "before_g": 11.4,
+      "after_g": 15.97
      },
      {
-      "start_deg": 74.3,
-      "flow_deg": 80.0,
+      "start_deg": 77.5,
+      "flow_deg": 83.4,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.38,
-      "after_g": 14.66
+      "before_g": 15.97,
+      "after_g": 20.86
      },
      {
-      "start_deg": 78.0,
-      "flow_deg": 82.4,
+      "start_deg": 81.4,
+      "flow_deg": 85.7,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 14.66,
-      "after_g": 18.9
+      "before_g": 20.86,
+      "after_g": 28.05
      },
      {
-      "start_deg": 80.4,
-      "flow_deg": 84.4,
+      "start_deg": 83.7,
+      "flow_deg": 87.9,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 18.9,
-      "after_g": 21.52
+      "before_g": 28.05,
+      "after_g": 35.88
      },
      {
-      "start_deg": 82.4,
-      "flow_deg": 86.3,
+      "start_deg": 85.9,
+      "flow_deg": 88.2,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 21.52,
-      "after_g": 28.38
+      "before_g": 35.88,
+      "after_g": 38.82
      },
      {
-      "start_deg": 84.3,
-      "flow_deg": 87.2,
+      "start_deg": 86.2,
+      "flow_deg": 89.8,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 28.38,
-      "after_g": 29.03
+      "stopped_deg": 89.76400000002155,
+      "before_g": 38.82,
+      "after_g": 43.4
      },
      {
-      "start_deg": 85.2,
-      "flow_deg": 88.1,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 29.03,
-      "after_g": 34.58
-     },
-     {
-      "start_deg": 86.1,
-      "flow_deg": 88.9,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 34.58,
-      "after_g": 37.84
-     },
-     {
-      "start_deg": 86.9,
-      "flow_deg": 87.8,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 37.84,
-      "after_g": 38.5
-     },
-     {
-      "start_deg": 85.8,
-      "flow_deg": 90.1,
-      "let_run": true,
-      "stopped_deg": 90.08000000002795,
-      "before_g": 38.5,
-      "after_g": 43.72
-     },
-     {
-      "start_deg": 88.1,
-      "flow_deg": 88.5,
+      "start_deg": 87.8,
+      "flow_deg": 90.3,
       "let_run": false,
-      "stopped_deg": 88.52800000002782,
-      "before_g": 43.72,
+      "stopped_deg": 90.31900000002292,
+      "before_g": 43.4,
       "after_g": 44.05
      },
      {
-      "start_deg": 86.5,
-      "flow_deg": 89.8,
+      "start_deg": 88.3,
+      "flow_deg": 88.5,
       "let_run": false,
-      "stopped_deg": 89.76500000002748,
+      "stopped_deg": 88.49900000002248,
       "before_g": 44.05,
       "after_g": 44.7
      },
      {
-      "start_deg": 87.8,
-      "flow_deg": 89.8,
+      "start_deg": 86.5,
+      "flow_deg": 90.1,
       "let_run": false,
-      "stopped_deg": 89.7870000000271,
+      "stopped_deg": 90.06900000002216,
       "before_g": 44.7,
       "after_g": 45.03
      },
      {
-      "start_deg": 87.8,
-      "flow_deg": 90.0,
+      "start_deg": 88.1,
+      "flow_deg": 90.1,
       "let_run": false,
-      "stopped_deg": 89.97400000002673,
+      "stopped_deg": 90.11500000002178,
       "before_g": 45.03,
       "after_g": 45.35
      },
      {
-      "start_deg": 88.0,
+      "start_deg": 88.1,
       "flow_deg": 90.1,
       "let_run": false,
-      "stopped_deg": 90.11900000002636,
+      "stopped_deg": 90.0590000000214,
       "before_g": 45.35,
       "after_g": 45.68
      }
     ],
-    "seconds": 205.1,
-    "smallest_gap_mm": 5.3,
+    "seconds": 181.1,
+    "smallest_gap_mm": 5.4,
     "error": "",
     "balance_tube": "balance A",
     "blank": "blank0",
@@ -3586,78 +3754,54 @@
     "rounds": [
      {
       "start_deg": 70.0,
-      "flow_deg": 75.1,
+      "flow_deg": 81.5,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 11.42,
-      "after_g": 12.07
+      "after_g": 15.66
      },
      {
-      "start_deg": 73.1,
-      "flow_deg": 77.7,
+      "start_deg": 79.5,
+      "flow_deg": 84.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 12.07,
-      "after_g": 14.03
+      "before_g": 15.66,
+      "after_g": 24.81
      },
      {
-      "start_deg": 75.7,
-      "flow_deg": 84.7,
+      "start_deg": 82.8,
+      "flow_deg": 85.8,
       "let_run": true,
       "stopped_deg": null,
-      "before_g": 14.03,
-      "after_g": 23.5
-     },
-     {
-      "start_deg": 82.7,
-      "flow_deg": 86.1,
-      "let_run": true,
-      "stopped_deg": null,
-      "before_g": 23.5,
+      "before_g": 24.81,
       "after_g": 27.09
      },
      {
-      "start_deg": 84.1,
-      "flow_deg": 84.1,
+      "start_deg": 83.8,
+      "flow_deg": 87.4,
       "let_run": true,
       "stopped_deg": null,
       "before_g": 27.09,
-      "after_g": 27.42
+      "after_g": 29.7
      },
      {
-      "start_deg": 82.1,
-      "flow_deg": 87.0,
+      "start_deg": 85.4,
+      "flow_deg": 88.5,
       "let_run": true,
-      "stopped_deg": null,
-      "before_g": 27.42,
-      "after_g": 30.36
+      "stopped_deg": 88.53700000001913,
+      "before_g": 29.7,
+      "after_g": 32.32
      },
      {
-      "start_deg": 85.0,
-      "flow_deg": 88.2,
-      "let_run": true,
-      "stopped_deg": 88.21900000002199,
-      "before_g": 30.36,
-      "after_g": 33.62
-     },
-     {
-      "start_deg": 86.2,
-      "flow_deg": 87.2,
+      "start_deg": 86.5,
+      "flow_deg": 88.8,
       "let_run": false,
-      "stopped_deg": 87.22400000002158,
-      "before_g": 33.62,
-      "after_g": 34.28
-     },
-     {
-      "start_deg": 85.2,
-      "flow_deg": 87.8,
-      "let_run": false,
-      "stopped_deg": 87.78600000002122,
-      "before_g": 34.28,
+      "stopped_deg": 88.75600000002026,
+      "before_g": 32.32,
       "after_g": 34.93
      }
     ],
-    "seconds": 133.8,
+    "seconds": 120.2,
     "smallest_gap_mm": 5.3,
     "error": "",
     "balance_tube": "balance B",
@@ -3670,27 +3814,27 @@
    }
   ],
   "imbalance_g": 0.282,
-  "spilled": 8,
+  "spilled": 14,
   "back": {
    "blank0": {
-    "off_mm": 0.24,
-    "tilt_deg": 1.58
+    "off_mm": 0.11,
+    "tilt_deg": 0.19
    },
    "blank1": {
-    "off_mm": 0.4,
-    "tilt_deg": 1.69
+    "off_mm": 0.3,
+    "tilt_deg": 1.7
    },
    "water0": {
-    "off_mm": 0.47,
-    "tilt_deg": 1.64
+    "off_mm": 0.14,
+    "tilt_deg": 1.48
    },
    "water1": {
-    "off_mm": 0.03,
-    "tilt_deg": 0.73
+    "off_mm": 0.21,
+    "tilt_deg": 1.23
    }
   },
   "back_ok": true,
   "disturbed": [],
-  "wall_seconds": 293.3
+  "wall_seconds": 250.6
  }
 ]

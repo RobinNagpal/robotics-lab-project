@@ -101,10 +101,20 @@ a balance tube. Samples hold 30 to 100 balls; each water tube 126.
 Liquid is settled in each tube on its own before the scene is built (as in v1), and everything but the arm
 starts asleep, so a scene with 400 balls runs faster than real time until the arm touches something.
 
-**Samples are capped, balance tubes are not.** Sample tubes have screw caps, so nothing falls out when they
-are tilted into the 35° holes. The balance tubes are left open: they are filled by pouring, and capping
-them would add a whole screwing task (v2 did that). The tests check that an open tube as full as any job
-needs (106 balls) does not spill at 35° in the rotor. Real labs would cap it; this is a simplification.
+**Samples are capped; balance tubes are capped once filled.** Sample tubes have screw caps, so nothing falls
+out when they are tilted into the 35° holes. The balance tubes start open (they are filled by pouring). Real
+labs cap every tube before spinning, so Step 3 puts a spare cap on each one once it is filled
+(step-3-fill-balance-tube/cap.py). The spare caps stand on two pegs on the balance's base (`CAP_STAND`), not on
+the pan, so they never weigh on it.
+
+The thread is not simulated (v2 did that, a whole task of its own). A spare cap is only drawn, and moves with
+the hand that holds it. Each empty tube is built with its own cap switched off: not drawn, touching nothing,
+no mass. When the arm brings the spare cap to the tube's top, `tubes.put_cap_on` switches the tube's cap on
+(drawn, touched, 2 g added) and puts the spare one away under the table. From then on it is a capped tube like
+a sample. One shortcut: the tube's balance point stays where it was, 8 mm below where the cap would put it.
+Moving it while the simulation runs made MuJoCo throw the tube across the bench at the next grip. The weight,
+and so the rotor's balance, gets the cap's full 2 g. The tests check that an open tube as full as any job needs
+(106 balls) does not spill at 35° in the rotor (Step 3's own evaluation still loads them open).
 
 ## 7. The balance rule
 

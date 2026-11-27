@@ -35,6 +35,8 @@ TUBE_SPREAD_G = 0.15
 MAX_WATER_G = 34.6
 # Step 3 fills a balance tube to within this of its target.
 FILL_ERROR_G = 0.5
+# Step 3 puts a cap on each balance tube once it is filled (as a lab would before spinning): 2 g more.
+CAP_G = 2.0
 
 DIRECTIONS = [(math.cos(2 * math.pi * k / SLOTS), math.sin(2 * math.pi * k / SLOTS)) for k in range(SLOTS)]
 
@@ -93,8 +95,8 @@ def plan_load(weights: dict[str, float]) -> Plan | None:
     numbers.
     """
     names = sorted(weights)
-    lo = EMPTY_TUBE_G + TUBE_SPREAD_G
-    hi = EMPTY_TUBE_G - TUBE_SPREAD_G + MAX_WATER_G
+    lo = EMPTY_TUBE_G + TUBE_SPREAD_G + CAP_G
+    hi = EMPTY_TUBE_G - TUBE_SPREAD_G + MAX_WATER_G + CAP_G
     for n_balance in range(MAX_BALANCE_TUBES + 1):
         if len(names) + n_balance > MAX_TUBES:
             break

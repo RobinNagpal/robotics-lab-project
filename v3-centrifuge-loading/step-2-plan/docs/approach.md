@@ -17,6 +17,8 @@ So that the rotor is balanced: the tubes' outward pulls add up to at most 1.0 g
 
 - Samples are never changed (no water added to a sample!). Only balance tubes are filled.
 - At most two balance tubes (there are two empty tubes), and at most five tubes in all.
+- A balance tube gets a cap once filled (Step 3), so its weight includes the cap's 2 g: at least 13.65 g
+  (an empty tube and its cap), at most that plus the 34.6 g of water an open tube holds at 35°.
 - **Every tube needs an empty hole beside it when it goes in** (the gripper's finger links need the room:
   [grip plan](../../grasp-plan/docs/results.md)). So a full rotor cannot be loaded, and the order matters.
   Balance tubes (open, gripped at the top, with the least room) go in first, while both neighbours are empty.

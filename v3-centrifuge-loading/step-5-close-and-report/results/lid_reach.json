@@ -1,0 +1,379 @@
+[
+ {
+  "yaw_deg": 0.0,
+  "closer_cm": 0,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": 0.0,
+  "closer_cm": 8,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": 30.0,
+  "closer_cm": 0,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": 30.0,
+  "closer_cm": 8,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": -30.0,
+  "closer_cm": 0,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": -30.0,
+  "closer_cm": 8,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": 60.0,
+  "closer_cm": 0,
+  "holes_clear": 5,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": null,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": 60.0,
+  "closer_cm": 8,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": -60.0,
+  "closer_cm": 0,
+  "holes_clear": 4,
+  "holes_gap_mm": {
+   "0": null,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": null
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": -60.0,
+  "closer_cm": 8,
+  "holes_clear": 5,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": null
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ },
+ {
+  "yaw_deg": 90.0,
+  "closer_cm": 0,
+  "holes_clear": 5,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": null,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": 10.0,
+   "75 deg, push at 0.7": 10.0
+  },
+  "lid_closable": [
+   "75 deg, push at 0.5",
+   "75 deg, push at 0.7"
+  ]
+ },
+ {
+  "yaw_deg": 90.0,
+  "closer_cm": 8,
+  "holes_clear": 6,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": 3.9,
+   "5": 3.9
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": 10.0,
+   "98.7 deg, push at 0.7": 10.0,
+   "85 deg, push at 0.5": 10.0,
+   "85 deg, push at 0.7": 10.0,
+   "75 deg, push at 0.5": 10.0,
+   "75 deg, push at 0.7": 10.0
+  },
+  "lid_closable": [
+   "98.7 deg, push at 0.5",
+   "98.7 deg, push at 0.7",
+   "85 deg, push at 0.5",
+   "85 deg, push at 0.7",
+   "75 deg, push at 0.5",
+   "75 deg, push at 0.7"
+  ]
+ },
+ {
+  "yaw_deg": -90.0,
+  "closer_cm": 0,
+  "holes_clear": 3,
+  "holes_gap_mm": {
+   "0": null,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": null,
+   "5": null
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": 10.0,
+   "75 deg, push at 0.7": 10.0
+  },
+  "lid_closable": [
+   "75 deg, push at 0.5",
+   "75 deg, push at 0.7"
+  ]
+ },
+ {
+  "yaw_deg": -90.0,
+  "closer_cm": 8,
+  "holes_clear": 4,
+  "holes_gap_mm": {
+   "0": 10.0,
+   "1": 10.0,
+   "2": 10.0,
+   "3": 10.0,
+   "4": null,
+   "5": null
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": 10.0,
+   "98.7 deg, push at 0.7": 10.0,
+   "85 deg, push at 0.5": 10.0,
+   "85 deg, push at 0.7": 10.0,
+   "75 deg, push at 0.5": 10.0,
+   "75 deg, push at 0.7": 10.0
+  },
+  "lid_closable": [
+   "98.7 deg, push at 0.5",
+   "98.7 deg, push at 0.7",
+   "85 deg, push at 0.5",
+   "85 deg, push at 0.7",
+   "75 deg, push at 0.5",
+   "75 deg, push at 0.7"
+  ]
+ },
+ {
+  "yaw_deg": 180.0,
+  "closer_cm": 0,
+  "holes_clear": 0,
+  "holes_gap_mm": {
+   "0": null,
+   "1": null,
+   "2": null,
+   "3": null,
+   "4": null,
+   "5": null
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": 10.0,
+   "85 deg, push at 0.7": 10.0,
+   "75 deg, push at 0.5": 10.0,
+   "75 deg, push at 0.7": 10.0
+  },
+  "lid_closable": [
+   "85 deg, push at 0.5",
+   "85 deg, push at 0.7",
+   "75 deg, push at 0.5",
+   "75 deg, push at 0.7"
+  ]
+ },
+ {
+  "yaw_deg": 180.0,
+  "closer_cm": 8,
+  "holes_clear": 0,
+  "holes_gap_mm": {
+   "0": null,
+   "1": null,
+   "2": null,
+   "3": null,
+   "4": null,
+   "5": null
+  },
+  "lid_gap_mm": {
+   "98.7 deg, push at 0.5": null,
+   "98.7 deg, push at 0.7": null,
+   "85 deg, push at 0.5": null,
+   "85 deg, push at 0.7": null,
+   "75 deg, push at 0.5": null,
+   "75 deg, push at 0.7": null
+  },
+  "lid_closable": []
+ }
+]

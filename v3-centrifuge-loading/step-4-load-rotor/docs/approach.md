@@ -1,6 +1,8 @@
 # Step 4 Approach: Load the Rotor
 
-**Status: planned.** The overview is in [steps.md](../../docs/solutions/steps.md#step-4-load-the-rotor).
+**Status: programmed version built**: 20 of 20 jobs loaded, 75 of 75 tubes seated ([results.md](results.md)). First physics test (one sample tube into one hole: 23 of 23 seated, all six holes;
+[insert-test.md](insert-test.md)). The overview is in
+[steps.md](../../docs/solutions/steps.md#step-4-load-the-rotor).
 
 ## Goal
 
@@ -67,6 +69,11 @@ dropped; neighbouring tubes disturbed; balls spilled from open balance tubes; ti
 
 ## Open questions
 
-- Does a tube held only by its 12 mm cap stay lined up with the fingers when tilted to 35° and slid into a
-  hole with 0.9 mm to spare? (v1's tubes turned 13 to 19° in the fingers while pouring.) The first physics
-  test of the programmed version.
+- ~~Does a tube held only by its 12 mm cap stay lined up with the fingers when tilted to 35° and slid into
+  a hole with 0.9 mm to spare?~~ **Answered 2026-11-23** ([insert-test.md](insert-test.md)): not with the
+  gripper model as built. The tube turns about the line between the pads, about 1.4° a second, whatever the
+  squeeze. With twist (torsional) friction on the pads it stays within 1.5° on arrival, and 23 of 23 tries
+  seated, even with the hole 5 mm from where the arm thinks it is.
+- Open balance tubes: held by their top with a 1 mm squeeze and water inside. Do they stay lined up, and
+  does water spill at 35°?
+- A hole with one full neighbour: only a 25° window of finger turns, 8 mm to spare.

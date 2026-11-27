@@ -52,6 +52,12 @@ STEEL = Material(friction=0.5, rgba=(0.62, 0.64, 0.66, 1.0))
 # The Robotiq's rubber pads, raised from the model's 0.6 to 0.7 as in v1 (its pads press about 3 N, a real
 # 2F-85 at least 20 N), so a held tube does not turn in the fingers.
 PAD_FRICTION = 1.2
+# The pads' grip against a held tube turning between them (MuJoCo's torsional friction, m; the pads' contacts
+# get condim 4 for it). The gripper model has none, so a tube held by its cap and tilted (into a rotor hole)
+# turns about the line between the pads by about 1.4 degrees a second, however hard it is squeezed. A real
+# rubber pad resists that with its whole contact patch, and presses about 7 times harder than the model's.
+# 0.02 m holds the tube within about 2 degrees (step-4-load-rotor/docs/insert-test.md).
+PAD_TORSION = 0.02
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -283,6 +289,29 @@ class Scale:
 SCALE = Scale()
 
 
+@dataclass(frozen=True)
+class CapStand:
+    """Pegs on the balance's base, each holding a spare cap for a balance tube (one per empty tube).
+
+    A balance tube is filled by pouring, so it starts open; Step 3 screws a spare cap on once it is filled, as
+    a lab would before spinning it. The pegs stand on the base, not the pan, so they never weigh on the
+    balance, in the two corners on the centrifuge's side (the water is poured from the racks' side). Each
+    peg is tall enough that the fingers, closed on the cap, stay 2 cm above the base.
+    """
+
+    # Peg centres, from the balance's centre (m).
+    offsets: tuple[tuple[float, float], ...] = ((-0.072, -0.090), (0.072, -0.090))
+    peg_radius: float = 0.006
+    peg_height: float = 0.040
+    foot_radius: float = 0.016
+    foot_height: float = 0.003
+    # A cap's top stands this far above the peg's top (its top is 1.5 mm thick).
+    cap_top_above_peg: float = 0.0015
+
+
+CAP_STAND = CapStand()
+
+
 # ---------------------------------------------------------------------------------------------------------
 # Layout and cameras
 # ---------------------------------------------------------------------------------------------------------
@@ -296,7 +325,8 @@ class Layout:
     supply_rack: tuple[float, float] = (0.20, 0.42)
     scale: tuple[float, float] = (0.45, 0.02)
     # The centrifuge's own origin (its bottom centre), and its turn: its hinge (local +y) faces away from the
-    # arm, so the lid opens away and the arm reaches in from the front.
+    # arm, so the lid opens away and the arm reaches in from the front. (Turned a quarter turn so the lid
+    # opens sideways, the arm could no longer load holes 0, 4 and 5: step-5-close-and-report/docs/lid-reach.md.)
     centrifuge: tuple[float, float] = (0.50, -0.36)
     centrifuge_yaw: float = math.atan2(-0.36, 0.50) - math.pi / 2
 

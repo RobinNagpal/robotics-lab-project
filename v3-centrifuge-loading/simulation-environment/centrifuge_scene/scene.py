@@ -21,6 +21,9 @@ from .scale import add_scale
 from .settings import (
     ARM_NAME,
     ARM_XML,
+    BLANK_CELLS,
+    CAP_PLASTIC,
+    CAP_STAND,
     FRONT,
     GRIPPER_XML,
     HOME,
@@ -29,16 +32,18 @@ from .settings import (
     LIQUID,
     OVERHEAD,
     PAD_FRICTION,
+    PAD_TORSION,
     RACKS_HIGH,
     RACKS_LOW,
     ROTOR_CAMERA,
     SAMPLE_COLOURS,
     SAMPLES,
+    SCALE,
+    STEEL,
     TABLE,
     TIMESTEP,
     TUBE,
     TUBE_MASS_SPREAD,
-    BLANK_CELLS,
     WATER_CELLS,
     WATER_COLOUR,
     WATER_LEVEL,
@@ -143,6 +148,7 @@ def build(seed: int, scenario: str | None = None, awake: bool = False) -> tuple[
     )
     spec.attach(centrifuge.load(), prefix=centrifuge.PREFIX, frame=frame)
     add_scale(spec, LAYOUT.scale)
+    add_cap_stand(spec)
     for rack in RACKS:
         add_rack(spec, rack, getattr(LAYOUT, rack))
 
@@ -171,7 +177,16 @@ def build(seed: int, scenario: str | None = None, awake: bool = False) -> tuple[
             body_mass = TUBE.body_mass
         else:
             body_mass = truth.blanks[name]
-        add_tube(spec, world, name, pos.tolist(), capped=capped, body_mass=body_mass)
+        # The empty tubes become balance tubes: Step 3 caps them once filled.
+        add_tube(
+            spec,
+            world,
+            name,
+            pos.tolist(),
+            capped=capped,
+            body_mass=body_mass,
+            cap_later=name in truth.blanks,
+        )
         truth.cells[name] = (rack, cell)
         truth.capped[name] = capped
         balls = sample.balls if sample else truth.water_balls if name in WATER_TUBES else 0
@@ -188,6 +203,59 @@ def build(seed: int, scenario: str | None = None, awake: bool = False) -> tuple[
                 mujoco.mjtSleepPolicy.mjSLEEP_AUTO_ALLOWED if awake else mujoco.mjtSleepPolicy.mjSLEEP_INIT
             )
     return spec.compile(), truth
+
+
+SPARE_CAP = "spare_cap{}"
+
+
+def spare_cap_top(i: int) -> np.ndarray:
+    """Where spare cap ``i``'s top is, standing on its peg (the bench layout: the arm may use it)."""
+    dx, dy = CAP_STAND.offsets[i]
+    z = 2 * SCALE.base[2] + CAP_STAND.foot_height + CAP_STAND.peg_height + CAP_STAND.cap_top_above_peg
+    return np.array([LAYOUT.scale[0] + dx, LAYOUT.scale[1] + dy, z])
+
+
+def add_cap_stand(spec: mujoco.MjSpec) -> None:
+    """The pegs on the balance's base and a spare cap on each.
+
+    A spare cap is only drawn: it is moved with the hand that holds it (a mocap body), and nothing touches it.
+    When the arm sets it on a tube, ``tubes.put_cap_on`` switches on that tube's own cap and this one is put
+    away out of sight. So the cap's thread is not simulated, only where the cap goes.
+    """
+    from .tubes import add_meshes
+
+    add_meshes(spec)
+    stand = spec.worldbody.add_body(name="cap_stand")
+    base_top = 2 * SCALE.base[2]
+    s = CAP_STAND
+    for i in range(len(s.offsets)):
+        top = spare_cap_top(i)
+        x, y = top[:2]
+        stand.add_geom(
+            name=f"cap_stand_foot{i}",
+            type=mujoco.mjtGeom.mjGEOM_CYLINDER,
+            size=[s.foot_radius, s.foot_height / 2, 0],
+            pos=[x, y, base_top + s.foot_height / 2],
+            rgba=list(STEEL.rgba),
+        )
+        stand.add_geom(
+            name=f"cap_stand_peg{i}",
+            type=mujoco.mjtGeom.mjGEOM_CYLINDER,
+            size=[s.peg_radius, s.peg_height / 2, 0],
+            pos=[x, y, base_top + s.foot_height + s.peg_height / 2],
+            rgba=list(STEEL.rgba),
+        )
+        cap = spec.worldbody.add_body(name=SPARE_CAP.format(i), pos=top.tolist(), mocap=True)
+        cap.add_geom(
+            name=f"{SPARE_CAP.format(i)}_visual",
+            type=mujoco.mjtGeom.mjGEOM_MESH,
+            meshname="tube50_cap",
+            quat=[0, 1, 0, 0],
+            rgba=list(CAP_PLASTIC.rgba),
+            contype=0,
+            conaffinity=0,
+            group=2,
+        )
 
 
 def _choose_samples(truth: Truth, rng: np.random.Generator) -> None:
@@ -254,6 +322,8 @@ def arm_with_gripper() -> mujoco.MjSpec:
     gripper = mujoco.MjSpec.from_file(str(GRIPPER_XML))
     for pad in PAD_GEOMS:
         gripper.geom(pad).friction[0] = PAD_FRICTION
+        gripper.geom(pad).friction[1] = PAD_TORSION
+        gripper.geom(pad).condim = 4
     arm.attach(gripper, prefix=GRIPPER_PREFIX, site=arm.site("attachment_site"))
     # A real UR controller cancels gravity itself; the model's position actuators do not.
     for body in arm.bodies:
