@@ -46,7 +46,7 @@ today), Gemini (quota still blocked), learned models (SmolVLA had one short run,
 - [ ] Step 3's spills (2 to 14 balls on balance-tube jobs): the one thing between 11 and 20 of 20 on the strict rule
 - [ ] The lid (a new layout), if wanted
 - [ ] When the Gemini quota is approved: Step 2's Gemini planner, the seated-tube check, Step 6 with Gemini
-- [ ] Commit the uncommitted work (Step 1 SmolVLA files, Step 3 fix, Step 4, Step 5 study, the scene change)
+- [x] Commit the uncommitted work (Step 1 SmolVLA files, Step 3 fix, Step 4, Step 5 study, the scene change)
 
 ## How to run things
 
