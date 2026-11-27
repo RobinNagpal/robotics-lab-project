@@ -52,18 +52,21 @@ class _MujocoWithRecorder:
         return getattr(mujoco, name)
 
 
-def build_spec(seed: int, scenario: str | None = None, awake: bool = False) -> tuple[mujoco.MjSpec, object]:
-    """v3's scene for ``seed`` as a spec (not yet compiled with our parts), and its truth."""
+def build_spec(
+    seed: int, scenario: str | None = None, awake: bool = False
+) -> tuple[mujoco.MjSpec, object, mujoco.MjModel]:
+    """v3's scene for ``seed`` as a spec (not yet compiled with our parts), its truth, and v3's own compiled
+    model."""
     recorder = _RecordingMjSpec()
     real = scene.mujoco
     scene.mujoco = _MujocoWithRecorder(recorder)
     try:
-        _, truth = _V3_BUILD(seed, scenario=scenario, awake=awake)
+        v3_model, truth = _V3_BUILD(seed, scenario=scenario, awake=awake)
     finally:
         scene.mujoco = real
     if not recorder.made:
         raise RuntimeError("v3's scene.build made no MjSpec: the way it builds the scene has changed")
-    return recorder.made[0], truth
+    return recorder.made[0], truth, v3_model
 
 
 FLOOR_RGBA = (0.30, 0.30, 0.32, 1.0)
@@ -95,9 +98,26 @@ def build(seed: int, scenario: str | None = None, awake: bool = False) -> tuple[
     """Same call and result as v3's ``scene.build``, with the person (parked out of sight) and the camera
     added.
     """
-    spec, truth = build_spec(seed, scenario=scenario, awake=awake)
+    spec, truth, v3_model = build_spec(seed, scenario=scenario, awake=awake)
     add_parts(spec)
-    return spec.compile(), truth
+    model = spec.compile()
+    keep_v3_statistics(model, v3_model)
+    return model, truth
+
+
+def keep_v3_statistics(model: mujoco.MjModel, v3_model: mujoco.MjModel) -> None:
+    """Give our model v3's scene size and centre.
+
+    MuJoCo works them out from everything in the scene, and uses the size to place the cameras' near and far
+    clipping planes. The parked person (far away) and the floor made the scene "bigger", which moved those
+    planes and changed every depth picture: v3's Step 5 then read its seated tubes as 19 to 63 mm high. The
+    physics never changed; the pictures did. With v3's numbers, v3's cameras see exactly what they saw.
+    """
+    model.stat.extent = v3_model.stat.extent
+    model.stat.center[:] = v3_model.stat.center
+    model.stat.meaninertia = v3_model.stat.meaninertia
+    model.stat.meanmass = v3_model.stat.meanmass
+    model.stat.meansize = v3_model.stat.meansize
 
 
 @contextlib.contextmanager

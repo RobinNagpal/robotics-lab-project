@@ -56,3 +56,25 @@ def test_patched_swaps_build_and_puts_it_back():
         model, _ = scene.build(1)
         assert model.body(hand.BODY).id > 0
     assert scene.build is v3
+
+
+@pytest.mark.parametrize("seed", [0, 7])
+def test_v3_cameras_see_the_same(seed):
+    """v3's own cameras render the same pictures and the same depth in our scene (v3's Step 5 reads depth from
+    the rotor camera; the person is parked out of sight)."""
+    a, _ = scene_plus._V3_BUILD(seed)
+    b, _ = scene_plus.build(seed)
+    da, db = mujoco.MjData(a), mujoco.MjData(b)
+    for m, d in ((a, da), (b, db)):
+        scene.reset(m, d)
+        mujoco.mj_forward(m, d)
+    for camera in ("rotor", "overhead", "racks_high"):
+        for depth in (False, True):
+            pictures = []
+            for m, d in ((a, da), (b, db)):
+                with mujoco.Renderer(m, height=240, width=320) as r:
+                    if depth:
+                        r.enable_depth_rendering()
+                    r.update_scene(d, camera=camera)
+                    pictures.append(r.render().astype(float))
+            assert np.abs(pictures[0] - pictures[1]).max() < (1e-4 if depth else 1.0), (camera, depth)
