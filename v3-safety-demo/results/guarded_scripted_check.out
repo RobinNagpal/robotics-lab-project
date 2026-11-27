@@ -1,0 +1,8 @@
+seed  0 pairs    visits  9: slowed 9, held 9, carried on 9 | loaded+balanced True spilled 0 (v3 0) | job 271.919 s (v3 226.3) | worst stop 0.014000000000066848 s 0.4 mm | log True replay True
+seed  1 odd_one  visits 16: slowed 11, held 16, carried on 16 | loaded+balanced True spilled 1 (v3 5) | job 489.802 s (v3 417.413) | worst stop 0.026999999999361535 s 1.2 mm | log True replay True
+   ['t=130.1: warning visit logged stop/hold', 't=160.1: warning visit logged stop/hold', 't=190.1: warning visit logged stop/hold']
+seed  2 triangle visits  7: slowed 7, held 7, carried on 7 | loaded+balanced True spilled 0 (v3 0) | job 211.548 s (v3 164.477) | worst stop 0.014000000000066848 s 0.4 mm | log True replay True
+seed  3 mismatch visits 21: slowed 14, held 21, carried on 21 | loaded+balanced True spilled 6 (v3 4) | job 626.725 s (v3 496.096) | worst stop 0.016999999999598003 s 0.7 mm | log True replay True
+   ['t=100.1: warning visit logged stop/hold', 't=130.1: warning visit logged stop/hold', 't=250.1: warning visit logged stop/hold']
+
+all seeds: {'visits': 53, 'slowed': 41, 'held': 53, 'carried_on': 53}

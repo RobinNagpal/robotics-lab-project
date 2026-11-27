@@ -1,0 +1,1628 @@
+[
+ {
+  "seed": 6,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/2": 33.56,
+   "sample_rack/5": 33.46,
+   "sample_rack/7": 33.47
+  },
+  "step1_error_g": {
+   "sample_rack/2": -0.005,
+   "sample_rack/5": 0.002,
+   "sample_rack/7": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/2",
+    "grams": 33.56,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 33.46,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 33.47,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": -38.1,
+   "2": -18.1,
+   "4": -62.8
+  },
+  "report": "NOT done: tube not seated (hole 0 -38 mm high, hole 2 -18 mm high, hole 4 -63 mm high); of the rest: 0.00 g out (limit 1.0 g), 0 tubes in holes ; examiner 33.52 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.0,
+  "examiner_g": 33.518,
+  "tubes_planned": 3,
+  "tubes_seated": 2,
+  "all_samples_loaded": false,
+  "balanced": false,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 169.5,
+  "wall_seconds": 395.0,
+  "robot_says_done": false,
+  "success": false,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.914
+  },
+  "detector": "v2",
+  "guard": {
+   "sim_seconds": 410.578,
+   "ticks": 170019,
+   "physics_steps": 409078,
+   "held_seconds": 224.401,
+   "slow_seconds": 14.2,
+   "catch_up_seconds": 4.008,
+   "frames": 4092,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.8458,
+   "peak_tool_speed": 0.6087,
+   "joint_peaks": [
+    0.7002,
+    0.6467,
+    0.6996,
+    0.8458,
+    0.7001,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.6951,
+    0.3991,
+    0.6275,
+    0.6926,
+    0.6974,
+    0.6958
+   ],
+   "measured_tool_peak": 0.6062,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 84871,
+     "q": [
+      -3.7503,
+      -1.1485,
+      1.3959,
+      -1.8074,
+      -2.1816,
+      -0.6794
+     ],
+     "q_window_start": [
+      -3.7635,
+      -1.1446,
+      1.425,
+      -1.8497,
+      -2.1817,
+      -0.6955
+     ],
+     "tool": [
+      0.5276,
+      -0.3832,
+      0.2441
+     ],
+     "elbow": [
+      0.1469,
+      -0.0939,
+      0.5507
+     ]
+    },
+    "tool_speed": {
+     "tick": 166287,
+     "q": [
+      -1.0705,
+      -1.977,
+      0.5241,
+      -1.925,
+      -2.958,
+      0.6781
+     ],
+     "q_window_start": [
+      -1.0579,
+      -1.9873,
+      0.4977,
+      -1.9339,
+      -2.993,
+      0.6952
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 147994,
+     "q": [
+      -1.6279,
+      -1.86,
+      0.4424,
+      -1.9455,
+      -2.9464,
+      0.2531
+     ],
+     "q_window_start": [
+      -1.654,
+      -1.8473,
+      0.4673,
+      -1.9375,
+      -2.9114,
+      0.2258
+     ],
+     "tool": [
+      0.1148,
+      -0.0416,
+      1.0662
+     ],
+     "elbow": [
+      -0.0139,
+      -0.1206,
+      0.5704
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.5032,
+     0.1206
+    ],
+    [
+     0.7028,
+     0.5357,
+     1.0662
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0764,
+     -0.2048,
+     0.4515
+    ],
+    [
+     0.2615,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [
+    {
+     "t": 31.501000000015516,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000012221,
+     "distance": 3.8794927074367886e-07,
+     "peak_speed": 0.0004
+    },
+    {
+     "t": 78.30100000000982,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0020000000000095497,
+     "distance": 8.81038875796641e-06,
+     "peak_speed": 0.0049
+    },
+    {
+     "t": 92.00100000007524,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0020000000000095497,
+     "distance": 1.441972143674404e-05,
+     "peak_speed": 0.0082
+    },
+    {
+     "t": 115.60100000018792,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.016000000000076398,
+     "distance": 0.0007878013504458246,
+     "peak_speed": 0.1312
+    },
+    {
+     "t": 132.80100000027005,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.017000000000081172,
+     "distance": 0.0010771984798751031,
+     "peak_speed": 0.2407
+    },
+    {
+     "t": 155.30100000037748,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.008000000000038199,
+     "distance": 0.00016181431489445584,
+     "peak_speed": 0.043
+    },
+    {
+     "t": 358.30199999843916,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.020999999999503416,
+     "distance": 0.002132557924351814,
+     "peak_speed": 0.3828
+    },
+    {
+     "t": 359.5019999984108,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.016999999999598003,
+     "distance": 0.0011622227474309239,
+     "peak_speed": 0.2123
+    },
+    {
+     "t": 362.1019999983493,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.022999999999456122,
+     "distance": 0.0029055654736238096,
+     "peak_speed": 0.5165
+    },
+    {
+     "t": 369.7019999981696,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0029999999999290594,
+     "distance": 3.101120988581131e-05,
+     "peak_speed": 0.0123
+    },
+    {
+     "t": 393.6019999976044,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0019999999999527063,
+     "distance": 8.64785713490098e-06,
+     "peak_speed": 0.0053
+    },
+    {
+     "t": 404.0019999973585,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.03599999999914871,
+     "distance": 0.00595555453867939,
+     "peak_speed": 0.6014
+    },
+    {
+     "t": 405.80199999731593,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.03499999999917236,
+     "distance": 0.005328842446941801,
+     "peak_speed": 0.5537
+    }
+   ],
+   "log_entries": 4093,
+   "log_head": "960b82fbc7bc66a860f9f995121851f008118d2c613694339cf342e29ecd24e2",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [
+   {
+    "start": 12.055999999998757,
+    "goal": "warning",
+    "look": {
+     "size": 1.0693907517476609,
+     "hand": "skin_tan",
+     "sleeve": "sleeve_black"
+    },
+    "deepest": "warning",
+    "reach": 1.0132,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 16.869999999997635
+   },
+   {
+    "start": 30.959000000014854,
+    "goal": "stop",
+    "look": {
+     "size": 1.0823092829106282,
+     "hand": "glove_black",
+     "sleeve": "sleeve_black"
+    },
+    "deepest": "stop",
+    "reach": 0.6491,
+    "gap": 0.4514,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 31.3240000000153,
+    "stopped": 31.3240000000153,
+    "end": 33.56000000001249,
+    "stop_after": 0.0
+   },
+   {
+    "start": 49.01499999997647,
+    "goal": "warning",
+    "look": {
+     "size": 0.9013612853985652,
+     "hand": "skin_light",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 0.9697,
+    "gap": 0.3994,
+    "gap_moving": 0.3994,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 53.26499999996656
+   },
+   {
+    "start": 64.42599999994357,
+    "goal": "warning",
+    "look": {
+     "size": 1.0750449472620793,
+     "hand": "glove_purple",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 1.0642,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 65.84099999995033
+   },
+   {
+    "start": 77.75500000000721,
+    "goal": "stop",
+    "look": {
+     "size": 0.9495812869110887,
+     "hand": "glove_purple",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "stop",
+    "reach": 0.4543,
+    "gap": 0.397,
+    "gap_moving": 0.5,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 78.20400000000936,
+    "stopped": 78.30400000000984,
+    "end": 80.60500000002082,
+    "stop_after": 0.1
+   },
+   {
+    "start": 90.68700000006896,
+    "goal": "stop",
+    "look": {
+     "size": 0.8743255755651632,
+     "hand": "skin_medium",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.3011,
+    "gap": 0.116,
+    "gap_moving": 0.5,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 91.86600000007459,
+    "stopped": 92.00600000007526,
+    "end": 96.73300000009783,
+    "stop_after": 0.14
+   },
+   {
+    "start": 115.1570000001858,
+    "goal": "stop",
+    "look": {
+     "size": 0.987256167893809,
+     "hand": "glove_green",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.4002,
+    "gap": 0.1924,
+    "gap_moving": 0.2629,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 115.46000000018725,
+    "stopped": 115.62000000018801,
+    "end": 117.40200000019652,
+    "stop_after": 0.16
+   },
+   {
+    "start": 133.83400000027498,
+    "goal": "stop",
+    "look": {
+     "size": 1.0335881615245288,
+     "hand": "glove_white",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "stop",
+    "reach": 0.6241,
+    "gap": 0.2041,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 134.23200000027688,
+    "stopped": 134.23200000027688,
+    "end": 137.43400000029217,
+    "stop_after": 0.0
+   },
+   {
+    "start": 153.2910000003679,
+    "goal": "warning",
+    "look": {
+     "size": 1.0362782999958822,
+     "hand": "glove_purple",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 0.9751,
+    "gap": 0.5,
+    "gap_moving": 0.5,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 155.12200000037663
+   },
+   {
+    "start": 162.60900000041238,
+    "goal": "warning",
+    "look": {
+     "size": 0.8766672490308789,
+     "hand": "skin_tan",
+     "sleeve": "sleeve_black"
+    },
+    "deepest": "clear",
+    "reach": 1.1636,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 167.90100000043765
+   },
+   {
+    "start": 184.58900000051733,
+    "goal": "stop",
+    "look": {
+     "size": 0.9385138366234251,
+     "hand": "skin_medium",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "stop",
+    "reach": 0.2196,
+    "gap": 0.043,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 184.93400000051898,
+    "stopped": 184.93400000051898,
+    "end": 188.20100000053458,
+    "stop_after": 0.0
+   },
+   {
+    "start": 208.11600000062967,
+    "goal": "stop",
+    "look": {
+     "size": 1.1289373605399713,
+     "hand": "skin_medium",
+     "sleeve": "sleeve_black"
+    },
+    "deepest": "stop",
+    "reach": 0.488,
+    "gap": 0.2886,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 208.7290000006326,
+    "stopped": 208.7290000006326,
+    "end": 211.56700000064615,
+    "stop_after": 0.0
+   },
+   {
+    "start": 222.21000000069697,
+    "goal": "stop",
+    "look": {
+     "size": 0.8983454886473107,
+     "hand": "glove_black",
+     "sleeve": "sleeve_blue"
+    },
+    "deepest": "stop",
+    "reach": 0.6889,
+    "gap": 0.5,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 222.84200000069998,
+    "stopped": 222.84200000069998,
+    "end": 225.20800000071128,
+    "stop_after": 0.0
+   },
+   {
+    "start": 233.0240000007486,
+    "goal": "stop",
+    "look": {
+     "size": 0.9246714295008366,
+     "hand": "glove_white",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.6194,
+    "gap": 0.3843,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 233.90800000075282,
+    "stopped": 233.90800000075282,
+    "end": 237.78700000077134,
+    "stop_after": 0.0
+   },
+   {
+    "start": 257.31700000082714,
+    "goal": "stop",
+    "look": {
+     "size": 0.9255397326817797,
+     "hand": "skin_medium",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.6514,
+    "gap": 0.1645,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 257.88800000081363,
+    "stopped": 257.88800000081363,
+    "end": 261.17800000073584,
+    "stop_after": 0.0
+   },
+   {
+    "start": 267.6250000005834,
+    "goal": "stop",
+    "look": {
+     "size": 1.1276214215898883,
+     "hand": "glove_purple",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.6383,
+    "gap": 0.5,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 267.96500000057534,
+    "stopped": 267.96500000057534,
+    "end": 269.4010000005414,
+    "stop_after": 0.0
+   },
+   {
+    "start": 282.18300000023913,
+    "goal": "warning",
+    "look": {
+     "size": 1.003872629225357,
+     "hand": "skin_dark",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 0.9262,
+    "gap": 0.5,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 285.5460000001596
+   },
+   {
+    "start": 294.88999999993865,
+    "goal": "outside",
+    "look": {
+     "size": 0.8850136710785098,
+     "hand": "skin_dark",
+     "sleeve": "coat_white"
+    },
+    "deepest": "clear",
+    "reach": 1.3813,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 297.6609999998731
+   },
+   {
+    "start": 306.4419999996655,
+    "goal": "outside",
+    "look": {
+     "size": 1.0304298323300516,
+     "hand": "skin_light",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "clear",
+    "reach": 1.2541,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 308.9859999996053
+   },
+   {
+    "start": 321.6959999993048,
+    "goal": "warning",
+    "look": {
+     "size": 1.1189885005307025,
+     "hand": "skin_dark",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "warning",
+    "reach": 0.9524,
+    "gap": 0.5,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 326.3079999991957
+   },
+   {
+    "start": 333.9669999990146,
+    "goal": "warning",
+    "look": {
+     "size": 0.8516151332790701,
+     "hand": "glove_purple",
+     "sleeve": "sleeve_blue"
+    },
+    "deepest": "clear",
+    "reach": 1.2054,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 337.06399999894137
+   },
+   {
+    "start": 355.0269999985166,
+    "goal": "outside",
+    "look": {
+     "size": 1.01211220880557,
+     "hand": "skin_tan",
+     "sleeve": "coat_white"
+    },
+    "deepest": "clear",
+    "reach": 1.504,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 356.1059999984911
+   },
+   {
+    "start": 369.2779999981796,
+    "goal": "stop",
+    "look": {
+     "size": 0.9390761625393554,
+     "hand": "glove_blue",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "stop",
+    "reach": 0.397,
+    "gap": 0.3079,
+    "gap_moving": 0.3246,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 369.5859999981723,
+    "stopped": 369.7059999981695,
+    "end": 371.62799999812404,
+    "stop_after": 0.12
+   },
+   {
+    "start": 381.9769999978793,
+    "goal": "warning",
+    "look": {
+     "size": 1.1183060068037813,
+     "hand": "glove_blue",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 0.9559,
+    "gap": 0.5,
+    "gap_moving": 0.5,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 384.5999999978173
+   },
+   {
+    "start": 392.7579999976244,
+    "goal": "stop",
+    "look": {
+     "size": 1.039104936614398,
+     "hand": "glove_purple",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.614,
+    "gap": 0.5,
+    "gap_moving": 0.5,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 393.53299999760605,
+    "stopped": 393.61299999760416,
+    "end": 396.93799999752554,
+    "stop_after": 0.08
+   }
+  ],
+  "disagreements": {
+   "frames": 1801,
+   "saved": [
+    {
+     "t": 15.900999999996626,
+     "frame": 146,
+     "true": "clear",
+     "said": "warning",
+     "score": 0.9321813583374023,
+     "boxes": [
+      [
+       384.51422119140625,
+       100.57511901855469,
+       427.7361145019531,
+       141.86439514160156
+      ]
+     ],
+     "file": "frame000146_true-clear_said-warning.jpg"
+    },
+    {
+     "t": 78.20100000000934,
+     "frame": 769,
+     "true": "warning",
+     "said": "stop",
+     "score": 0.9057098031044006,
+     "boxes": [
+      [
+       458.0010986328125,
+       184.91493225097656,
+       486.7897033691406,
+       229.85092163085938
+      ]
+     ],
+     "file": "frame000769_true-warning_said-stop.jpg"
+    },
+    {
+     "t": 95.60100000009243,
+     "frame": 943,
+     "true": "clear",
+     "said": "warning",
+     "score": 0.9333652257919312,
+     "boxes": [
+      [
+       305.1121520996094,
+       117.06714630126953,
+       332.0494384765625,
+       158.09310913085938
+      ]
+     ],
+     "file": "frame000943_true-clear_said-warning.jpg"
+    },
+    {
+     "t": 132.70100000026957,
+     "frame": 1314,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.3317740857601166,
+     "boxes": [
+      [
+       335.7728271484375,
+       284.23529052734375,
+       368.92474365234375,
+       310.655517578125
+      ],
+      [
+       336.7344665527344,
+       284.7557373046875,
+       391.0626220703125,
+       312.6016540527344
+      ]
+     ],
+     "file": "frame001314_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 132.80100000027005,
+     "frame": 1315,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.37934815883636475,
+     "boxes": [
+      [
+       341.47735595703125,
+       282.422607421875,
+       373.219970703125,
+       309.6286315917969
+      ],
+      [
+       342.4150695800781,
+       282.5836181640625,
+       385.87957763671875,
+       310.09893798828125
+      ]
+     ],
+     "file": "frame001315_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 132.90100000027053,
+     "frame": 1316,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.46963757276535034,
+     "boxes": [
+      [
+       340.00408935546875,
+       281.9720153808594,
+       373.0545349121094,
+       309.3560485839844
+      ]
+     ],
+     "file": "frame001316_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.001000000271,
+     "frame": 1317,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4627033472061157,
+     "boxes": [
+      [
+       340.6758728027344,
+       282.0584716796875,
+       373.5518493652344,
+       309.4283142089844
+      ]
+     ],
+     "file": "frame001317_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.10100000027148,
+     "frame": 1318,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.46080881357192993,
+     "boxes": [
+      [
+       340.4057922363281,
+       282.15179443359375,
+       373.38873291015625,
+       309.383544921875
+      ],
+      [
+       341.3066101074219,
+       282.3582458496094,
+       385.6217956542969,
+       310.0066223144531
+      ]
+     ],
+     "file": "frame001318_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.20100000027196,
+     "frame": 1319,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4775864779949188,
+     "boxes": [
+      [
+       340.7377624511719,
+       282.0845642089844,
+       373.3674621582031,
+       309.5183410644531
+      ],
+      [
+       341.6055908203125,
+       282.2954406738281,
+       385.6259765625,
+       310.13348388671875
+      ]
+     ],
+     "file": "frame001319_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.30100000027244,
+     "frame": 1320,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4716774523258209,
+     "boxes": [
+      [
+       340.7402648925781,
+       282.1618957519531,
+       373.61175537109375,
+       309.5130615234375
+      ]
+     ],
+     "file": "frame001320_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.40100000027292,
+     "frame": 1321,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.43441444635391235,
+     "boxes": [
+      [
+       341.1195373535156,
+       282.1630554199219,
+       373.5252380371094,
+       309.4482116699219
+      ],
+      [
+       342.0433349609375,
+       282.3324279785156,
+       385.414306640625,
+       309.9694519042969
+      ]
+     ],
+     "file": "frame001321_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.5010000002734,
+     "frame": 1322,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.49809038639068604,
+     "boxes": [
+      [
+       340.5380554199219,
+       282.28466796875,
+       373.2010192871094,
+       309.7470397949219
+      ],
+      [
+       341.362060546875,
+       282.4673156738281,
+       386.0692443847656,
+       310.3352355957031
+      ]
+     ],
+     "file": "frame001322_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.60100000027387,
+     "frame": 1323,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.452890008687973,
+     "boxes": [
+      [
+       340.6056213378906,
+       282.29449462890625,
+       373.04443359375,
+       309.5433349609375
+      ],
+      [
+       341.5516662597656,
+       282.5230712890625,
+       385.98211669921875,
+       310.1893310546875
+      ]
+     ],
+     "file": "frame001323_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.70100000027435,
+     "frame": 1324,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4391807019710541,
+     "boxes": [
+      [
+       340.80096435546875,
+       282.3006286621094,
+       373.1689147949219,
+       309.66217041015625
+      ],
+      [
+       341.7250671386719,
+       282.4867858886719,
+       385.68792724609375,
+       310.22467041015625
+      ]
+     ],
+     "file": "frame001324_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 133.80100000027483,
+     "frame": 1325,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4354708790779114,
+     "boxes": [
+      [
+       340.66290283203125,
+       282.3035583496094,
+       373.3212890625,
+       309.623779296875
+      ],
+      [
+       341.57318115234375,
+       282.5404357910156,
+       386.54205322265625,
+       310.31500244140625
+      ]
+     ],
+     "file": "frame001325_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 134.20100000027674,
+     "frame": 1329,
+     "true": "warning",
+     "said": "stop",
+     "score": 0.18885429203510284,
+     "boxes": [
+      [
+       367.6149597167969,
+       155.91598510742188,
+       408.6357727050781,
+       200.59291076660156
+      ],
+      [
+       340.6319274902344,
+       282.40667724609375,
+       373.0882873535156,
+       309.5455627441406
+      ],
+      [
+       341.66632080078125,
+       282.5916748046875,
+       386.3362731933594,
+       310.3602294921875
+      ]
+     ],
+     "file": "frame001329_true-warning_said-stop.jpg"
+    },
+    {
+     "t": 136.80100000028915,
+     "frame": 1355,
+     "true": "warning",
+     "said": "stop",
+     "score": 0.9071112871170044,
+     "boxes": [
+      [
+       376.75726318359375,
+       167.61825561523438,
+       417.5919189453125,
+       211.51092529296875
+      ]
+     ],
+     "file": "frame001355_true-warning_said-stop.jpg"
+    },
+    {
+     "t": 137.5010000002925,
+     "frame": 1362,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4867653250694275,
+     "boxes": [
+      [
+       339.91119384765625,
+       282.379638671875,
+       373.0854797363281,
+       309.54241943359375
+      ],
+      [
+       340.722412109375,
+       282.6210632324219,
+       385.33697509765625,
+       310.14739990234375
+      ]
+     ],
+     "file": "frame001362_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 137.60100000029297,
+     "frame": 1363,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.5077452063560486,
+     "boxes": [
+      [
+       340.1063537597656,
+       282.25537109375,
+       373.0810546875,
+       309.5669860839844
+      ],
+      [
+       340.9657287597656,
+       282.5082702636719,
+       386.1405944824219,
+       310.269287109375
+      ]
+     ],
+     "file": "frame001363_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 137.70100000029345,
+     "frame": 1364,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.5060139298439026,
+     "boxes": [
+      [
+       339.6292419433594,
+       282.2679138183594,
+       373.065673828125,
+       309.49072265625
+      ],
+      [
+       340.4856872558594,
+       282.53057861328125,
+       386.685791015625,
+       310.2830505371094
+      ]
+     ],
+     "file": "frame001364_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 137.80100000029393,
+     "frame": 1365,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4778863191604614,
+     "boxes": [
+      [
+       340.1136779785156,
+       282.2870178222656,
+       372.9698181152344,
+       309.41424560546875
+      ],
+      [
+       341.0005187988281,
+       282.5098876953125,
+       385.6842041015625,
+       310.1018981933594
+      ]
+     ],
+     "file": "frame001365_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 137.9010000002944,
+     "frame": 1366,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.47362279891967773,
+     "boxes": [
+      [
+       339.7540283203125,
+       282.28448486328125,
+       372.6885986328125,
+       309.4989929199219
+      ],
+      [
+       340.6083679199219,
+       282.5535888671875,
+       386.5354919433594,
+       310.2959899902344
+      ]
+     ],
+     "file": "frame001366_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.00100000029488,
+     "frame": 1367,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4458322823047638,
+     "boxes": [
+      [
+       339.95269775390625,
+       282.34393310546875,
+       373.270263671875,
+       309.4079284667969
+      ],
+      [
+       340.8673095703125,
+       282.60101318359375,
+       386.7406311035156,
+       310.1632385253906
+      ]
+     ],
+     "file": "frame001367_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.10100000029536,
+     "frame": 1368,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.5091373324394226,
+     "boxes": [
+      [
+       339.8023986816406,
+       282.26202392578125,
+       373.1193542480469,
+       309.6543884277344
+      ],
+      [
+       340.5711975097656,
+       282.47930908203125,
+       386.2801208496094,
+       310.2717590332031
+      ]
+     ],
+     "file": "frame001368_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.20100000029583,
+     "frame": 1369,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.5260142087936401,
+     "boxes": [
+      [
+       339.91552734375,
+       282.31634521484375,
+       373.6040344238281,
+       309.5735778808594
+      ],
+      [
+       340.6869201660156,
+       282.5279541015625,
+       385.8609313964844,
+       310.14697265625
+      ]
+     ],
+     "file": "frame001369_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.3010000002963,
+     "frame": 1370,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4598267376422882,
+     "boxes": [
+      [
+       340.1021423339844,
+       282.2510986328125,
+       373.1807556152344,
+       309.4248352050781
+      ],
+      [
+       340.95599365234375,
+       282.4859619140625,
+       386.7840270996094,
+       310.1555480957031
+      ]
+     ],
+     "file": "frame001370_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.4010000002968,
+     "frame": 1371,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4925318956375122,
+     "boxes": [
+      [
+       339.7701110839844,
+       282.32281494140625,
+       372.8562927246094,
+       309.6496276855469
+      ],
+      [
+       340.5650939941406,
+       282.5509338378906,
+       385.67572021484375,
+       310.3276062011719
+      ]
+     ],
+     "file": "frame001371_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.50100000029727,
+     "frame": 1372,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4335552752017975,
+     "boxes": [
+      [
+       340.13348388671875,
+       282.3391418457031,
+       372.71923828125,
+       309.57257080078125
+      ],
+      [
+       341.0615539550781,
+       282.5862121582031,
+       386.1930847167969,
+       310.3011169433594
+      ]
+     ],
+     "file": "frame001372_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.60100000029774,
+     "frame": 1373,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.48497316241264343,
+     "boxes": [
+      [
+       339.8760681152344,
+       282.3305969238281,
+       372.8870849609375,
+       309.63751220703125
+      ],
+      [
+       340.7415771484375,
+       282.55133056640625,
+       385.81390380859375,
+       310.2869567871094
+      ]
+     ],
+     "file": "frame001373_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.70100000029822,
+     "frame": 1374,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4569891393184662,
+     "boxes": [
+      [
+       339.69915771484375,
+       282.2613220214844,
+       373.3479919433594,
+       309.4488220214844
+      ],
+      [
+       340.4346008300781,
+       282.5126647949219,
+       386.9353942871094,
+       310.2361145019531
+      ]
+     ],
+     "file": "frame001374_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.8010000002987,
+     "frame": 1375,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.47174641489982605,
+     "boxes": [
+      [
+       340.0169982910156,
+       282.3473205566406,
+       372.8083801269531,
+       309.4423828125
+      ],
+      [
+       340.84783935546875,
+       282.58538818359375,
+       386.03033447265625,
+       310.146728515625
+      ]
+     ],
+     "file": "frame001375_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 138.90100000029918,
+     "frame": 1376,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.49983179569244385,
+     "boxes": [
+      [
+       339.7377624511719,
+       282.26116943359375,
+       372.950439453125,
+       309.5412902832031
+      ],
+      [
+       340.4676513671875,
+       282.4956359863281,
+       386.3917236328125,
+       310.2367858886719
+      ]
+     ],
+     "file": "frame001376_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.00100000029965,
+     "frame": 1377,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.5331953763961792,
+     "boxes": [
+      [
+       339.77911376953125,
+       282.2763671875,
+       372.8847351074219,
+       309.537841796875
+      ],
+      [
+       340.504150390625,
+       282.48248291015625,
+       386.3868713378906,
+       310.23699951171875
+      ]
+     ],
+     "file": "frame001377_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.10100000030013,
+     "frame": 1378,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.46232500672340393,
+     "boxes": [
+      [
+       339.9355773925781,
+       282.2595520019531,
+       372.8229064941406,
+       309.54083251953125
+      ],
+      [
+       340.7594909667969,
+       282.4922790527344,
+       385.7866516113281,
+       310.22161865234375
+      ]
+     ],
+     "file": "frame001378_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.2010000003006,
+     "frame": 1379,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.481122761964798,
+     "boxes": [
+      [
+       340.0462951660156,
+       282.2469787597656,
+       372.7428283691406,
+       309.42181396484375
+      ],
+      [
+       340.8542175292969,
+       282.490966796875,
+       387.4071044921875,
+       310.2105712890625
+      ]
+     ],
+     "file": "frame001379_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.3010000003011,
+     "frame": 1380,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.45379355549812317,
+     "boxes": [
+      [
+       340.13311767578125,
+       282.2570495605469,
+       373.0568542480469,
+       309.4930114746094
+      ],
+      [
+       340.99798583984375,
+       282.51837158203125,
+       386.15057373046875,
+       310.2354431152344
+      ]
+     ],
+     "file": "frame001380_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.40100000030156,
+     "frame": 1381,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4571963846683502,
+     "boxes": [
+      [
+       340.1900329589844,
+       282.27239990234375,
+       372.9540100097656,
+       309.5205078125
+      ],
+      [
+       341.0780334472656,
+       282.5364074707031,
+       387.2441101074219,
+       310.2936706542969
+      ]
+     ],
+     "file": "frame001381_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.50100000030204,
+     "frame": 1382,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.47818663716316223,
+     "boxes": [
+      [
+       340.0563659667969,
+       282.22186279296875,
+       372.9990234375,
+       309.434326171875
+      ],
+      [
+       340.88958740234375,
+       282.4604187011719,
+       385.1470031738281,
+       310.1887512207031
+      ]
+     ],
+     "file": "frame001382_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.60100000030252,
+     "frame": 1383,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.43946388363838196,
+     "boxes": [
+      [
+       340.2689208984375,
+       282.3186340332031,
+       372.812255859375,
+       309.5515441894531
+      ],
+      [
+       341.158203125,
+       282.5832824707031,
+       386.28790283203125,
+       310.28619384765625
+      ]
+     ],
+     "file": "frame001383_true-clear_said-stop.jpg"
+    },
+    {
+     "t": 139.701000000303,
+     "frame": 1384,
+     "true": "clear",
+     "said": "stop",
+     "score": 0.4673578441143036,
+     "boxes": [
+      [
+       340.3812255859375,
+       282.2969665527344,
+       373.0580749511719,
+       309.56915283203125
+      ],
+      [
+       341.2533874511719,
+       282.4576110839844,
+       385.86834716796875,
+       310.2002258300781
+      ]
+     ],
+     "file": "frame001384_true-clear_said-stop.jpg"
+    }
+   ]
+  }
+ }
+]

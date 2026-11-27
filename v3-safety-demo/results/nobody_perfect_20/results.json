@@ -1,0 +1,4391 @@
+[
+ {
+  "seed": 0,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 38.08,
+   "sample_rack/5": 34.79,
+   "sample_rack/6": 37.7,
+   "sample_rack/7": 35.17
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.004,
+   "sample_rack/5": -0.004,
+   "sample_rack/6": 0.004,
+   "sample_rack/7": -0.005
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 38.08,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/5",
+    "grams": 34.79,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/6",
+    "grams": 37.7,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 35.17,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.4,
+   "1": 1.1,
+   "3": 1.0,
+   "4": 1.2
+  },
+  "report": "Balanced: 0.38 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.39 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.38,
+  "examiner_g": 0.385,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 224.3,
+  "wall_seconds": 184.3,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.931
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 226.3,
+   "ticks": 224800,
+   "physics_steps": 224800,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 2249,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 1.254,
+   "peak_tool_speed": 0.8832,
+   "joint_peaks": [
+    0.7002,
+    0.6432,
+    1.254,
+    0.9266,
+    0.7001,
+    0.7002
+   ],
+   "measured_joint_peaks": [
+    0.6951,
+    0.3979,
+    0.6762,
+    0.6974,
+    0.6975,
+    0.6987
+   ],
+   "measured_tool_peak": 0.8812,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 212946,
+     "q": [
+      -0.5229,
+      -2.2459,
+      -0.9746,
+      -2.0084,
+      -4.3703,
+      -0.3392
+     ],
+     "q_window_start": [
+      -0.5161,
+      -2.2274,
+      -1.0373,
+      -1.9621,
+      -4.367,
+      -0.3329
+     ],
+     "tool": [
+      0.5168,
+      -0.3536,
+      0.2049
+     ],
+     "elbow": [
+      0.2266,
+      -0.1387,
+      0.4948
+     ]
+    },
+    "tool_speed": {
+     "tick": 126922,
+     "q": [
+      -1.53,
+      -1.7402,
+      0.3047,
+      -3.0107,
+      -1.3212,
+      0.1796
+     ],
+     "q_window_start": [
+      -1.5643,
+      -1.7348,
+      0.3386,
+      -2.9757,
+      -1.3277,
+      0.1823
+     ],
+     "tool": [
+      -0.195,
+      -0.058,
+      1.2358
+     ],
+     "elbow": [
+      -0.0041,
+      -0.0719,
+      0.5819
+     ]
+    },
+    "tool_high": {
+     "tick": 126898,
+     "q": [
+      -1.5465,
+      -1.7376,
+      0.321,
+      -2.9939,
+      -1.3243,
+      0.1809
+     ],
+     "q_window_start": [
+      -1.5808,
+      -1.7322,
+      0.3549,
+      -2.9589,
+      -1.3308,
+      0.1836
+     ],
+     "tool": [
+      -0.1956,
+      -0.0368,
+      1.236
+     ],
+     "elbow": [
+      -0.0053,
+      -0.0707,
+      0.5821
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.3197,
+     -0.61,
+     0.1206
+    ],
+    [
+     0.6172,
+     0.5518,
+     1.236
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0764,
+     -0.2048,
+     0.4516
+    ],
+    [
+     0.2614,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 2249,
+   "log_head": "f1af5e34e3735249e789ed9d4fde8ba55b2aad0e52cf04759e68717d241cb8f7",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 1,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 45.27,
+   "sample_rack/3": 40.58,
+   "sample_rack/5": 40.22
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.002,
+   "sample_rack/3": 0.001,
+   "sample_rack/5": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 45.45,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 45.27,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/3",
+    "grams": 40.58,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/5",
+    "grams": 40.22,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 45.19
+  },
+  "step5_seen_mm": {
+   "3": 0.9,
+   "0": 1.2,
+   "1": 1.2,
+   "4": 1.1
+  },
+  "report": "Balanced: 0.41 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.41 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.406,
+  "examiner_g": 0.41,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 5,
+  "sim_blew_up": false,
+  "sim_seconds": 415.4,
+  "wall_seconds": 368.9,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "bright",
+   "scale": 1.723
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 417.413,
+   "ticks": 415913,
+   "physics_steps": 415913,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 4161,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4726,
+   "peak_tool_speed": 0.6085,
+   "joint_peaks": [
+    0.7002,
+    0.6975,
+    1.2497,
+    0.9248,
+    0.7001,
+    3.4726
+   ],
+   "measured_joint_peaks": [
+    0.6967,
+    0.5417,
+    0.6881,
+    0.6698,
+    0.6975,
+    0.836
+   ],
+   "measured_tool_peak": 0.6065,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 188175,
+     "q": [
+      -3.2387,
+      -0.7059,
+      1.0217,
+      -0.3157,
+      -1.6679,
+      -1.3863
+     ],
+     "q_window_start": [
+      -3.2412,
+      -0.7123,
+      1.0143,
+      -0.302,
+      -1.6704,
+      -1.5599
+     ],
+     "tool": [
+      0.45,
+      0.0659,
+      0.217
+     ],
+     "elbow": [
+      0.3226,
+      -0.0244,
+      0.4387
+     ]
+    },
+    "tool_speed": {
+     "tick": 412181,
+     "q": [
+      -1.0706,
+      -1.9769,
+      0.5246,
+      -1.9252,
+      -2.958,
+      -0.1818
+     ],
+     "q_window_start": [
+      -1.058,
+      -1.9872,
+      0.4982,
+      -1.9341,
+      -2.993,
+      -0.1864
+     ],
+     "tool": [
+      0.1509,
+      -0.031,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 391716,
+     "q": [
+      -1.7315,
+      -1.948,
+      0.5407,
+      -1.9576,
+      -2.9478,
+      -0.838
+     ],
+     "q_window_start": [
+      -1.7602,
+      -1.9374,
+      0.5681,
+      -1.95,
+      -2.9128,
+      -0.8494
+     ],
+     "tool": [
+      0.1048,
+      -0.0847,
+      1.0533
+     ],
+     "elbow": [
+      -0.032,
+      -0.1534,
+      0.5581
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.529,
+     0.0767
+    ],
+    [
+     0.6196,
+     0.532,
+     1.0533
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2205,
+     0.4346
+    ],
+    [
+     0.326,
+     0.0948,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 4161,
+   "log_head": "bfb1a4c9bc0a5ec06f2fd0081084072916e6f4db144cac6b24f962493d5f93d0",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 45.47}, guarded {'balance A': 45.19}",
+   "step5_seen_mm: v3 {'3': 0.9, '0': 1.4, '1': 1.0, '4': 1.0}, guarded {'3': 0.9, '0': 1.2, '1': 1.2, '4': 1.1}",
+   "report: v3 \"Balanced: 0.31 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.31 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.41 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.41 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.312, guarded 0.406",
+   "examiner_g: v3 0.312, guarded 0.41",
+   "balls_spilled: v3 2, guarded 5",
+   "sim_seconds: v3 399.8, guarded 415.4"
+  ]
+ },
+ {
+  "seed": 2,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 42.27,
+   "sample_rack/5": 42.3,
+   "sample_rack/7": 42.44
+  },
+  "step1_error_g": {
+   "sample_rack/1": 0.005,
+   "sample_rack/5": -0.004,
+   "sample_rack/7": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 42.27,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 42.3,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 42.44,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.2,
+   "2": 0.7,
+   "4": 1.1
+  },
+  "report": "Balanced: 0.16 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.16 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.157,
+  "examiner_g": 0.158,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 162.5,
+  "wall_seconds": 142.6,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "dim",
+   "scale": 0.43
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 164.477,
+   "ticks": 162977,
+   "physics_steps": 162977,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 1631,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7001,
+   "peak_tool_speed": 0.6087,
+   "joint_peaks": [
+    0.7001,
+    0.6477,
+    0.6997,
+    0.7001,
+    0.7001,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.695,
+    0.4283,
+    0.6275,
+    0.6974,
+    0.6975,
+    0.6868
+   ],
+   "measured_tool_peak": 0.6066,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 46840,
+     "q": [
+      -3.0372,
+      -1.6276,
+      1.7103,
+      -1.6535,
+      -1.5708,
+      -1.4664
+     ],
+     "q_window_start": [
+      -3.0021,
+      -1.6117,
+      1.6954,
+      -1.6546,
+      -1.5708,
+      -1.4313
+     ],
+     "tool": [
+      0.45,
+      0.1819,
+      0.2991
+     ],
+     "elbow": [
+      -0.0247,
+      0.0044,
+      0.5873
+     ]
+    },
+    "tool_speed": {
+     "tick": 159245,
+     "q": [
+      -1.0705,
+      -1.977,
+      0.5241,
+      -1.925,
+      -2.958,
+      0.6781
+     ],
+     "q_window_start": [
+      -1.0579,
+      -1.9873,
+      0.4977,
+      -1.9339,
+      -2.993,
+      0.6952
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 140940,
+     "q": [
+      -1.6279,
+      -1.86,
+      0.4424,
+      -1.9455,
+      -2.9464,
+      0.2531
+     ],
+     "q_window_start": [
+      -1.654,
+      -1.8472,
+      0.4673,
+      -1.9376,
+      -2.9114,
+      0.2258
+     ],
+     "tool": [
+      0.1148,
+      -0.0415,
+      1.0662
+     ],
+     "elbow": [
+      -0.0139,
+      -0.1206,
+      0.5704
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.5032,
+     0.1206
+    ],
+    [
+     0.7028,
+     0.5357,
+     1.0662
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0894,
+     -0.2048,
+     0.4515
+    ],
+    [
+     0.2615,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 1631,
+   "log_head": "441e3066fc09d4a9a4088f6ec9d68af5cb9ee097e6a737db7abe616fd96e4923",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 3,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 25.35,
+   "sample_rack/1": 41.93
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.004,
+   "sample_rack/1": -0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 25.35,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 41.93,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 25.35,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/1",
+    "grams": 41.93,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 25.25,
+   "balance B": 41.81
+  },
+  "step5_seen_mm": {
+   "3": 0.9,
+   "5": 1.4,
+   "0": 1.4,
+   "2": 0.8
+  },
+  "report": "Balanced: 0.11 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.12 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.111,
+  "examiner_g": 0.115,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 4,
+  "sim_blew_up": false,
+  "sim_seconds": 494.1,
+  "wall_seconds": 366.2,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "bright",
+   "scale": 1.844
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 496.096,
+   "ticks": 494596,
+   "physics_steps": 494596,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 4947,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4726,
+   "peak_tool_speed": 0.7886,
+   "joint_peaks": [
+    0.7001,
+    0.6979,
+    1.253,
+    0.8849,
+    0.7001,
+    3.4726
+   ],
+   "measured_joint_peaks": [
+    0.6949,
+    0.554,
+    0.6881,
+    0.6973,
+    0.6976,
+    0.8413
+   ],
+   "measured_tool_peak": 0.7865,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 123209,
+     "q": [
+      -3.2382,
+      -0.7034,
+      1.0246,
+      -0.3213,
+      -1.6674,
+      -1.3176
+     ],
+     "q_window_start": [
+      -3.24,
+      -0.7098,
+      1.0171,
+      -0.3073,
+      -1.6692,
+      -1.4912
+     ],
+     "tool": [
+      0.45,
+      0.0662,
+      0.2141
+     ],
+     "elbow": [
+      0.3233,
+      -0.0243,
+      0.4379
+     ]
+    },
+    "tool_speed": {
+     "tick": 401038,
+     "q": [
+      -1.3196,
+      -1.9972,
+      0.5527,
+      -2.0208,
+      -0.0517,
+      -0.8038
+     ],
+     "q_window_start": [
+      -1.3425,
+      -1.9875,
+      0.5784,
+      -2.0124,
+      -0.0867,
+      -0.8385
+     ],
+     "tool": [
+      -0.341,
+      -0.2379,
+      1.0378
+     ],
+     "elbow": [
+      0.0369,
+      -0.172,
+      0.55
+     ]
+    },
+    "tool_high": {
+     "tick": 421534,
+     "q": [
+      -0.995,
+      -1.9715,
+      0.5933,
+      -1.9601,
+      -0.1528,
+      0.3139
+     ],
+     "q_window_start": [
+      -0.9808,
+      -1.9814,
+      0.5692,
+      -1.9697,
+      -0.1178,
+      0.3217
+     ],
+     "tool": [
+      -0.2852,
+      -0.2711,
+      1.0448
+     ],
+     "elbow": [
+      0.0844,
+      -0.1429,
+      0.5543
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6861,
+     0.0796
+    ],
+    [
+     0.7028,
+     0.5729,
+     1.0448
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2039,
+     0.4346
+    ],
+    [
+     0.326,
+     0.2867,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 4947,
+   "log_head": "d82d08205ccec3008caafd7b33c3d0499adaa79c7c6438cafee89503997697ca",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 25.21, 'balance B': 42.09}, guarded {'balance A': 25.25, 'balance B': 41.81}",
+   "step5_seen_mm: v3 {'3': 1.0, '5': 1.3, '0': 1.4, '2': 0.9}, guarded {'3': 0.9, '5': 1.4, '0': 1.4, '2': 0.8}",
+   "report: v3 \"Balanced: 0.26 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.26 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.11 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.12 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.26, guarded 0.111",
+   "examiner_g: v3 0.257, guarded 0.115",
+   "balls_spilled: v3 7, guarded 4",
+   "sim_seconds: v3 460.5, guarded 494.1"
+  ]
+ },
+ {
+  "seed": 4,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 35.14,
+   "sample_rack/1": 35.28,
+   "sample_rack/3": 44.86,
+   "sample_rack/5": 45.28
+  },
+  "step1_error_g": {
+   "sample_rack/0": -0.002,
+   "sample_rack/1": -0.0,
+   "sample_rack/3": -0.001,
+   "sample_rack/5": -0.005
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 35.14,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/3",
+    "grams": 44.86,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/1",
+    "grams": 35.28,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/5",
+    "grams": 45.28,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.4,
+   "2": 0.8,
+   "3": 1.0,
+   "5": 1.3
+  },
+  "report": "Balanced: 0.37 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.38 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.37,
+  "examiner_g": 0.375,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 229.9,
+  "wall_seconds": 197.5,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "bright",
+   "scale": 1.591
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 231.915,
+   "ticks": 230415,
+   "physics_steps": 230415,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 2306,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.7811,
+   "joint_peaks": [
+    0.7001,
+    0.6117,
+    0.7001,
+    0.7002,
+    0.7001,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.6968,
+    0.4327,
+    0.6333,
+    0.6625,
+    0.6978,
+    0.698
+   ],
+   "measured_tool_peak": 0.7793,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 210054,
+     "q": [
+      -0.3768,
+      -2.166,
+      -0.8608,
+      -2.0042,
+      1.4823,
+      0.6106
+     ],
+     "q_window_start": [
+      -0.3794,
+      -2.1451,
+      -0.8893,
+      -1.9692,
+      1.4888,
+      0.6058
+     ],
+     "tool": [
+      0.5401,
+      -0.3821,
+      0.2865
+     ],
+     "elbow": [
+      0.219,
+      -0.0942,
+      0.5149
+     ]
+    },
+    "tool_speed": {
+     "tick": 205752,
+     "q": [
+      -1.559,
+      -1.7518,
+      0.1382,
+      -1.6263,
+      0.0983,
+      -0.1831
+     ],
+     "q_window_start": [
+      -1.5862,
+      -1.7472,
+      0.1691,
+      -1.6269,
+      0.0633,
+      -0.2007
+     ],
+     "tool": [
+      -0.387,
+      -0.1327,
+      1.0697
+     ],
+     "elbow": [
+      -0.0061,
+      -0.0766,
+      0.5811
+     ]
+    },
+    "tool_high": {
+     "tick": 205630,
+     "q": [
+      -1.6255,
+      -1.7405,
+      0.2138,
+      -1.6279,
+      0.013,
+      -0.2262
+     ],
+     "q_window_start": [
+      -1.6528,
+      -1.7359,
+      0.2448,
+      -1.6285,
+      -0.0221,
+      -0.2439
+     ],
+     "tool": [
+      -0.3924,
+      -0.0377,
+      1.0735
+     ],
+     "elbow": [
+      -0.0109,
+      -0.0713,
+      0.5819
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6732,
+     0.1206
+    ],
+    [
+     0.6181,
+     0.5686,
+     1.0735
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.125,
+     -0.1691,
+     0.4439
+    ],
+    [
+     0.2967,
+     0.0564,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 2306,
+   "log_head": "c610ccaf42f9bd99ed72040739b1504616a095665130b2ef94ae10eb28dd7a93",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 5,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 38.28,
+   "sample_rack/6": 41.84,
+   "sample_rack/7": 38.51
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.002,
+   "sample_rack/6": -0.004,
+   "sample_rack/7": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 4,
+    "name": "balance A",
+    "grams": 41.73,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 38.28,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/6",
+    "grams": 41.84,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/7",
+    "grams": 38.51,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 41.63
+  },
+  "step5_seen_mm": {
+   "4": 1.2,
+   "0": 1.4,
+   "1": 1.2,
+   "3": 0.7
+  },
+  "report": "Balanced: 0.22 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.22 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.221,
+  "examiner_g": 0.222,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 1,
+  "sim_blew_up": false,
+  "sim_seconds": 372.6,
+  "wall_seconds": 311.9,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "normal",
+   "scale": 1.014
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 374.566,
+   "ticks": 373066,
+   "physics_steps": 373066,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 3732,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4726,
+   "peak_tool_speed": 0.6087,
+   "joint_peaks": [
+    0.7002,
+    0.6972,
+    0.7001,
+    0.7001,
+    0.7001,
+    3.4726
+   ],
+   "measured_joint_peaks": [
+    0.6951,
+    0.5417,
+    0.6881,
+    0.6698,
+    0.6974,
+    0.8419
+   ],
+   "measured_tool_peak": 0.6066,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 151391,
+     "q": [
+      -3.2385,
+      -0.7053,
+      1.0224,
+      -0.317,
+      -1.6677,
+      -1.3701
+     ],
+     "q_window_start": [
+      -3.2409,
+      -0.7117,
+      1.015,
+      -0.3033,
+      -1.6701,
+      -1.5437
+     ],
+     "tool": [
+      0.45,
+      0.066,
+      0.2163
+     ],
+     "elbow": [
+      0.3228,
+      -0.0244,
+      0.4385
+     ]
+    },
+    "tool_speed": {
+     "tick": 263988,
+     "q": [
+      -1.0705,
+      -1.977,
+      0.5241,
+      -1.925,
+      -2.958,
+      0.6781
+     ],
+     "q_window_start": [
+      -1.0579,
+      -1.9873,
+      0.4977,
+      -1.9339,
+      -2.993,
+      0.6952
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 264022,
+     "q": [
+      -1.0791,
+      -1.9701,
+      0.5421,
+      -1.9189,
+      -2.9342,
+      0.6665
+     ],
+     "q_window_start": [
+      -1.0665,
+      -1.9803,
+      0.5157,
+      -1.9279,
+      -2.9692,
+      0.6836
+     ],
+     "tool": [
+      0.1395,
+      -0.0141,
+      1.0512
+     ],
+     "elbow": [
+      0.0718,
+      -0.1489,
+      0.5546
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.4999,
+     0.079
+    ],
+    [
+     0.6244,
+     0.5357,
+     1.0512
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2213,
+     0.4346
+    ],
+    [
+     0.326,
+     0.0948,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 3732,
+   "log_head": "320ce803de8f9095483fe8bf47eb816700e60cab5b465c09891b655c214c2db6",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 41.91}, guarded {'balance A': 41.63}",
+   "step5_seen_mm: v3 {'4': 1.0, '0': 1.4, '1': 1.1, '3': 0.8}, guarded {'4': 1.2, '0': 1.4, '1': 1.2, '3': 0.7}",
+   "report: v3 \"Balanced: 0.27 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.27 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.22 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.22 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.272, guarded 0.221",
+   "examiner_g: v3 0.269, guarded 0.222",
+   "balls_spilled: v3 2, guarded 1",
+   "sim_seconds: v3 372.4, guarded 372.6"
+  ]
+ },
+ {
+  "seed": 6,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/2": 33.56,
+   "sample_rack/5": 33.46,
+   "sample_rack/7": 33.47
+  },
+  "step1_error_g": {
+   "sample_rack/2": -0.005,
+   "sample_rack/5": 0.002,
+   "sample_rack/7": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/2",
+    "grams": 33.56,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 33.46,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 33.47,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.2,
+   "2": 0.7,
+   "4": 1.2
+  },
+  "report": "Balanced: 0.10 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.10 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.095,
+  "examiner_g": 0.101,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 160.6,
+  "wall_seconds": 113.7,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.914
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 162.619,
+   "ticks": 161119,
+   "physics_steps": 161119,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 1613,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.6087,
+   "joint_peaks": [
+    0.7002,
+    0.6475,
+    0.6997,
+    0.7001,
+    0.7001,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.6951,
+    0.3991,
+    0.6275,
+    0.6974,
+    0.6974,
+    0.6808
+   ],
+   "measured_tool_peak": 0.6066,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 1540,
+     "q": [
+      -2.1556,
+      -1.7665,
+      1.7847,
+      -1.589,
+      -1.5708,
+      0.0353
+     ],
+     "q_window_start": [
+      -2.1206,
+      -1.7647,
+      1.7811,
+      -1.5872,
+      -1.5708,
+      0.0348
+     ],
+     "tool": [
+      0.1142,
+      0.4152,
+      0.3169
+     ],
+     "elbow": [
+      -0.0515,
+      -0.0651,
+      0.5799
+     ]
+    },
+    "tool_speed": {
+     "tick": 157387,
+     "q": [
+      -1.0705,
+      -1.977,
+      0.5241,
+      -1.925,
+      -2.958,
+      0.6781
+     ],
+     "q_window_start": [
+      -1.0579,
+      -1.9873,
+      0.4977,
+      -1.9339,
+      -2.993,
+      0.6952
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 139081,
+     "q": [
+      -1.6279,
+      -1.86,
+      0.4424,
+      -1.9455,
+      -2.9464,
+      0.7885
+     ],
+     "q_window_start": [
+      -1.654,
+      -1.8473,
+      0.4673,
+      -1.9375,
+      -2.9114,
+      0.7742
+     ],
+     "tool": [
+      0.1148,
+      -0.0416,
+      1.0662
+     ],
+     "elbow": [
+      -0.0139,
+      -0.1206,
+      0.5704
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.5032,
+     0.1206
+    ],
+    [
+     0.7026,
+     0.5357,
+     1.0662
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0764,
+     -0.2048,
+     0.4515
+    ],
+    [
+     0.2615,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 1613,
+   "log_head": "7ad477ec08e2b3f608153bf315e42b10c097494efd1c5d23557d08c217663791",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 7,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 37.75,
+   "sample_rack/6": 45.09
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.004,
+   "sample_rack/6": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 37.75,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 45.09,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 37.75,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/6",
+    "grams": 45.09,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 37.76,
+   "balance B": 44.7
+  },
+  "step5_seen_mm": {
+   "3": 1.0,
+   "5": 1.3,
+   "0": 1.3,
+   "2": 0.8
+  },
+  "report": "Balanced: 0.40 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.40 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.395,
+  "examiner_g": 0.4,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 1,
+  "sim_blew_up": false,
+  "sim_seconds": 518.9,
+  "wall_seconds": 427.3,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "dim",
+   "scale": 0.505
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 520.902,
+   "ticks": 519402,
+   "physics_steps": 519402,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 5195,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4726,
+   "peak_tool_speed": 0.7886,
+   "joint_peaks": [
+    0.7001,
+    0.6979,
+    0.7001,
+    0.7001,
+    0.7001,
+    3.4726
+   ],
+   "measured_joint_peaks": [
+    0.6968,
+    0.5417,
+    0.6881,
+    0.6698,
+    0.6976,
+    0.8396
+   ],
+   "measured_tool_peak": 0.7865,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 135116,
+     "q": [
+      -3.2386,
+      -0.7056,
+      1.0221,
+      -0.3165,
+      -1.6678,
+      -1.3764
+     ],
+     "q_window_start": [
+      -3.241,
+      -0.7119,
+      1.0147,
+      -0.3028,
+      -1.6702,
+      -1.5501
+     ],
+     "tool": [
+      0.45,
+      0.066,
+      0.2166
+     ],
+     "elbow": [
+      0.3227,
+      -0.0244,
+      0.4386
+     ]
+    },
+    "tool_speed": {
+     "tick": 431443,
+     "q": [
+      -1.3196,
+      -1.9971,
+      0.5527,
+      -2.0208,
+      -0.0517,
+      -0.0292
+     ],
+     "q_window_start": [
+      -1.3425,
+      -1.9875,
+      0.5784,
+      -2.0124,
+      -0.0867,
+      -0.0456
+     ],
+     "tool": [
+      -0.341,
+      -0.2378,
+      1.0378
+     ],
+     "elbow": [
+      0.0369,
+      -0.172,
+      0.55
+     ]
+    },
+    "tool_high": {
+     "tick": 450275,
+     "q": [
+      -0.9951,
+      -1.9716,
+      0.5927,
+      -1.9599,
+      -0.1529,
+      0.3139
+     ],
+     "q_window_start": [
+      -0.9809,
+      -1.9814,
+      0.5686,
+      -1.9695,
+      -0.1179,
+      0.3217
+     ],
+     "tool": [
+      -0.2851,
+      -0.2713,
+      1.0448
+     ],
+     "elbow": [
+      0.0844,
+      -0.1429,
+      0.5543
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6861,
+     0.0767
+    ],
+    [
+     0.6181,
+     0.5729,
+     1.0448
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.1943,
+     0.4346
+    ],
+    [
+     0.326,
+     0.2867,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 5195,
+   "log_head": "2107ad9b6d3416b233a59d1d122e687ad54a28a999db1fecc8ea30df563c35fc",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 38.37, 'balance B': 45.31}, guarded {'balance A': 37.76, 'balance B': 44.7}",
+   "step5_seen_mm: v3 {'3': 0.9, '5': 1.3, '0': 1.3, '2': 0.7}, guarded {'3': 1.0, '5': 1.3, '0': 1.3, '2': 0.8}",
+   "report: v3 \"Balanced: 0.54 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.55 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.40 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.40 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.544, guarded 0.395",
+   "examiner_g: v3 0.55, guarded 0.4",
+   "balls_spilled: v3 6, guarded 1",
+   "sim_seconds: v3 506.5, guarded 518.9"
+  ]
+ },
+ {
+  "seed": 8,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 46.03,
+   "sample_rack/2": 26.85,
+   "sample_rack/5": 46.12,
+   "sample_rack/6": 27.2
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.006,
+   "sample_rack/2": 0.0,
+   "sample_rack/5": -0.001,
+   "sample_rack/6": 0.004
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 46.03,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/2",
+    "grams": 26.85,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/5",
+    "grams": 46.12,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/6",
+    "grams": 27.2,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.4,
+   "2": 0.7,
+   "3": 0.9,
+   "5": 1.3
+  },
+  "report": "Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.31 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.315,
+  "examiner_g": 0.312,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 228.1,
+  "wall_seconds": 179.6,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "bright",
+   "scale": 1.81
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 230.055,
+   "ticks": 228555,
+   "physics_steps": 228555,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 2287,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.7562,
+   "joint_peaks": [
+    0.7001,
+    0.6121,
+    0.7,
+    0.7002,
+    0.6804,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.6967,
+    0.433,
+    0.6328,
+    0.6626,
+    0.6783,
+    0.6993
+   ],
+   "measured_tool_peak": 0.7545,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 202736,
+     "q": [
+      -0.3768,
+      -2.1656,
+      -0.8614,
+      -2.0035,
+      1.4824,
+      -5.6727
+     ],
+     "q_window_start": [
+      -0.3794,
+      -2.1447,
+      -0.8899,
+      -1.9685,
+      1.4889,
+      -5.6775
+     ],
+     "tool": [
+      0.5401,
+      -0.3821,
+      0.2866
+     ],
+     "elbow": [
+      0.2188,
+      -0.0941,
+      0.515
+     ]
+    },
+    "tool_speed": {
+     "tick": 198306,
+     "q": [
+      -1.5279,
+      -1.71,
+      0.1196,
+      -1.6235,
+      0.0721,
+      -4.1799
+     ],
+     "q_window_start": [
+      -1.5532,
+      -1.7046,
+      0.1488,
+      -1.624,
+      0.0381,
+      -4.1449
+     ],
+     "tool": [
+      -0.3848,
+      -0.1088,
+      1.0742
+     ],
+     "elbow": [
+      -0.0045,
+      -0.0592,
+      0.5839
+     ]
+    },
+    "tool_high": {
+     "tick": 198218,
+     "q": [
+      -1.5725,
+      -1.7005,
+      0.171,
+      -1.6244,
+      0.0122,
+      -4.1183
+     ],
+     "q_window_start": [
+      -1.5978,
+      -1.6951,
+      0.2002,
+      -1.625,
+      -0.0218,
+      -4.0833
+     ],
+     "tool": [
+      -0.3899,
+      -0.0425,
+      1.076
+     ],
+     "elbow": [
+      -0.0071,
+      -0.055,
+      0.5844
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6647,
+     0.1206
+    ],
+    [
+     0.6179,
+     0.598,
+     1.076
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0894,
+     -0.1691,
+     0.4444
+    ],
+    [
+     0.2964,
+     0.0501,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 2287,
+   "log_head": "78d253c438a4e45ce129ed43b3cb0190fc658d07a19a275d5f6ea2f1448af254",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 9,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 33.17,
+   "sample_rack/6": 43.28,
+   "sample_rack/7": 32.89
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.005,
+   "sample_rack/6": 0.0,
+   "sample_rack/7": -0.0
+  },
+  "step2_plan": [
+   {
+    "hole": 4,
+    "name": "balance A",
+    "grams": 43.42,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 33.17,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/6",
+    "grams": 43.28,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/7",
+    "grams": 32.89,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 43.21
+  },
+  "step5_seen_mm": {
+   "4": 1.0,
+   "0": 1.4,
+   "1": 1.2,
+   "3": 0.9
+  },
+  "report": "Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.33 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.321,
+  "examiner_g": 0.325,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 10,
+  "sim_blew_up": false,
+  "sim_seconds": 376.8,
+  "wall_seconds": 291.1,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "normal",
+   "scale": 1.146
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 378.816,
+   "ticks": 377316,
+   "physics_steps": 377316,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 3775,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4633,
+   "peak_tool_speed": 0.6087,
+   "joint_peaks": [
+    0.7002,
+    0.6975,
+    0.7001,
+    0.7001,
+    0.7001,
+    3.4633
+   ],
+   "measured_joint_peaks": [
+    0.6968,
+    0.5417,
+    0.6881,
+    0.6698,
+    0.6974,
+    0.8407
+   ],
+   "measured_tool_peak": 0.6066,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 167449,
+     "q": [
+      -3.2385,
+      -0.705,
+      1.0227,
+      -0.3177,
+      -1.6677,
+      -1.3617
+     ],
+     "q_window_start": [
+      -3.2407,
+      -0.7114,
+      1.0153,
+      -0.3039,
+      -1.6699,
+      -1.5348
+     ],
+     "tool": [
+      0.45,
+      0.066,
+      0.216
+     ],
+     "elbow": [
+      0.3228,
+      -0.0243,
+      0.4384
+     ]
+    },
+    "tool_speed": {
+     "tick": 272948,
+     "q": [
+      -1.0705,
+      -1.977,
+      0.5241,
+      -1.925,
+      -2.958,
+      0.6781
+     ],
+     "q_window_start": [
+      -1.0579,
+      -1.9873,
+      0.4977,
+      -1.9339,
+      -2.993,
+      0.6952
+     ],
+     "tool": [
+      0.151,
+      -0.0313,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 272982,
+     "q": [
+      -1.0791,
+      -1.9701,
+      0.5421,
+      -1.9189,
+      -2.9342,
+      0.6665
+     ],
+     "q_window_start": [
+      -1.0665,
+      -1.9803,
+      0.5157,
+      -1.9279,
+      -2.9692,
+      0.6836
+     ],
+     "tool": [
+      0.1395,
+      -0.0141,
+      1.0512
+     ],
+     "elbow": [
+      0.0718,
+      -0.1489,
+      0.5546
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.4999,
+     0.0795
+    ],
+    [
+     0.6244,
+     0.5357,
+     1.0512
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2213,
+     0.4346
+    ],
+    [
+     0.326,
+     0.0948,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 3775,
+   "log_head": "65414f00e7bec36c26b8a97457711178a58e2383ed19b81b7bad7dfb19c1310c",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 43.5}, guarded {'balance A': 43.21}",
+   "step5_seen_mm: v3 {'4': 1.2, '0': 1.3, '1': 1.2, '3': 0.9}, guarded {'4': 1.0, '0': 1.4, '1': 1.2, '3': 0.9}",
+   "report: v3 \"Balanced: 0.26 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.26 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.33 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.255, guarded 0.321",
+   "examiner_g: v3 0.258, guarded 0.325",
+   "balls_spilled: v3 8, guarded 10",
+   "sim_seconds: v3 401.5, guarded 376.8"
+  ]
+ },
+ {
+  "seed": 10,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/2": 40.82,
+   "sample_rack/4": 41.15,
+   "sample_rack/5": 41.59
+  },
+  "step1_error_g": {
+   "sample_rack/2": 0.0,
+   "sample_rack/4": -0.0,
+   "sample_rack/5": 0.004
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/2",
+    "grams": 40.82,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/4",
+    "grams": 41.15,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/5",
+    "grams": 41.59,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.3,
+   "2": 0.8,
+   "4": 1.2
+  },
+  "report": "Balanced: 0.67 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.67 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.669,
+  "examiner_g": 0.666,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 159.3,
+  "wall_seconds": 128.5,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.912
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 161.322,
+   "ticks": 159822,
+   "physics_steps": 159822,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 1600,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.6086,
+   "joint_peaks": [
+    0.7002,
+    0.6481,
+    0.6999,
+    0.7001,
+    0.7001,
+    0.7002
+   ],
+   "measured_joint_peaks": [
+    0.6951,
+    0.3779,
+    0.6278,
+    0.6973,
+    0.6975,
+    0.6882
+   ],
+   "measured_tool_peak": 0.6065,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 63595,
+     "q": [
+      -2.1556,
+      -1.7664,
+      1.7847,
+      -1.589,
+      -1.5708,
+      -0.5848
+     ],
+     "q_window_start": [
+      -2.1206,
+      -1.7646,
+      1.781,
+      -1.5872,
+      -1.5708,
+      -0.5498
+     ],
+     "tool": [
+      0.1142,
+      0.4153,
+      0.3169
+     ],
+     "elbow": [
+      -0.0514,
+      -0.065,
+      0.5799
+     ]
+    },
+    "tool_speed": {
+     "tick": 156090,
+     "q": [
+      -1.0704,
+      -1.9771,
+      0.5244,
+      -1.9251,
+      -2.9581,
+      0.6783
+     ],
+     "q_window_start": [
+      -1.0577,
+      -1.9873,
+      0.4979,
+      -1.934,
+      -2.9931,
+      0.6954
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 137896,
+     "q": [
+      -1.7315,
+      -1.948,
+      0.5407,
+      -1.9576,
+      -2.9478,
+      0.6845
+     ],
+     "q_window_start": [
+      -1.7602,
+      -1.9374,
+      0.5681,
+      -1.95,
+      -2.9128,
+      0.6676
+     ],
+     "tool": [
+      0.1048,
+      -0.0847,
+      1.0533
+     ],
+     "elbow": [
+      -0.032,
+      -0.1534,
+      0.5581
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.529,
+     0.1206
+    ],
+    [
+     0.7028,
+     0.5252,
+     1.0533
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.1066,
+     -0.2205,
+     0.4516
+    ],
+    [
+     0.2615,
+     0.051,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 1600,
+   "log_head": "1263fe5e6cdf6bf505aa3757cf0066f06bdfbcb3205459a73b9de9d1b96f3ae2",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 11,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "no tube stands at [0.23 0.39]",
+  "step1_readings_g": {
+   "sample_rack/3": 34.62,
+   "sample_rack/4": 41.44
+  },
+  "step1_error_g": {
+   "sample_rack/3": 0.001,
+   "sample_rack/4": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 34.62,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 41.44,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 34.62,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/4",
+    "grams": 41.44,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 34.29,
+   "balance B": 41.06
+  },
+  "step5_seen_mm": {},
+  "report": "Balanced: 0.00 g out (limit 1.0 g), 0 tubes in holes ; examiner 0.00 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.0,
+  "examiner_g": 0.0,
+  "tubes_planned": 4,
+  "tubes_seated": 0,
+  "all_samples_loaded": false,
+  "balanced": true,
+  "balls_spilled": 167,
+  "sim_blew_up": true,
+  "sim_seconds": 388.1,
+  "wall_seconds": 319.6,
+  "robot_says_done": false,
+  "success": false,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.903
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 390.054,
+   "ticks": 388554,
+   "physics_steps": 388554,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 3887,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4716,
+   "peak_tool_speed": 0.4253,
+   "joint_peaks": [
+    0.7001,
+    0.6979,
+    0.7001,
+    0.7001,
+    0.7,
+    3.4716
+   ],
+   "measured_joint_peaks": [
+    0.6949,
+    0.5418,
+    0.6881,
+    0.6698,
+    0.6881,
+    0.8391
+   ],
+   "measured_tool_peak": 0.3453,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 143275,
+     "q": [
+      -3.2385,
+      -0.7051,
+      1.0226,
+      -0.3175,
+      -1.6677,
+      -1.3646
+     ],
+     "q_window_start": [
+      -3.2408,
+      -0.7115,
+      1.0152,
+      -0.3037,
+      -1.67,
+      -1.5382
+     ],
+     "tool": [
+      0.45,
+      0.066,
+      0.2161
+     ],
+     "elbow": [
+      0.3228,
+      -0.0243,
+      0.4385
+     ]
+    },
+    "tool_speed": {
+     "tick": 358430,
+     "q": [
+      -3.4583,
+      -1.6434,
+      1.7247,
+      -1.652,
+      -1.5708,
+      -1.8875
+     ],
+     "q_window_start": [
+      -3.4827,
+      -1.6086,
+      1.6928,
+      -1.655,
+      -1.5708,
+      -1.9119
+     ],
+     "tool": [
+      0.4787,
+      -0.0159,
+      0.2993
+     ],
+     "elbow": [
+      -0.0271,
+      0.0163,
+      0.5869
+     ]
+    },
+    "tool_high": {
+     "tick": 153698,
+     "q": [
+      -3.3106,
+      -1.3292,
+      1.624,
+      -0.2949,
+      -1.1014,
+      -0.0008
+     ],
+     "q_window_start": [
+      -3.3091,
+      -1.3016,
+      1.589,
+      -0.2874,
+      -1.1311,
+      -0.0008
+     ],
+     "tool": [
+      0.2871,
+      0.2043,
+      0.3617
+     ],
+     "elbow": [
+      0.1014,
+      -0.0102,
+      0.5757
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.07,
+     0.0759
+    ],
+    [
+     0.522,
+     0.516,
+     0.3617
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.1764,
+     0.4346
+    ],
+    [
+     0.326,
+     0.2867,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 3887,
+   "log_head": "f3ca6938fc978bb5385ae3abb553102fbca289d88142102da2c6facab1c20fbb",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "error: v3 '', guarded 'no tube stands at [0.23 0.39]'",
+   "step3_fills_g: v3 {'balance A': 34.57, 'balance B': 41.35}, guarded {'balance A': 34.29, 'balance B': 41.06}",
+   "step5_seen_mm: v3 {'3': 1.0, '5': 1.4, '0': 1.2, '2': 0.9}, guarded {}",
+   "report: v3 \"Balanced: 0.08 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.08 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.00 g out (limit 1.0 g), 0 tubes in holes ; examiner 0.00 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.078, guarded 0.0",
+   "examiner_g: v3 0.079, guarded 0.0",
+   "tubes_seated: v3 4, guarded 0",
+   "all_samples_loaded: v3 True, guarded False",
+   "balls_spilled: v3 14, guarded 167",
+   "sim_blew_up: v3 False, guarded True",
+   "sim_seconds: v3 486.2, guarded 388.1",
+   "robot_says_done: v3 True, guarded False"
+  ]
+ },
+ {
+  "seed": 12,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 28.96,
+   "sample_rack/5": 45.39,
+   "sample_rack/6": 45.88,
+   "sample_rack/7": 29.09
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.006,
+   "sample_rack/5": 0.005,
+   "sample_rack/6": 0.002,
+   "sample_rack/7": -0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 28.96,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 45.39,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/7",
+    "grams": 29.09,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/6",
+    "grams": 45.88,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.5,
+   "2": 0.6,
+   "3": 0.8,
+   "5": 1.3
+  },
+  "report": "Balanced: 0.44 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.44 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.44,
+  "examiner_g": 0.444,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 216.7,
+  "wall_seconds": 176.8,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "normal",
+   "scale": 1.039
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 218.666,
+   "ticks": 217166,
+   "physics_steps": 217166,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 2173,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.7781,
+   "joint_peaks": [
+    0.7001,
+    0.6479,
+    0.6997,
+    0.7002,
+    0.7001,
+    0.7002
+   ],
+   "measured_joint_peaks": [
+    0.6967,
+    0.4283,
+    0.6328,
+    0.6974,
+    0.6979,
+    0.6868
+   ],
+   "measured_tool_peak": 0.7763,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 196835,
+     "q": [
+      -0.3768,
+      -2.1656,
+      -0.8614,
+      -2.0035,
+      1.4824,
+      0.6105
+     ],
+     "q_window_start": [
+      -0.3794,
+      -2.1447,
+      -0.8899,
+      -1.9685,
+      1.4889,
+      0.6057
+     ],
+     "tool": [
+      0.5401,
+      -0.3821,
+      0.2866
+     ],
+     "elbow": [
+      0.2188,
+      -0.0941,
+      0.515
+     ]
+    },
+    "tool_speed": {
+     "tick": 192497,
+     "q": [
+      -1.5276,
+      -1.71,
+      0.1194,
+      -1.6235,
+      0.0724,
+      0.4797
+     ],
+     "q_window_start": [
+      -1.5537,
+      -1.7045,
+      0.1494,
+      -1.624,
+      0.0375,
+      0.4778
+     ],
+     "tool": [
+      -0.3848,
+      -0.1091,
+      1.0742
+     ],
+     "elbow": [
+      -0.0044,
+      -0.0592,
+      0.5839
+     ]
+    },
+    "tool_high": {
+     "tick": 192411,
+     "q": [
+      -1.5725,
+      -1.7005,
+      0.171,
+      -1.6244,
+      0.0123,
+      0.4764
+     ],
+     "q_window_start": [
+      -1.5985,
+      -1.6949,
+      0.2011,
+      -1.625,
+      -0.0228,
+      0.4745
+     ],
+     "tool": [
+      -0.3899,
+      -0.0425,
+      1.076
+     ],
+     "elbow": [
+      -0.0071,
+      -0.0549,
+      0.5844
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6647,
+     0.1206
+    ],
+    [
+     0.7028,
+     0.598,
+     1.076
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0894,
+     -0.2039,
+     0.4442
+    ],
+    [
+     0.2966,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 2173,
+   "log_head": "c0298ea828d89281fa8f3c131cfc170a686f5eebbcc5106a7ab20e1783fd4c4d",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 13,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 24.64,
+   "sample_rack/5": 24.78,
+   "sample_rack/7": 42.03
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.004,
+   "sample_rack/5": 0.0,
+   "sample_rack/7": -0.002
+  },
+  "step2_plan": [
+   {
+    "hole": 1,
+    "name": "balance A",
+    "grams": 17.32,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 24.64,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 24.78,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 42.03,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 17.62
+  },
+  "step5_seen_mm": {
+   "1": 1.1,
+   "0": 1.4,
+   "2": 0.9,
+   "4": 1.0
+  },
+  "report": "Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 1, 2, 4; examiner 0.32 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.324,
+  "examiner_g": 0.321,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 321.2,
+  "wall_seconds": 218.1,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.884
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 323.209,
+   "ticks": 321709,
+   "physics_steps": 321709,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 3219,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4654,
+   "peak_tool_speed": 0.6086,
+   "joint_peaks": [
+    0.7001,
+    0.6975,
+    1.2546,
+    0.9268,
+    0.7001,
+    3.4654
+   ],
+   "measured_joint_peaks": [
+    0.6956,
+    0.5416,
+    0.6881,
+    0.6973,
+    0.6975,
+    0.8358
+   ],
+   "measured_tool_peak": 0.6065,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 99119,
+     "q": [
+      -3.2385,
+      -0.6956,
+      1.0338,
+      -0.3382,
+      -1.6677,
+      -1.1089
+     ],
+     "q_window_start": [
+      -3.2381,
+      -0.702,
+      1.0259,
+      -0.324,
+      -1.6673,
+      -1.2822
+     ],
+     "tool": [
+      0.45,
+      0.066,
+      0.2053
+     ],
+     "elbow": [
+      0.3254,
+      -0.0246,
+      0.4353
+     ]
+    },
+    "tool_speed": {
+     "tick": 317977,
+     "q": [
+      -1.0703,
+      -1.9771,
+      0.5244,
+      -1.9251,
+      -2.9581,
+      0.6782
+     ],
+     "q_window_start": [
+      -1.0577,
+      -1.9873,
+      0.498,
+      -1.934,
+      -2.9931,
+      0.6954
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 297681,
+     "q": [
+      -1.6279,
+      -1.86,
+      0.4424,
+      -1.9455,
+      -2.9464,
+      -0.0146
+     ],
+     "q_window_start": [
+      -1.654,
+      -1.8472,
+      0.4673,
+      -1.9376,
+      -2.9114,
+      -0.0485
+     ],
+     "tool": [
+      0.1148,
+      -0.0415,
+      1.0662
+     ],
+     "elbow": [
+      -0.0139,
+      -0.1206,
+      0.5704
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.5032,
+     0.0796
+    ],
+    [
+     0.7028,
+     0.5357,
+     1.0662
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2048,
+     0.4346
+    ],
+    [
+     0.326,
+     0.0948,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 3219,
+   "log_head": "8cb9b469c62cf652662244196c70be0a2b01849d79edb37c4f4221656a134881",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 17.58}, guarded {'balance A': 17.62}",
+   "step5_seen_mm: v3 {'1': 1.0, '0': 1.4, '2': 0.8, '4': 1.1}, guarded {'1': 1.1, '0': 1.4, '2': 0.9, '4': 1.0}",
+   "report: v3 \"Balanced: 0.29 g out (limit 1.0 g), 4 tubes in holes 0, 1, 2, 4; examiner 0.28 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 1, 2, 4; examiner 0.32 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.287, guarded 0.324",
+   "examiner_g: v3 0.284, guarded 0.321",
+   "sim_seconds: v3 304.2, guarded 321.2"
+  ]
+ },
+ {
+  "seed": 14,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 26.6,
+   "sample_rack/4": 26.9,
+   "sample_rack/6": 26.67
+  },
+  "step1_error_g": {
+   "sample_rack/0": -0.004,
+   "sample_rack/4": -0.002,
+   "sample_rack/6": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 26.6,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/4",
+    "grams": 26.9,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/6",
+    "grams": 26.67,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.4,
+   "2": 0.8,
+   "4": 1.2
+  },
+  "report": "Balanced: 0.27 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.27 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.272,
+  "examiner_g": 0.272,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 160.3,
+  "wall_seconds": 85.6,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.898
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 162.287,
+   "ticks": 160787,
+   "physics_steps": 160787,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 1609,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 1.2464,
+   "peak_tool_speed": 0.6086,
+   "joint_peaks": [
+    0.7001,
+    0.6611,
+    1.2464,
+    0.9236,
+    0.7001,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.6952,
+    0.5429,
+    0.6444,
+    0.6973,
+    0.6974,
+    0.6916
+   ],
+   "measured_tool_peak": 0.6065,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 149084,
+     "q": [
+      -0.5223,
+      -2.2441,
+      -0.9807,
+      -2.004,
+      -4.37,
+      1.4067
+     ],
+     "q_window_start": [
+      -0.5155,
+      -2.2258,
+      -1.043,
+      -1.9578,
+      -4.3666,
+      1.413
+     ],
+     "tool": [
+      0.5165,
+      -0.3528,
+      0.2038
+     ],
+     "elbow": [
+      0.2262,
+      -0.1383,
+      0.4953
+     ]
+    },
+    "tool_speed": {
+     "tick": 157055,
+     "q": [
+      -1.0704,
+      -1.9771,
+      0.5244,
+      -1.9251,
+      -2.9581,
+      0.6782
+     ],
+     "q_window_start": [
+      -1.0577,
+      -1.9873,
+      0.498,
+      -1.9341,
+      -2.9931,
+      0.6954
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 136689,
+     "q": [
+      -1.6769,
+      -1.9067,
+      0.4966,
+      -1.9539,
+      -2.9471,
+      0.0703
+     ],
+     "q_window_start": [
+      -1.7042,
+      -1.8951,
+      0.5228,
+      -1.9462,
+      -2.9121,
+      0.0385
+     ],
+     "tool": [
+      0.1109,
+      -0.0633,
+      1.0596
+     ],
+     "elbow": [
+      -0.0218,
+      -0.1385,
+      0.5643
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.5157,
+     0.1206
+    ],
+    [
+     0.7028,
+     0.5253,
+     1.0596
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.125,
+     -0.2126,
+     0.4516
+    ],
+    [
+     0.2615,
+     0.051,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 1609,
+   "log_head": "2e0c52807bc4fbd53e61c8307e11e2210cbdbeb077111e93a8f70e42276df027",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 15,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 44.71,
+   "sample_rack/5": 39.25
+  },
+  "step1_error_g": {
+   "sample_rack/3": -0.001,
+   "sample_rack/5": 0.0
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 44.71,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 39.25,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 44.71,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 39.25,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 44.8,
+   "balance B": 39.69
+  },
+  "step5_seen_mm": {
+   "3": 0.8,
+   "5": 1.3,
+   "0": 1.2,
+   "2": 0.9
+  },
+  "report": "Balanced: 0.40 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.40 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.403,
+  "examiner_g": 0.401,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 6,
+  "sim_blew_up": false,
+  "sim_seconds": 501.5,
+  "wall_seconds": 1305.9,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.937
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 503.502,
+   "ticks": 502002,
+   "physics_steps": 502002,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 5021,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4702,
+   "peak_tool_speed": 0.7886,
+   "joint_peaks": [
+    0.7002,
+    0.6979,
+    1.253,
+    0.8849,
+    0.7001,
+    3.4702
+   ],
+   "measured_joint_peaks": [
+    0.6967,
+    0.5417,
+    0.6881,
+    0.6974,
+    0.6976,
+    0.8421
+   ],
+   "measured_tool_peak": 0.7865,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 281565,
+     "q": [
+      -3.2384,
+      -0.7047,
+      1.0231,
+      -0.3183,
+      -1.6676,
+      -1.3538
+     ],
+     "q_window_start": [
+      -3.2406,
+      -0.7111,
+      1.0156,
+      -0.3045,
+      -1.6698,
+      -1.5273
+     ],
+     "tool": [
+      0.45,
+      0.0661,
+      0.2156
+     ],
+     "elbow": [
+      0.3229,
+      -0.0243,
+      0.4383
+     ]
+    },
+    "tool_speed": {
+     "tick": 408962,
+     "q": [
+      -1.3196,
+      -1.9972,
+      0.5527,
+      -2.0208,
+      -0.0517,
+      -0.2874
+     ],
+     "q_window_start": [
+      -1.3425,
+      -1.9875,
+      0.5784,
+      -2.0124,
+      -0.0867,
+      -0.3099
+     ],
+     "tool": [
+      -0.341,
+      -0.2379,
+      1.0378
+     ],
+     "elbow": [
+      0.0369,
+      -0.172,
+      0.55
+     ]
+    },
+    "tool_high": {
+     "tick": 429425,
+     "q": [
+      -0.995,
+      -1.9715,
+      0.5933,
+      -1.96,
+      -0.1528,
+      0.3139
+     ],
+     "q_window_start": [
+      -0.9807,
+      -1.9814,
+      0.5692,
+      -1.9696,
+      -0.1178,
+      0.3217
+     ],
+     "tool": [
+      -0.2852,
+      -0.2711,
+      1.0448
+     ],
+     "elbow": [
+      0.0844,
+      -0.1429,
+      0.5543
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6861,
+     0.0788
+    ],
+    [
+     0.7012,
+     0.5729,
+     1.0448
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2029,
+     0.4346
+    ],
+    [
+     0.326,
+     0.2867,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 5021,
+   "log_head": "7ae7d470febe76a9f45d42bdd9b43a4d82e0a0634b174adc1ef6074a98d975a6",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 45.09, 'balance B': 39.65}, guarded {'balance A': 44.8, 'balance B': 39.69}",
+   "step5_seen_mm: v3 {'3': 1.0, '5': 1.3, '0': 1.3, '2': 0.9}, guarded {'3': 0.8, '5': 1.3, '0': 1.2, '2': 0.9}",
+   "report: v3 \"Balanced: 0.39 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.39 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.40 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.40 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.39, guarded 0.403",
+   "examiner_g: v3 0.387, guarded 0.401",
+   "balls_spilled: v3 7, guarded 6",
+   "sim_seconds: v3 494.6, guarded 501.5"
+  ]
+ },
+ {
+  "seed": 16,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 36.47,
+   "sample_rack/3": 42.42,
+   "sample_rack/5": 36.46,
+   "sample_rack/7": 42.09
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.0,
+   "sample_rack/3": -0.005,
+   "sample_rack/5": -0.004,
+   "sample_rack/7": -0.002
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 36.47,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/3",
+    "grams": 42.42,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/5",
+    "grams": 36.46,
+    "balance": false
+   },
+   {
+    "hole": 5,
+    "name": "sample_rack/7",
+    "grams": 42.09,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.4,
+   "2": 0.9,
+   "3": 1.0,
+   "5": 1.2
+  },
+  "report": "Balanced: 0.33 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.33 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.325,
+  "examiner_g": 0.33,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 214.7,
+  "wall_seconds": 781.5,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "bright",
+   "scale": 1.729
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 216.686,
+   "ticks": 215186,
+   "physics_steps": 215186,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 2153,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.7767,
+   "joint_peaks": [
+    0.7001,
+    0.6122,
+    0.7001,
+    0.7002,
+    0.7001,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.6967,
+    0.4848,
+    0.633,
+    0.6625,
+    0.6978,
+    0.6976
+   ],
+   "measured_tool_peak": 0.7749,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 194677,
+     "q": [
+      -0.3768,
+      -2.166,
+      -0.8608,
+      -2.0042,
+      1.4823,
+      0.6106
+     ],
+     "q_window_start": [
+      -0.3794,
+      -2.1451,
+      -0.8893,
+      -1.9692,
+      1.4888,
+      0.6058
+     ],
+     "tool": [
+      0.5401,
+      -0.3821,
+      0.2865
+     ],
+     "elbow": [
+      0.219,
+      -0.0942,
+      0.5149
+     ]
+    },
+    "tool_speed": {
+     "tick": 190303,
+     "q": [
+      -1.4989,
+      -1.6621,
+      0.0885,
+      -1.616,
+      0.048,
+      -0.1092
+     ],
+     "q_window_start": [
+      -1.5239,
+      -1.6556,
+      0.1174,
+      -1.6164,
+      0.013,
+      -0.1246
+     ],
+     "tool": [
+      -0.3844,
+      -0.0847,
+      1.0775
+     ],
+     "elbow": [
+      -0.0042,
+      -0.0392,
+      0.5862
+     ]
+    },
+    "tool_high": {
+     "tick": 190251,
+     "q": [
+      -1.5249,
+      -1.6553,
+      0.1185,
+      -1.6164,
+      0.0116,
+      -0.1252
+     ],
+     "q_window_start": [
+      -1.5499,
+      -1.6488,
+      0.1474,
+      -1.6168,
+      -0.0235,
+      -0.1406
+     ],
+     "tool": [
+      -0.3881,
+      -0.0445,
+      1.0782
+     ],
+     "elbow": [
+      -0.0053,
+      -0.0362,
+      0.5865
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.656,
+     0.1206
+    ],
+    [
+     0.6179,
+     0.6292,
+     1.0782
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.125,
+     -0.1691,
+     0.4443
+    ],
+    [
+     0.2965,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 2153,
+   "log_head": "2fc0612d9772fab9749d870cd717f5f760cceedea767516450265967f097c4bf",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 17,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 31.86,
+   "sample_rack/2": 31.49,
+   "sample_rack/7": 40.91
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.003,
+   "sample_rack/2": -0.003,
+   "sample_rack/7": 0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 4,
+    "name": "balance A",
+    "grams": 41.1,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 31.86,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/7",
+    "grams": 40.91,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/2",
+    "grams": 31.49,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 40.8
+  },
+  "step5_seen_mm": {
+   "4": 1.0,
+   "0": 1.3,
+   "1": 1.1,
+   "3": 0.9
+  },
+  "report": "Balanced: 0.44 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.42 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.436,
+  "examiner_g": 0.425,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 2,
+  "sim_blew_up": false,
+  "sim_seconds": 364.0,
+  "wall_seconds": 582.1,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "normal",
+   "scale": 1.113
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 365.987,
+   "ticks": 364487,
+   "physics_steps": 364487,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 3646,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4706,
+   "peak_tool_speed": 0.6086,
+   "joint_peaks": [
+    0.7002,
+    0.6971,
+    1.2453,
+    0.9202,
+    0.7001,
+    3.4706
+   ],
+   "measured_joint_peaks": [
+    0.695,
+    0.5417,
+    0.6881,
+    0.6698,
+    0.6975,
+    0.8391
+   ],
+   "measured_tool_peak": 0.6065,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 162572,
+     "q": [
+      -3.2384,
+      -0.7048,
+      1.0229,
+      -0.3181,
+      -1.6676,
+      -1.3567
+     ],
+     "q_window_start": [
+      -3.2406,
+      -0.7112,
+      1.0155,
+      -0.3043,
+      -1.6698,
+      -1.5302
+     ],
+     "tool": [
+      0.45,
+      0.0661,
+      0.2158
+     ],
+     "elbow": [
+      0.3229,
+      -0.0243,
+      0.4384
+     ]
+    },
+    "tool_speed": {
+     "tick": 254363,
+     "q": [
+      -1.0704,
+      -1.9771,
+      0.5244,
+      -1.9251,
+      -2.9581,
+      0.6782
+     ],
+     "q_window_start": [
+      -1.0577,
+      -1.9873,
+      0.498,
+      -1.934,
+      -2.9931,
+      0.6954
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 254397,
+     "q": [
+      -1.0789,
+      -1.9701,
+      0.5423,
+      -1.919,
+      -2.9343,
+      0.6666
+     ],
+     "q_window_start": [
+      -1.0663,
+      -1.9804,
+      0.5159,
+      -1.9279,
+      -2.9693,
+      0.6837
+     ],
+     "tool": [
+      0.1395,
+      -0.014,
+      1.0512
+     ],
+     "elbow": [
+      0.0719,
+      -0.149,
+      0.5546
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.4999,
+     0.0796
+    ],
+    [
+     0.6199,
+     0.5357,
+     1.0512
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2213,
+     0.4346
+    ],
+    [
+     0.326,
+     0.0948,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 3646,
+   "log_head": "d160b2d514ffdbb8922864779e8654b198c552ef1e35a5591c443e248cab6fe3",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 41.09}, guarded {'balance A': 40.8}",
+   "step5_seen_mm: v3 {'4': 1.2, '0': 1.4, '1': 1.2, '3': 0.8}, guarded {'4': 1.0, '0': 1.3, '1': 1.1, '3': 0.9}",
+   "report: v3 \"Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.32 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.44 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.42 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.32, guarded 0.436",
+   "examiner_g: v3 0.315, guarded 0.425",
+   "balls_spilled: v3 14, guarded 2",
+   "sim_seconds: v3 419.2, guarded 364.0"
+  ]
+ },
+ {
+  "seed": 18,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 43.74,
+   "sample_rack/3": 43.68,
+   "sample_rack/5": 43.89
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.003,
+   "sample_rack/3": -0.002,
+   "sample_rack/5": 0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 43.74,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/3",
+    "grams": 43.68,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/5",
+    "grams": 43.89,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.3,
+   "2": 0.8,
+   "4": 1.0
+  },
+  "report": "Balanced: 0.19 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.18 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.187,
+  "examiner_g": 0.182,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 160.7,
+  "wall_seconds": 133.3,
+  "robot_says_done": true,
+  "success": true,
+  "lighting": {
+   "level": "bright",
+   "scale": 1.58
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 162.717,
+   "ticks": 161217,
+   "physics_steps": 161217,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 1614,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.5983,
+   "joint_peaks": [
+    0.7001,
+    0.6116,
+    0.6999,
+    0.7001,
+    0.7001,
+    0.7002
+   ],
+   "measured_joint_peaks": [
+    0.6951,
+    0.4326,
+    0.5937,
+    0.6194,
+    0.6975,
+    0.6976
+   ],
+   "measured_tool_peak": 0.5963,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 96037,
+     "q": [
+      -2.1039,
+      -1.6964,
+      1.7256,
+      -1.5999,
+      -1.5708,
+      -0.5313
+     ],
+     "q_window_start": [
+      -2.069,
+      -1.6974,
+      1.7239,
+      -1.5973,
+      -1.5708,
+      -0.4962
+     ],
+     "tool": [
+      0.1075,
+      0.4458,
+      0.3174
+     ],
+     "elbow": [
+      -0.0331,
+      -0.0423,
+      0.5847
+     ]
+    },
+    "tool_speed": {
+     "tick": 157511,
+     "q": [
+      -1.0731,
+      -1.9718,
+      0.5768,
+      -1.9607,
+      -2.9407,
+      0.6733
+     ],
+     "q_window_start": [
+      -1.0603,
+      -1.982,
+      0.5514,
+      -1.9706,
+      -2.9757,
+      0.6905
+     ],
+     "tool": [
+      0.1353,
+      -0.0047,
+      1.0488
+     ],
+     "elbow": [
+      0.0731,
+      -0.1491,
+      0.5543
+     ]
+    },
+    "tool_high": {
+     "tick": 138969,
+     "q": [
+      -1.7315,
+      -1.948,
+      0.5407,
+      -1.9576,
+      -2.9478,
+      0.1495
+     ],
+     "q_window_start": [
+      -1.7602,
+      -1.9374,
+      0.5681,
+      -1.95,
+      -2.9128,
+      0.1196
+     ],
+     "tool": [
+      0.1048,
+      -0.0847,
+      1.0533
+     ],
+     "elbow": [
+      -0.032,
+      -0.1534,
+      0.5581
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.529,
+     0.1206
+    ],
+    [
+     0.6181,
+     0.5315,
+     1.0533
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0894,
+     -0.2205,
+     0.452
+    ],
+    [
+     0.2622,
+     0.0564,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 1614,
+   "log_head": "a53e2c398e066fae5630515ed6aa0972dc9f98512fa407891d322a1694c8dab2",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": []
+ },
+ {
+  "seed": 19,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 32.7,
+   "sample_rack/6": 36.55
+  },
+  "step1_error_g": {
+   "sample_rack/3": 0.002,
+   "sample_rack/6": -0.002
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 32.7,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 36.55,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 32.7,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/6",
+    "grams": 36.55,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 32.52,
+   "balance B": 36.7
+  },
+  "step5_seen_mm": {
+   "3": 0.7,
+   "5": 1.2,
+   "0": 1.4,
+   "2": 0.7
+  },
+  "report": "Balanced: 0.29 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.28 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.286,
+  "examiner_g": 0.276,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 7,
+  "sim_blew_up": false,
+  "sim_seconds": 498.7,
+  "wall_seconds": 348.6,
+  "robot_says_done": true,
+  "success": false,
+  "lighting": {
+   "level": "dim",
+   "scale": 0.469
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 500.658,
+   "ticks": 499158,
+   "physics_steps": 499158,
+   "held_seconds": 0.0,
+   "slow_seconds": 0.0,
+   "catch_up_seconds": 0.0,
+   "frames": 4993,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4726,
+   "peak_tool_speed": 0.7886,
+   "joint_peaks": [
+    0.7002,
+    0.6979,
+    0.7001,
+    0.7001,
+    0.7001,
+    3.4726
+   ],
+   "measured_joint_peaks": [
+    0.6968,
+    0.5418,
+    0.6881,
+    0.6698,
+    0.6976,
+    0.8421
+   ],
+   "measured_tool_peak": 0.7864,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 296700,
+     "q": [
+      -3.2384,
+      -0.7047,
+      1.0231,
+      -0.3184,
+      -1.6676,
+      -1.3528
+     ],
+     "q_window_start": [
+      -3.2406,
+      -0.7111,
+      1.0156,
+      -0.3046,
+      -1.6698,
+      -1.5264
+     ],
+     "tool": [
+      0.45,
+      0.0661,
+      0.2156
+     ],
+     "elbow": [
+      0.3229,
+      -0.0243,
+      0.4383
+     ]
+    },
+    "tool_speed": {
+     "tick": 409468,
+     "q": [
+      -1.3196,
+      -1.9972,
+      0.5527,
+      -2.0208,
+      -0.0517,
+      -0.0292
+     ],
+     "q_window_start": [
+      -1.3425,
+      -1.9875,
+      0.5784,
+      -2.0124,
+      -0.0867,
+      -0.0456
+     ],
+     "tool": [
+      -0.341,
+      -0.2379,
+      1.0378
+     ],
+     "elbow": [
+      0.0369,
+      -0.172,
+      0.55
+     ]
+    },
+    "tool_high": {
+     "tick": 428540,
+     "q": [
+      -0.9951,
+      -1.9715,
+      0.5928,
+      -1.9599,
+      -0.1529,
+      0.3139
+     ],
+     "q_window_start": [
+      -0.9809,
+      -1.9814,
+      0.5687,
+      -1.9695,
+      -0.1179,
+      0.3217
+     ],
+     "tool": [
+      -0.2851,
+      -0.2713,
+      1.0448
+     ],
+     "elbow": [
+      0.0844,
+      -0.1429,
+      0.5543
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6861,
+     0.0795
+    ],
+    [
+     0.618,
+     0.5729,
+     1.0448
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.1943,
+     0.4346
+    ],
+    [
+     0.326,
+     0.2867,
+     0.588
+    ]
+   ],
+   "stops": [],
+   "log_entries": 4993,
+   "log_head": "f647b817d3216c8e8b852c28dda9ba518e0081bb932ff44d78a2bb1700801007",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [],
+  "same_as_v3": [
+   "step3_fills_g: v3 {'balance A': 33.14, 'balance B': 37.31}, guarded {'balance A': 32.52, 'balance B': 36.7}",
+   "step5_seen_mm: v3 {'3': 0.9, '5': 1.4, '0': 1.4, '2': 0.8}, guarded {'3': 0.7, '5': 1.2, '0': 1.4, '2': 0.7}",
+   "report: v3 \"Balanced: 0.66 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.66 g; lid left open (out of the arm's reach)\", guarded \"Balanced: 0.29 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.28 g; lid left open (out of the arm's reach)\"",
+   "robot_g: v3 0.661, guarded 0.286",
+   "examiner_g: v3 0.657, guarded 0.276",
+   "balls_spilled: v3 13, guarded 7",
+   "sim_seconds: v3 462.0, guarded 498.7"
+  ]
+ }
+]

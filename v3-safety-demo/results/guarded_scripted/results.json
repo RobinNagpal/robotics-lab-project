@@ -1,0 +1,1232 @@
+[
+ {
+  "seed": 0,
+  "scenario": "pairs",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/3": 38.09,
+   "sample_rack/5": 34.79,
+   "sample_rack/6": 37.69,
+   "sample_rack/7": 35.18
+  },
+  "step1_error_g": {
+   "sample_rack/3": 0.006,
+   "sample_rack/5": -0.004,
+   "sample_rack/6": -0.006,
+   "sample_rack/7": 0.005
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/3",
+    "grams": 38.09,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/5",
+    "grams": 34.79,
+    "balance": false
+   },
+   {
+    "hole": 3,
+    "name": "sample_rack/6",
+    "grams": 37.69,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 35.18,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.3,
+   "1": 1.0,
+   "3": 0.9,
+   "4": 1.2
+  },
+  "report": "Balanced: 0.40 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.39 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.395,
+  "examiner_g": 0.385,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 216.2,
+  "wall_seconds": 216.1,
+  "robot_says_done": true,
+  "success": true,
+  "guard": {
+   "sim_seconds": 271.919,
+   "ticks": 216726,
+   "physics_steps": 270419,
+   "held_seconds": 26.1,
+   "slow_seconds": 36.0,
+   "catch_up_seconds": 0.593,
+   "frames": 2705,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.8832,
+   "joint_peaks": [
+    0.7002,
+    0.6462,
+    0.6998,
+    0.7001,
+    0.7001,
+    0.7002
+   ],
+   "peak_where": {
+    "joint_speed": {
+     "tick": 45352,
+     "q": [
+      -3.0914,
+      -1.6494,
+      1.7305,
+      -1.6519,
+      -1.5708,
+      1.3592
+     ],
+     "q_window_start": [
+      -3.0564,
+      -1.6356,
+      1.718,
+      -1.6532,
+      -1.5708,
+      1.3942
+     ],
+     "tool": [
+      0.45,
+      0.1568,
+      0.2991
+     ],
+     "elbow": [
+      -0.0337,
+      0.0053,
+      0.5867
+     ]
+    },
+    "tool_speed": {
+     "tick": 121809,
+     "q": [
+      -1.53,
+      -1.7402,
+      0.3047,
+      -3.0107,
+      -1.3212,
+      -0.6308
+     ],
+     "q_window_start": [
+      -1.5643,
+      -1.7348,
+      0.3386,
+      -2.9757,
+      -1.3277,
+      -0.6477
+     ],
+     "tool": [
+      -0.195,
+      -0.058,
+      1.2358
+     ],
+     "elbow": [
+      -0.0041,
+      -0.0719,
+      0.5819
+     ]
+    },
+    "tool_high": {
+     "tick": 121785,
+     "q": [
+      -1.5465,
+      -1.7376,
+      0.321,
+      -2.9939,
+      -1.3243,
+      -0.6389
+     ],
+     "q_window_start": [
+      -1.5808,
+      -1.7322,
+      0.3549,
+      -2.9589,
+      -1.3308,
+      -0.6559
+     ],
+     "tool": [
+      -0.1956,
+      -0.0368,
+      1.236
+     ],
+     "elbow": [
+      -0.0053,
+      -0.0707,
+      0.5821
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.3197,
+     -0.61,
+     0.1206
+    ],
+    [
+     0.6173,
+     0.5518,
+     1.236
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0764,
+     -0.2048,
+     0.4515
+    ],
+    [
+     0.2614,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [
+    {
+     "t": 14.099999999997625,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999994458,
+     "distance": 8.391431736262553e-08,
+     "peak_speed": 0.0001
+    },
+    {
+     "t": 44.09999999998792,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.009999999999976694,
+     "distance": 0.0002530338149034773,
+     "peak_speed": 0.0508
+    },
+    {
+     "t": 74.09999999998976,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0030000000000143245,
+     "distance": 3.145944260572899e-05,
+     "peak_speed": 0.0132
+    },
+    {
+     "t": 104.00000000013253,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 5.736999064715057e-06,
+     "peak_speed": 0.0057
+    },
+    {
+     "t": 134.00000000027578,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.011000000000052523,
+     "distance": 0.00022926908895698792,
+     "peak_speed": 0.0398
+    },
+    {
+     "t": 164.00000000041902,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 2.4682949107123133e-06,
+     "peak_speed": 0.0024
+    },
+    {
+     "t": 194.00000000056227,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.014000000000066848,
+     "distance": 0.0004107096300754768,
+     "peak_speed": 0.0665
+    },
+    {
+     "t": 224.0000000007055,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.011000000000052523,
+     "distance": 0.0003036907702199759,
+     "peak_speed": 0.056
+    },
+    {
+     "t": 254.00000000084876,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 2.5131723109083637e-06,
+     "peak_speed": 0.0025
+    }
+   ],
+   "log_entries": 2706,
+   "log_head": "989d15384192b707226223e2281deaa8057b985a32a1738a780233e01c54008f",
+   "min_hand_distance": 0.0356,
+   "log_problems": [],
+   "replay_disagrees": []
+  }
+ },
+ {
+  "seed": 1,
+  "scenario": "odd_one",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 45.27,
+   "sample_rack/3": 40.58,
+   "sample_rack/5": 40.22
+  },
+  "step1_error_g": {
+   "sample_rack/1": -0.002,
+   "sample_rack/3": 0.001,
+   "sample_rack/5": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 45.45,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 45.27,
+    "balance": false
+   },
+   {
+    "hole": 1,
+    "name": "sample_rack/3",
+    "grams": 40.58,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/5",
+    "grams": 40.22,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 45.19
+  },
+  "step5_seen_mm": {
+   "3": 0.8,
+   "0": 1.4,
+   "1": 0.9,
+   "4": 1.2
+  },
+  "report": "Balanced: 0.41 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.41 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.406,
+  "examiner_g": 0.41,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 1,
+  "sim_blew_up": false,
+  "sim_seconds": 387.4,
+  "wall_seconds": 436.1,
+  "robot_says_done": true,
+  "success": false,
+  "guard": {
+   "sim_seconds": 489.802,
+   "ticks": 387870,
+   "physics_steps": 488302,
+   "held_seconds": 66.4,
+   "slow_seconds": 44.0,
+   "catch_up_seconds": 1.032,
+   "frames": 4884,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4706,
+   "peak_tool_speed": 0.6085,
+   "joint_peaks": [
+    0.7002,
+    0.6971,
+    1.2579,
+    0.9281,
+    0.7001,
+    3.4706
+   ],
+   "peak_where": {
+    "joint_speed": {
+     "tick": 194606,
+     "q": [
+      -3.2384,
+      -0.7047,
+      1.023,
+      -0.3183,
+      -1.6676,
+      -1.3541
+     ],
+     "q_window_start": [
+      -3.2406,
+      -0.7111,
+      1.0156,
+      -0.3045,
+      -1.6698,
+      -1.5276
+     ],
+     "tool": [
+      0.45,
+      0.0661,
+      0.2156
+     ],
+     "elbow": [
+      0.3229,
+      -0.0243,
+      0.4383
+     ]
+    },
+    "tool_speed": {
+     "tick": 384138,
+     "q": [
+      -1.0706,
+      -1.9769,
+      0.5246,
+      -1.9252,
+      -2.958,
+      -0.1818
+     ],
+     "q_window_start": [
+      -1.058,
+      -1.9872,
+      0.4982,
+      -1.9341,
+      -2.993,
+      -0.1864
+     ],
+     "tool": [
+      0.1509,
+      -0.031,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 363673,
+     "q": [
+      -1.7315,
+      -1.948,
+      0.5407,
+      -1.9576,
+      -2.9478,
+      -0.0356
+     ],
+     "q_window_start": [
+      -1.7602,
+      -1.9374,
+      0.5681,
+      -1.95,
+      -2.9128,
+      -0.0275
+     ],
+     "tool": [
+      0.1048,
+      -0.0847,
+      1.0533
+     ],
+     "elbow": [
+      -0.032,
+      -0.1534,
+      0.5581
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.529,
+     0.0792
+    ],
+    [
+     0.6199,
+     0.5321,
+     1.0533
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2205,
+     0.4346
+    ],
+    [
+     0.326,
+     0.0948,
+     0.588
+    ]
+   ],
+   "stops": [
+    {
+     "t": 14.099999999997625,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999994458,
+     "distance": 1.7053283127557312e-07,
+     "peak_speed": 0.0002
+    },
+    {
+     "t": 44.09999999998792,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.008999999999979025,
+     "distance": 0.00027934798840644506,
+     "peak_speed": 0.0774
+    },
+    {
+     "t": 74.09999999998976,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.011000000000052523,
+     "distance": 0.00038385746825854493,
+     "peak_speed": 0.0856
+    },
+    {
+     "t": 104.00000000013253,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.008000000000038199,
+     "distance": 9.512337196837031e-05,
+     "peak_speed": 0.036
+    },
+    {
+     "t": 130.00000000025668,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 1.6344923837132986e-07,
+     "peak_speed": 0.0002
+    },
+    {
+     "t": 160.00000000039992,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 1.9567509682641017e-08,
+     "peak_speed": 0.0
+    },
+    {
+     "t": 190.00000000054317,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 1.7918107385780696e-07,
+     "peak_speed": 0.0002
+    },
+    {
+     "t": 220.0000000006864,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 2.016409760148526e-07,
+     "peak_speed": 0.0002
+    },
+    {
+     "t": 250.00000000082966,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.012000000000057298,
+     "distance": 0.00017701889111100094,
+     "peak_speed": 0.0361
+    },
+    {
+     "t": 284.00000000019617,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.010999999999739885,
+     "distance": 0.00019011266254587497,
+     "peak_speed": 0.0444
+    },
+    {
+     "t": 314.0999999994844,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.006999999999834472,
+     "distance": 9.696204832076958e-05,
+     "peak_speed": 0.0211
+    },
+    {
+     "t": 344.00099999877733,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0019999999999527063,
+     "distance": 1.2910927343915481e-05,
+     "peak_speed": 0.0073
+    },
+    {
+     "t": 374.0009999980679,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.011999999999716238,
+     "distance": 0.00027648582536057815,
+     "peak_speed": 0.06
+    },
+    {
+     "t": 404.0009999973585,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.013999999999668944,
+     "distance": 0.0004975928080726448,
+     "peak_speed": 0.0874
+    },
+    {
+     "t": 434.0009999966491,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999763531,
+     "distance": 2.560482697956403e-06,
+     "peak_speed": 0.0026
+    },
+    {
+     "t": 464.0009999959397,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.026999999999361535,
+     "distance": 0.0011685044386985138,
+     "peak_speed": 0.1233
+    }
+   ],
+   "log_entries": 4885,
+   "log_head": "709731eeedc0429a4a5228e7acf5ce811e1c82e1960a1bd4893b26386b6c0a23",
+   "min_hand_distance": 0.0,
+   "log_problems": [],
+   "replay_disagrees": []
+  }
+ },
+ {
+  "seed": 2,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/1": 42.27,
+   "sample_rack/5": 42.3,
+   "sample_rack/7": 42.44
+  },
+  "step1_error_g": {
+   "sample_rack/1": 0.005,
+   "sample_rack/5": -0.004,
+   "sample_rack/7": 0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/1",
+    "grams": 42.27,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 42.3,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 42.44,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": 1.2,
+   "2": 0.8,
+   "4": 1.0
+  },
+  "report": "Balanced: 0.16 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.16 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.157,
+  "examiner_g": 0.158,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 167.8,
+  "wall_seconds": 153.4,
+  "robot_says_done": true,
+  "success": true,
+  "guard": {
+   "sim_seconds": 211.548,
+   "ticks": 168287,
+   "physics_steps": 210048,
+   "held_seconds": 20.3,
+   "slow_seconds": 28.0,
+   "catch_up_seconds": 0.461,
+   "frames": 2101,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.6077,
+   "joint_peaks": [
+    0.7001,
+    0.6472,
+    0.6996,
+    0.7001,
+    0.7001,
+    0.7002
+   ],
+   "peak_where": {
+    "joint_speed": {
+     "tick": 65442,
+     "q": [
+      -2.2142,
+      -1.8383,
+      1.8396,
+      -1.5721,
+      -1.5708,
+      -0.6432
+     ],
+     "q_window_start": [
+      -2.1792,
+      -1.8343,
+      1.8348,
+      -1.5713,
+      -1.5708,
+      -0.6082
+     ],
+     "tool": [
+      0.1206,
+      0.3842,
+      0.3166
+     ],
+     "elbow": [
+      -0.073,
+      -0.0857,
+      0.5729
+     ]
+    },
+    "tool_speed": {
+     "tick": 142148,
+     "q": [
+      -1.537,
+      -1.9043,
+      0.3556,
+      -1.973,
+      -3.0681,
+      -3.7293
+     ],
+     "q_window_start": [
+      -1.5631,
+      -1.8916,
+      0.3805,
+      -1.9651,
+      -3.0332,
+      -3.698
+     ],
+     "tool": [
+      0.1261,
+      -0.1459,
+      1.0563
+     ],
+     "elbow": [
+      -0.0023,
+      -0.1393,
+      0.5646
+     ]
+    },
+    "tool_high": {
+     "tick": 141974,
+     "q": [
+      -1.6279,
+      -1.86,
+      0.4424,
+      -1.9455,
+      -2.9464,
+      -3.6206
+     ],
+     "q_window_start": [
+      -1.654,
+      -1.8472,
+      0.4673,
+      -1.9376,
+      -2.9114,
+      -3.5893
+     ],
+     "tool": [
+      0.1148,
+      -0.0415,
+      1.0662
+     ],
+     "elbow": [
+      -0.0139,
+      -0.1206,
+      0.5704
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.5032,
+     0.1206
+    ],
+    [
+     0.7028,
+     0.5357,
+     1.0662
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0894,
+     -0.2048,
+     0.4515
+    ],
+    [
+     0.2615,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [
+    {
+     "t": 14.099999999997625,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999994458,
+     "distance": 1.7127496169313058e-07,
+     "peak_speed": 0.0002
+    },
+    {
+     "t": 44.09999999998792,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.007999999999981355,
+     "distance": 0.00024846390961755016,
+     "peak_speed": 0.0699
+    },
+    {
+     "t": 74.09999999998976,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.014000000000066848,
+     "distance": 0.000416612595289555,
+     "peak_speed": 0.0617
+    },
+    {
+     "t": 104.00000000013253,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 2.5846314948091044e-06,
+     "peak_speed": 0.0026
+    },
+    {
+     "t": 134.00000000027578,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.010000000000047748,
+     "distance": 0.0002846805038167382,
+     "peak_speed": 0.0658
+    },
+    {
+     "t": 164.00000000041902,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 1.6986469397102808e-06,
+     "peak_speed": 0.0017
+    },
+    {
+     "t": 194.00000000056227,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 2.623847784484587e-06,
+     "peak_speed": 0.0026
+    }
+   ],
+   "log_entries": 2102,
+   "log_head": "c207030e8db855ecc83da2d45920b8f60b8e454cafddb9c36efbc921a12fd983",
+   "min_hand_distance": 0.036,
+   "log_problems": [],
+   "replay_disagrees": []
+  }
+ },
+ {
+  "seed": 3,
+  "scenario": "mismatch",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/0": 25.35,
+   "sample_rack/1": 41.93
+  },
+  "step1_error_g": {
+   "sample_rack/0": 0.004,
+   "sample_rack/1": -0.003
+  },
+  "step2_plan": [
+   {
+    "hole": 3,
+    "name": "balance A",
+    "grams": 25.35,
+    "balance": true
+   },
+   {
+    "hole": 5,
+    "name": "balance B",
+    "grams": 41.93,
+    "balance": true
+   },
+   {
+    "hole": 0,
+    "name": "sample_rack/0",
+    "grams": 25.35,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/1",
+    "grams": 41.93,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {
+   "balance A": 25.25,
+   "balance B": 41.48
+  },
+  "step5_seen_mm": {
+   "3": 0.9,
+   "5": 1.2,
+   "0": 1.4,
+   "2": 0.8
+  },
+  "report": "Balanced: 0.41 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.41 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.409,
+  "examiner_g": 0.413,
+  "tubes_planned": 4,
+  "tubes_seated": 4,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 6,
+  "sim_blew_up": false,
+  "sim_seconds": 492.3,
+  "wall_seconds": 1495.9,
+  "robot_says_done": true,
+  "success": false,
+  "guard": {
+   "sim_seconds": 626.725,
+   "ticks": 492776,
+   "physics_steps": 625225,
+   "held_seconds": 88.9,
+   "slow_seconds": 56.0,
+   "catch_up_seconds": 1.549,
+   "frames": 6253,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 3.4654,
+   "peak_tool_speed": 0.7886,
+   "joint_peaks": [
+    0.7001,
+    0.6979,
+    0.7002,
+    0.7001,
+    0.7001,
+    3.4654
+   ],
+   "peak_where": {
+    "joint_speed": {
+     "tick": 285791,
+     "q": [
+      -3.2384,
+      -0.7046,
+      1.0232,
+      -0.3186,
+      -1.6676,
+      -1.3503
+     ],
+     "q_window_start": [
+      -3.2405,
+      -0.711,
+      1.0158,
+      -0.3048,
+      -1.6697,
+      -1.5236
+     ],
+     "tool": [
+      0.45,
+      0.0661,
+      0.2155
+     ],
+     "elbow": [
+      0.323,
+      -0.0243,
+      0.4383
+     ]
+    },
+    "tool_speed": {
+     "tick": 400924,
+     "q": [
+      -1.3196,
+      -1.9972,
+      0.5527,
+      -2.0208,
+      -0.0517,
+      0.7453
+     ],
+     "q_window_start": [
+      -1.3425,
+      -1.9875,
+      0.5784,
+      -2.0124,
+      -0.0867,
+      0.7473
+     ],
+     "tool": [
+      -0.341,
+      -0.2379,
+      1.0378
+     ],
+     "elbow": [
+      0.0369,
+      -0.172,
+      0.55
+     ]
+    },
+    "tool_high": {
+     "tick": 419656,
+     "q": [
+      -0.9952,
+      -1.9715,
+      0.5929,
+      -1.9597,
+      -0.1533,
+      0.3139
+     ],
+     "q_window_start": [
+      -0.981,
+      -1.9814,
+      0.5688,
+      -1.9693,
+      -0.1183,
+      0.3216
+     ],
+     "tool": [
+      -0.2852,
+      -0.271,
+      1.0448
+     ],
+     "elbow": [
+      0.0844,
+      -0.1429,
+      0.5543
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.4306,
+     -0.6861,
+     0.0796
+    ],
+    [
+     0.7028,
+     0.5729,
+     1.0448
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.2896,
+     -0.2039,
+     0.4346
+    ],
+    [
+     0.326,
+     0.2867,
+     0.588
+    ]
+   ],
+   "stops": [
+    {
+     "t": 14.099999999997625,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999994458,
+     "distance": 3.378760573780843e-07,
+     "peak_speed": 0.0003
+    },
+    {
+     "t": 44.09999999998792,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.001999999999995339,
+     "distance": 1.4977833728103495e-05,
+     "peak_speed": 0.0086
+    },
+    {
+     "t": 74.09999999998976,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.004000000000019099,
+     "distance": 3.9110980478730754e-05,
+     "peak_speed": 0.0174
+    },
+    {
+     "t": 100.00000000011343,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 5.02089272814606e-07,
+     "peak_speed": 0.0005
+    },
+    {
+     "t": 130.00000000025668,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 5.975280757752846e-07,
+     "peak_speed": 0.0006
+    },
+    {
+     "t": 164.00000000041902,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.007000000000033424,
+     "distance": 0.00015593520893345165,
+     "peak_speed": 0.0452
+    },
+    {
+     "t": 194.00000000056227,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.004000000000019099,
+     "distance": 9.944165824562337e-07,
+     "peak_speed": 0.0003
+    },
+    {
+     "t": 224.0000000007055,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000047748,
+     "distance": 8.58174143468916e-07,
+     "peak_speed": 0.0008
+    },
+    {
+     "t": 250.00000000082966,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.010000000000047748,
+     "distance": 0.00014366930323349452,
+     "peak_speed": 0.0307
+    },
+    {
+     "t": 280.00000000029075,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999763531,
+     "distance": 1.0667433913058634e-08,
+     "peak_speed": 0.0
+    },
+    {
+     "t": 310.099999999579,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999763531,
+     "distance": 4.933112635479874e-07,
+     "peak_speed": 0.0005
+    },
+    {
+     "t": 340.0009999988719,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999763531,
+     "distance": 4.5792810247823424e-07,
+     "peak_speed": 0.0005
+    },
+    {
+     "t": 370.0009999981625,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0029999999999290594,
+     "distance": 7.948600563595415e-06,
+     "peak_speed": 0.0034
+    },
+    {
+     "t": 404.0009999973585,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.014999999999645297,
+     "distance": 0.0003977732180673489,
+     "peak_speed": 0.0684
+    },
+    {
+     "t": 434.0009999966491,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.007999999999810825,
+     "distance": 0.00013611882817198334,
+     "peak_speed": 0.0293
+    },
+    {
+     "t": 464.0009999959397,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.010999999999739885,
+     "distance": 0.0002762175466663719,
+     "peak_speed": 0.0516
+    },
+    {
+     "t": 494.0009999952303,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.013999999999668944,
+     "distance": 0.00047795539012071895,
+     "peak_speed": 0.0765
+    },
+    {
+     "t": 524.000999994521,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999763531,
+     "distance": 2.4569566106550994e-06,
+     "peak_speed": 0.0025
+    },
+    {
+     "t": 554.0009999938115,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.016999999999598003,
+     "distance": 0.0006808016431828695,
+     "peak_speed": 0.1108
+    },
+    {
+     "t": 584.0009999931021,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.010999999999739885,
+     "distance": 0.000224100252382187,
+     "peak_speed": 0.0483
+    },
+    {
+     "t": 614.0009999923927,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0009999999999763531,
+     "distance": 2.3985035298969626e-06,
+     "peak_speed": 0.0024
+    }
+   ],
+   "log_entries": 6254,
+   "log_head": "8b0e6febd1a766603c64c37ed53449783a98aea696229d2fe9a14cfd7bc2372a",
+   "min_hand_distance": 0.0,
+   "log_problems": [],
+   "replay_disagrees": []
+  }
+ }
+]

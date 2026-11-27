@@ -1,0 +1,25 @@
+[workspace]
+name = "v3-safety-demo"
+version = "0.1.0"
+description = "A sample ML safety evaluation on the v3 centrifuge simulation: a hand detector that slows or stops the arm"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+# The same simulation packages as v3 (v3-centrifuge-loading/simulation-environment/pixi.toml), so v3's scene
+# builds here, plus YOLO for the hand detector.
+[dependencies]
+python = "3.12.*"
+numpy = ">=2.0,<2.3"
+trimesh = ">=4.0"
+pillow = ">=10"
+pytest = "*"
+ruff = "*"
+
+[pypi-dependencies]
+mujoco = ">=3.3,<4"
+manifold3d = ">=2.5"
+# YOLO11 (Ultralytics); brings PyTorch and OpenCV with it. As v1's Step 0.
+ultralytics = ">=8.3,<9"
+
+[activation.env]
+PYTHONPATH = "$PIXI_PROJECT_ROOT:$PIXI_PROJECT_ROOT/../v3-centrifuge-loading/simulation-environment"

@@ -1,0 +1,755 @@
+{
+ "weights": "runs/v2/weights/best.pt",
+ "threshold (chosen on validation)": 0.1,
+ "validation by threshold": {
+  "0.05": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 1,
+    "n": 149,
+    "rate": 0.006711409395973154,
+    "upper95": 0.03144081014844253
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 0,
+    "n": 86,
+    "rate": 0.0,
+    "upper95": 0.034234372849120204
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  },
+  "0.1": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 1,
+    "n": 149,
+    "rate": 0.006711409395973154,
+    "upper95": 0.03144081014844253
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 0,
+    "n": 86,
+    "rate": 0.0,
+    "upper95": 0.034234372849120204
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  },
+  "0.15": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 2,
+    "n": 149,
+    "rate": 0.013422818791946308,
+    "upper95": 0.04164864793729994
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 1,
+    "n": 86,
+    "rate": 0.011627906976744186,
+    "upper95": 0.053974963447552066
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  },
+  "0.2": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 2,
+    "n": 149,
+    "rate": 0.013422818791946308,
+    "upper95": 0.04164864793729994
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 1,
+    "n": 86,
+    "rate": 0.011627906976744186,
+    "upper95": 0.053974963447552066
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  },
+  "0.25": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 2,
+    "n": 149,
+    "rate": 0.013422818791946308,
+    "upper95": 0.04164864793729994
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 1,
+    "n": 86,
+    "rate": 0.011627906976744186,
+    "upper95": 0.053974963447552066
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  },
+  "0.3": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 3,
+    "n": 149,
+    "rate": 0.020134228187919462,
+    "upper95": 0.05121305964371859
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 2,
+    "n": 86,
+    "rate": 0.023255813953488372,
+    "upper95": 0.07139977152716342
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  },
+  "0.4": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 3,
+    "n": 149,
+    "rate": 0.020134228187919462,
+    "upper95": 0.05121305964371859
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 2,
+    "n": 86,
+    "rate": 0.023255813953488372,
+    "upper95": 0.07139977152716342
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  },
+  "0.5": {
+   "pictures": 300,
+   "missed (hand in a zone, less serious zone chosen)": {
+    "k": 4,
+    "n": 149,
+    "rate": 0.026845637583892617,
+    "upper95": 0.06037659407309481
+   },
+   "missed stop (hand in stop zone, arm not stopped)": {
+    "k": 3,
+    "n": 86,
+    "rate": 0.03488372093023256,
+    "upper95": 0.08769393044870341
+   },
+   "false alarm (more serious zone than true)": {
+    "k": 6,
+    "n": 300,
+    "rate": 0.02,
+    "upper95": 0.03909105868095792
+   },
+   "false alarm when clear": {
+    "k": 4,
+    "n": 151,
+    "rate": 0.026490066225165563,
+    "upper95": 0.05959063462387786
+   }
+  }
+ },
+ "test": {
+  "pictures": 3000,
+  "missed (hand in a zone, less serious zone chosen)": {
+   "k": 12,
+   "n": 1428,
+   "rate": 0.008403361344537815,
+   "upper95": 0.013579757731890131
+  },
+  "missed stop (hand in stop zone, arm not stopped)": {
+   "k": 5,
+   "n": 840,
+   "rate": 0.005952380952380952,
+   "upper95": 0.012474483256651795
+  },
+  "false alarm (more serious zone than true)": {
+   "k": 92,
+   "n": 3000,
+   "rate": 0.030666666666666665,
+   "upper95": 0.036363671233462576
+  },
+  "false alarm when clear": {
+   "k": 50,
+   "n": 1572,
+   "rate": 0.031806615776081425,
+   "upper95": 0.040087991508923435
+  }
+ },
+ "test, perfect boxes (the rule alone)": {
+  "pictures": 3000,
+  "missed (hand in a zone, less serious zone chosen)": {
+   "k": 10,
+   "n": 1428,
+   "rate": 0.0070028011204481795,
+   "upper95": 0.01184934956982122
+  },
+  "missed stop (hand in stop zone, arm not stopped)": {
+   "k": 3,
+   "n": 840,
+   "rate": 0.0035714285714285713,
+   "upper95": 0.009204454315878751
+  },
+  "false alarm (more serious zone than true)": {
+   "k": 83,
+   "n": 3000,
+   "rate": 0.027666666666666666,
+   "upper95": 0.033114919399413495
+  },
+  "false alarm when clear": {
+   "k": 42,
+   "n": 1572,
+   "rate": 0.026717557251908396,
+   "upper95": 0.034421249668510935
+  }
+ },
+ "test, no depth (worst-case height rule)": {
+  "pictures": 3000,
+  "missed (hand in a zone, less serious zone chosen)": {
+   "k": 11,
+   "n": 1428,
+   "rate": 0.007703081232492998,
+   "upper95": 0.012718180603634064
+  },
+  "missed stop (hand in stop zone, arm not stopped)": {
+   "k": 5,
+   "n": 840,
+   "rate": 0.005952380952380952,
+   "upper95": 0.012474483256651795
+  },
+  "false alarm (more serious zone than true)": {
+   "k": 892,
+   "n": 3000,
+   "rate": 0.29733333333333334,
+   "upper95": 0.31136924194515697
+  },
+  "false alarm when clear": {
+   "k": 574,
+   "n": 1572,
+   "rate": 0.3651399491094148,
+   "upper95": 0.385607426235322
+  }
+ },
+ "test, hand in a zone but hidden from the camera": 3,
+ "test by condition": {
+  "lighting": {
+   "bright": {
+    "pictures": 699,
+    "missed": {
+     "k": 4,
+     "n": 340,
+     "rate": 0.011764705882352941,
+     "upper95": 0.026718586345400412
+    },
+    "false alarm": {
+     "k": 25,
+     "n": 699,
+     "rate": 0.0357653791130186,
+     "upper95": 0.04959585343544709
+    }
+   },
+   "dim": {
+    "pictures": 762,
+    "missed": {
+     "k": 4,
+     "n": 372,
+     "rate": 0.010752688172043012,
+     "upper95": 0.024436178854702617
+    },
+    "false alarm": {
+     "k": 27,
+     "n": 762,
+     "rate": 0.03543307086614173,
+     "upper95": 0.04853431510507514
+    }
+   },
+   "normal": {
+    "pictures": 1539,
+    "missed": {
+     "k": 4,
+     "n": 716,
+     "rate": 0.00558659217877095,
+     "upper95": 0.01273829051001269
+    },
+    "false alarm": {
+     "k": 40,
+     "n": 1539,
+     "rate": 0.02599090318388564,
+     "upper95": 0.03370010742572322
+    }
+   }
+  },
+  "goal": {
+   "nobody": {
+    "pictures": 459,
+    "missed": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "upper95": NaN
+    },
+    "false alarm": {
+     "k": 7,
+     "n": 459,
+     "rate": 0.015250544662309368,
+     "upper95": 0.028453485381058154
+    }
+   },
+   "outside": {
+    "pictures": 498,
+    "missed": {
+     "k": 7,
+     "n": 7,
+     "rate": 1.0,
+     "upper95": 1.0
+    },
+    "false alarm": {
+     "k": 0,
+     "n": 498,
+     "rate": 0.0,
+     "upper95": 0.005997469598970113
+    }
+   },
+   "stop": {
+    "pictures": 1264,
+    "missed": {
+     "k": 5,
+     "n": 1004,
+     "rate": 0.0049800796812749,
+     "upper95": 0.010442422507279949
+    },
+    "false alarm": {
+     "k": 29,
+     "n": 1264,
+     "rate": 0.022943037974683545,
+     "upper95": 0.03115163347066263
+    }
+   },
+   "warning": {
+    "pictures": 779,
+    "missed": {
+     "k": 0,
+     "n": 417,
+     "rate": 0.0,
+     "upper95": 0.007158266930348478
+    },
+    "false alarm": {
+     "k": 56,
+     "n": 779,
+     "rate": 0.07188703465982028,
+     "upper95": 0.08899388458103497
+    }
+   }
+  },
+  "hand": {
+   "glove_black": {
+    "pictures": 305,
+    "missed": {
+     "k": 4,
+     "n": 171,
+     "rate": 0.023391812865497075,
+     "upper95": 0.05272669313954841
+    },
+    "false alarm": {
+     "k": 7,
+     "n": 305,
+     "rate": 0.022950819672131147,
+     "upper95": 0.04267476845153563
+    }
+   },
+   "glove_blue": {
+    "pictures": 281,
+    "missed": {
+     "k": 2,
+     "n": 152,
+     "rate": 0.013157894736842105,
+     "upper95": 0.040838262889874945
+    },
+    "false alarm": {
+     "k": 17,
+     "n": 281,
+     "rate": 0.060498220640569395,
+     "upper95": 0.08936662558834134
+    }
+   },
+   "glove_green": {
+    "pictures": 331,
+    "missed": {
+     "k": 2,
+     "n": 191,
+     "rate": 0.010471204188481676,
+     "upper95": 0.03259354245557133
+    },
+    "false alarm": {
+     "k": 6,
+     "n": 331,
+     "rate": 0.01812688821752266,
+     "upper95": 0.035462463864083124
+    }
+   },
+   "glove_purple": {
+    "pictures": 323,
+    "missed": {
+     "k": 3,
+     "n": 177,
+     "rate": 0.01694915254237288,
+     "upper95": 0.043220829519077915
+    },
+    "false alarm": {
+     "k": 15,
+     "n": 323,
+     "rate": 0.04643962848297214,
+     "upper95": 0.07060966103330991
+    }
+   },
+   "glove_white": {
+    "pictures": 305,
+    "missed": {
+     "k": 0,
+     "n": 187,
+     "rate": 0.0,
+     "upper95": 0.015892321633036825
+    },
+    "false alarm": {
+     "k": 12,
+     "n": 305,
+     "rate": 0.03934426229508197,
+     "upper95": 0.06296765859514913
+    }
+   },
+   "skin_dark": {
+    "pictures": 239,
+    "missed": {
+     "k": 0,
+     "n": 143,
+     "rate": 0.0,
+     "upper95": 0.020731267064000965
+    },
+    "false alarm": {
+     "k": 10,
+     "n": 239,
+     "rate": 0.04184100418410042,
+     "upper95": 0.06993806454394548
+    }
+   },
+   "skin_light": {
+    "pictures": 259,
+    "missed": {
+     "k": 1,
+     "n": 141,
+     "rate": 0.0070921985815602835,
+     "upper95": 0.03320104609108989
+    },
+    "false alarm": {
+     "k": 6,
+     "n": 259,
+     "rate": 0.023166023166023165,
+     "upper95": 0.04520904708944207
+    }
+   },
+   "skin_medium": {
+    "pictures": 252,
+    "missed": {
+     "k": 0,
+     "n": 133,
+     "rate": 0.0,
+     "upper95": 0.022272524619173912
+    },
+    "false alarm": {
+     "k": 7,
+     "n": 252,
+     "rate": 0.027777777777777776,
+     "upper95": 0.051539799083599125
+    }
+   },
+   "skin_tan": {
+    "pictures": 246,
+    "missed": {
+     "k": 0,
+     "n": 133,
+     "rate": 0.0,
+     "upper95": 0.022272524619173912
+    },
+    "false alarm": {
+     "k": 5,
+     "n": 246,
+     "rate": 0.02032520325203252,
+     "upper95": 0.04225846930735641
+    }
+   }
+  },
+  "sleeve": {
+   "coat_white": {
+    "pictures": 1389,
+    "missed": {
+     "k": 6,
+     "n": 785,
+     "rate": 0.007643312101910828,
+     "upper95": 0.015029759839234925
+    },
+    "false alarm": {
+     "k": 48,
+     "n": 1389,
+     "rate": 0.03455723542116631,
+     "upper95": 0.04374765435945006
+    }
+   },
+   "sleeve_black": {
+    "pictures": 402,
+    "missed": {
+     "k": 2,
+     "n": 218,
+     "rate": 0.009174311926605505,
+     "upper95": 0.028596554829762342
+    },
+    "false alarm": {
+     "k": 15,
+     "n": 402,
+     "rate": 0.03731343283582089,
+     "upper95": 0.056875790667855135
+    }
+   },
+   "sleeve_blue": {
+    "pictures": 357,
+    "missed": {
+     "k": 2,
+     "n": 197,
+     "rate": 0.01015228426395939,
+     "upper95": 0.03161167838011741
+    },
+    "false alarm": {
+     "k": 9,
+     "n": 357,
+     "rate": 0.025210084033613446,
+     "upper95": 0.043579296924728554
+    }
+   },
+   "sleeve_grey": {
+    "pictures": 393,
+    "missed": {
+     "k": 2,
+     "n": 228,
+     "rate": 0.008771929824561403,
+     "upper95": 0.027354145166499463
+    },
+    "false alarm": {
+     "k": 13,
+     "n": 393,
+     "rate": 0.03307888040712468,
+     "upper95": 0.05207809981404417
+    }
+   }
+  },
+  "hand size": {
+   "large (>1.05)": {
+    "pictures": 882,
+    "missed": {
+     "k": 3,
+     "n": 512,
+     "rate": 0.005859375,
+     "upper95": 0.015073687702340063
+    },
+    "false alarm": {
+     "k": 34,
+     "n": 882,
+     "rate": 0.03854875283446712,
+     "upper95": 0.05099218183820007
+    }
+   },
+   "medium": {
+    "pictures": 825,
+    "missed": {
+     "k": 3,
+     "n": 449,
+     "rate": 0.0066815144766146995,
+     "upper95": 0.017177499880010563
+    },
+    "false alarm": {
+     "k": 26,
+     "n": 825,
+     "rate": 0.03151515151515152,
+     "upper95": 0.04346126919659069
+    }
+   },
+   "small (<0.95)": {
+    "pictures": 834,
+    "missed": {
+     "k": 6,
+     "n": 467,
+     "rate": 0.01284796573875803,
+     "upper95": 0.025200034382512775
+    },
+    "false alarm": {
+     "k": 25,
+     "n": 834,
+     "rate": 0.02997601918465228,
+     "upper95": 0.04161614649179347
+    }
+   }
+  },
+  "hand height": {
+   "high (>35 cm)": {
+    "pictures": 304,
+    "missed": {
+     "k": 0,
+     "n": 42,
+     "rate": 0.0,
+     "upper95": 0.06884260784039489
+    },
+    "false alarm": {
+     "k": 6,
+     "n": 304,
+     "rate": 0.019736842105263157,
+     "upper95": 0.038581673578901944
+    }
+   },
+   "low (<20 cm)": {
+    "pictures": 549,
+    "missed": {
+     "k": 3,
+     "n": 415,
+     "rate": 0.007228915662650603,
+     "upper95": 0.018576745398424344
+    },
+    "false alarm": {
+     "k": 31,
+     "n": 549,
+     "rate": 0.056466302367941715,
+     "upper95": 0.07544958725070065
+    }
+   },
+   "middle": {
+    "pictures": 1688,
+    "missed": {
+     "k": 9,
+     "n": 971,
+     "rate": 0.009268795056642637,
+     "upper95": 0.016118436499717795
+    },
+    "false alarm": {
+     "k": 48,
+     "n": 1688,
+     "rate": 0.02843601895734597,
+     "upper95": 0.03602890534325127
+    }
+   }
+  },
+  "hand showing": {
+   "fully": {
+    "pictures": 2506,
+    "missed": {
+     "k": 6,
+     "n": 1395,
+     "rate": 0.004301075268817204,
+     "upper95": 0.008471403635802111
+    },
+    "false alarm": {
+     "k": 83,
+     "n": 2506,
+     "rate": 0.03312051077414206,
+     "upper95": 0.03962081662000876
+    }
+   },
+   "hidden (<12 px)": {
+    "pictures": 3,
+    "missed": {
+     "k": 2,
+     "n": 3,
+     "rate": 0.6666666666666666,
+     "upper95": 0.9830475724915585
+    },
+    "false alarm": {
+     "k": 0,
+     "n": 3,
+     "rate": 0.0,
+     "upper95": 0.6315968501359613
+    }
+   },
+   "partly (<300 px)": {
+    "pictures": 32,
+    "missed": {
+     "k": 4,
+     "n": 30,
+     "rate": 0.13333333333333333,
+     "upper95": 0.27961516589348145
+    },
+    "false alarm": {
+     "k": 2,
+     "n": 32,
+     "rate": 0.0625,
+     "upper95": 0.18394346817692858
+    }
+   }
+  }
+ }
+}

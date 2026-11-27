@@ -1,0 +1,23 @@
+
+ok  seed  0 pairs    held 26.1 s slow 36.0 s stops 9 log ok True replay ok True |   216 s
+
+ok  seed  1 odd_one  held 66.4 s slow 44.0 s stops 16 log ok True replay ok True |   436 s
+ok  seed  2 triangle held 20.3 s slow 28.0 s stops 7 log ok True replay ok True |   153 s
+ok  seed  3 mismatch held 88.9 s slow 56.0 s stops 21 log ok True replay ok True |   1496 s
+loaded and balanced: 4 of 4
+Traceback (most recent call last):
+  File "/Users/hassaan/Documents/dodao/robotics-lab-project-guard/v3-safety-demo/check_scripted.py", line 19, in <module>
+    from guard import CLEAR_FOR, HOLD, RUN, SLOWED
+  File "/Users/hassaan/Documents/dodao/robotics-lab-project-guard/v3-safety-demo/guard.py", line 46, in <module>
+    from centrifuge_scene import scene
+ModuleNotFoundError: No module named 'centrifuge_scene'
+seed  0 pairs    visits  9: slowed 6, held 6, carried on 9 | loaded+balanced True spilled 0 (v3 0) | job 271.919 s (v3 224.3) | worst stop 0.014000000000066848 s 0.4 mm | log True replay True
+   ['t=10.0: warning visit logged clear/run', 't=14.0: stop visit logged warning/slow', 't=40.0: warning visit logged clear/run']
+seed  1 odd_one  visits 16: slowed 7, held 12, carried on 16 | loaded+balanced True spilled 1 (v3 2) | job 489.802 s (v3 399.8) | worst stop 0.026999999999361535 s 1.2 mm | log True replay True
+   ['t=10.0: warning visit logged clear/run', 't=14.0: stop visit logged warning/slow', 't=40.0: warning visit logged clear/run']
+seed  2 triangle visits  7: slowed 4, held 4, carried on 7 | loaded+balanced True spilled 0 (v3 0) | job 211.548 s (v3 162.5) | worst stop 0.014000000000066848 s 0.4 mm | log True replay True
+   ['t=10.0: warning visit logged clear/run', 't=14.0: stop visit logged warning/slow', 't=40.0: warning visit logged clear/run']
+seed  3 mismatch visits 21: slowed 11, held 18, carried on 21 | loaded+balanced True spilled 6 (v3 7) | job 626.725 s (v3 460.5) | worst stop 0.016999999999598003 s 0.7 mm | log True replay True
+   ['t=10.0: warning visit logged clear/run', 't=14.0: stop visit logged warning/slow', 't=40.0: warning visit logged clear/run']
+
+all seeds: {'visits': 53, 'slowed': 28, 'held': 40, 'carried_on': 53}

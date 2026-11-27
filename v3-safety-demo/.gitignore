@@ -1,0 +1,13 @@
+# Recorded job states, rendered pictures, trained models: remade by the scripts
+data/
+runs/
+*.pt
+# Raw safety logs and traces of guarded runs (tens of MB): remade by run_guarded.py; summaries are kept
+results/*/log_*.jsonl
+results/*/trace_*.json
+# The secret key that signs the safety log and the model registry (keys.py): never committed
+keys/
+# Example pictures kept by runs and scans (the figures used in docs/ are copied to docs/figures)
+results/*/disagreements_*/
+results/nobody_test_*/
+results/nobody_mine_*/

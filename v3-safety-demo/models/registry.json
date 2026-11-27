@@ -1,0 +1,32 @@
+{
+ "models": {
+  "v1": {
+   "version": "v1",
+   "file": "hand_v1.pt",
+   "sha256": "1ccabfa9577d4e142c41344b7ac85388c4964dac147b85a855b3cf9bb729f3ff",
+   "bytes": 5455450,
+   "note": "first release: 1,200 training pictures, 20 epochs (docs/detector-results.md)",
+   "settings": {
+    "threshold": 0.2,
+    "imgsz": 640
+   }
+  },
+  "v2": {
+   "version": "v2",
+   "file": "hand_v2.pt",
+   "sha256": "38cba0bead690da870c5db14556f396a7c6eb002e698abc9721b48c3c9d0368f",
+   "bytes": 5454170,
+   "note": "update: +600 pictures of hands near the robot, dark gloves; passed the update test (results/release_v2.json)",
+   "settings": {
+    "threshold": 0.1,
+    "imgsz": 640
+   }
+  }
+ },
+ "active": "v2",
+ "history": [
+  "v1",
+  "v2"
+ ],
+ "signature": "26f6a320f3a6d895737ad19723df5575af1c12f445902e98265826b4da392d62"
+}
