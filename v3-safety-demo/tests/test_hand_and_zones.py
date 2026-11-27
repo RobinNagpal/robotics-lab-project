@@ -146,7 +146,8 @@ def test_outline_distance():
 def test_depth_rule_matches_truth(world):
     """With the true box and the depth picture, the rule's reach is never above the truth (the 2 cm margin
     covers the depth's precision), and usually close to it: a box that overlaps the robot or a rack takes
-    their nearer points, which is cautious, not wrong."""
+    their nearer points, which is cautious, not wrong.
+    """
     import box_zone
     import cameras
     import dataset

@@ -55,7 +55,8 @@ class Frame:
 
 def random_arm_pose(arm, rng: np.random.Generator) -> np.ndarray | None:
     """Joint angles with the pinch point 8 to 30 cm above a random work spot, fingers down; None if
-    unreachable."""
+    unreachable.
+    """
     from motion import Blocked, fingers_down
 
     x, y = WORK_SPOTS[rng.integers(len(WORK_SPOTS))]

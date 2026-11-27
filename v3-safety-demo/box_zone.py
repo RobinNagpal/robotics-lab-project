@@ -10,10 +10,10 @@ This never puts a hand in a safer zone than it is in (if the box covers the hand
 ``HAND_TOP``); the price is some stops and slow-downs that weren't needed, near the zones' edges. Package 2
 measures both.
 
-With depth (the safety camera is an RGB-D camera, as 3D safety cameras are), the height is measured
-instead: ``depth_reach`` turns every pixel in the box into a point in space, from its depth, and takes the
-closest one to the arm's base. The bare table seen around the hand is left out (it is not the hand). This is
-the rule the safety feature uses; the worst-case rule above is the fallback when a box has no depth.
+With depth (the safety camera is an RGB-D camera, as 3D safety cameras are), the height is measured instead:
+``depth_reach`` turns every pixel in the box into a point in space, from its depth, and takes the closest one
+to the arm's base. The bare table seen around the hand is left out (it is not the hand). This is the rule the
+safety feature uses; the worst-case rule above is the fallback when a box has no depth.
 """
 
 from __future__ import annotations

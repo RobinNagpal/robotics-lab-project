@@ -119,6 +119,7 @@ def job(args: tuple) -> dict:
             registry = Registry(MODELS / "registry.json", key=key)
             path = MODELS / registry.models[version]["file"]
             det = D.load(path, registry, log, sensing.yolo_builder())
+            det = sensing.DisagreementRecorder(det, OUT / name / f"disagreements_seed{seed:02d}")
         else:
             det = sensing.perfect_detector()
         guard = G.Guard(model, data, camera, det, log, limits=limits, trace=True)
@@ -156,6 +157,8 @@ def job(args: tuple) -> dict:
         person.finish(float(g.data.time))
         out["visits"] = [v.summary() for v in person.visits]
         made["camera"].close()
+        if isinstance(g.detector, sensing.DisagreementRecorder):
+            out["disagreements"] = {"frames": g.detector.disagreements, "saved": g.detector.saved}
         entries = read(log_path)
         out["guard"]["log_problems"] = verify(entries, head=g.log.head, key=key)
         out["guard"]["replay_disagrees"] = G.replay(entries)[:5]

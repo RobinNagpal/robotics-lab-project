@@ -1,14 +1,14 @@
 """May a new detector version replace the current one? The update test, on the same frozen test pictures.
 
-The rule is fixed before the new version is evaluated (this file was committed before v2's results existed):
-a new version is released only if, on the 3,000 test pictures,
+The rule is fixed before the new version is evaluated (this file was committed before v2's results existed): a
+new version is released only if, on the 3,000 test pictures,
 
 1. it misses no more hands in the stop zone than the current version;
 2. it misses no more hands in any zone than the current version;
 3. its false alarms on clear pictures are at most 1 percentage point above the current version's;
 4. under every condition (lighting, hand colour, sleeve, hand size, hand height, how much of the hand shows),
-   it misses at most 1 more hand than the current version (one picture of slack per condition, so chance
-   alone does not block a better model; a real step backwards in one condition still does).
+   it misses at most 1 more hand than the current version (one picture of slack per condition, so chance alone
+   does not block a better model; a real step backwards in one condition still does).
 
     python release_check.py results/evaluation_v1.json results/evaluation_v2.json
 """

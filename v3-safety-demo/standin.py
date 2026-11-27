@@ -3,9 +3,8 @@
 - **Zones** (``zone_of``): how far a hand is from the arm, and so which zone it is in. The arm is drawn as a
   chain of thick lines through its joints (each ``ARM_RADIUS`` thick), and a hand point's distance is to the
   nearest of them. Warning closer than ``WARNING_DISTANCE``, stop closer than ``STOP_DISTANCE``. These sizes
-  are
-  placeholders: Track A's ``zones.py`` settles the real ones, and its function replaces ``zone_of`` with the
-  same call.
+  are placeholders: Track A's ``zones.py`` settles the real ones, and its function replaces ``zone_of`` with
+  the same call.
 - **A scripted hand** (``ScriptedHand``): a single point placed beside the gripper at set times, at a set
   distance. It is not in the scene (nothing to see or touch); only the "perfect" detector, which reads the
   simulation, knows where it is. Track A's simulated hand replaces it.
@@ -70,7 +69,8 @@ def zone_of(hand: np.ndarray, arm: np.ndarray) -> tuple[str, float]:
 @dataclass(frozen=True)
 class Visit:
     """The hand beside the gripper from ``start`` to ``end`` (simulation seconds), ``distance`` from the
-    arm."""
+    arm.
+    """
 
     start: float
     end: float

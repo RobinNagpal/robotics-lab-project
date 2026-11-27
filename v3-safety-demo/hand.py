@@ -1,9 +1,9 @@
 """A person's arm and hand reaching into the robot's cell, made of simple shapes.
 
 The whole arm is one mocap body ("person"): the simulation moves it exactly where we put it, and nothing
-pushes it. Its shapes don't collide with anything (contype and conaffinity 0), so adding it changes nothing
-in v3's physics. Touching the robot is measured instead, as the smallest distance between the person's shapes
-and the robot's (``zones.py``).
+pushes it. Its shapes don't collide with anything (contype and conaffinity 0), so adding it changes nothing in
+v3's physics. Touching the robot is measured instead, as the smallest distance between the person's shapes and
+the robot's (``zones.py``).
 
 The body's frame sits at the wrist. Its +x points along the hand towards the fingertips, +z is the back of the
 hand, so the palm faces -z (down, when the hand is level). The forearm runs back along -x, and the upper arm
@@ -23,8 +23,10 @@ import numpy as np
 
 BODY = "person"
 PREFIX = "person/"
-# Where the person waits between reaches: well away from the bench, out of every camera's view.
-PARKED = np.array([3.0, 0.0, -1.0])
+# Where the person waits between reaches: far away and far below the floor (0.9 m below the bench), out of
+# every camera's view whichever way the arm is turned. (At 3 m away and 1 m down, the upper arm poked up
+# through the floor at the safety camera's edge, and the detector saw it.)
+PARKED = np.array([50.0, 0.0, -10.0])
 
 # The shapes at size 1 (an average adult hand), in the body's frame, metres.
 # name: (type, size, pos, quat, part). Part is "skin" (bare or gloved hand), "sleeve" (forearm, upper arm).
@@ -127,7 +129,8 @@ class Look:
     @staticmethod
     def draw(rng: np.random.Generator, dark_gloves: bool = False) -> Look:
         """A random look. ``dark_gloves``: mostly gloves, and mostly the dark ones (black, blue, green,
-        purple), which v1 found hardest against the robot's dark links (docs/detector-results.md)."""
+        purple), which v1 found hardest against the robot's dark links (docs/detector-results.md).
+        """
         if dark_gloves:
             gloved = rng.random() < 0.8
             weights = {"glove_black": 0.35, "glove_blue": 0.25, "glove_green": 0.15, "glove_purple": 0.15}

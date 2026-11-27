@@ -135,7 +135,8 @@ ZONE_NAMES = {Zone.CLEAR: "clear", Zone.WARNING: "warning", Zone.STOP: "stop"}  
 
 def zone_of_points(points: np.ndarray | None, arm=None) -> tuple[str, float]:
     """The zone for a set of person points (n, 3), and how close they come to the arm's base (m, seen from
-    above). The call the safety layer's perfect detector uses; ``arm`` is not needed (the zones are fixed)."""
+    above). The call the safety layer's perfect detector uses; ``arm`` is not needed (the zones are fixed).
+    """
     if points is None or len(points) == 0:
         return "clear", float("inf")
     pts = np.atleast_2d(points)

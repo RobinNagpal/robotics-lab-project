@@ -1,16 +1,12 @@
 """The safety layer around v3's arm: it slows or holds the arm between simulation steps.
 
 **How it reaches the arm without changing v3.** Every v3 step moves the arm the same way: it writes joint
-targets
-into ``data.ctrl`` and calls ``scene.step(model, data, n)``, looked up through the ``scene`` module.
-``install()``
-replaces that module attribute with a wrapper. For a ``data`` the wrapper has been told about (``attach``),
-each
-call becomes one "tick" of v3's script, and the guard decides how the tick is carried out:
+targets into ``data.ctrl`` and calls ``scene.step(model, data, n)``, looked up through the ``scene`` module.
+``install()`` replaces that module attribute with a wrapper. For a ``data`` the wrapper has been told about
+(``attach``), each call becomes one "tick" of v3's script, and the guard decides how the tick is carried out:
 
 - **run**: one physics step with v3's targets, exactly as v3 does it (so with nothing near, the run is the
-  same
-  to the last bit);
+  same to the last bit);
 - **slow**: the tick is spread over 4 physics steps (25% speed), the targets moving a quarter of the way each
   step;
 - **hold**: the targets are set to where the arm is at that moment, so it stops at once (in about 20 ms in the
@@ -24,24 +20,18 @@ After each call ``data.ctrl`` again holds v3's own targets, so v3's code reads b
 
 - The **normal layer** (no ML) checks every arm command (each tick's joint targets): joint speed and gripper
   speed over the last 50 ms within limits, and the gripper and elbow inside the work-area box. Any breach, and
-  the
-  emergency stop, latch a **stop**: the arm holds and ``SafetyStop`` is raised out of v3's script. It needs an
-  operator's reset (``reset_stop``). Nothing from the ML side can change or skip it.
+  the emergency stop, latch a **stop**: the arm holds and ``SafetyStop`` is raised out of v3's script. It
+  needs an operator's reset (``reset_stop``). Nothing from the ML side can change or skip it.
 - The **ML layer** reads camera frames (10 a second) and asks the detector for the zone: warning gives slow,
-  stop
-  zone gives hold, and the arm carries on only after 1 s with no hand (``Behaviour``). The **watchdog** holds
-  the
-  arm whenever a frame is missing, late (older than 150 ms), frozen (its number or time not moving on, or the
-  same
-  picture 3 times running), or the detector crashes, gives an answer that makes no sense, or takes too long.
-  It
-  carries on only after 1 s of good frames with no hand.
+  stop zone gives hold, and the arm carries on only after 1 s with no hand (``Behaviour``). The **watchdog**
+  holds the arm whenever a frame is missing, late (older than 150 ms), frozen (its number or time not moving
+  on, or the same picture 3 times running), or the detector crashes, gives an answer that makes no sense, or
+  takes too long. It carries on only after 1 s of good frames with no hand.
 
 What the arm does is the strictest of the two: stop beats hold beats slow beats run.
 
 Every decision goes into the safety log (``safety_log.py``), and ``replay`` rebuilds the decisions from the
-log
-alone.
+log alone.
 """
 
 from __future__ import annotations
@@ -66,9 +56,10 @@ FRAME_HZ = 10.0  # camera frames per simulated second
 MAX_FRAME_AGE = 0.15  # s: a newer frame than this must have been checked, or the arm holds
 FROZEN_FRAMES = 3  # the same picture this many times running counts as a frozen camera
 DETECTOR_BUDGET = 0.25  # s (wall clock) the detector may take per frame
-# s from a frame being taken to its decision taking effect: the camera's exposure and read-out, the detector and
-# the rule. A real system's figure would be measured; 0.1 s covers a 30 frame-a-second camera (33 ms), YOLO11n
-# (about 15 ms on the Mac's GPU) and the rest with room. Frames are acted on this late in the simulation too.
+# s from a frame being taken to its decision taking effect: the camera's exposure and read-out, the detector
+# and the rule. A real system's figure would be measured; 0.1 s covers a 30 frame-a-second camera (33 ms),
+# YOLO11n (about 15 ms on the Mac's GPU) and the rest with room. Frames are acted on this late in the
+# simulation too.
 LATENCY = 0.1
 # The measured speeds may exceed the command limits by this factor before the normal layer stops the arm: the
 # arm follows its targets with a little overshoot. Set from v3's own jobs (docs/safety-layer.md).
@@ -91,8 +82,7 @@ class Limits:
     Set from what v3's own 20 jobs use, with room to spare (docs/safety-layer.md, "Setting the limits"):
 
     - joints 1 to 5 reach 1.25 rad/s at most; the last wrist joint reaches 3.47 rad/s (a quick turn of the
-      gripper
-      in Step 3, likely the cap's screw-on turns, while the gripper itself hardly moves);
+      gripper in Step 3, likely the cap's screw-on turns, while the gripper itself hardly moves);
     - the point between the fingers reaches 0.88 m/s (as the arm swings upright going home);
     - the boxes are the space the gripper and the elbow use over all 20 jobs, plus 5 cm.
     """
@@ -122,7 +112,8 @@ def loose(**changes) -> Limits:
 
 class SafetyStop(RuntimeError):
     """The normal layer stopped the arm (a limit was broken, or the emergency stop). Needs an operator's
-    reset."""
+    reset.
+    """
 
 
 # --- the normal layer (no ML) -----------------------------------------------------------------------------
@@ -132,8 +123,7 @@ class ArmFK:
     """Where the gripper's pinch point and the elbow would be for given joint angles.
 
     Uses a copy of v3's arm on its own (``scene.arm_with_gripper``), which stands at the world's origin
-    exactly
-    as it does in the scene, so it is quick and never touches the scene's ``data``.
+    exactly as it does in the scene, so it is quick and never touches the scene's ``data``.
     """
 
     NAMES = ("tool", "elbow")
@@ -242,8 +232,8 @@ class NormalLayer:
 
 class Behaviour:
     """What the arm should do, from the zones seen: hold for 1 s after a stop zone or a fault, slow for 1 s
-    after
-    a warning, otherwise run. A pure function of (time, zone) pairs, so the log can replay it."""
+    after a warning, otherwise run. A pure function of (time, zone) pairs, so the log can replay it.
+    """
 
     def __init__(self, clear_for: float = CLEAR_FOR):
         self.clear_for = clear_for
@@ -268,7 +258,8 @@ class Behaviour:
 @dataclass
 class StopEvent:
     """One time the arm was told to hold or stop while moving: how long it took to stop and how far it
-    went."""
+    went.
+    """
 
     t: float  # when the decision was made (simulation s)
     action: str
@@ -428,8 +419,8 @@ class Guard:
 
     def _hold_step(self) -> None:
         """One physics step with the arm held where it is (the gripper keeps its last command: a held tube
-        stays
-        held)."""
+        stays held).
+        """
         if not self.holding:
             self.holding = True
             self.applied = self.applied.copy()
@@ -466,7 +457,8 @@ class Guard:
 
     def _check_measured(self) -> None:
         """The normal layer's check on what the arm actually does (not only what it is told): measured joint
-        and gripper speeds, over ``MEASURED_WINDOW``, against the limits times ``MEASURED_MARGIN``."""
+        and gripper speeds, over ``MEASURED_WINDOW``, against the limits times ``MEASURED_MARGIN``.
+        """
         self._q_hist.append(self.data.qpos[self.joints].copy())
         self._p_hist.append(self._tool.copy())
         span = (len(self._q_hist) - 1) * self.dt
@@ -531,7 +523,8 @@ class Guard:
 
     def _capture(self):
         """Take a frame now; its decision takes effect ``latency`` later. A failing camera is kept as the
-        error, to be handled then (the fault shows when the frame's answer was due)."""
+        error, to be handled then (the fault shows when the frame's answer was due).
+        """
         try:
             return self.camera.capture(self.model, self.data, self.frame_no)
         except Exception as e:  # noqa: BLE001 - any camera failure is a fault, never a crash of the guard

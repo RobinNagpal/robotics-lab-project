@@ -2,12 +2,12 @@
 
 A hash chain shows that an entry was changed, but someone who knows the method can change an entry and
 recompute every hash after it. Keying the hashes with a secret (HMAC-SHA256) closes that: without the key, no
-valid entry can be written. The same goes for the model registry, which says which model files may run and with
-which settings.
+valid entry can be written. The same goes for the model registry, which says which model files may run and
+with which settings.
 
-The key is 32 random bytes in ``keys/safety.key`` next to this file, made the first time it is needed and never
-committed (``keys/`` is in ``.gitignore``). A real system would keep it in the robot controller's secure storage,
-where the software that writes the log can use it but cannot read it out.
+The key is 32 random bytes in ``keys/safety.key`` next to this file, made the first time it is needed and
+never committed (``keys/`` is in ``.gitignore``). A real system would keep it in the robot controller's secure
+storage, where the software that writes the log can use it but cannot read it out.
 """
 
 from __future__ import annotations

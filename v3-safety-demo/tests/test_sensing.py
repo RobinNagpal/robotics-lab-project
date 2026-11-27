@@ -6,11 +6,11 @@ from pathlib import Path
 import mujoco
 import numpy as np
 import pytest
-import scene_plus
 from centrifuge_scene import scene
 from centrifuge_scene.settings import HOME
 
 import guard as G
+import scene_plus
 import sensing
 import zones
 from detector import Frame
@@ -85,8 +85,11 @@ def test_perfect_detector_uses_the_fixed_zones():
 
 def test_guard_holds_while_the_person_is_in_the_stop_zone(model, data):
     """A person who only reaches into the stop zone: the arm is held whenever they are there (allowing the
-    delay), and moves again once they are gone."""
-    person = sensing.Person(model, data, np.random.default_rng(3), first=(0.2, 0.3), pause=(30, 40), goals=("stop",))
+    delay), and moves again once they are gone.
+    """
+    person = sensing.Person(
+        model, data, np.random.default_rng(3), first=(0.2, 0.3), pause=(30, 40), goals=("stop",)
+    )
     cam = sensing.SafetyCamera(person, np.random.default_rng(4), render=False)
     g = G.attach(G.Guard(model, data, cam, sensing.perfect_detector(), SafetyLog(), limits=G.loose()))
     g.before_physics.append(person.before_physics)
@@ -104,7 +107,9 @@ def test_guard_holds_while_the_person_is_in_the_stop_zone(model, data):
     assert holds and holds[0]["t"] <= v.entered_stop + G.FRAME_HZ**-1 + G.LATENCY + 1e-6
 
 
-@pytest.mark.skipif(not V1.exists() or not (TEST / "meta" / "test.jsonl").exists(), reason="needs v1 and data")
+@pytest.mark.skipif(
+    not V1.exists() or not (TEST / "meta" / "test.jsonl").exists(), reason="needs v1 and data"
+)
 def test_yolo_detector_finds_a_test_hand():
     from PIL import Image
 

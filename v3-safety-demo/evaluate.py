@@ -99,7 +99,8 @@ def detect(weights: str, split: str, rows: list[dict], imgsz: int) -> dict[str, 
 
 def choose_zones(world, rows: list[dict], boxes_of, split: str | None = None) -> list[int]:
     """The zone for each picture from its boxes: with the depth picture if ``split`` is given (the safety
-    feature's rule), else the worst-case height rule (no depth)."""
+    feature's rule), else the worst-case height rule (no depth).
+    """
     model, data = world
     out = []
     for r in rows:

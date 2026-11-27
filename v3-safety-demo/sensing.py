@@ -2,13 +2,13 @@
 judged by a detector.
 
 - ``Person``: a technician at the bench who reaches in now and then while the robot works (Track A's hand,
-  ``hand.py``), with a new look for every reach. It is moved before every physics step (``Guard.before_physics``),
-  also while the arm is held. Every 10 ms while the hand is near, it measures the gap between the person and the
-  robot and whether the robot is moving: a **contact event** is a gap below zero, and one **while the robot
-  moves** is what the safety feature must prevent.
-- ``SafetyCamera``: the ceiling camera's colour and depth pictures, with sensor noise as a real camera has (the
-  watchdog takes identical pictures in a row for a frozen camera). It also hands the simulation's truth along,
-  for the perfect detector and for the record; the trained detector never reads it.
+  ``hand.py``), with a new look for every reach. It is moved before every physics step
+  (``Guard.before_physics``), also while the arm is held. Every 10 ms while the hand is near, it measures the
+  gap between the person and the robot and whether the robot is moving: a **contact event** is a gap below
+  zero, and one **while the robot moves** is what the safety feature must prevent.
+- ``SafetyCamera``: the ceiling camera's colour and depth pictures, with sensor noise as a real camera has
+  (the watchdog takes identical pictures in a row for a frozen camera). It also hands the simulation's truth
+  along, for the perfect detector and for the record; the trained detector never reads it.
 - ``YoloDetector``: the trained model (YOLO11n) finds hands in the colour picture; ``box_zone``'s fixed rule
   turns each box and the depth inside it into a zone. Built only from registry-approved bytes and settings.
 - ``perfect_detector()``: the baseline, the zone straight from the truth.
@@ -206,7 +206,8 @@ class SafetyCamera:
                 r.close()
 
 
-# --- the detectors --------------------------------------------------------------------------------------------
+# --- the detectors
+# --------------------------------------------------------------------------------------------
 
 
 def perfect_detector() -> PerfectDetector:
@@ -284,3 +285,46 @@ def yolo_builder(device: str = "mps"):
         return YoloDetector(blob, version, settings, device=device)
 
     return build
+
+
+class DisagreementRecorder:
+    """Wraps a detector: passes every answer through unchanged, and saves the picture (with the boxes drawn)
+    whenever the zone differs from the truth, up to ``limit`` pictures. Evidence for the record, and for
+    finding out why a detector went wrong. The detector itself never sees the truth.
+    """
+
+    def __init__(self, inner, folder, limit: int = 40):
+        self.inner = inner
+        self.version = inner.version
+        self.folder = folder
+        self.limit = limit
+        self.saved: list[dict] = []
+        self.disagreements = 0
+
+    def detect(self, frame: Frame) -> Detection:
+        det = self.inner.detect(frame)
+        truth = (frame.truth or {}).get("zone")
+        if truth is not None and det.zone != truth:
+            self.disagreements += 1
+            if len(self.saved) < self.limit and frame.image is not None:
+                from PIL import Image, ImageDraw
+
+                self.folder.mkdir(parents=True, exist_ok=True)
+                name = f"frame{frame.number:06d}_true-{truth}_said-{det.zone}.jpg"
+                im = Image.fromarray(frame.image)
+                draw = ImageDraw.Draw(im)
+                for b in det.boxes:
+                    draw.rectangle(b, outline=(255, 0, 255), width=2)
+                im.save(self.folder / name, quality=90)
+                self.saved.append(
+                    {
+                        "t": frame.time,
+                        "frame": frame.number,
+                        "true": truth,
+                        "said": det.zone,
+                        "score": det.score,
+                        "boxes": [list(b) for b in det.boxes],
+                        "file": name,
+                    }
+                )
+        return det

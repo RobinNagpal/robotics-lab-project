@@ -6,8 +6,7 @@ camera hangs higher (1.9 m above the bench, about 2.8 m above the floor: a lab c
 centred over the zones, so it sees the whole warning zone even where a hand is high up at the bench's sides.
 
 It is an RGB-D camera: a colour picture and a depth picture (MuJoCo renders both). The depth is what tells how
-high a hand is (docs/detector.md).
-``docs/camera-check.md`` compares the two.
+high a hand is (docs/detector.md). ``docs/camera-check.md`` compares the two.
 """
 
 from __future__ import annotations
@@ -47,7 +46,8 @@ def add_safety_camera(spec: mujoco.MjSpec) -> None:
 
 def to_pixels(model: mujoco.MjModel, data: mujoco.MjData, camera: str, points, width: int, height: int):
     """Where world points (n, 3) land in a camera's picture: (n, 2) pixel x, y, and whether each is in
-    front."""
+    front.
+    """
     import numpy as np
 
     cid = model.camera(camera).id
@@ -74,7 +74,8 @@ def pixel_rays(model: mujoco.MjModel, data: mujoco.MjData, camera: str, px, widt
 
 def camera_only():
     """A model holding just the safety camera (and its data, posed): for working out where a picture's pixels
-    point, without the whole scene."""
+    point, without the whole scene.
+    """
     spec = mujoco.MjSpec()
     add_safety_camera(spec)
     model = spec.compile()

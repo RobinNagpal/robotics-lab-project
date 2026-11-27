@@ -72,7 +72,8 @@ FLOOR_DEPTH = 0.90  # m below the bench's top
 
 def add_parts(spec: mujoco.MjSpec) -> None:
     """The demo's parts: the person, the safety camera, and a floor under the bench (seen around its
-    edges)."""
+    edges).
+    """
     hand.add_person(spec)
     cameras.add_safety_camera(spec)
     # On a body of its own: geoms on the world body itself are numbered first, which would shift v3's.
@@ -92,7 +93,8 @@ def add_parts(spec: mujoco.MjSpec) -> None:
 
 def build(seed: int, scenario: str | None = None, awake: bool = False) -> tuple[mujoco.MjModel, object]:
     """Same call and result as v3's ``scene.build``, with the person (parked out of sight) and the camera
-    added."""
+    added.
+    """
     spec, truth = build_spec(seed, scenario=scenario, awake=awake)
     add_parts(spec)
     return spec.compile(), truth
@@ -140,7 +142,8 @@ _V3_LIGHTS: dict[int, tuple[np.ndarray, np.ndarray, np.ndarray]] = {}
 
 def set_lighting(model: mujoco.MjModel, scale: float) -> None:
     """Scale every light in the scene (the lamps and the viewer's headlight) by ``scale``; 1 is v3's
-    lighting."""
+    lighting.
+    """
     key = id(model)
     if key not in _V3_LIGHTS:
         _V3_LIGHTS[key] = (

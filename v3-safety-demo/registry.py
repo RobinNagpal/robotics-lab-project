@@ -3,14 +3,14 @@
 A model is loaded only through ``Registry.read_approved``: it reads the file's bytes once, fingerprints those
 bytes, and hands them back only if the fingerprint is an approved one. So the file checked is the file loaded
 (nothing can swap it in between). A refused file raises ``UnapprovedModel`` and, given a safety log, the
-attempt
-is logged.
+attempt is logged.
 
 The registry also says which approved version is in use (``active``) and keeps the order versions were made
 active in, so an update can be rolled back to the version before it.
 
 Each entry also holds the model's **settings** (its confidence threshold, its picture size): they change what
-the safety function does as much as the weights do, so they are approved with them and cannot be changed apart.
+the safety function does as much as the weights do, so they are approved with them and cannot be changed
+apart.
 
 Given a ``key`` (``keys.py``), the registry file is **signed** (HMAC-SHA256 over its whole contents). A
 registry whose signature is missing or wrong is refused as a whole (``RegistryTampered``): editing the file by

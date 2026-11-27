@@ -1,8 +1,7 @@
 """The safety log: every safety decision, each entry chained to the one before by a hash.
 
 Each entry is one line of JSON. Besides its own fields (time, frame number, model version, score, zone,
-action,
-reason) it carries
+action, reason) it carries
 
 - ``seq``: its place in the log (0, 1, 2, ...),
 - ``prev``: the hash of the entry before it (64 zeros for the first),
@@ -13,8 +12,8 @@ So changing any entry changes its hash and breaks the next entry's ``prev``; del
 
 - **the end cut off**: the last hash (the "head") is kept somewhere else too, and ``verify(entries,
   head=...)`` checks it;
-- **every hash after an edit recomputed** by someone who knows the method: given a ``key`` (``keys.py``),
-  each hash is an HMAC-SHA256 under that secret key, so nobody without the key can write a valid entry.
+- **every hash after an edit recomputed** by someone who knows the method: given a ``key`` (``keys.py``), each
+  hash is an HMAC-SHA256 under that secret key, so nobody without the key can write a valid entry.
   ``verify(entries, key=...)`` checks with the same key.
 
     log = SafetyLog("run.jsonl", key=keys.load())
@@ -57,7 +56,8 @@ def _plain(v: Any) -> Any:
 
 def digest(entry: dict, key: bytes | None = None) -> str:
     """The hash of an entry, over every field but its own ``hash``, in a fixed key order: SHA-256, or
-    HMAC-SHA256 under ``key`` when one is given."""
+    HMAC-SHA256 under ``key`` when one is given.
+    """
     body = {k: v for k, v in entry.items() if k != "hash"}
     text = json.dumps(body, sort_keys=True, separators=(",", ":"), allow_nan=False)
     if key is not None:
@@ -107,7 +107,8 @@ def read(path: str | Path) -> list[dict]:
 def verify(entries: list[dict], head: str | None = None, key: bytes | None = None) -> list[str]:
     """What is wrong with the chain, in plain words; an empty list when every entry is as it was written.
 
-    ``key``: the key the log was written with (None for a log written without one)."""
+    ``key``: the key the log was written with (None for a log written without one).
+    """
     problems = []
     prev = GENESIS
     for i, e in enumerate(entries):

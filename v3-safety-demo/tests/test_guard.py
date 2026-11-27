@@ -1,6 +1,6 @@
 """The guard on v3's real scene, with a small stand-in "script" that moves the arm the way v3's steps do:
-write
-joint targets into data.ctrl, then call scene.step through the module."""
+write joint targets into data.ctrl, then call scene.step through the module.
+"""
 
 import math
 
@@ -386,7 +386,8 @@ def test_v3_home_is_inside_the_set_limits():
 
 def test_decisions_take_effect_one_latency_after_the_frame(model, data):
     """With the real 0.1 s delay, a hand in the stop zone from 0.25 s is first seen in the frame taken at
-    0.301 s (frames from the first step, every 0.1 s), and that frame's hold takes effect at 0.401 s."""
+    0.301 s (frames from the first step, every 0.1 s), and that frame's hold takes effect at 0.401 s.
+    """
     g = make_guard(model, data, ScriptedHand([Visit(0.25, 0.75, 0.05)]), latency=G.LATENCY)
     move(model, data, GOAL, 1.5)
     hold = [e for e in g.log.entries if e.get("kind") == "detector" and e.get("action") == G.HOLD]
@@ -419,7 +420,8 @@ def test_start_up_check_holds_a_hand_already_there(model, data):
 
 def test_measured_overspeed_latches_a_stop(model, data):
     """The normal layer also watches the arm's measured speed: a joint really turning too fast stops it,
-    whatever the commands said."""
+    whatever the commands said.
+    """
     g = make_guard(model, data, limits=G.Limits())
     q = data.qpos[g.joints].copy()
     for k in range(20):  # the shoulder turning at 4 rad/s, twice the measured limit (1.6 x 1.25)
