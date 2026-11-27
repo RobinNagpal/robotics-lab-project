@@ -22,6 +22,10 @@ detector and the safety layer exist.
 
 ## Track A: the hand and the camera (phase 1)
 
+**Status (27 Nov): built; go / no-go pictures ready for review** ([camera-check.md](camera-check.md)). The person
+is added without changing v3 (same bodies, geoms, cameras, masses; the same physics, tested). A new safety
+camera replaces v3's overhead camera, which misses most of the warning zone.
+
 Goal: rendered images where a hand reaching into the cell is clear enough to train a detector on.
 
 1. **Scene wrapper.** `scene_plus.py` builds v3's scene for a seed with `scene.build(seed)` and adds the demo's
@@ -69,11 +73,21 @@ hand exists) and the arm slows, holds and carries on as planned.
 
 ## How the two tracks share work
 
-- **Files.** Track A owns `scene_plus.py`, `hand.py`, `zones.py` and `render.py`. Track B owns `guard.py` (wrapper,
-  behaviour, watchdog, normal layer), `detector.py`, `safety_log.py` and `registry.py`. Neither edits the other's
-  files.
-- **Where they meet.** Track B needs only "where is the hand" and "which zone is it in". Until `zones.py` exists,
-  Track B uses a stand-in with the same calls; the zone sizes are settled in Track A.
+- **Files.** Track A owns `scene_plus.py`, `hand.py`, `zones.py`, `cameras.py`, `render.py`,
+  `tests/test_scene_plus.py`, `tests/test_hand_and_zones.py` and `docs/camera-check.md`. Track B owns `guard.py`
+  (wrapper, behaviour, watchdog, normal layer), `detector.py`, `safety_log.py` and `registry.py`, and their tests.
+  Neither edits the other's files. `tests/conftest.py` and `ruff.toml` (shared set-up) came with Track A; Track B
+  keeps them as they are and adds to `conftest.py` only if it must.
+- **Where they meet.** Track B needs only "where is the hand" and "which zone is it in". Track A's calls for that
+  (merge `v3-safety-demo` into the Track B branch to get them):
+  - `scene_plus.build(seed)`: v3's scene with the person; `scene_plus.patched()` makes v3's step code use it.
+  - `hand.place(model, data, wrist_pos or None, quat)`: put the person somewhere (None parks them out of sight).
+  - `hand.draw_reach(rng, model, data, t_from, t_to)` and `Reach.wrist(t)`: a random reach over time.
+  - `zones.truth(model, data)`: the zone (`zones.Zone.CLEAR`, `WARNING`, `STOP`), how close the person comes to
+    the arm's base, and whether they are in view. The perfect detector is this.
+  - `zones.distance_to_robot(model, data)`: the gap between person and robot (negative: a contact event).
+  - The zones: stop closer than 0.85 m to the arm's base (seen from above), warning 0.85 to 1.15 m, both up to
+    1 m above the table.
 - **Git.** One branch, `v3-safety-demo`, made from `v3-centrifuge-loading` (the demo imports v3's code, which isn't
   in `main` yet). The second session works in its own git worktree, on a branch made from `v3-safety-demo`, and is
   merged back when its track is done. Two sessions in the same folder would trip over each other's changes.
