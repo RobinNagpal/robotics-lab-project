@@ -49,7 +49,7 @@ count below.)
 
 ## Results: the perfect detector (test jobs 4 to 7)
 
-`results/person_perfect/`
+`results/person_perfect/` (rerun after the camera fix below; the safety numbers were the same before it)
 
 | | Seed 4 (pairs) | Seed 5 (odd one) | Seed 6 (triangle) | Seed 7 (mismatch) | All |
 |---|---|---|---|---|---|
@@ -60,6 +60,7 @@ count below.)
 | Smallest gap to the robot while it moved | | | | | **13 cm** |
 | Arm held / slowed | 28.7 s / 17.2 s | 37.1 s / 27.1 s | 19.0 s / 13.4 s | 36.1 s / 39.5 s | |
 | Job loaded and balanced | yes | yes | yes | yes | **4 of 4** |
+| The robot's own report agrees (Step 5) | yes | yes | yes | yes | **4 of 4** |
 | Normal layer tripped; log and replay | no; intact | no; intact | no; intact | no; intact | |
 
 The fastest reach into the stop zone came in at 1.98 m/s.
