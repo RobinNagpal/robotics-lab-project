@@ -35,6 +35,19 @@ Gaps Track B had listed as simplified, closed while joining:
 - **Signed log and registry:** the log's hashes are keyed with a secret (HMAC-SHA256), and the registry is
   signed; editing either by hand is caught. The registry also approves each model's threshold and picture size.
 
+## With nobody there, the joined system leaves v3's jobs alone
+
+All 20 v3 jobs, guard on (with the delay, the start-up check and the measured-speed limits), perfect detector,
+nobody there (`results/nobody_perfect_20/`, after the camera fix below):
+
+- **every result is identical to Track B's no-hand run** (20 of 20, every field), which in turn matched plain v3
+  as it runs today; against v3's saved results file, the 10 jobs without a balance tube match exactly and the
+  other 10 differ only because that file is older than v3's Step 3 changes of 24 November (safety-layer.md);
+- the arm was **never slowed or held**, and the normal layer never tripped: the highest measured joint speed was
+  0.84 rad/s (limit 1.6 x 1.25 = 2.0) and the gripper's 0.88 m/s (limit 1.1 x 1.25 = 1.375);
+- every log verifies with its key and every decision replays from the log;
+- 19 of 20 loaded and balanced: seed 11 fails in Step 4 exactly as plain v3 does.
+
 ## Measuring contact
 
 Every 10 ms while the person is near, the run measures the gap between the person's shapes and the robot's, and

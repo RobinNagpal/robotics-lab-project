@@ -9,4 +9,5 @@ results/*/trace_*.json
 keys/
 # Example pictures kept by runs and scans (the figures used in docs/ are copied to docs/figures)
 results/*/disagreements_*/
-results/nobody_*/
+results/nobody_test_*/
+results/nobody_mine_*/
