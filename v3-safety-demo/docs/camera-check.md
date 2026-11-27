@@ -58,3 +58,7 @@ What they show:
   because the zones' edges are drawn at table height. The truth labels are worked out in 3D, so the detector has
   to judge height from how big the hand looks. This belongs in the manufacturer file as a known limitation, and
   Package 2 should measure errors by hand height.
+
+**Later (27 Nov):** the height problem turned out to be big (a cautious rule without height raised a false alarm
+on 36% of clear pictures), so the safety camera became an RGB-D camera: it also gives depth. See
+[detector.md](detector.md#why-the-camera-needs-depth).

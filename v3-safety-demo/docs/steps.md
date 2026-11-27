@@ -22,7 +22,7 @@ detector and the safety layer exist.
 
 ## Track A: the hand and the camera (phase 1)
 
-**Status (27 Nov): built; go / no-go pictures ready for review** ([camera-check.md](camera-check.md)). The person
+**Status (27 Nov): done; go given** ([camera-check.md](camera-check.md)). The person
 is added without changing v3 (same bodies, geoms, cameras, masses; the same physics, tested). A new safety
 camera replaces v3's overhead camera, which misses most of the warning zone.
 
@@ -46,6 +46,24 @@ Goal: rendered images where a hand reaching into the cell is clear enough to tra
    to the fallback: a person-sized shape (plan.md section 9).
 
 Done when: the go / no-go images are reviewed.
+
+## Track A: pictures and detector v1 (phase 2)
+
+**Status (27 Nov): dataset rendered, v1 training.** Approach and decisions: [detector.md](detector.md).
+
+1. **Record real v3 jobs** (`record_jobs.py`): 8 scenes, the state every 0.25 s; seeds 0 to 3 for training,
+   4 to 7 for testing only.
+2. **Render the pictures** (`dataset.py`): 1,200 training, 300 validation, 3,000 test, with boxes from MuJoCo's
+   segmentation and the truth per picture; depth pictures for validation and test.
+3. **Train YOLO11n v1** (`train_yolo.py`): 20 epochs, about 25 minutes on the Mac's GPU.
+4. **Rule** (`box_zone.py`): box + depth -> zone. Without depth the safe rule raised a false alarm on 36% of
+   clear pictures, so the safety camera became an RGB-D camera (decided 27 Nov).
+5. **Evaluate** (`evaluate.py`): missed hands and false alarms per condition, 95% bounds, threshold chosen on
+   validation only.
+
+Decisions (27 Nov): YOLO11n; dataset sized to train in 20 to 30 minutes; RGB-D camera with a fixed rule; the two
+limitations found (arms not detected, hands hidden under the robot) kept as documented gaps
+([detector.md](detector.md#known-limitations-found-while-building-keep-for-the-report)).
 
 ## Track B: the safety layer (phase 1)
 
@@ -73,8 +91,10 @@ hand exists) and the arm slows, holds and carries on as planned.
 
 ## How the two tracks share work
 
-- **Files.** Track A owns `scene_plus.py`, `hand.py`, `zones.py`, `cameras.py`, `render.py`,
-  `tests/test_scene_plus.py`, `tests/test_hand_and_zones.py` and `docs/camera-check.md`. Track B owns `guard.py`
+- **Files.** Track A owns `scene_plus.py`, `hand.py`, `zones.py`, `cameras.py`, `render.py`, `record_jobs.py`,
+  `dataset.py`, `train_yolo.py`, `evaluate.py`, `box_zone.py`, `pixi.toml` (the demo's own environment, with
+  YOLO), `tests/test_scene_plus.py`, `tests/test_hand_and_zones.py`, `docs/camera-check.md` and
+  `docs/detector*.md`. Track B owns `guard.py`
   (wrapper, behaviour, watchdog, normal layer), `detector.py`, `safety_log.py` and `registry.py`, and their tests.
   Neither edits the other's files. `tests/conftest.py` and `ruff.toml` (shared set-up) came with Track A; Track B
   keeps them as they are and adds to `conftest.py` only if it must.

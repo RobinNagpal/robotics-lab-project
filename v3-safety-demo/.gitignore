@@ -1,0 +1,4 @@
+# Recorded job states, rendered pictures, trained models: remade by the scripts
+data/
+runs/
+*.pt

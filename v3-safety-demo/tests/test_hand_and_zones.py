@@ -94,3 +94,88 @@ def test_distance_to_robot(world):
     hand.place(model, data, pinch + np.array([0.05, 0.0, 0.0]), np.array([1.0, 0, 0, 0]))
     mujoco.mj_forward(model, data)
     assert zones.distance_to_robot(model, data) < 0.0 < far
+
+
+def test_pixel_rays_undo_to_pixels(world):
+    import cameras
+
+    model, data = world
+    pts = np.array([[0.4, 0.2, 0.1], [1.0, -0.8, 0.4], [0.0, 0.9, 0.0]])
+    w, h = cameras.SAFETY.width, cameras.SAFETY.height
+    px, ok = cameras.to_pixels(model, data, cameras.SAFETY.name, pts, w, h)
+    pos, rays = cameras.pixel_rays(model, data, cameras.SAFETY.name, px, w, h)
+    t = (pts[:, 2] - pos[2]) / rays[:, 2]
+    assert ok.all() and np.allclose(pos + t[:, None] * rays, pts, atol=1e-9)
+
+
+def test_box_rule_never_safer_than_truth(world):
+    """With the true box, the rule's zone is never safer than the true zone (hands below HAND_TOP)."""
+    import box_zone
+    import cameras
+
+    model, data = world
+    rng = np.random.default_rng(1)
+    w, h = cameras.SAFETY.width, cameras.SAFETY.height
+    skin = np.array([model.geom(hand.PREFIX + n).id for n in hand.SKIN_SHAPES])
+    for _ in range(40):
+        hand.set_look(model, hand.Look.draw(rng))
+        _, r = hand.draw_reach(rng, model, data, 0.0, 0.0)
+        hand.place(model, data, np.array(r.target), r.quat())
+        mujoco.mj_forward(model, data)
+        truth = zones.truth(model, data)
+        # The hand's own corner points, projected: the box a perfect detector would draw (hidden parts too).
+        pts = zones.person_points(model, data)[: 8 + 10 * (len(skin) - 1)]
+        px, _ = cameras.to_pixels(model, data, cameras.SAFETY.name, pts, w, h)
+        box = (*px.min(axis=0), *px.max(axis=0))
+        hand_reach = np.linalg.norm(pts[:, :2], axis=1).min()
+        assert box_zone.box_reach(model, data, box) <= hand_reach + 1e-6
+        if truth.reach == hand_reach:
+            assert box_zone.zone_of_boxes(model, data, [box]) >= truth.zone
+
+
+def test_outline_distance():
+    import box_zone
+
+    square = box_zone._hull(np.array([[1.0, -1], [3, -1], [3, 1], [1, 1], [2, 0]]))
+    assert len(square) == 4
+    assert box_zone._distance_from_origin(square) == pytest.approx(1.0)
+    around = box_zone._hull(np.array([[-1.0, -1], [1, -1], [1, 1], [-1, 1]]))
+    assert box_zone._distance_from_origin(around) == 0.0
+
+
+def test_depth_rule_matches_truth(world):
+    """With the true box and the depth picture, the rule's reach is within 2 cm below the truth (never above
+    it when the closest point of the hand shows), and its zone is never safer."""
+    import box_zone
+    import cameras
+    import dataset
+
+    model, data = world
+    rng = np.random.default_rng(2)
+    w, h = cameras.SAFETY.width, cameras.SAFETY.height
+    skin = np.array([model.geom(hand.PREFIX + n).id for n in hand.SKIN_SHAPES])
+    seg = mujoco.Renderer(model, height=h, width=w)
+    seg.enable_segmentation_rendering()
+    dep = mujoco.Renderer(model, height=h, width=w)
+    dep.enable_depth_rendering()
+    checked = 0
+    for _ in range(25):
+        hand.set_look(model, hand.Look.draw(rng))
+        goal, r = hand.draw_reach(rng, model, data, 0.0, 0.0)
+        hand.place(model, data, np.array(r.target), r.quat())
+        mujoco.mj_forward(model, data)
+        seg.update_scene(data, camera=cameras.SAFETY.name)
+        _, box = dataset.hand_box(seg.render(), skin)
+        if box is None:
+            continue
+        dep.update_scene(data, camera=cameras.SAFETY.name)
+        depth = dep.render()
+        pts = zones.person_points(model, data)[: 8 + 10 * (len(skin) - 1)]
+        hand_reach = np.linalg.norm(pts[:, :2], axis=1).min()
+        got = box_zone.depth_reach(model, data, box, depth)
+        assert got <= hand_reach + 0.02
+        assert got >= hand_reach - 0.15  # not wildly cautious: the box's own corners only
+        checked += 1
+    seg.close()
+    dep.close()
+    assert checked >= 15

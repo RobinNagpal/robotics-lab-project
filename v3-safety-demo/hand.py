@@ -238,17 +238,36 @@ GOALS = {"outside": (0.2, 1.40, 1.60), "warning": (0.3, 1.02, 1.28), "stop": (0.
 # m/s. ISO 13855 takes 1.6 m/s for a hand reaching in, 2.0 m/s close to the hazard.
 HAND_SPEED = (0.3, 2.0)
 CLEARANCE = 0.04  # m: the lowest the hand goes above anything on the bench
+HIGHEST = 0.5  # m: the wrist never goes higher (a reach that would have to is drawn again)
+ROBOT_PREFIX = "arm/"
 
 
 def surface(model: mujoco.MjModel, data: mujoco.MjData, x: float, y: float) -> float:
-    """The height of whatever is highest on the bench at (x, y): the table, a rack, the centrifuge, its
-    lid."""
+    """The height of whatever is highest on the bench at (x, y): the table, a rack, the centrifuge, its lid.
+
+    The robot doesn't count (it moves; a person reaches past it, not over it): a ray down that hits the robot
+    carries on below it.
+    """
     geomid = np.zeros(1, dtype=np.int32)
     top = 2.0
-    dist = mujoco.mj_ray(
-        model, data, np.array([x, y, top]), np.array([0.0, 0.0, -1.0]), None, 1, model.body(BODY).id, geomid
-    )
-    return 0.0 if dist < 0 else top - dist
+    for _ in range(10):
+        dist = mujoco.mj_ray(
+            model,
+            data,
+            np.array([x, y, top]),
+            np.array([0.0, 0.0, -1.0]),
+            None,
+            1,
+            model.body(BODY).id,
+            geomid,
+        )
+        if dist < 0:
+            return 0.0
+        hit = top - dist
+        if not model.body(model.geom_bodyid[geomid[0]]).name.startswith(ROBOT_PREFIX):
+            return hit
+        top = hit - 1e-4
+    return 0.0
 
 
 def draw_reach(
@@ -263,8 +282,24 @@ def draw_reach(
 
     The hand starts at the bench's edge on a random side, out of the zones, and goes in a straight line to a
     target chosen for the goal. It stays above everything on the bench along the way (the person's shapes
-    don't collide, so this is what keeps it from going through the centrifuge).
+    don't collide, so this is what keeps it from going through the centrifuge), and never higher than
+    ``HIGHEST``: a reach that would have to go higher is drawn again.
     """
+    for _ in range(100):
+        drawn = _draw_once(rng, model, data, t_from, t_to, goal)
+        if drawn[1].start[2] <= HIGHEST:
+            return drawn
+    raise RuntimeError("no reach found below HIGHEST")
+
+
+def _draw_once(
+    rng: np.random.Generator,
+    model: mujoco.MjModel,
+    data: mujoco.MjData,
+    t_from: float,
+    t_to: float,
+    goal: str | None = None,
+) -> tuple[str, Reach]:
     side = str(rng.choice(list(SIDES), p=list(SIDES.values())))
     if goal is None:
         names = list(GOALS)
