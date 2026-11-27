@@ -1,4 +1,5 @@
 import pytest
+
 from detector import Detection, load
 from registry import Registry, UnapprovedModel, fingerprint_file
 from safety_log import SafetyLog, verify

@@ -1,5 +1,6 @@
 import numpy as np
 import pytest
+
 from detector import CLEAR, STOP, WARNING, Frame, PerfectDetector
 from standin import ARM_RADIUS, STOP_DISTANCE, WARNING_DISTANCE, distance_to_chain, repeating_visits, zone_of
 
@@ -8,7 +9,12 @@ ARM = np.array([[0.0, 0.0, 0.0], [0.0, 0.0, 1.0]])  # a straight vertical arm, 1
 
 @pytest.mark.parametrize(
     "gap, zone",
-    [(0.01, STOP), (STOP_DISTANCE - 0.01, STOP), (STOP_DISTANCE + 0.01, WARNING), (WARNING_DISTANCE + 0.01, CLEAR)],
+    [
+        (0.01, STOP),
+        (STOP_DISTANCE - 0.01, STOP),
+        (STOP_DISTANCE + 0.01, WARNING),
+        (WARNING_DISTANCE + 0.01, CLEAR),
+    ],
 )
 def test_zone_by_distance_from_the_arm(gap, zone):
     hand = np.array([[ARM_RADIUS + gap, 0.0, 0.5]])

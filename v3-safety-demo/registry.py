@@ -2,7 +2,8 @@
 
 A model is loaded only through ``Registry.read_approved``: it reads the file's bytes once, fingerprints those
 bytes, and hands them back only if the fingerprint is an approved one. So the file checked is the file loaded
-(nothing can swap it in between). A refused file raises ``UnapprovedModel`` and, given a safety log, the attempt
+(nothing can swap it in between). A refused file raises ``UnapprovedModel`` and, given a safety log, the
+attempt
 is logged.
 
 The registry also says which approved version is in use (``active``) and keeps the order versions were made
@@ -49,7 +50,8 @@ class Registry:
         else:
             self.data = {"models": {}, "active": None, "history": []}
 
-    # --- what is in it ---------------------------------------------------------------------------------------
+    # --- what is in it
+    # ---------------------------------------------------------------------------------------
 
     @property
     def models(self) -> dict[str, dict]:
@@ -125,7 +127,12 @@ class Registry:
             raise UnapprovedModel(reason)
         if log is not None:
             log.append(
-                kind="registry", action="loaded", reason="", model=entry["version"], sha256=sha, file=str(model_path)
+                kind="registry",
+                action="loaded",
+                reason="",
+                model=entry["version"],
+                sha256=sha,
+                file=str(model_path),
             )
         return blob, entry
 
@@ -135,7 +142,9 @@ class Registry:
             raise UnapprovedModel("no model version is active")
         blob, entry = self.read_approved(Path(models_dir) / self.models[self.active]["file"], log)
         if entry["version"] != self.active:
-            raise UnapprovedModel(f"the active model's file holds version {entry['version']}, not {self.active}")
+            raise UnapprovedModel(
+                f"the active model's file holds version {entry['version']}, not {self.active}"
+            )
         return blob, entry
 
 

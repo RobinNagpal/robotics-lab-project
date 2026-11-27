@@ -2,7 +2,8 @@
 
 - **Zones** (``zone_of``): how far a hand is from the arm, and so which zone it is in. The arm is drawn as a
   chain of thick lines through its joints (each ``ARM_RADIUS`` thick), and a hand point's distance is to the
-  nearest of them. Warning closer than ``WARNING_DISTANCE``, stop closer than ``STOP_DISTANCE``. These sizes are
+  nearest of them. Warning closer than ``WARNING_DISTANCE``, stop closer than ``STOP_DISTANCE``. These sizes
+  are
   placeholders: Track A's ``zones.py`` settles the real ones, and its function replaces ``zone_of`` with the
   same call.
 - **A scripted hand** (``ScriptedHand``): a single point placed beside the gripper at set times, at a set
@@ -68,7 +69,8 @@ def zone_of(hand: np.ndarray, arm: np.ndarray) -> tuple[str, float]:
 
 @dataclass(frozen=True)
 class Visit:
-    """The hand beside the gripper from ``start`` to ``end`` (simulation seconds), ``distance`` from the arm."""
+    """The hand beside the gripper from ``start`` to ``end`` (simulation seconds), ``distance`` from the
+    arm."""
 
     start: float
     end: float
@@ -102,7 +104,8 @@ class ScriptedHand:
 def repeating_visits(
     first: float, every: float, until: float, warn: float = 4.0, stop: float = 2.0
 ) -> list[Visit]:
-    """Every ``every`` seconds from ``first``: ``warn`` s in the warning zone, then ``stop`` s in the stop zone.
+    """Every ``every`` seconds from ``first``: ``warn`` s in the warning zone, then ``stop`` s in the stop
+    zone.
 
     The distances sit well inside each zone (0.27 m and 0.05 m from the arm) so the zone is clear-cut.
     """

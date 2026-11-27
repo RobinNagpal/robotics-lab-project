@@ -2,13 +2,16 @@ import json
 import math
 
 import numpy as np
+
 from safety_log import GENESIS, SafetyLog, read, verify
 
 
 def make(path=None, n=5):
     log = SafetyLog(path)
     for i in range(n):
-        log.append(kind="detector", t=0.1 * i, frame=i + 1, model="perfect-1", score=1.0, zone="clear", action="run")
+        log.append(
+            kind="detector", t=0.1 * i, frame=i + 1, model="perfect-1", score=1.0, zone="clear", action="run"
+        )
     return log
 
 
@@ -67,7 +70,15 @@ def test_cut_short_is_found_by_the_head():
 
 def test_numpy_and_nan_values_are_plain():
     log = SafetyLog()
-    e = log.append(t=np.float64(1.5), frame=np.int64(3), score=float("nan"), pts=np.zeros(2), ok=np.bool_(True))
-    assert e["t"] == 1.5 and e["frame"] == 3 and e["score"] is None and e["pts"] == [0.0, 0.0] and e["ok"] is True
+    e = log.append(
+        t=np.float64(1.5), frame=np.int64(3), score=float("nan"), pts=np.zeros(2), ok=np.bool_(True)
+    )
+    assert (
+        e["t"] == 1.5
+        and e["frame"] == 3
+        and e["score"] is None
+        and e["pts"] == [0.0, 0.0]
+        and e["ok"] is True
+    )
     assert verify(log.entries) == []
     assert not any(isinstance(v, float) and math.isnan(v) for v in e.values())

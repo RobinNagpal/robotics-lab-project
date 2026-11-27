@@ -1,6 +1,7 @@
 """The safety log: every safety decision, each entry chained to the one before by a hash.
 
-Each entry is one line of JSON. Besides its own fields (time, frame number, model version, score, zone, action,
+Each entry is one line of JSON. Besides its own fields (time, frame number, model version, score, zone,
+action,
 reason) it carries
 
 - ``seq``: its place in the log (0, 1, 2, ...),
@@ -102,10 +103,14 @@ def verify(entries: list[dict], head: str | None = None) -> list[str]:
         if e.get("seq") != i:
             problems.append(f"entry {i}: numbered {e.get('seq')} (an entry before it was deleted or added)")
         if e.get("prev") != prev:
-            problems.append(f"entry {i}: does not follow the entry before it (one was changed, deleted or added)")
+            problems.append(
+                f"entry {i}: does not follow the entry before it (one was changed, deleted or added)"
+            )
         if digest(e) != e.get("hash"):
             problems.append(f"entry {i}: its contents were changed after it was written")
         prev = e.get("hash")
     if head is not None and prev != head:
-        problems.append("the log's last entry is not the one recorded at the end of the run (cut short or replaced)")
+        problems.append(
+            "the log's last entry is not the one recorded at the end of the run (cut short or replaced)"
+        )
     return problems

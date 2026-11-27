@@ -7,14 +7,17 @@
 
 A ``Frame`` is what a camera hands over: its number (counting up from 1), the simulation time it was taken at,
 the picture (an image array, or None for the truth camera), a depth picture if the camera has one (Track A's
-safety camera is RGB-D), and, for the "perfect" detector only, the simulation's truth at that moment (where the
+safety camera is RGB-D), and, for the "perfect" detector only, the simulation's truth at that moment (where
+the
 hand and the arm are).
 
 Two pieces live here:
 
-- ``PerfectDetector``: reads the hand's true position from the frame's truth and works out the zone exactly. It
+- ``PerfectDetector``: reads the hand's true position from the frame's truth and works out the zone exactly.
+  It
   stands in for the trained model until that exists, and stays as the baseline the model is compared with.
-- ``TruthCamera``: the camera that goes with it. It takes no picture; it records where the hand and the arm are.
+- ``TruthCamera``: the camera that goes with it. It takes no picture; it records where the hand and the arm
+  are.
 
 The trained model (Track A, phase 2) implements the same ``detect`` and is loaded with ``load``, which goes
 through the model registry. A rendering camera must add sensor noise to its pictures, as a real camera has:
@@ -88,7 +91,8 @@ class PerfectDetector:
 
 
 class TruthCamera:
-    """Records where the hand and the arm are, at each frame. Also keeps the smallest hand-arm distance seen."""
+    """Records where the hand and the arm are, at each frame. Also keeps the smallest hand-arm distance
+    seen."""
 
     def __init__(self, hand=None, arm_points=None, zone_fn=None):
         import standin

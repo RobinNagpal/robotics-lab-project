@@ -1,10 +1,13 @@
-"""v3's whole job with the safety layer on: Step 6's ``run_seed``, unchanged, with its arm going through the guard.
+"""v3's whole job with the safety layer on: Step 6's ``run_seed``, unchanged, with its arm going through the
+guard.
 
-v3's ``step-6-whole-run/run.py`` is loaded as it is. Two things are wrapped from outside, without changing a v3
+v3's ``step-6-whole-run/run.py`` is loaded as it is. Two things are wrapped from outside, without changing a
+v3
 file: ``scene.step`` (``guard.install``) and ``test_scenes.build``, so the scene ``run_seed`` builds gets its
 guard (a truth camera, the perfect detector, a safety log) the moment it is made.
 
-Step 0 (SAM 3 finding the tubes) moves nothing, so the guard has nothing to do there. Rather than run the 3.4 GB
+Step 0 (SAM 3 finding the tubes) moves nothing, so the guard has nothing to do there. Rather than run the 3.4
+GB
 model again, its answer is taken as the bench's truth, which is what SAM 3 gave on all 20 seeds
 (``step0_right`` in v3's results).
 
@@ -89,7 +92,9 @@ def job(args: tuple[int, str, str, str]) -> dict:
 
     run = v3_whole_run()
     limits = G.loose() if limits_kind == "loose" else G.Limits()
-    hand = ScriptedHand(repeating_visits(VISIT_FIRST, VISIT_EVERY, 3600.0)) if hand_kind == "scripted" else None
+    hand = (
+        ScriptedHand(repeating_visits(VISIT_FIRST, VISIT_EVERY, 3600.0)) if hand_kind == "scripted" else None
+    )
     log_path = OUT / name / f"log_seed{seed:02d}.jsonl"
     log = SafetyLog(log_path)
     made: dict = {}
@@ -99,7 +104,9 @@ def job(args: tuple[int, str, str, str]) -> dict:
         model, data, truth = plain_build(seed_, changed)
         camera = TruthCamera(hand)
         made["camera"] = camera
-        made["guard"] = G.attach(G.Guard(model, data, camera, PerfectDetector(), log, limits=limits, trace=True))
+        made["guard"] = G.attach(
+            G.Guard(model, data, camera, PerfectDetector(), log, limits=limits, trace=True)
+        )
         return model, data, truth
 
     t0 = time.time()
@@ -111,7 +118,12 @@ def job(args: tuple[int, str, str, str]) -> dict:
         out = {"seed": seed, "error": f"SafetyStop: {e}", "success": False}
         made["guard"].hold(1.0)
     except Exception as e:  # noqa: BLE001 - recorded, so one bad seed does not end the batch
-        out = {"seed": seed, "error": f"{type(e).__name__}: {e}", "success": False, "trace": traceback.format_exc()}
+        out = {
+            "seed": seed,
+            "error": f"{type(e).__name__}: {e}",
+            "success": False,
+            "trace": traceback.format_exc(),
+        }
     finally:
         test_scenes.build = plain_build
         G.uninstall()
@@ -121,7 +133,9 @@ def job(args: tuple[int, str, str, str]) -> dict:
     if g is not None:
         out["guard"] = g.summary()
         cam = made["camera"]
-        out["guard"]["min_hand_distance"] = None if cam.min_distance == float("inf") else round(cam.min_distance, 4)
+        out["guard"]["min_hand_distance"] = (
+            None if cam.min_distance == float("inf") else round(cam.min_distance, 4)
+        )
         entries = read(log_path)
         out["guard"]["log_problems"] = verify(entries, head=g.log.head)
         out["guard"]["replay_disagrees"] = G.replay(entries)[:5]
@@ -162,12 +176,18 @@ def main() -> None:
                 r["same_as_v3"] = compare(r, v3_rows)
             rows.append(r)
             g = r.get("guard", {})
-            same = "" if a.hand != "none" else ("same as v3" if not r["same_as_v3"] else f"DIFFERS {r['same_as_v3'][:3]}")
+            same = (
+                ""
+                if a.hand != "none"
+                else ("same as v3" if not r["same_as_v3"] else f"DIFFERS {r['same_as_v3'][:3]}")
+            )
+            ok = r.get("success") or (r.get("all_samples_loaded") and r.get("balanced"))
             print(
-                f"{'ok ' if r.get('success') or (r.get('all_samples_loaded') and r.get('balanced')) else 'BAD'} "
-                f"seed {r['seed']:2d} {r.get('scenario', ''):8s} held {g.get('held_seconds')} s slow "
-                f"{g.get('slow_seconds')} s stops {len(g.get('stops', []))} log ok {not g.get('log_problems')} "
-                f"replay ok {not g.get('replay_disagrees')} | {same} {r.get('error', '')} {r['wall_seconds']:.0f} s",
+                f"{'ok ' if ok else 'BAD'} seed {r['seed']:2d} {r.get('scenario', ''):8s} "
+                f"held {g.get('held_seconds')} s slow {g.get('slow_seconds')} s "
+                f"stops {len(g.get('stops', []))} log ok {not g.get('log_problems')} "
+                f"replay ok {not g.get('replay_disagrees')} | {same} {r.get('error', '')} "
+                f"{r['wall_seconds']:.0f} s",
                 flush=True,
             )
     (OUT / name / "results.json").write_text(json.dumps(rows, indent=1, default=str))

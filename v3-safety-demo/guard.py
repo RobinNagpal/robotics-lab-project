@@ -1,13 +1,18 @@
 """The safety layer around v3's arm: it slows or holds the arm between simulation steps.
 
-**How it reaches the arm without changing v3.** Every v3 step moves the arm the same way: it writes joint targets
-into ``data.ctrl`` and calls ``scene.step(model, data, n)``, looked up through the ``scene`` module. ``install()``
-replaces that module attribute with a wrapper. For a ``data`` the wrapper has been told about (``attach``), each
+**How it reaches the arm without changing v3.** Every v3 step moves the arm the same way: it writes joint
+targets
+into ``data.ctrl`` and calls ``scene.step(model, data, n)``, looked up through the ``scene`` module.
+``install()``
+replaces that module attribute with a wrapper. For a ``data`` the wrapper has been told about (``attach``),
+each
 call becomes one "tick" of v3's script, and the guard decides how the tick is carried out:
 
-- **run**: one physics step with v3's targets, exactly as v3 does it (so with nothing near, the run is the same
+- **run**: one physics step with v3's targets, exactly as v3 does it (so with nothing near, the run is the
+  same
   to the last bit);
-- **slow**: the tick is spread over 4 physics steps (25% speed), the targets moving a quarter of the way each step;
+- **slow**: the tick is spread over 4 physics steps (25% speed), the targets moving a quarter of the way each
+  step;
 - **hold**: the targets are set to where the arm is at that moment, so it stops at once (in about 20 ms in the
   simulation), and physics keeps running; the call does not return until the arm may move again. Then the arm
   eases back onto v3's path (at most 0.5 rad/s) and v3's script carries on exactly where it was paused.
@@ -18,18 +23,24 @@ After each call ``data.ctrl`` again holds v3's own targets, so v3's code reads b
 **The two layers.**
 
 - The **normal layer** (no ML) checks every arm command (each tick's joint targets): joint speed and gripper
-  speed over the last 50 ms within limits, and the gripper and elbow inside the work-area box. Any breach, and the
+  speed over the last 50 ms within limits, and the gripper and elbow inside the work-area box. Any breach, and
+  the
   emergency stop, latch a **stop**: the arm holds and ``SafetyStop`` is raised out of v3's script. It needs an
   operator's reset (``reset_stop``). Nothing from the ML side can change or skip it.
-- The **ML layer** reads camera frames (10 a second) and asks the detector for the zone: warning gives slow, stop
-  zone gives hold, and the arm carries on only after 1 s with no hand (``Behaviour``). The **watchdog** holds the
-  arm whenever a frame is missing, late (older than 150 ms), frozen (its number or time not moving on, or the same
-  picture 3 times running), or the detector crashes, gives an answer that makes no sense, or takes too long. It
+- The **ML layer** reads camera frames (10 a second) and asks the detector for the zone: warning gives slow,
+  stop
+  zone gives hold, and the arm carries on only after 1 s with no hand (``Behaviour``). The **watchdog** holds
+  the
+  arm whenever a frame is missing, late (older than 150 ms), frozen (its number or time not moving on, or the
+  same
+  picture 3 times running), or the detector crashes, gives an answer that makes no sense, or takes too long.
+  It
   carries on only after 1 s of good frames with no hand.
 
 What the arm does is the strictest of the two: stop beats hold beats slow beats run.
 
-Every decision goes into the safety log (``safety_log.py``), and ``replay`` rebuilds the decisions from the log
+Every decision goes into the safety log (``safety_log.py``), and ``replay`` rebuilds the decisions from the
+log
 alone.
 """
 
@@ -66,11 +77,13 @@ FAULT = "fault"  # the zone logged when there is no trustworthy answer
 
 @dataclass(frozen=True)
 class Limits:
-    """The normal layer's limits, on the commands v3 sends (speeds measured over ``window`` seconds of commands).
+    """The normal layer's limits, on the commands v3 sends (speeds measured over ``window`` seconds of
+    commands).
 
     Set from what v3's own 20 jobs use, with room to spare (docs/safety-layer.md, "Setting the limits"):
 
-    - joints 1 to 5 reach 1.25 rad/s at most; the last wrist joint reaches 3.47 rad/s (a quick turn of the gripper
+    - joints 1 to 5 reach 1.25 rad/s at most; the last wrist joint reaches 3.47 rad/s (a quick turn of the
+      gripper
       in Step 3, likely the cap's screw-on turns, while the gripper itself hardly moves);
     - the point between the fingers reaches 0.88 m/s (as the arm swings upright going home);
     - the boxes are the space the gripper and the elbow use over all 20 jobs, plus 5 cm.
@@ -88,13 +101,20 @@ class Limits:
 
 def loose(**changes) -> Limits:
     """Limits wide open, but for ``changes``: for measuring what a job needs, and for tests of one limit."""
-    wide = dict(joint_speed=100.0, tool_speed=100.0, box_min=(-9.0,) * 3, box_max=(9.0,) * 3,
-                elbow_min=(-9.0,) * 3, elbow_max=(9.0,) * 3)
+    wide = dict(
+        joint_speed=100.0,
+        tool_speed=100.0,
+        box_min=(-9.0,) * 3,
+        box_max=(9.0,) * 3,
+        elbow_min=(-9.0,) * 3,
+        elbow_max=(9.0,) * 3,
+    )
     return Limits(**{**wide, **changes})
 
 
 class SafetyStop(RuntimeError):
-    """The normal layer stopped the arm (a limit was broken, or the emergency stop). Needs an operator's reset."""
+    """The normal layer stopped the arm (a limit was broken, or the emergency stop). Needs an operator's
+    reset."""
 
 
 # --- the normal layer (no ML) -----------------------------------------------------------------------------
@@ -103,7 +123,8 @@ class SafetyStop(RuntimeError):
 class ArmFK:
     """Where the gripper's pinch point and the elbow would be for given joint angles.
 
-    Uses a copy of v3's arm on its own (``scene.arm_with_gripper``), which stands at the world's origin exactly
+    Uses a copy of v3's arm on its own (``scene.arm_with_gripper``), which stands at the world's origin
+    exactly
     as it does in the scene, so it is quick and never touches the scene's ``data``.
     """
 
@@ -170,9 +191,18 @@ class NormalLayer:
         per_joint = np.abs(q - self.q_hist[0]) / span
         self.joint_peaks = np.maximum(self.joint_peaks, per_joint)
         where = None
-        if joint > self.peak["joint_speed"] or tool > self.peak["tool_speed"] or np.any(pts[0] > self.tool_seen[1]):
-            where = {"tick": self.ticks, "q": np.round(q, 4).tolist(), "q_window_start": np.round(self.q_hist[0], 4).tolist(),
-                     "tool": np.round(pts[0], 4).tolist(), "elbow": np.round(pts[1], 4).tolist()}
+        if (
+            joint > self.peak["joint_speed"]
+            or tool > self.peak["tool_speed"]
+            or np.any(pts[0] > self.tool_seen[1])
+        ):
+            where = {
+                "tick": self.ticks,
+                "q": np.round(q, 4).tolist(),
+                "q_window_start": np.round(self.q_hist[0], 4).tolist(),
+                "tool": np.round(pts[0], 4).tolist(),
+                "elbow": np.round(pts[1], 4).tolist(),
+            }
         if joint > self.peak["joint_speed"]:
             self.peak_where["joint_speed"] = where
         if tool > self.peak["tool_speed"]:
@@ -181,8 +211,12 @@ class NormalLayer:
             self.peak_where["tool_high"] = where
         self.peak["joint_speed"] = max(self.peak["joint_speed"], joint)
         self.peak["tool_speed"] = max(self.peak["tool_speed"], tool)
-        self.tool_seen = np.array([np.minimum(self.tool_seen[0], pts[0]), np.maximum(self.tool_seen[1], pts[0])])
-        self.elbow_seen = np.array([np.minimum(self.elbow_seen[0], pts[1]), np.maximum(self.elbow_seen[1], pts[1])])
+        self.tool_seen = np.array(
+            [np.minimum(self.tool_seen[0], pts[0]), np.maximum(self.tool_seen[1], pts[0])]
+        )
+        self.elbow_seen = np.array(
+            [np.minimum(self.elbow_seen[0], pts[1]), np.maximum(self.elbow_seen[1], pts[1])]
+        )
         for name, p, lo, hi in zip(ArmFK.NAMES, pts, self.lo, self.hi, strict=True):
             if np.any(p < lo) or np.any(p > hi):
                 return f"the {name} would leave the work area, at {np.round(p, 3).tolist()} m"
@@ -199,7 +233,8 @@ class NormalLayer:
 
 
 class Behaviour:
-    """What the arm should do, from the zones seen: hold for 1 s after a stop zone or a fault, slow for 1 s after
+    """What the arm should do, from the zones seen: hold for 1 s after a stop zone or a fault, slow for 1 s
+    after
     a warning, otherwise run. A pure function of (time, zone) pairs, so the log can replay it."""
 
     def __init__(self, clear_for: float = CLEAR_FOR):
@@ -224,12 +259,15 @@ class Behaviour:
 
 @dataclass
 class StopEvent:
-    """One time the arm was told to hold or stop while moving: how long it took to stop and how far it went."""
+    """One time the arm was told to hold or stop while moving: how long it took to stop and how far it
+    went."""
 
     t: float  # when the decision was made (simulation s)
     action: str
     reason: str
-    seconds: float | None = None  # until no joint turned faster than STOPPED (None: resumed first, or timed out)
+    seconds: float | None = (
+        None  # until no joint turned faster than STOPPED (None: resumed first, or timed out)
+    )
     distance: float = 0.0  # m the pinch point travelled meanwhile
     peak_speed: float = 0.0  # m/s of the pinch point at the decision
 
@@ -274,7 +312,9 @@ class Guard:
         self.last = self.applied.copy()  # v3's targets at the end of the last tick
         self.progress = 0.0
         self.holding = False
-        self.resume: tuple[np.ndarray, float] | None = None  # (where the arm stopped, how far back on the path)
+        self.resume: tuple[np.ndarray, float] | None = (
+            None  # (where the arm stopped, how far back on the path)
+        )
         self.catch_up_steps = 0
         self.next_frame = float(data.time)
         self.frame_no = 0
@@ -300,7 +340,8 @@ class Guard:
     def version(self) -> str:
         return getattr(self.detector, "version", "none")
 
-    # --- v3's ticks ------------------------------------------------------------------------------------------
+    # --- v3's ticks
+    # ------------------------------------------------------------------------------------------
 
     def step(self, n: int = 1) -> None:
         for _ in range(n):
@@ -325,7 +366,8 @@ class Guard:
                     raise SafetyStop(self.normal.latched)
                 continue
             if self.resume is not None:
-                # Back from a hold: ease from where the arm stopped onto v3's path before v3's script carries on.
+                # Back from a hold: ease from where the arm stopped onto v3's path before v3's script carries
+                # on.
                 frm, phase = self.resume
                 nominal = self.last + (desired - self.last) * self.progress
                 seconds = max(0.05, 1.5 * float(np.abs(nominal[:6] - frm[:6]).max()) / CATCH_UP_SPEED)
@@ -353,7 +395,8 @@ class Guard:
         d.ctrl[self.act] = desired  # v3 reads back the targets it wrote
 
     def _hold_step(self) -> None:
-        """One physics step with the arm held where it is (the gripper keeps its last command: a held tube stays
+        """One physics step with the arm held where it is (the gripper keeps its last command: a held tube
+        stays
         held)."""
         if not self.holding:
             self.holding = True
@@ -395,7 +438,9 @@ class Guard:
 
     def reset_stop(self) -> None:
         if self.normal.latched:
-            self.log.append(kind="normal", t=float(self.data.time), event="reset", action=RUN, reason="operator reset")
+            self.log.append(
+                kind="normal", t=float(self.data.time), event="reset", action=RUN, reason="operator reset"
+            )
             self.normal.latched = None
             self.normal.reseed(self.applied[:6])
             self.last = self.applied.copy()
@@ -448,7 +493,12 @@ class Guard:
             # The fault lasted until now: the arm carries on only after CLEAR_FOR of good frames.
             self.behaviour.update(t, FAULT)
             self.log.append(
-                kind="watchdog", t=t, frame=frame.number, model=self.version, zone=FAULT, action=self._effective(HOLD),
+                kind="watchdog",
+                t=t,
+                frame=frame.number,
+                model=self.version,
+                zone=FAULT,
+                action=self._effective(HOLD),
                 reason=f"fault ended ({self.fault})",
             )
             self.fault = None
@@ -456,8 +506,14 @@ class Guard:
         self.ml_action = self.behaviour.update(t, det.zone)
         action = self._effective(self.ml_action)
         self.log.append(
-            kind="detector", t=t, frame=frame.number, model=det.model_version, score=float(det.score),
-            zone=det.zone, action=action, reason="",
+            kind="detector",
+            t=t,
+            frame=frame.number,
+            model=det.model_version,
+            score=float(det.score),
+            zone=det.zone,
+            action=action,
+            reason="",
         )
         if self.trace is not None:
             dist = getattr(self.camera, "last_distance", None)
@@ -492,7 +548,10 @@ class Guard:
         if not isinstance(s, (int, float, np.floating)) or not math.isfinite(s) or not 0.0 <= s <= 1.0:
             return f"detector output makes no sense: score {str(s)[:20]}"
         if det.model_version != self.version:
-            return f"detector output makes no sense: says model {str(det.model_version)[:20]}, loaded {self.version}"
+            return (
+                f"detector output makes no sense: says model "
+                f"{str(det.model_version)[:20]}, loaded {self.version}"
+            )
         if took > self.detector_budget:
             return f"detector too slow: {took * 1000:.0f} ms"
         return None
@@ -503,8 +562,13 @@ class Guard:
         self.ml_action = HOLD
         score = getattr(det, "score", None)
         self.log.append(
-            kind=kind, t=t, frame=frame.number if isinstance(frame, Frame) else self.frame_no, model=self.version,
-            score=score if isinstance(score, (int, float)) else None, zone=FAULT, action=self._effective(HOLD),
+            kind=kind,
+            t=t,
+            frame=frame.number if isinstance(frame, Frame) else self.frame_no,
+            model=self.version,
+            score=score if isinstance(score, (int, float)) else None,
+            zone=FAULT,
+            action=self._effective(HOLD),
             reason=reason,
         )
         self._set_action(t, reason)
@@ -525,7 +589,9 @@ class Guard:
         if new == self.action:
             return
         if SPEED[new] == 0.0 and SPEED[self.action] > 0.0:
-            self._watch = StopEvent(t, new, reason or "hand in the stop zone", peak_speed=round(self.tool_speed, 4))
+            self._watch = StopEvent(
+                t, new, reason or "hand in the stop zone", peak_speed=round(self.tool_speed, 4)
+            )
             self.stops.append(self._watch)
         elif SPEED[new] > 0.0:
             self._watch = None

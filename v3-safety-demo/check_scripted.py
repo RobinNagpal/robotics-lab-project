@@ -18,8 +18,8 @@ import json
 import sys
 from pathlib import Path
 
-from run_guarded import VISIT_EVERY, VISIT_FIRST  # first: it puts v3's folders on the import path
 from guard import CLEAR_FOR, HOLD, RUN, SLOWED  # noqa: I001
+from run_guarded import VISIT_EVERY, VISIT_FIRST  # first: it puts v3's folders on the import path
 from safety_log import read
 from standin import repeating_visits
 
@@ -35,25 +35,34 @@ def check_seed(log_path: Path) -> dict:
         if stop.end > end:
             break
         out["visits"] += 1
-        # The visits start on a frame's time, where rounding decides whether that frame sees the hand: take the
+        # The visits start on a frame's time, where rounding decides whether that frame sees the hand: take
+        # the
         # first frame clearly inside each visit.
         first_w = next(e for e in entries if e["t"] > warn.start + 1e-6)
         first_s = next(e for e in entries if e["t"] > stop.start + 1e-6)
         if first_w["zone"] == "warning" and first_w["action"] == SLOWED:
             out["slowed"] += 1
         else:
-            out["problems"].append(f"t={first_w['t']:.1f}: warning visit logged {first_w['zone']}/{first_w['action']}")
+            out["problems"].append(
+                f"t={first_w['t']:.1f}: warning visit logged {first_w['zone']}/{first_w['action']}"
+            )
         if first_s["zone"] == "stop" and first_s["action"] == HOLD:
             out["held"] += 1
         else:
-            out["problems"].append(f"t={first_s['t']:.1f}: stop visit logged {first_s['zone']}/{first_s['action']}")
+            out["problems"].append(
+                f"t={first_s['t']:.1f}: stop visit logged {first_s['zone']}/{first_s['action']}"
+            )
         last_stop = max(e["t"] for e in entries if e["zone"] == "stop" and e["t"] < stop.end + 1e-9)
         back = next((e for e in entries if e["t"] > stop.start and e["action"] == RUN), None)
-        if back is not None and last_stop + CLEAR_FOR - 1e-6 <= back["t"] <= last_stop + CLEAR_FOR + FRAME + 1e-6:
+        if (
+            back is not None
+            and last_stop + CLEAR_FOR - 1e-6 <= back["t"] <= last_stop + CLEAR_FOR + FRAME + 1e-6
+        ):
             out["carried_on"] += 1
         else:
             out["problems"].append(
-                f"t={stop.start:.1f}: back to run at {back and round(back['t'], 2)}, last stop frame {last_stop:.2f}"
+                f"t={stop.start:.1f}: back to run at {back and round(back['t'], 2)}, "
+                f"last stop frame {last_stop:.2f}"
             )
     return out
 
@@ -77,7 +86,9 @@ def main() -> None:
             "scenario": r.get("scenario"),
             **{k: c[k] for k in total},
             "problems": c["problems"],
-            "loaded_and_balanced": bool(r.get("all_samples_loaded") and r.get("balanced") and not r.get("error")),
+            "loaded_and_balanced": bool(
+                r.get("all_samples_loaded") and r.get("balanced") and not r.get("error")
+            ),
             "error": r.get("error", ""),
             "spilled": r.get("balls_spilled"),
             "spilled_v3": ref["balls_spilled"],
@@ -96,10 +107,14 @@ def main() -> None:
             total[k] += c[k]
         summary.append(row)
         print(
-            f"seed {seed:2d} {row['scenario']:8s} visits {c['visits']:2d}: slowed {c['slowed']}, held {c['held']}, "
-            f"carried on {c['carried_on']} | loaded+balanced {row['loaded_and_balanced']} spilled {row['spilled']} "
-            f"(v3 {row['spilled_v3']}) | job {row['sim_seconds']} s (v3 {row['sim_seconds_v3']}) | worst stop "
-            f"{row['stop_seconds_max']} s {row['stop_mm_max']} mm | log {row['log_ok']} replay {row['replay_ok']}"
+            f"seed {seed:2d} {row['scenario']:8s} visits {c['visits']:2d}: slowed "
+            f"{c['slowed']}, held {c['held']}, "
+            f"carried on {c['carried_on']} | loaded+balanced "
+            f"{row['loaded_and_balanced']} spilled {row['spilled']} "
+            f"(v3 {row['spilled_v3']}) | job {row['sim_seconds']} s (v3 "
+            f"{row['sim_seconds_v3']}) | worst stop "
+            f"{row['stop_seconds_max']} s {row['stop_mm_max']} mm | log "
+            f"{row['log_ok']} replay {row['replay_ok']}"
             + (f"\n   {c['problems'][:3]}" if c["problems"] else "")
         )
     print(f"\nall seeds: {total}")

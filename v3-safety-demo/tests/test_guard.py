@@ -1,4 +1,5 @@
-"""The guard on v3's real scene, with a small stand-in "script" that moves the arm the way v3's steps do: write
+"""The guard on v3's real scene, with a small stand-in "script" that moves the arm the way v3's steps do:
+write
 joint targets into data.ctrl, then call scene.step through the module."""
 
 import math
@@ -10,7 +11,7 @@ from centrifuge_scene import scene
 from centrifuge_scene.settings import HOME
 
 import guard as G
-from detector import CLEAR, STOP, WARNING, Detection, Frame, PerfectDetector, TruthCamera
+from detector import CLEAR, WARNING, Detection, Frame, PerfectDetector, TruthCamera
 from safety_log import SafetyLog, verify
 from standin import ScriptedHand, Visit
 
@@ -40,7 +41,13 @@ def installed():
 
 def make_guard(model, data, hand=None, camera=None, detector=None, limits=LOOSE, **kw):
     g = G.Guard(
-        model, data, camera or TruthCamera(hand), detector or PerfectDetector(), SafetyLog(), limits=limits, **kw
+        model,
+        data,
+        camera or TruthCamera(hand),
+        detector or PerfectDetector(),
+        SafetyLog(),
+        limits=limits,
+        **kw,
     )
     return G.attach(g)
 
@@ -155,7 +162,8 @@ def test_warning_after_stop_steps_down_to_slow(model, data):
     assert actions[0] == G.HOLD and G.SLOWED in actions and G.RUN not in actions
 
 
-# --- the watchdog --------------------------------------------------------------------------------------------
+# --- the watchdog
+# --------------------------------------------------------------------------------------------
 
 
 class Faulty:
@@ -270,7 +278,8 @@ def test_detector_faults_hold_the_arm(model, data, how):
     assert G.replay(g.log.entries) == []
 
 
-# --- the normal layer ----------------------------------------------------------------------------------------
+# --- the normal layer
+# ----------------------------------------------------------------------------------------
 
 
 def test_too_fast_command_is_stopped(model, data):
@@ -332,7 +341,9 @@ def test_normal_layer_works_when_the_detector_is_broken(model, data):
     with pytest.raises(G.SafetyStop, match="rad/s"):
         scene.step(model, data)
     assert g.normal.latched
-    assert all(e["action"] in (G.HOLD, G.STOP) for e in g.log.entries if "action" in e and e["kind"] != "guard")
+    assert all(
+        e["action"] in (G.HOLD, G.STOP) for e in g.log.entries if "action" in e and e["kind"] != "guard"
+    )
 
 
 def test_hold_mid_move_eases_back_onto_the_path(model, data):
