@@ -1,0 +1,464 @@
+[
+ {
+  "seed": 6,
+  "scenario": "triangle",
+  "step0_right": true,
+  "error": "",
+  "step1_readings_g": {
+   "sample_rack/2": 33.56,
+   "sample_rack/5": 33.46,
+   "sample_rack/7": 33.47
+  },
+  "step1_error_g": {
+   "sample_rack/2": -0.005,
+   "sample_rack/5": 0.002,
+   "sample_rack/7": -0.001
+  },
+  "step2_plan": [
+   {
+    "hole": 0,
+    "name": "sample_rack/2",
+    "grams": 33.56,
+    "balance": false
+   },
+   {
+    "hole": 2,
+    "name": "sample_rack/5",
+    "grams": 33.46,
+    "balance": false
+   },
+   {
+    "hole": 4,
+    "name": "sample_rack/7",
+    "grams": 33.47,
+    "balance": false
+   }
+  ],
+  "step3_fills_g": {},
+  "step5_seen_mm": {
+   "0": -38.1,
+   "2": -18.8,
+   "4": -62.8
+  },
+  "report": "NOT done: tube not seated (hole 0 -38 mm high, hole 2 -19 mm high, hole 4 -63 mm high); of the rest: 0.00 g out (limit 1.0 g), 0 tubes in holes ; examiner 0.10 g; lid left open (out of the arm's reach)",
+  "robot_g": 0.0,
+  "examiner_g": 0.101,
+  "tubes_planned": 3,
+  "tubes_seated": 3,
+  "all_samples_loaded": true,
+  "balanced": true,
+  "balls_spilled": 0,
+  "sim_blew_up": false,
+  "sim_seconds": 164.6,
+  "wall_seconds": 116.3,
+  "robot_says_done": false,
+  "success": true,
+  "lighting": {
+   "level": "normal",
+   "scale": 0.914
+  },
+  "detector": "perfect-1",
+  "guard": {
+   "sim_seconds": 197.12,
+   "ticks": 165065,
+   "physics_steps": 195620,
+   "held_seconds": 19.0,
+   "slow_seconds": 13.4,
+   "catch_up_seconds": 1.505,
+   "frames": 1958,
+   "stopped_by_normal_layer": null,
+   "peak_joint_speed": 0.7002,
+   "peak_tool_speed": 0.6087,
+   "joint_peaks": [
+    0.7002,
+    0.6475,
+    0.6997,
+    0.7001,
+    0.7001,
+    0.7001
+   ],
+   "measured_joint_peaks": [
+    0.695,
+    0.397,
+    0.5989,
+    0.6974,
+    0.6974,
+    0.6927
+   ],
+   "measured_tool_peak": 0.6066,
+   "peak_where": {
+    "joint_speed": {
+     "tick": 134570,
+     "q": [
+      -2.1453,
+      -1.6823,
+      1.7131,
+      -1.6016,
+      -1.5708,
+      0.1342
+     ],
+     "q_window_start": [
+      -2.1103,
+      -1.6862,
+      1.7142,
+      -1.5988,
+      -1.5708,
+      0.1248
+     ],
+     "tool": [
+      0.1291,
+      0.446,
+      0.3175
+     ],
+     "elbow": [
+      -0.0316,
+      -0.0359,
+      0.5854
+     ]
+    },
+    "tool_speed": {
+     "tick": 161333,
+     "q": [
+      -1.0705,
+      -1.977,
+      0.5241,
+      -1.925,
+      -2.958,
+      0.6781
+     ],
+     "q_window_start": [
+      -1.0579,
+      -1.9873,
+      0.4977,
+      -1.9339,
+      -2.993,
+      0.6952
+     ],
+     "tool": [
+      0.151,
+      -0.0312,
+      1.0508
+     ],
+     "elbow": [
+      0.0744,
+      -0.1507,
+      0.5534
+     ]
+    },
+    "tool_high": {
+     "tick": 143050,
+     "q": [
+      -1.6279,
+      -1.86,
+      0.4424,
+      -1.9455,
+      -2.9464,
+      0.9224
+     ],
+     "q_window_start": [
+      -1.654,
+      -1.8473,
+      0.4673,
+      -1.9375,
+      -2.9114,
+      0.9113
+     ],
+     "tool": [
+      0.1148,
+      -0.0416,
+      1.0662
+     ],
+     "elbow": [
+      -0.0139,
+      -0.1206,
+      0.5704
+     ]
+    }
+   },
+   "tool_box_seen": [
+    [
+     -0.134,
+     -0.5032,
+     0.1206
+    ],
+    [
+     0.7026,
+     0.5357,
+     1.0662
+    ]
+   ],
+   "elbow_box_seen": [
+    [
+     -0.0764,
+     -0.2048,
+     0.4515
+    ],
+    [
+     0.2615,
+     0.0702,
+     0.588
+    ]
+   ],
+   "stops": [
+    {
+     "t": 31.501000000015516,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0010000000000012221,
+     "distance": 6.425464024964854e-06,
+     "peak_speed": 0.0065
+    },
+    {
+     "t": 78.4010000000103,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.004000000000019099,
+     "distance": 4.0436001057760274e-05,
+     "peak_speed": 0.0135
+    },
+    {
+     "t": 92.00100000007524,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.0020000000000095497,
+     "distance": 1.9436462709595792e-05,
+     "peak_speed": 0.0107
+    },
+    {
+     "t": 115.60100000018792,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.009000000000042974,
+     "distance": 0.00035731154297764036,
+     "peak_speed": 0.1046
+    },
+    {
+     "t": 134.4010000002777,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.005000000000023874,
+     "distance": 5.8609072609202675e-05,
+     "peak_speed": 0.016
+    },
+    {
+     "t": 185.10100000051978,
+     "action": "hold",
+     "reason": "hand in the stop zone",
+     "seconds": 0.007000000000033424,
+     "distance": 0.00014633425503692972,
+     "peak_speed": 0.0473
+    }
+   ],
+   "log_entries": 1958,
+   "log_head": "19a0fc2af504f84c5b489320dafcdb30ddfaa1481def6c43c0110018b62155e0",
+   "log_problems": [],
+   "replay_disagrees": []
+  },
+  "visits": [
+   {
+    "start": 12.055999999998757,
+    "goal": "warning",
+    "look": {
+     "size": 1.0693907517476609,
+     "hand": "skin_tan",
+     "sleeve": "sleeve_black"
+    },
+    "deepest": "warning",
+    "reach": 1.0132,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 16.869999999997635
+   },
+   {
+    "start": 30.959000000014854,
+    "goal": "stop",
+    "look": {
+     "size": 1.0823092829106282,
+     "hand": "glove_black",
+     "sleeve": "sleeve_black"
+    },
+    "deepest": "stop",
+    "reach": 0.6491,
+    "gap": 0.4575,
+    "gap_moving": 0.458,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 31.3240000000153,
+    "stopped": 31.50400000001552,
+    "end": 33.56000000001249,
+    "stop_after": 0.18
+   },
+   {
+    "start": 49.01499999997647,
+    "goal": "warning",
+    "look": {
+     "size": 0.9013612853985652,
+     "hand": "skin_light",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 0.9697,
+    "gap": 0.3683,
+    "gap_moving": 0.3683,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 53.26499999996656
+   },
+   {
+    "start": 64.42599999994357,
+    "goal": "warning",
+    "look": {
+     "size": 1.0750449472620793,
+     "hand": "glove_purple",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 1.0642,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 65.84099999995033
+   },
+   {
+    "start": 77.75500000000721,
+    "goal": "stop",
+    "look": {
+     "size": 0.9495812869110887,
+     "hand": "glove_purple",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "stop",
+    "reach": 0.4543,
+    "gap": 0.397,
+    "gap_moving": 0.4952,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 78.20400000000936,
+    "stopped": 78.41400000001036,
+    "end": 80.60500000002082,
+    "stop_after": 0.21
+   },
+   {
+    "start": 90.68700000006896,
+    "goal": "stop",
+    "look": {
+     "size": 0.8743255755651632,
+     "hand": "skin_medium",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.3011,
+    "gap": 0.1073,
+    "gap_moving": 0.4921,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 91.86600000007459,
+    "stopped": 92.00600000007526,
+    "end": 96.73300000009783,
+    "stop_after": 0.14
+   },
+   {
+    "start": 115.1570000001858,
+    "goal": "stop",
+    "look": {
+     "size": 0.987256167893809,
+     "hand": "glove_green",
+     "sleeve": "coat_white"
+    },
+    "deepest": "stop",
+    "reach": 0.4002,
+    "gap": 0.2219,
+    "gap_moving": 0.357,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 115.46000000018725,
+    "stopped": 115.61000000018797,
+    "end": 117.40200000019652,
+    "stop_after": 0.15
+   },
+   {
+    "start": 133.83400000027498,
+    "goal": "stop",
+    "look": {
+     "size": 1.0335881615245288,
+     "hand": "glove_white",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "stop",
+    "reach": 0.6241,
+    "gap": 0.0947,
+    "gap_moving": 0.1299,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 134.23200000027688,
+    "stopped": 134.41200000027774,
+    "end": 137.43400000029217,
+    "stop_after": 0.18
+   },
+   {
+    "start": 153.2910000003679,
+    "goal": "warning",
+    "look": {
+     "size": 1.0362782999958822,
+     "hand": "glove_purple",
+     "sleeve": "coat_white"
+    },
+    "deepest": "warning",
+    "reach": 0.9751,
+    "gap": 0.5,
+    "gap_moving": 0.5,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 155.12200000037663
+   },
+   {
+    "start": 162.60900000041238,
+    "goal": "warning",
+    "look": {
+     "size": 0.8766672490308789,
+     "hand": "skin_tan",
+     "sleeve": "sleeve_black"
+    },
+    "deepest": "clear",
+    "reach": 1.1636,
+    "gap": null,
+    "gap_moving": null,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": null,
+    "stopped": null,
+    "end": 167.90100000043765
+   },
+   {
+    "start": 184.58900000051733,
+    "goal": "stop",
+    "look": {
+     "size": 0.9385138366234251,
+     "hand": "skin_medium",
+     "sleeve": "sleeve_grey"
+    },
+    "deepest": "stop",
+    "reach": 0.2196,
+    "gap": 0.1618,
+    "gap_moving": 0.3921,
+    "contact_moving": 0,
+    "contact_still": 0,
+    "entered_stop": 184.93400000051898,
+    "stopped": 185.11400000051984,
+    "end": 188.20100000053458,
+    "stop_after": 0.18
+   }
+  ]
+ }
+]

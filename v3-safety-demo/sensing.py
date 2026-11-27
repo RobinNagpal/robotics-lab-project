@@ -34,7 +34,10 @@ from detector import CLEAR, Detection, Frame, PerfectDetector
 
 MONITOR_EVERY = 10  # physics steps (10 ms) between gap checks while the hand is near
 NEAR = 1.0  # m: the gap to the robot is measured while the person comes this close to the arm's base
-MOVING = 0.01  # rad/s: the robot counts as moving when any arm joint turns faster than this
+# m/s: the robot counts as moving when any point of it (the origins of its links and the point between the
+# fingers) moves faster than this. Below it the robot is at a standstill in all but name (braking, or settling
+# by a few millimetres). Every contact's robot speed is recorded as well, whichever side of this it falls.
+MOVING = 0.01
 RGB_NOISE = 2.0  # standard deviation of the colour noise, in 0-255 steps
 DEPTH_NOISE = 0.002  # m, standard deviation of the depth noise (a good time-of-flight camera at 2 m)
 
@@ -53,14 +56,18 @@ class Visit:
     reach: float = float("inf")  # the closest the person came to the arm's base, m
     gap: float = float("inf")  # the smallest gap to the robot, m
     gap_moving: float = float("inf")  # the smallest gap to the robot while it was moving, m
-    contact_moving: int = 0  # 10 ms samples touching the robot while it moved
+    contact_moving: int = 0  # 10 ms samples touching the robot while it moved (faster than MOVING)
     contact_still: int = 0  # 10 ms samples touching the robot while it stood still (held)
+    contact_speed: float = 0.0  # m/s: the robot's fastest point, at the worst contact sample
+    hand_speed: float = 0.0  # m/s: the reach's speed in
     entered_stop: float | None = None  # when the person first entered the stop zone
     stopped: float | None = None  # when the robot was first still after that
     end: float | None = None
 
     def summary(self) -> dict:
         out = {k: v for k, v in self.__dict__.items()}
+        out["contact_speed"] = round(out["contact_speed"], 4)
+        out["hand_speed"] = round(out["hand_speed"], 3)
         for k in ("reach", "gap", "gap_moving"):
             out[k] = None if not np.isfinite(out[k]) else round(out[k], 4)
         if self.entered_stop is not None and self.stopped is not None:
@@ -96,7 +103,11 @@ class Person:
         self.visits: list[Visit] = []
         self.robot = zones.robot_geoms(model)
         self.person = zones.person_geoms(model)
-        self.dofs = np.array([model.joint(f"{scene.ARM_NAME}/{n}").dofadr[0] for n in scene.ARM_JOINTS])
+        self.links = np.array(
+            [b for b in range(model.nbody) if model.body(b).name.startswith(zones.ROBOT_PREFIX)]
+        )
+        self.pinch = model.site(scene.pinch_site()).id
+        self._vel = np.zeros(6)
         self.steps = 0
         hand.place(model, data, None, np.array([1.0, 0, 0, 0]))
 
@@ -107,7 +118,7 @@ class Person:
             hand.set_look(model, look)
             goal = str(self.rng.choice(self.goals)) if self.goals else None
             goal, self.reach = hand.draw_reach(self.rng, model, data, t, t, goal=goal)
-            self.visit = Visit(start=t, goal=goal, look=look.__dict__.copy())
+            self.visit = Visit(start=t, goal=goal, look=look.__dict__.copy(), hand_speed=self.reach.speed_in)
         if self.reach is None:
             return
         wrist = self.reach.wrist(t)
@@ -131,7 +142,8 @@ class Person:
         if truth.zone > {"clear": 0, "warning": 1, "stop": 2}[v.deepest]:
             v.deepest = zones.ZONE_NAMES[truth.zone]
         v.reach = min(v.reach, truth.reach)
-        moving = float(np.abs(data.qvel[self.dofs]).max()) > MOVING
+        speed = self.robot_speed(model, data)
+        moving = speed > MOVING
         if truth.zone == zones.Zone.STOP and v.entered_stop is None:
             v.entered_stop = t
         if v.entered_stop is not None and v.stopped is None and not moving:
@@ -143,10 +155,24 @@ class Person:
         if moving:
             v.gap_moving = min(v.gap_moving, gap)
         if gap < 0:
+            v.contact_speed = max(v.contact_speed, speed)
             if moving:
                 v.contact_moving += 1
             else:
                 v.contact_still += 1
+
+    def robot_speed(self, model: mujoco.MjModel, data: mujoco.MjData) -> float:
+        """
+        The fastest any point of the robot moves now (its links' origins and the point between the fingers),
+
+        m/s.
+        """
+        best = 0.0
+        for b in self.links:
+            mujoco.mj_objectVelocity(model, data, mujoco.mjtObj.mjOBJ_BODY, int(b), self._vel, 0)
+            best = max(best, float(np.linalg.norm(self._vel[3:])))
+        mujoco.mj_objectVelocity(model, data, mujoco.mjtObj.mjOBJ_SITE, self.pinch, self._vel, 0)
+        return max(best, float(np.linalg.norm(self._vel[3:])))
 
     def points(self, model: mujoco.MjModel, data: mujoco.MjData) -> np.ndarray | None:
         """The person's surface points (for the truth camera), or None when out of sight."""

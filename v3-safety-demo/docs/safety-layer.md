@@ -3,8 +3,13 @@
 27 November 2026
 
 This is Track B of [steps.md](steps.md): the layer that sits between v3's scripts and the arm and slows or holds
-the arm when a hand is near. It uses a "perfect" detector for now, one that reads the hand's true position from
-the simulation. Track A's trained model replaces it in phase 3, and the perfect detector stays as the baseline.
+the arm when a hand is near. It was built with a "perfect" detector, one that reads the hand's true position from
+the simulation; the perfect detector stays as the baseline the trained model is compared with.
+
+**Phase 3 (27 Nov) joined it with Track A** ([integration.md](integration.md)): the zones are now Track A's fixed
+ones, the person, the RGB-D camera and the trained YOLO detector plug in through `sensing.py`, and four of the
+simplifications listed at the end were closed (detection delay, measured speeds, a signed log, a signed
+registry). The sections below say where that changed things.
 
 No v3 file was changed. Everything is in `v3-safety-demo/`.
 
@@ -50,13 +55,20 @@ is stopped it in 16 ms and 1.6 mm.
 - **work-area box**: the point between the fingers and the elbow must stay inside a box around the bench. The
   check uses a separate copy of the arm's model to work out where the command would put them, so it never
   touches the simulation;
+- **measured speeds** (since phase 3): the arm's actual joint speeds and the gripper's actual speed, over the
+  last 10 ms of physics, against the same limits times 1.25 (the arm follows its targets with a little
+  overshoot). So an arm that moves too fast for any reason is stopped, not only one told to;
 - **emergency stop**: `guard.emergency_stop()` at any moment.
 
 Any of these **latches a stop**: the arm holds, `SafetyStop` is raised out of v3's script, and the arm stays
 held until `guard.reset_stop()` (an operator's reset). The normal layer does not read the camera or the
 detector, and nothing on the ML side can switch it off or overrule it.
 
-**The ML layer** takes a camera frame 10 times per simulated second and asks the detector for the zone:
+**The ML layer** takes a camera frame 10 times per simulated second and asks the detector for the zone. Since
+phase 3, a frame's decision takes effect **0.1 s after the frame was taken** (`guard.LATENCY`: the camera's
+exposure and read-out, the detector and the rule), as it would on a real system; and before the job starts,
+one frame is judged at once (the start-up check: the camera and detector run before the robot's program does,
+so a hand already in the cell keeps the arm from ever starting).
 
 - warning zone: slow; stop zone: hold;
 - the arm goes back up only after 1 s with nothing worse: 1 s after the last stop-zone frame it may go to slow
@@ -69,7 +81,7 @@ detector, and nothing on the ML side can switch it off or overrule it.
 | frame missing | the camera returns nothing, or raises an error |
 | frame late | taken more than 150 ms before it is checked (a 200 ms delay is always caught) |
 | frame frozen | its number or time does not move on, or the same picture 3 times running |
-| no fresh frame at all | no good frame for 150 ms |
+| no fresh frame at all | no good decision for 150 ms (decisions keep coming once a frame period apart with the delay too) |
 | detector crashed | it raises an error |
 | detector talks nonsense | a zone that is not one of the three, a score that is not between 0 and 1, the wrong model version, or not an answer at all |
 | detector too slow | more than 250 ms (wall clock) for one frame |
@@ -83,23 +95,29 @@ What the arm does is the **strictest** of the two layers: stop beats hold beats 
 Every decision is one line of JSON: the simulation time, the frame number, the model version, the score, the zone,
 the action and the reason. Normal-layer stops, resets, and model loads or refusals go in too.
 
-Each line carries the hash (a SHA-256 fingerprint) of the line before it, and its own hash. Changing a line breaks
-its hash; deleting or adding one breaks the chain. The last hash (the "head") is also saved in the run's results,
-so cutting lines off the end, or rebuilding every hash after an edit, shows up too (`safety_log.verify`).
+Each line carries the hash of the line before it, and its own hash. Changing a line breaks its hash; deleting or
+adding one breaks the chain. The last hash (the "head") is also saved in the run's results, so cutting lines off
+the end shows up too (`safety_log.verify`). Since phase 3 the hashes are **keyed with a secret** (HMAC-SHA256,
+`keys.py`): someone who edits an entry and recomputes every hash after it cannot make them verify without the key.
 
 `guard.replay(entries)` rebuilds every decision from the zones in the log alone and reports any line where the
 logged action is not what the rules give. That is the plan's "rebuild decisions from the log" test.
 
 ## The model registry
 
-`registry.py` keeps a JSON list of approved model files: version, file name, SHA-256 and size. A model is loaded
+`registry.py` keeps a JSON list of approved model files: version, file name, SHA-256, size and, since phase 3,
+the model's **settings** (confidence threshold, picture size), approved with the weights because they change what
+the safety function does just as much. Since phase 3 the registry file is also **signed** with the same secret
+key: a registry edited by hand (to approve a model, or change a threshold) is refused as a whole. A model is loaded
 only through `Registry.read_approved`, which reads the file once, fingerprints those bytes, and hands them back
 only if the fingerprint is approved. So the file checked is the file loaded. Anything else raises
 `UnapprovedModel`, and the attempt is logged. The registry also records which version is active and the order
 versions were made active in, so `rollback()` goes back to the version before. `detector.load(path, registry,
 log, build)` is the one way a trained detector is made.
 
-There is no registry file yet: phase 1 has no trained model (the perfect detector has no model file).
+The registry is `models/registry.json`: v1, then v2, approved and activated in that order (v2 active, v1 to roll
+back to). The model files themselves (`models/hand_v1.pt`, `hand_v2.pt`) are not committed; their fingerprints
+are.
 
 ## Files
 
@@ -109,21 +127,24 @@ There is no registry file yet: phase 1 has no trained model (the perfect detecto
 | `detector.py` | the detector interface (`Frame`, `Detection`, `detect`), the perfect detector, the truth camera, `load` |
 | `safety_log.py` | the hash-chained log and `verify` |
 | `registry.py` | approved models, fingerprints, activate, revoke, rollback (also a command line) |
-| `standin.py` | stand-ins for Track A's parts: the zones (`zone_of`) and a scripted hand |
-| `run_guarded.py` | v3's whole job (Step 6's `run_seed`, unchanged) with the guard on |
-| `check_scripted.py` | checks a scripted-hand run visit by visit, from its logs |
+| `keys.py` | the secret key that signs the log and the registry (made on first use, never committed) |
+| `sensing.py` | (phase 3) the person, the RGB-D safety camera, the YOLO detector, the perfect detector |
+| `standin.py` | stand-ins used before phase 3, now only by the unit tests: distance-to-arm zones and a scripted hand |
+| `run_guarded.py` | v3's whole job (Step 6's `run_seed`, unchanged) with the guard on, and a person if asked |
+| `check_scripted.py` | checks the scripted-hand run of phase 1, visit by visit, from its logs |
 | `tests/` | unit tests for each part (`pytest tests`) |
 
 ## How to run
 
 ```bash
 cd v3-safety-demo
-PY=../v3-centrifuge-loading/simulation-environment/.pixi/envs/default/bin/python
-$PY -m pytest tests                                                     # about 10 s
-$PY run_guarded.py --hand none --workers 2                              # v3's 20 jobs, guard on, no hand
-$PY run_guarded.py --hand scripted --seeds 0 1 2 3 --workers 2          # a scripted hand every 30 s
-$PY check_scripted.py results/guarded_scripted
+pixi run python -m pytest tests                                                   # about 40 s
+pixi run python run_guarded.py --hand none --workers 2                            # v3's 20 jobs, nobody there
+pixi run python run_guarded.py --hand person --detector perfect --seeds 4 5 6 7   # a person, perfect detector
+pixi run python run_guarded.py --hand person --detector yolo --seeds 4 5 6 7      # a person, the active model
 ```
+
+The phase 1 scripted-hand run (below, results 3) used `--hand scripted`, since replaced by Track A's person.
 
 ## Results
 
@@ -164,7 +185,12 @@ All 20 runs' peaks fit inside the set limits. Two things are worth knowing:
 Per-joint speeds were measured on 2 seeds only (0 and 13). The scripted-hand run below (seeds 0 to 3, the set
 limits on) didn't trip them either. A full 20-seed run with the set limits would confirm the rest.
 
-### 3. With a hand: slows, holds and carries on as planned
+### 3. With a hand: slows, holds and carries on as planned (phase 1, stand-in zones)
+
+This run used phase 1's stand-ins: a hand point beside the gripper and distance-to-arm zones with placeholder
+sizes. It showed the guard's behaviour; the run with Track A's person and the fixed zones is in
+[integration.md](integration.md).
+
 
 Seeds 0 to 3 (one of each job type), the set limits on, a scripted hand every 30 s: 4 s in the warning zone, then
 2 s in the stop zone (`results/guarded_scripted/`, checked by `check_scripted.py` from the logs alone):
@@ -210,7 +236,10 @@ detector crashes on every frame; the log catching edits, deletions, insertions, 
 the registry refusing unknown, changed and revoked models (and logging it), updates and rollback; the perfect
 detector and the stand-in zones.
 
-## For phase 3 (plugging in Track A's parts)
+## For phase 3 (plugging in Track A's parts): done
+
+How these were met is in [integration.md](integration.md). The notes as written before phase 3:
+
 
 - **Zones.** The guard needs one function, `zone_of(hand_points, arm_points) -> (zone, distance)`, plus
   `arm_points(model, data)`. The stand-in measures from a chain of thick lines through the arm's joints, with
@@ -227,13 +256,16 @@ detector and the stand-in zones.
 
 ## Not done yet, or simplified
 
-- Detector latency is not simulated: the zone from a frame is acted on in the same millisecond. A slow detector
-  is caught by the wall-clock budget instead.
-- Holding mid-pour (Step 3) stops the arm with the tube tilted, so water may keep flowing. On seed 3 it left a
-  balance tube 0.33 g light (still balanced, see Results). A rule such as "tilt back upright when held mid-pour"
-  would be a v3 or phase 3 decision.
-- Seed 3's scripted-hand run took 25 minutes of wall-clock time for 10.5 simulated minutes, about three times
-  slower than the other seeds. Not looked into (the Mac was shared with Track A at the time).
-- The normal layer checks commands, not the arm's measured speed. Holding and easing back are done by the guard
-  itself and kept below v3's own speeds.
-- The log's head is not signed. A real system would sign it or key the hashes with a secret.
+Status after phase 3 in **bold**.
+
+- **Closed.** Detector latency is not simulated: the zone from a frame is acted on in the same millisecond. A
+  slow detector is caught by the wall-clock budget instead. (Now: 0.1 s from frame to effect, with a start-up
+  check.)
+- **Open (a v3 decision).** Holding mid-pour (Step 3) stops the arm with the tube tilted, so water may keep
+  flowing. On seed 3 it left a balance tube 0.33 g light (still balanced, see Results). A rule such as "tilt back
+  upright when held mid-pour" would be a v3 or phase 3 decision.
+- **Open.** Seed 3's scripted-hand run took 25 minutes of wall-clock time for 10.5 simulated minutes, about three
+  times slower than the other seeds. Not looked into (the Mac was shared with Track A at the time).
+- **Closed.** The normal layer checks commands, not the arm's measured speed. (Now it checks both.)
+- **Closed.** The log's head is not signed. A real system would sign it or key the hashes with a secret. (Now
+  the hashes are keyed, and the registry is signed too.)
