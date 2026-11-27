@@ -99,6 +99,17 @@ What was done about it:
 v3: trained from v2 on the 1,800 pictures plus the 472, then the same update test, now with rule 5. (Results to
 follow.)
 
+## v3's cameras: a fault in the demo's own additions, found by the nobody run
+
+All 20 v3 jobs with the guard on and nobody there: the guard never slowed or held the arm, the measured-speed
+limits never tripped, but every job's Step 5 report said "tube not seated": its rotor-camera depth check read
+every seated tube as 19 to 63 mm too high. The cause was the demo's scene, not the guard. MuJoCo places a
+camera's near and far clipping planes from the scene's overall size, and the parked person (far away) and the
+floor had made it 1.86 -> 51 m, so near objects fell inside the near plane. The physics was identical (tested);
+the pictures were not. `scene_plus` now keeps v3's own scene statistics, and a new test renders v3's cameras
+(colour and depth) in both scenes and requires them to match; it fails without the fix. The safety camera's own
+depth moved by at most 0.1 mm either way, so the detector's evaluations stand.
+
 ## Still open
 
 - **The zones are not sized for the worst case.** The stop zone's edge is the arm's reach. From a hand entering

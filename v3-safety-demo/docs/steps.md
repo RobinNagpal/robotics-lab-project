@@ -15,7 +15,7 @@ detector and the safety layer exist.
 | 1 | Hand in the scene, safety zones, camera check, sample images | A | nothing |
 | 1 | Safety layer around v3's arm, with a "perfect" detector | B | nothing |
 | 2 | Render training and test images, train detector v1 | A | phase 1 A |
-| 3 | Plug the trained detector into the safety layer, train v2 | A + B | phase 2, phase 1 B |
+| 3 | Plug the trained detector into the safety layer, train v2 (and v3) | A + B | phase 2, phase 1 B |
 | 4 | Manufacturer file | either | phase 3 numbers |
 | 5 | Packages 1 to 3 | either | phases 3 and 4 |
 | 6 | Report and video | either | phase 5 |
@@ -66,6 +66,24 @@ Approach and decisions: [detector.md](detector.md).
 Decisions (27 Nov): YOLO11n; dataset sized to train in 20 to 30 minutes; RGB-D camera with a fixed rule; the two
 limitations found (arms not detected, hands hidden under the robot) kept as documented gaps
 ([detector.md](detector.md#known-limitations-found-while-building-keep-for-the-report)).
+
+## Phase 3: the tracks joined, detector v2 (and v3)
+
+**Status (27 Nov): joined and running in real v3 jobs** ([integration.md](integration.md)).
+
+- Track B committed and merged (the shared test set-up resolved); fixed zones; Track A's person, RGB-D camera
+  and YOLO plug into the guard through `sensing.py`.
+- Track B's simplifications closed: a 0.1 s detection delay with a start-up check; measured-speed limits; a
+  keyed (signed) log and a signed registry that also approves each model's settings.
+- v2 trained (hands near the robot, dark gloves) and released through the registry: stop-zone misses 21 -> 5 of
+  840.
+- With the perfect detector, test jobs 4 to 7: 93 reaches, no contact while the robot moved, 4 of 4 jobs
+  balanced.
+- Found in the closed loop: v2 takes the robot's own gripper for a hand and can hold a job for good. New test
+  (false alarms with nobody there), new release rule 5, 472 hard negatives mined. Next: v3 of the detector,
+  then the closed-loop runs with it.
+- Also found: the demo's additions had moved v3's camera clipping planes (v3's Step 5 depth check misread);
+  fixed and tested.
 
 ## Track B: the safety layer (phase 1)
 
