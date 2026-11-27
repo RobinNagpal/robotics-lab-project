@@ -1,0 +1,277 @@
+[
+ {
+  "seed": 0,
+  "scenario": "pairs",
+  "holes": {
+   "0": 38.08,
+   "2": 35.18,
+   "3": 37.7,
+   "5": 34.79
+  },
+  "robot_g": 0.385,
+  "examiner_g": 0.385,
+  "lid_shut": false,
+  "text": "Balanced: 0.39 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.39 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 1,
+  "scenario": "odd_one",
+  "holes": {
+   "4": 45.21,
+   "0": 40.22,
+   "1": 45.27,
+   "3": 40.58
+  },
+  "robot_g": 0.334,
+  "examiner_g": 0.333,
+  "lid_shut": false,
+  "text": "Balanced: 0.33 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.33 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 2,
+  "scenario": "triangle",
+  "holes": {
+   "0": 42.44,
+   "2": 42.27,
+   "4": 42.3
+  },
+  "robot_g": 0.157,
+  "examiner_g": 0.158,
+  "lid_shut": false,
+  "text": "Balanced: 0.16 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.16 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 3,
+  "scenario": "mismatch",
+  "holes": {
+   "3": 25.21,
+   "5": 42.09,
+   "0": 25.35,
+   "2": 41.93
+  },
+  "robot_g": 0.26,
+  "examiner_g": 0.257,
+  "lid_shut": false,
+  "text": "Balanced: 0.26 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.26 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 4,
+  "scenario": "pairs",
+  "holes": {
+   "0": 35.14,
+   "1": 45.29,
+   "3": 35.28,
+   "4": 44.86
+  },
+  "robot_g": 0.38,
+  "examiner_g": 0.375,
+  "lid_shut": false,
+  "text": "Balanced: 0.38 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.38 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 5,
+  "scenario": "odd_one",
+  "holes": {
+   "3": 42.02,
+   "0": 41.84,
+   "1": 38.51,
+   "4": 38.28
+  },
+  "robot_g": 0.21,
+  "examiner_g": 0.206,
+  "lid_shut": false,
+  "text": "Balanced: 0.21 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.21 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 6,
+  "scenario": "triangle",
+  "holes": {
+   "0": 33.56,
+   "2": 33.46,
+   "4": 33.47
+  },
+  "robot_g": 0.095,
+  "examiner_g": 0.101,
+  "lid_shut": false,
+  "text": "Balanced: 0.10 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.10 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 7,
+  "scenario": "mismatch",
+  "holes": {
+   "3": 38.45,
+   "5": 45.88,
+   "0": 37.75,
+   "2": 45.09
+  },
+  "robot_g": 0.749,
+  "examiner_g": 0.753,
+  "lid_shut": false,
+  "text": "Balanced: 0.75 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.75 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 8,
+  "scenario": "pairs",
+  "holes": {
+   "0": 46.12,
+   "2": 27.2,
+   "3": 46.04,
+   "5": 26.85
+  },
+  "robot_g": 0.318,
+  "examiner_g": 0.312,
+  "lid_shut": false,
+  "text": "Balanced: 0.32 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.31 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 9,
+  "scenario": "odd_one",
+  "holes": {
+   "4": 43.48,
+   "0": 33.18,
+   "1": 43.28,
+   "3": 32.89
+  },
+  "robot_g": 0.257,
+  "examiner_g": 0.254,
+  "lid_shut": false,
+  "text": "Balanced: 0.26 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.25 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 10,
+  "scenario": "triangle",
+  "holes": {
+   "0": 41.15,
+   "2": 41.59,
+   "4": 40.82
+  },
+  "robot_g": 0.669,
+  "examiner_g": 0.666,
+  "lid_shut": false,
+  "text": "Balanced: 0.67 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.67 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 11,
+  "scenario": "mismatch",
+  "holes": {
+   "3": 41.76,
+   "5": 34.82,
+   "0": 41.44,
+   "2": 34.62
+  },
+  "robot_g": 0.28,
+  "examiner_g": 0.277,
+  "lid_shut": false,
+  "text": "Balanced: 0.28 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.28 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 12,
+  "scenario": "pairs",
+  "holes": {
+   "0": 29.09,
+   "2": 45.88,
+   "3": 28.97,
+   "5": 45.38
+  },
+  "robot_g": 0.452,
+  "examiner_g": 0.444,
+  "lid_shut": false,
+  "text": "Balanced: 0.45 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.44 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 13,
+  "scenario": "odd_one",
+  "holes": {
+   "1": 17.9,
+   "0": 24.64,
+   "2": 24.78,
+   "4": 42.03
+  },
+  "robot_g": 0.593,
+  "examiner_g": 0.595,
+  "lid_shut": false,
+  "text": "Balanced: 0.59 g out (limit 1.0 g), 4 tubes in holes 0, 1, 2, 4; examiner 0.59 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 14,
+  "scenario": "triangle",
+  "holes": {
+   "0": 26.67,
+   "2": 26.6,
+   "4": 26.9
+  },
+  "robot_g": 0.272,
+  "examiner_g": 0.272,
+  "lid_shut": false,
+  "text": "Balanced: 0.27 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.27 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 15,
+  "scenario": "mismatch",
+  "holes": {
+   "3": 39.97,
+   "5": 45.08,
+   "0": 39.25,
+   "2": 44.71
+  },
+  "robot_g": 0.624,
+  "examiner_g": 0.628,
+  "lid_shut": false,
+  "text": "Balanced: 0.62 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.63 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 16,
+  "scenario": "pairs",
+  "holes": {
+   "0": 42.09,
+   "1": 36.47,
+   "3": 42.42,
+   "4": 36.46
+  },
+  "robot_g": 0.325,
+  "examiner_g": 0.33,
+  "lid_shut": false,
+  "text": "Balanced: 0.33 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.33 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 17,
+  "scenario": "odd_one",
+  "holes": {
+   "3": 41.09,
+   "0": 40.91,
+   "1": 31.49,
+   "4": 31.86
+  },
+  "robot_g": 0.486,
+  "examiner_g": 0.482,
+  "lid_shut": false,
+  "text": "Balanced: 0.49 g out (limit 1.0 g), 4 tubes in holes 0, 1, 3, 4; examiner 0.48 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 18,
+  "scenario": "triangle",
+  "holes": {
+   "0": 43.74,
+   "2": 43.68,
+   "4": 43.89
+  },
+  "robot_g": 0.187,
+  "examiner_g": 0.182,
+  "lid_shut": false,
+  "text": "Balanced: 0.19 g out (limit 1.0 g), 3 tubes in holes 0, 2, 4; examiner 0.18 g; lid left open (out of the arm's reach)"
+ },
+ {
+  "seed": 19,
+  "scenario": "mismatch",
+  "holes": {
+   "3": 32.81,
+   "5": 36.98,
+   "0": 32.7,
+   "2": 36.55
+  },
+  "robot_g": 0.387,
+  "examiner_g": 0.386,
+  "lid_shut": false,
+  "text": "Balanced: 0.39 g out (limit 1.0 g), 4 tubes in holes 0, 2, 3, 5; examiner 0.39 g; lid left open (out of the arm's reach)"
+ }
+]

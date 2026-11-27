@@ -1,0 +1,4 @@
+__pycache__/
+.ruff_cache/
+# Saved simulation states (remade by filled_states.py)
+results/filled/*.npz

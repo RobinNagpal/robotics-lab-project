@@ -1,0 +1,1262 @@
+[
+ {
+  "seed": 0,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -5.7,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -24.0,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -8.0,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -25.0,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample2",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample2",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -7.1,
+  "what": "sample2 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample2",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -22.5,
+  "what": "sample2 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample3",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample3",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.2,
+  "what": "sample3 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "sample3",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.3,
+  "what": "sample3 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 0,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -0.3,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.0,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -3.7,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.1,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample2",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample2",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.6,
+  "what": "sample2 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "sample2",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.5,
+  "what": "sample2 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 1,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -8.1,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -24.8,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -0.4,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.0,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample2",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample2",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.6,
+  "what": "sample2 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "sample2",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.5,
+  "what": "sample2 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 2,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 1.4,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -19.5,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -0.1,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.0,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 3,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 1.4,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -19.5,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -0.3,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.0,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample2",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample2",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.6,
+  "what": "sample2 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample2",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.5,
+  "what": "sample2 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample3",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample3",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -5.7,
+  "what": "sample3 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "sample3",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -24.0,
+  "what": "sample3 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 4,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -7.1,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -22.5,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.6,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.2,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample2",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample2",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -2.0,
+  "what": "sample2 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample2",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -20.1,
+  "what": "sample2 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample3",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample3",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -0.4,
+  "what": "sample3 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample3",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.0,
+  "what": "sample3 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample4",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample4",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -7.9,
+  "what": "sample4 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "sample4",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -23.7,
+  "what": "sample4 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 5,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -3.8,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.3,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.6,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -21.5,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample2",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample2",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -8.1,
+  "what": "sample2 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "sample2",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -24.8,
+  "what": "sample2 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 10.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 6,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "sample0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "sample0",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 1.5,
+  "what": "sample0 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "sample0",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -19.5,
+  "what": "sample0 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "sample1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "sample1",
+  "move": "rack -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -7.2,
+  "what": "sample1 - centrifuge/rotor",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "sample1",
+  "move": "rack -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -23.2,
+  "what": "sample1 - centrifuge/body",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "blank0",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "blank0",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank0 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "blank0",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank0 - centrifuge/hole3",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "blank1",
+  "move": "rack -> holder",
+  "via_cm": 0.0,
+  "ok": true,
+  "gap_mm": 10.0,
+  "what": "",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "blank1",
+  "move": "holder -> hole 0",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": 2.9,
+  "what": "blank1 - centrifuge/hole0",
+  "note": ""
+ },
+ {
+  "seed": 7,
+  "tube": "blank1",
+  "move": "holder -> hole 3",
+  "via_cm": 20.0,
+  "ok": false,
+  "gap_mm": -4.5,
+  "what": "blank1 - centrifuge/hole3",
+  "note": ""
+ }
+]

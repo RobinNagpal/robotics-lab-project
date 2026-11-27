@@ -1,0 +1,36 @@
+{
+ "seed": 16,
+ "scenario": "pairs",
+ "plan": [
+  {
+   "hole": 0,
+   "name": "sample0",
+   "tube": "sample0",
+   "balance": false,
+   "grams": 42.09
+  },
+  {
+   "hole": 1,
+   "name": "sample1",
+   "tube": "sample1",
+   "balance": false,
+   "grams": 36.47
+  },
+  {
+   "hole": 3,
+   "name": "sample3",
+   "tube": "sample3",
+   "balance": false,
+   "grams": 42.42
+  },
+  {
+   "hole": 4,
+   "name": "sample2",
+   "tube": "sample2",
+   "balance": false,
+   "grams": 36.46
+  }
+ ],
+ "fills": [],
+ "wall_seconds": 9.1
+}

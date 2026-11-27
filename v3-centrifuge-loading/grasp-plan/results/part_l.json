@@ -1,0 +1,38 @@
+[
+ {
+  "open_deg": 98.7,
+  "ok": false,
+  "at_deg": 98.7,
+  "what": "out of reach"
+ },
+ {
+  "open_deg": 90.0,
+  "ok": false,
+  "at_deg": 90.0,
+  "what": "out of reach"
+ },
+ {
+  "open_deg": 85.0,
+  "ok": false,
+  "at_deg": 85.0,
+  "what": "out of reach"
+ },
+ {
+  "open_deg": 80.0,
+  "ok": false,
+  "at_deg": 80.0,
+  "what": "out of reach"
+ },
+ {
+  "open_deg": 75.0,
+  "ok": false,
+  "at_deg": 69.6,
+  "what": "flip"
+ },
+ {
+  "open_deg": 70.0,
+  "ok": false,
+  "gap_mm": -40.9,
+  "what": "arm/gripper/left_spring_link - centrifuge/body"
+ }
+]

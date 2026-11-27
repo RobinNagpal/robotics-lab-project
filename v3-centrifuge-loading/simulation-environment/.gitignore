@@ -1,0 +1,20 @@
+# pixi
+.pixi/
+
+# models downloaded by `make assets`, and the meshes made from them
+assets/
+
+# pictures written by `make render`
+figures/
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# MuJoCo
+MUJOCO_LOG.TXT
+
+# macOS
+.DS_Store

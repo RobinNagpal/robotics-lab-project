@@ -1,0 +1,45 @@
+{
+ "seed": 13,
+ "scenario": "odd_one",
+ "plan": [
+  {
+   "hole": 1,
+   "name": "balance A",
+   "tube": "blank0",
+   "balance": true,
+   "grams": 17.32
+  },
+  {
+   "hole": 0,
+   "name": "sample0",
+   "tube": "sample0",
+   "balance": false,
+   "grams": 24.64
+  },
+  {
+   "hole": 2,
+   "name": "sample1",
+   "tube": "sample1",
+   "balance": false,
+   "grams": 24.78
+  },
+  {
+   "hole": 4,
+   "name": "sample2",
+   "tube": "sample2",
+   "balance": false,
+   "grams": 42.03
+  }
+ ],
+ "fills": [
+  {
+   "balance_tube": "balance A",
+   "blank": "blank0",
+   "target_g": 17.32,
+   "read_g": 17.9,
+   "error": "",
+   "true_g": 17.905
+  }
+ ],
+ "wall_seconds": 96.9
+}

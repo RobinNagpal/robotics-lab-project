@@ -1,0 +1,40 @@
+{
+ "rows": [
+  {
+   "turn": 0,
+   "ok": false,
+   "gap_mm": 10.0,
+   "what": "out of reach"
+  },
+  {
+   "turn": 30,
+   "ok": false,
+   "gap_mm": 10.0,
+   "what": "out of reach"
+  },
+  {
+   "turn": 60,
+   "ok": false,
+   "gap_mm": 10.0,
+   "what": "out of reach"
+  },
+  {
+   "turn": 90,
+   "ok": false,
+   "gap_mm": 10.0,
+   "what": "out of reach"
+  },
+  {
+   "turn": 120,
+   "ok": false,
+   "gap_mm": 10.0,
+   "what": "out of reach"
+  },
+  {
+   "turn": 150,
+   "ok": false,
+   "gap_mm": 10.0,
+   "what": "out of reach"
+  }
+ ]
+}

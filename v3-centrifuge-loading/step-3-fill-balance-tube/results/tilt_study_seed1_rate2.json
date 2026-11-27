@@ -1,0 +1,4285 @@
+{
+ "seed": 1,
+ "rate_deg_s": 2.0,
+ "empty_g": 11.58,
+ "empty_steady": true,
+ "end": {
+  "in_receiver": 0,
+  "in_source": 0,
+  "air": 0,
+  "spilled": 126,
+  "grams": 11.58
+ },
+ "ball_g": 0.3265,
+ "wall_s": 53.0,
+ "stages": {
+  "start": [
+   0,
+   126,
+   0,
+   0
+  ],
+  "picked": [
+   0,
+   126,
+   0,
+   0
+  ],
+  "moved in": [
+   0,
+   126,
+   0,
+   0
+  ]
+ },
+ "rows": [
+  {
+   "t": 35.96,
+   "tilt": 45.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.06,
+   "tilt": 45.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.16,
+   "tilt": 45.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.26,
+   "tilt": 45.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.36,
+   "tilt": 46.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.46,
+   "tilt": 46.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.56,
+   "tilt": 46.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.66,
+   "tilt": 46.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.76,
+   "tilt": 46.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.86,
+   "tilt": 47.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 36.96,
+   "tilt": 47.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.06,
+   "tilt": 47.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.16,
+   "tilt": 47.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.26,
+   "tilt": 47.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.36,
+   "tilt": 48.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.46,
+   "tilt": 48.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.56,
+   "tilt": 48.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.66,
+   "tilt": 48.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.76,
+   "tilt": 48.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.86,
+   "tilt": 49.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 37.96,
+   "tilt": 49.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.06,
+   "tilt": 49.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.16,
+   "tilt": 49.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.26,
+   "tilt": 49.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.36,
+   "tilt": 50.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.46,
+   "tilt": 50.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.56,
+   "tilt": 50.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.66,
+   "tilt": 50.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.76,
+   "tilt": 50.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.86,
+   "tilt": 51.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 38.96,
+   "tilt": 51.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.06,
+   "tilt": 51.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.16,
+   "tilt": 51.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.26,
+   "tilt": 51.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.36,
+   "tilt": 52.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.46,
+   "tilt": 52.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.56,
+   "tilt": 52.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.66,
+   "tilt": 52.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.76,
+   "tilt": 52.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.86,
+   "tilt": 53.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 39.96,
+   "tilt": 53.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.06,
+   "tilt": 53.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.16,
+   "tilt": 53.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.26,
+   "tilt": 53.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.36,
+   "tilt": 54.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.46,
+   "tilt": 54.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.56,
+   "tilt": 54.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.66,
+   "tilt": 54.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.76,
+   "tilt": 54.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.86,
+   "tilt": 55.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 40.96,
+   "tilt": 55.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.06,
+   "tilt": 55.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.16,
+   "tilt": 55.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.26,
+   "tilt": 55.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.36,
+   "tilt": 56.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.46,
+   "tilt": 56.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.56,
+   "tilt": 56.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.66,
+   "tilt": 56.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.76,
+   "tilt": 56.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.86,
+   "tilt": 57.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 41.96,
+   "tilt": 57.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.06,
+   "tilt": 57.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.16,
+   "tilt": 57.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.26,
+   "tilt": 57.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.36,
+   "tilt": 58.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.46,
+   "tilt": 58.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.56,
+   "tilt": 58.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.66,
+   "tilt": 58.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.76,
+   "tilt": 58.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.86,
+   "tilt": 59.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 42.96,
+   "tilt": 59.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.06,
+   "tilt": 59.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.16,
+   "tilt": 59.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.26,
+   "tilt": 59.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.36,
+   "tilt": 60.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.46,
+   "tilt": 60.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.56,
+   "tilt": 60.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.66,
+   "tilt": 60.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.76,
+   "tilt": 60.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.86,
+   "tilt": 61.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 43.96,
+   "tilt": 61.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.06,
+   "tilt": 61.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.16,
+   "tilt": 61.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.26,
+   "tilt": 61.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.36,
+   "tilt": 62.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.46,
+   "tilt": 62.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.56,
+   "tilt": 62.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.66,
+   "tilt": 62.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.76,
+   "tilt": 62.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.86,
+   "tilt": 63.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 44.96,
+   "tilt": 63.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.06,
+   "tilt": 63.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.16,
+   "tilt": 63.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.26,
+   "tilt": 63.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.36,
+   "tilt": 64.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.46,
+   "tilt": 64.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.56,
+   "tilt": 64.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.66,
+   "tilt": 64.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.76,
+   "tilt": 64.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.86,
+   "tilt": 65.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 45.96,
+   "tilt": 65.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.06,
+   "tilt": 65.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.16,
+   "tilt": 65.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.26,
+   "tilt": 65.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.36,
+   "tilt": 66.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.46,
+   "tilt": 66.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.56,
+   "tilt": 66.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.66,
+   "tilt": 66.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.76,
+   "tilt": 66.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.86,
+   "tilt": 67.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 46.96,
+   "tilt": 67.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.06,
+   "tilt": 67.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.16,
+   "tilt": 67.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.26,
+   "tilt": 67.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.36,
+   "tilt": 68.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.46,
+   "tilt": 68.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.56,
+   "tilt": 68.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.66,
+   "tilt": 68.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.76,
+   "tilt": 68.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.86,
+   "tilt": 69.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 47.96,
+   "tilt": 69.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.06,
+   "tilt": 69.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.16,
+   "tilt": 69.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.26,
+   "tilt": 69.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.36,
+   "tilt": 70.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.46,
+   "tilt": 70.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.56,
+   "tilt": 70.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.66,
+   "tilt": 70.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.76,
+   "tilt": 70.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.86,
+   "tilt": 71.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 48.96,
+   "tilt": 71.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.06,
+   "tilt": 71.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.16,
+   "tilt": 71.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.26,
+   "tilt": 71.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.36,
+   "tilt": 72.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.46,
+   "tilt": 72.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.56,
+   "tilt": 72.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.66,
+   "tilt": 72.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.76,
+   "tilt": 72.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.86,
+   "tilt": 73.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 49.96,
+   "tilt": 73.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.06,
+   "tilt": 73.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.16,
+   "tilt": 73.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.26,
+   "tilt": 73.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.36,
+   "tilt": 74.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.46,
+   "tilt": 74.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.56,
+   "tilt": 74.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.66,
+   "tilt": 74.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.76,
+   "tilt": 74.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.86,
+   "tilt": 75.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 50.96,
+   "tilt": 75.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.06,
+   "tilt": 75.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.16,
+   "tilt": 75.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.26,
+   "tilt": 75.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.36,
+   "tilt": 76.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.46,
+   "tilt": 76.2,
+   "grams": 11.56,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.56,
+   "tilt": 76.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.66,
+   "tilt": 76.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.76,
+   "tilt": 76.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.86,
+   "tilt": 77.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 51.96,
+   "tilt": 77.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.06,
+   "tilt": 77.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.16,
+   "tilt": 77.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.26,
+   "tilt": 77.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.36,
+   "tilt": 78.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.46,
+   "tilt": 78.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.56,
+   "tilt": 78.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.66,
+   "tilt": 78.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.76,
+   "tilt": 78.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.86,
+   "tilt": 79.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 52.96,
+   "tilt": 79.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.06,
+   "tilt": 79.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.16,
+   "tilt": 79.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.26,
+   "tilt": 79.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.36,
+   "tilt": 80.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.46,
+   "tilt": 80.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.56,
+   "tilt": 80.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.66,
+   "tilt": 80.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.76,
+   "tilt": 80.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.86,
+   "tilt": 81.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 53.96,
+   "tilt": 81.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.06,
+   "tilt": 81.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.16,
+   "tilt": 81.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.26,
+   "tilt": 81.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.36,
+   "tilt": 82.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.46,
+   "tilt": 82.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.56,
+   "tilt": 82.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.66,
+   "tilt": 82.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.76,
+   "tilt": 82.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.86,
+   "tilt": 83.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 54.96,
+   "tilt": 83.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.06,
+   "tilt": 83.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.16,
+   "tilt": 83.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.26,
+   "tilt": 83.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.36,
+   "tilt": 84.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.46,
+   "tilt": 84.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.56,
+   "tilt": 84.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.66,
+   "tilt": 84.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.76,
+   "tilt": 84.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.86,
+   "tilt": 85.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 55.96,
+   "tilt": 85.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.06,
+   "tilt": 85.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.16,
+   "tilt": 85.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.26,
+   "tilt": 85.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.36,
+   "tilt": 86.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.46,
+   "tilt": 86.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.56,
+   "tilt": 86.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.66,
+   "tilt": 86.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.76,
+   "tilt": 86.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.86,
+   "tilt": 87.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 56.96,
+   "tilt": 87.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.06,
+   "tilt": 87.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.16,
+   "tilt": 87.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.26,
+   "tilt": 87.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.36,
+   "tilt": 88.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.46,
+   "tilt": 88.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.56,
+   "tilt": 88.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.66,
+   "tilt": 88.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.76,
+   "tilt": 88.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.86,
+   "tilt": 89.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 57.96,
+   "tilt": 89.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.06,
+   "tilt": 89.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.16,
+   "tilt": 89.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.26,
+   "tilt": 89.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.36,
+   "tilt": 90.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.46,
+   "tilt": 90.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.56,
+   "tilt": 90.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.66,
+   "tilt": 90.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.76,
+   "tilt": 90.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.86,
+   "tilt": 91.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 58.96,
+   "tilt": 91.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.06,
+   "tilt": 91.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.16,
+   "tilt": 91.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.26,
+   "tilt": 91.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.36,
+   "tilt": 92.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.46,
+   "tilt": 92.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.56,
+   "tilt": 92.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.66,
+   "tilt": 92.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.76,
+   "tilt": 92.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.86,
+   "tilt": 93.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 59.96,
+   "tilt": 93.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.06,
+   "tilt": 93.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.16,
+   "tilt": 93.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.26,
+   "tilt": 93.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.36,
+   "tilt": 94.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.46,
+   "tilt": 94.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.56,
+   "tilt": 94.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.66,
+   "tilt": 94.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.76,
+   "tilt": 94.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.86,
+   "tilt": 95.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 60.96,
+   "tilt": 95.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.06,
+   "tilt": 95.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.16,
+   "tilt": 95.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.26,
+   "tilt": 95.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.36,
+   "tilt": 96.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.46,
+   "tilt": 96.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.56,
+   "tilt": 96.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.66,
+   "tilt": 96.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.76,
+   "tilt": 96.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.86,
+   "tilt": 97.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 61.96,
+   "tilt": 97.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.06,
+   "tilt": 97.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.16,
+   "tilt": 97.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.26,
+   "tilt": 97.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.36,
+   "tilt": 98.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.46,
+   "tilt": 98.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.56,
+   "tilt": 98.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.66,
+   "tilt": 98.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.76,
+   "tilt": 98.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.86,
+   "tilt": 99.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 62.96,
+   "tilt": 99.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.06,
+   "tilt": 99.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.16,
+   "tilt": 99.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.26,
+   "tilt": 99.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.36,
+   "tilt": 100.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.46,
+   "tilt": 100.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.56,
+   "tilt": 100.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.66,
+   "tilt": 100.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.76,
+   "tilt": 100.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.86,
+   "tilt": 101.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 63.96,
+   "tilt": 101.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.06,
+   "tilt": 101.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.16,
+   "tilt": 101.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.26,
+   "tilt": 101.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.36,
+   "tilt": 102.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.46,
+   "tilt": 102.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.56,
+   "tilt": 102.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.66,
+   "tilt": 102.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.76,
+   "tilt": 102.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.86,
+   "tilt": 103.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 64.96,
+   "tilt": 103.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.06,
+   "tilt": 103.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.16,
+   "tilt": 103.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.26,
+   "tilt": 103.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.36,
+   "tilt": 104.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.46,
+   "tilt": 104.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.56,
+   "tilt": 104.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.66,
+   "tilt": 104.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.76,
+   "tilt": 104.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.86,
+   "tilt": 105.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 65.96,
+   "tilt": 105.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.06,
+   "tilt": 105.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.16,
+   "tilt": 105.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.26,
+   "tilt": 105.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.36,
+   "tilt": 106.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.46,
+   "tilt": 106.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.56,
+   "tilt": 106.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.66,
+   "tilt": 106.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.76,
+   "tilt": 106.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.86,
+   "tilt": 107.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 66.96,
+   "tilt": 107.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.06,
+   "tilt": 107.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.16,
+   "tilt": 107.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.26,
+   "tilt": 107.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.36,
+   "tilt": 108.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.46,
+   "tilt": 108.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.56,
+   "tilt": 108.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.66,
+   "tilt": 108.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.76,
+   "tilt": 108.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 67.86,
+   "tilt": 109.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 125,
+   "air": 1,
+   "spilled": 0
+  },
+  {
+   "t": 67.96,
+   "tilt": 109.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.06,
+   "tilt": 109.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.16,
+   "tilt": 109.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.26,
+   "tilt": 109.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.36,
+   "tilt": 110.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.46,
+   "tilt": 110.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.56,
+   "tilt": 110.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.66,
+   "tilt": 110.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.76,
+   "tilt": 110.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.86,
+   "tilt": 111.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 68.96,
+   "tilt": 111.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.06,
+   "tilt": 111.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.16,
+   "tilt": 111.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.26,
+   "tilt": 111.8,
+   "grams": 11.56,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.36,
+   "tilt": 112.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.46,
+   "tilt": 112.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.56,
+   "tilt": 112.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.66,
+   "tilt": 112.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.76,
+   "tilt": 112.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.86,
+   "tilt": 113.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 126,
+   "air": 0,
+   "spilled": 0
+  },
+  {
+   "t": 69.96,
+   "tilt": 113.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 125,
+   "air": 1,
+   "spilled": 0
+  },
+  {
+   "t": 70.06,
+   "tilt": 113.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 125,
+   "air": 1,
+   "spilled": 0
+  },
+  {
+   "t": 70.16,
+   "tilt": 113.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 124,
+   "air": 2,
+   "spilled": 0
+  },
+  {
+   "t": 70.26,
+   "tilt": 113.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 123,
+   "air": 3,
+   "spilled": 0
+  },
+  {
+   "t": 70.36,
+   "tilt": 114.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 121,
+   "air": 4,
+   "spilled": 1
+  },
+  {
+   "t": 70.46,
+   "tilt": 114.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 119,
+   "air": 4,
+   "spilled": 3
+  },
+  {
+   "t": 70.56,
+   "tilt": 114.4,
+   "grams": 11.850000000000001,
+   "in_receiver": 0,
+   "in_source": 117,
+   "air": 4,
+   "spilled": 5
+  },
+  {
+   "t": 70.66,
+   "tilt": 114.6,
+   "grams": 11.81,
+   "in_receiver": 0,
+   "in_source": 117,
+   "air": 2,
+   "spilled": 7
+  },
+  {
+   "t": 70.76,
+   "tilt": 114.8,
+   "grams": 10.360000000000001,
+   "in_receiver": 0,
+   "in_source": 115,
+   "air": 2,
+   "spilled": 9
+  },
+  {
+   "t": 70.86,
+   "tilt": 115.0,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 115,
+   "air": 2,
+   "spilled": 9
+  },
+  {
+   "t": 70.96,
+   "tilt": 115.2,
+   "grams": 14.090000000000002,
+   "in_receiver": 0,
+   "in_source": 114,
+   "air": 2,
+   "spilled": 10
+  },
+  {
+   "t": 71.06,
+   "tilt": 115.4,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 111,
+   "air": 4,
+   "spilled": 11
+  },
+  {
+   "t": 71.16,
+   "tilt": 115.6,
+   "grams": 12.200000000000001,
+   "in_receiver": 0,
+   "in_source": 111,
+   "air": 3,
+   "spilled": 12
+  },
+  {
+   "t": 71.26,
+   "tilt": 115.8,
+   "grams": 12.15,
+   "in_receiver": 0,
+   "in_source": 111,
+   "air": 1,
+   "spilled": 14
+  },
+  {
+   "t": 71.36,
+   "tilt": 116.0,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 4,
+   "spilled": 14
+  },
+  {
+   "t": 71.46,
+   "tilt": 116.2,
+   "grams": 11.89,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 3,
+   "spilled": 15
+  },
+  {
+   "t": 71.56,
+   "tilt": 116.4,
+   "grams": 11.250000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 71.66,
+   "tilt": 116.6,
+   "grams": 12.620000000000001,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 71.76,
+   "tilt": 116.8,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 71.86,
+   "tilt": 117.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 71.96,
+   "tilt": 117.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.06,
+   "tilt": 117.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.16,
+   "tilt": 117.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.26,
+   "tilt": 117.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.36,
+   "tilt": 118.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.46,
+   "tilt": 118.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.56,
+   "tilt": 118.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.66,
+   "tilt": 118.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.76,
+   "tilt": 118.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.86,
+   "tilt": 119.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 72.96,
+   "tilt": 119.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 108,
+   "air": 0,
+   "spilled": 18
+  },
+  {
+   "t": 73.06,
+   "tilt": 119.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 106,
+   "air": 2,
+   "spilled": 18
+  },
+  {
+   "t": 73.16,
+   "tilt": 119.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 106,
+   "air": 2,
+   "spilled": 18
+  },
+  {
+   "t": 73.26,
+   "tilt": 119.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 103,
+   "air": 5,
+   "spilled": 18
+  },
+  {
+   "t": 73.36,
+   "tilt": 120.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 100,
+   "air": 6,
+   "spilled": 20
+  },
+  {
+   "t": 73.46,
+   "tilt": 120.2,
+   "grams": 26.140000000000004,
+   "in_receiver": 0,
+   "in_source": 97,
+   "air": 5,
+   "spilled": 24
+  },
+  {
+   "t": 73.56,
+   "tilt": 120.4,
+   "grams": 33.480000000000004,
+   "in_receiver": 0,
+   "in_source": 93,
+   "air": 5,
+   "spilled": 28
+  },
+  {
+   "t": 73.66,
+   "tilt": 120.6,
+   "grams": 12.830000000000002,
+   "in_receiver": 0,
+   "in_source": 88,
+   "air": 9,
+   "spilled": 29
+  },
+  {
+   "t": 73.76,
+   "tilt": 120.8,
+   "grams": 12.290000000000001,
+   "in_receiver": 0,
+   "in_source": 83,
+   "air": 9,
+   "spilled": 34
+  },
+  {
+   "t": 73.86,
+   "tilt": 121.0,
+   "grams": 13.600000000000001,
+   "in_receiver": 0,
+   "in_source": 78,
+   "air": 9,
+   "spilled": 39
+  },
+  {
+   "t": 73.96,
+   "tilt": 121.2,
+   "grams": 12.780000000000001,
+   "in_receiver": 0,
+   "in_source": 75,
+   "air": 6,
+   "spilled": 45
+  },
+  {
+   "t": 74.06,
+   "tilt": 121.4,
+   "grams": 16.3,
+   "in_receiver": 0,
+   "in_source": 72,
+   "air": 6,
+   "spilled": 48
+  },
+  {
+   "t": 74.16,
+   "tilt": 121.6,
+   "grams": 12.820000000000002,
+   "in_receiver": 0,
+   "in_source": 72,
+   "air": 3,
+   "spilled": 51
+  },
+  {
+   "t": 74.26,
+   "tilt": 121.8,
+   "grams": 13.99,
+   "in_receiver": 0,
+   "in_source": 69,
+   "air": 3,
+   "spilled": 54
+  },
+  {
+   "t": 74.36,
+   "tilt": 122.0,
+   "grams": 11.89,
+   "in_receiver": 0,
+   "in_source": 65,
+   "air": 7,
+   "spilled": 54
+  },
+  {
+   "t": 74.46,
+   "tilt": 122.2,
+   "grams": 11.240000000000002,
+   "in_receiver": 0,
+   "in_source": 60,
+   "air": 8,
+   "spilled": 58
+  },
+  {
+   "t": 74.56,
+   "tilt": 122.4,
+   "grams": 13.510000000000002,
+   "in_receiver": 0,
+   "in_source": 56,
+   "air": 7,
+   "spilled": 63
+  },
+  {
+   "t": 74.66,
+   "tilt": 122.6,
+   "grams": 12.8,
+   "in_receiver": 0,
+   "in_source": 55,
+   "air": 5,
+   "spilled": 66
+  },
+  {
+   "t": 74.76,
+   "tilt": 122.8,
+   "grams": 12.570000000000002,
+   "in_receiver": 0,
+   "in_source": 53,
+   "air": 3,
+   "spilled": 70
+  },
+  {
+   "t": 74.86,
+   "tilt": 123.0,
+   "grams": 12.88,
+   "in_receiver": 0,
+   "in_source": 51,
+   "air": 4,
+   "spilled": 71
+  },
+  {
+   "t": 74.96,
+   "tilt": 123.2,
+   "grams": 12.71,
+   "in_receiver": 0,
+   "in_source": 48,
+   "air": 5,
+   "spilled": 73
+  },
+  {
+   "t": 75.06,
+   "tilt": 123.4,
+   "grams": 12.88,
+   "in_receiver": 0,
+   "in_source": 46,
+   "air": 5,
+   "spilled": 75
+  },
+  {
+   "t": 75.16,
+   "tilt": 123.6,
+   "grams": 12.55,
+   "in_receiver": 0,
+   "in_source": 44,
+   "air": 4,
+   "spilled": 78
+  },
+  {
+   "t": 75.26,
+   "tilt": 123.8,
+   "grams": 12.24,
+   "in_receiver": 0,
+   "in_source": 41,
+   "air": 5,
+   "spilled": 80
+  },
+  {
+   "t": 75.36,
+   "tilt": 124.0,
+   "grams": 13.760000000000002,
+   "in_receiver": 0,
+   "in_source": 40,
+   "air": 2,
+   "spilled": 84
+  },
+  {
+   "t": 75.46,
+   "tilt": 124.2,
+   "grams": 13.260000000000002,
+   "in_receiver": 0,
+   "in_source": 36,
+   "air": 5,
+   "spilled": 85
+  },
+  {
+   "t": 75.56,
+   "tilt": 124.4,
+   "grams": 12.23,
+   "in_receiver": 0,
+   "in_source": 32,
+   "air": 8,
+   "spilled": 86
+  },
+  {
+   "t": 75.66,
+   "tilt": 124.6,
+   "grams": 12.900000000000002,
+   "in_receiver": 0,
+   "in_source": 29,
+   "air": 7,
+   "spilled": 90
+  },
+  {
+   "t": 75.76,
+   "tilt": 124.8,
+   "grams": 10.790000000000001,
+   "in_receiver": 0,
+   "in_source": 25,
+   "air": 7,
+   "spilled": 94
+  },
+  {
+   "t": 75.86,
+   "tilt": 125.0,
+   "grams": 11.510000000000002,
+   "in_receiver": 0,
+   "in_source": 23,
+   "air": 5,
+   "spilled": 98
+  },
+  {
+   "t": 75.96,
+   "tilt": 125.2,
+   "grams": 11.47,
+   "in_receiver": 0,
+   "in_source": 19,
+   "air": 6,
+   "spilled": 101
+  },
+  {
+   "t": 76.06,
+   "tilt": 125.4,
+   "grams": 12.280000000000001,
+   "in_receiver": 0,
+   "in_source": 16,
+   "air": 7,
+   "spilled": 103
+  },
+  {
+   "t": 76.16,
+   "tilt": 125.6,
+   "grams": 12.570000000000002,
+   "in_receiver": 0,
+   "in_source": 14,
+   "air": 6,
+   "spilled": 106
+  },
+  {
+   "t": 76.26,
+   "tilt": 125.8,
+   "grams": 42.620000000000005,
+   "in_receiver": 0,
+   "in_source": 12,
+   "air": 3,
+   "spilled": 111
+  },
+  {
+   "t": 76.36,
+   "tilt": 126.0,
+   "grams": 26.050000000000004,
+   "in_receiver": 0,
+   "in_source": 9,
+   "air": 4,
+   "spilled": 113
+  },
+  {
+   "t": 76.46,
+   "tilt": 126.2,
+   "grams": 12.920000000000002,
+   "in_receiver": 0,
+   "in_source": 7,
+   "air": 4,
+   "spilled": 115
+  },
+  {
+   "t": 76.56,
+   "tilt": 126.4,
+   "grams": 12.120000000000001,
+   "in_receiver": 0,
+   "in_source": 5,
+   "air": 4,
+   "spilled": 117
+  },
+  {
+   "t": 76.66,
+   "tilt": 126.6,
+   "grams": 12.570000000000002,
+   "in_receiver": 0,
+   "in_source": 3,
+   "air": 3,
+   "spilled": 120
+  },
+  {
+   "t": 76.76,
+   "tilt": 126.8,
+   "grams": 10.8,
+   "in_receiver": 0,
+   "in_source": 1,
+   "air": 3,
+   "spilled": 122
+  },
+  {
+   "t": 76.86,
+   "tilt": 127.0,
+   "grams": 12.530000000000001,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 3,
+   "spilled": 123
+  },
+  {
+   "t": 76.96,
+   "tilt": 127.2,
+   "grams": 13.340000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 1,
+   "spilled": 125
+  },
+  {
+   "t": 77.06,
+   "tilt": 127.4,
+   "grams": 12.23,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.16,
+   "tilt": 127.6,
+   "grams": 12.23,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.26,
+   "tilt": 127.8,
+   "grams": 11.880000000000003,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.36,
+   "tilt": 128.0,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.46,
+   "tilt": 128.2,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.56,
+   "tilt": 128.4,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.66,
+   "tilt": 128.6,
+   "grams": 11.9,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.76,
+   "tilt": 128.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.86,
+   "tilt": 129.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 77.96,
+   "tilt": 129.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.06,
+   "tilt": 129.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.16,
+   "tilt": 129.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.26,
+   "tilt": 129.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.36,
+   "tilt": 130.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.46,
+   "tilt": 130.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.56,
+   "tilt": 130.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.66,
+   "tilt": 130.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.76,
+   "tilt": 130.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.86,
+   "tilt": 131.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 78.96,
+   "tilt": 131.2,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.06,
+   "tilt": 131.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.16,
+   "tilt": 131.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.26,
+   "tilt": 131.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.36,
+   "tilt": 132.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.46,
+   "tilt": 132.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.56,
+   "tilt": 132.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.66,
+   "tilt": 132.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.76,
+   "tilt": 132.8,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.86,
+   "tilt": 133.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 79.96,
+   "tilt": 133.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.06,
+   "tilt": 133.4,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.16,
+   "tilt": 133.6,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.26,
+   "tilt": 133.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.36,
+   "tilt": 134.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.46,
+   "tilt": 134.2,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.56,
+   "tilt": 134.4,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.66,
+   "tilt": 134.6,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.76,
+   "tilt": 134.8,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.86,
+   "tilt": 135.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 80.96,
+   "tilt": 131.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.06,
+   "tilt": 127.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.16,
+   "tilt": 123.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.26,
+   "tilt": 119.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.36,
+   "tilt": 115.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.46,
+   "tilt": 111.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.56,
+   "tilt": 107.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.66,
+   "tilt": 103.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.76,
+   "tilt": 99.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.86,
+   "tilt": 95.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 81.96,
+   "tilt": 91.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.06,
+   "tilt": 87.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.16,
+   "tilt": 83.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.26,
+   "tilt": 79.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.36,
+   "tilt": 75.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.46,
+   "tilt": 71.0,
+   "grams": 11.57,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.56,
+   "tilt": 67.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.66,
+   "tilt": 63.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.76,
+   "tilt": 59.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.86,
+   "tilt": 55.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 82.96,
+   "tilt": 51.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  },
+  {
+   "t": 83.06,
+   "tilt": 47.0,
+   "grams": 11.580000000000002,
+   "in_receiver": 0,
+   "in_source": 0,
+   "air": 0,
+   "spilled": 126
+  }
+ ]
+}

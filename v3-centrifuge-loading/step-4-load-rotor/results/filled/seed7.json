@@ -1,0 +1,53 @@
+{
+ "seed": 7,
+ "scenario": "mismatch",
+ "plan": [
+  {
+   "hole": 3,
+   "name": "balance A",
+   "tube": "blank0",
+   "balance": true,
+   "grams": 37.75
+  },
+  {
+   "hole": 5,
+   "name": "balance B",
+   "tube": "blank1",
+   "balance": true,
+   "grams": 45.09
+  },
+  {
+   "hole": 0,
+   "name": "sample0",
+   "tube": "sample0",
+   "balance": false,
+   "grams": 37.75
+  },
+  {
+   "hole": 2,
+   "name": "sample1",
+   "tube": "sample1",
+   "balance": false,
+   "grams": 45.09
+  }
+ ],
+ "fills": [
+  {
+   "balance_tube": "balance A",
+   "blank": "blank0",
+   "target_g": 37.75,
+   "read_g": 38.45,
+   "error": "",
+   "true_g": 38.454
+  },
+  {
+   "balance_tube": "balance B",
+   "blank": "blank1",
+   "target_g": 45.44,
+   "read_g": 45.88,
+   "error": "",
+   "true_g": 45.883
+  }
+ ],
+ "wall_seconds": 303.3
+}

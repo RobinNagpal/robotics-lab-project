@@ -1,0 +1,923 @@
+[
+ {
+  "hole": 0,
+  "neighbours": "both empty",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   135,
+   140,
+   145,
+   150,
+   155,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "hole": 0,
+  "neighbours": "both empty",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 7.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 0,
+  "neighbours": "left full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 0,
+  "neighbours": "left full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 0,
+  "neighbours": "right full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   135,
+   140,
+   145,
+   150,
+   155,
+   160
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 0,
+  "neighbours": "right full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   160,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 0,
+  "neighbours": "both full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.1,
+   "what": "arm/gripper/right_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "hole": 0,
+  "neighbours": "both full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.2,
+   "what": "arm/gripper/right_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "both empty",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   135,
+   140,
+   145,
+   150,
+   155,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "both empty",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 7.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "left full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.1,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "left full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "right full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   135,
+   140,
+   145,
+   150,
+   155,
+   160
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.1,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "right full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   160,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "both full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.1,
+   "what": "arm/gripper/right_follower - sample2",
+   "note": ""
+  }
+ },
+ {
+  "hole": 1,
+  "neighbours": "both full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.2,
+   "what": "arm/gripper/right_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "both empty",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   135,
+   140,
+   145,
+   150,
+   155,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "both empty",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 7.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "left full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.1,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "left full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   15,
+   20
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "right full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   135,
+   140,
+   145,
+   150,
+   155,
+   160
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.1,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "right full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   160
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "both full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.1,
+   "what": "arm/gripper/right_follower - sample1",
+   "note": ""
+  }
+ },
+ {
+  "hole": 2,
+  "neighbours": "both full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.2,
+   "what": "arm/gripper/right_follower - sample0",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "both empty",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   135,
+   140,
+   145,
+   150,
+   155,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "both empty",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 7.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "left full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "left full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   15,
+   20
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "right full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   135,
+   140,
+   145,
+   150,
+   155,
+   160
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "right full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   160,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "both full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.1,
+   "what": "arm/gripper/right_follower - centrifuge/rotor",
+   "note": ""
+  }
+ },
+ {
+  "hole": 3,
+  "neighbours": "both full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.2,
+   "what": "arm/gripper/right_follower - centrifuge/rotor",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "both empty",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   135,
+   140,
+   145,
+   150,
+   155,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "both empty",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 7.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "left full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "left full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   15,
+   20
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "right full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   135,
+   140,
+   145,
+   150,
+   155,
+   160
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "right full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   160,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.5,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "both full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.1,
+   "what": "arm/gripper/right_follower - centrifuge/rotor",
+   "note": ""
+  }
+ },
+ {
+  "hole": 4,
+  "neighbours": "both full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.2,
+   "what": "arm/gripper/right_follower - centrifuge/rotor",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "both empty",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   135,
+   140,
+   145,
+   150,
+   155,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 10.0,
+   "what": "",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "both empty",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   160,
+   165,
+   170,
+   175
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 7.6,
+   "what": "arm/gripper/right_pad - centrifuge/rotor",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "left full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "left full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   15,
+   20
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.6,
+   "what": "arm/gripper/right_pad - centrifuge/rotor",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "right full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   135,
+   140,
+   145,
+   150,
+   155,
+   160
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 8.2,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "right full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [
+   160,
+   165
+  ],
+  "best": {
+   "ok": true,
+   "gap_mm": 3.6,
+   "what": "gripper - rotor top",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "both full",
+  "held": "capped",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.1,
+   "what": "arm/gripper/right_follower - centrifuge/rotor",
+   "note": ""
+  }
+ },
+ {
+  "hole": 5,
+  "neighbours": "both full",
+  "held": "open",
+  "lid_deg": 98.7,
+  "turns_ok": [],
+  "best": {
+   "ok": false,
+   "gap_mm": -3.2,
+   "what": "arm/gripper/right_follower - centrifuge/rotor",
+   "note": ""
+  }
+ }
+]

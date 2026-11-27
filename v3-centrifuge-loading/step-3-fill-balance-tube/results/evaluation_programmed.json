@@ -1,0 +1,3840 @@
+[
+ {
+  "seed": 1,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 40.22,
+   "sample1": 40.58,
+   "sample2": 45.27
+  },
+  "plan": "1. balance A (fill an empty tube to 45.09 g) into hole 4\n2. sample0 (40.22 g) into hole 0\n3. sample2 (45.27 g) into hole 1\n4. sample1 (40.58 g) into hole 3\nBalance: 0.31 g out (limit 1.0 g); at most 0.59 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 45.09,
+    "empty_g": 11.58,
+    "poured_g": 45.21,
+    "final_g": 45.21,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 81.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.58,
+      "after_g": 16.47
+     },
+     {
+      "start_deg": 79.3,
+      "flow_deg": 84.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.47,
+      "after_g": 27.58
+     },
+     {
+      "start_deg": 82.7,
+      "flow_deg": 86.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.58,
+      "after_g": 31.17
+     },
+     {
+      "start_deg": 84.8,
+      "flow_deg": 88.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 31.17,
+      "after_g": 39.01
+     },
+     {
+      "start_deg": 86.1,
+      "flow_deg": 88.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 39.01,
+      "after_g": 39.66
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 89.6,
+      "let_run": true,
+      "stopped_deg": 89.63100000002146,
+      "before_g": 39.66,
+      "after_g": 43.25
+     },
+     {
+      "start_deg": 87.6,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.85600000002101,
+      "before_g": 43.25,
+      "after_g": 43.58
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 89.0,
+      "let_run": false,
+      "stopped_deg": 88.99700000002068,
+      "before_g": 43.58,
+      "after_g": 43.9
+     },
+     {
+      "start_deg": 87.0,
+      "flow_deg": 89.1,
+      "let_run": false,
+      "stopped_deg": 89.1000000000203,
+      "before_g": 43.9,
+      "after_g": 44.23
+     },
+     {
+      "start_deg": 87.1,
+      "flow_deg": 89.0,
+      "let_run": false,
+      "stopped_deg": 89.02300000001992,
+      "before_g": 44.23,
+      "after_g": 44.88
+     },
+     {
+      "start_deg": 87.0,
+      "flow_deg": 89.8,
+      "let_run": false,
+      "stopped_deg": 89.84300000001957,
+      "before_g": 44.88,
+      "after_g": 45.21
+     }
+    ],
+    "seconds": 187.1,
+    "smallest_gap_mm": 10.0,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 45.09,
+    "read_g": 45.21,
+    "true_g": 45.209,
+    "off_true_g": 0.119
+   }
+  ],
+  "imbalance_g": 0.333,
+  "spilled": 0,
+  "back": {
+   "blank0": {
+    "off_mm": 0.24,
+    "tilt_deg": 1.35
+   },
+   "water0": {
+    "off_mm": 3.54,
+    "tilt_deg": 5.13
+   }
+  },
+  "back_ok": false,
+  "disturbed": [],
+  "wall_seconds": 183.3
+ },
+ {
+  "seed": 3,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 25.35,
+   "sample1": 41.93
+  },
+  "plan": "1. balance A (fill an empty tube to 25.35 g) into hole 3\n2. balance B (fill an empty tube to 41.93 g) into hole 5\n3. sample0 (25.35 g) into hole 0\n4. sample1 (41.93 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 25.35,
+    "empty_g": 11.49,
+    "poured_g": 25.21,
+    "final_g": 25.21,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 76.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.49,
+      "after_g": 12.8
+     },
+     {
+      "start_deg": 74.6,
+      "flow_deg": 80.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.8,
+      "after_g": 16.07
+     },
+     {
+      "start_deg": 78.8,
+      "flow_deg": 83.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.07,
+      "after_g": 21.94
+     },
+     {
+      "start_deg": 81.6,
+      "flow_deg": 85.1,
+      "let_run": false,
+      "stopped_deg": 85.14000000001516,
+      "before_g": 21.94,
+      "after_g": 23.57
+     },
+     {
+      "start_deg": 83.1,
+      "flow_deg": 83.8,
+      "let_run": false,
+      "stopped_deg": 83.75500000001473,
+      "before_g": 23.57,
+      "after_g": 23.9
+     },
+     {
+      "start_deg": 81.8,
+      "flow_deg": 85.5,
+      "let_run": false,
+      "stopped_deg": 85.51700000001442,
+      "before_g": 23.9,
+      "after_g": 24.23
+     },
+     {
+      "start_deg": 83.5,
+      "flow_deg": 84.1,
+      "let_run": false,
+      "stopped_deg": 84.12000000001399,
+      "before_g": 24.23,
+      "after_g": 24.88
+     },
+     {
+      "start_deg": 82.1,
+      "flow_deg": 85.1,
+      "let_run": false,
+      "stopped_deg": 85.06600000001364,
+      "before_g": 24.88,
+      "after_g": 25.21
+     }
+    ],
+    "seconds": 137.9,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 25.35,
+    "read_g": 25.21,
+    "true_g": 25.208,
+    "off_true_g": -0.142
+   },
+   {
+    "blank_cell": 6,
+    "water_cell": 3,
+    "target_g": 41.86,
+    "empty_g": 11.4,
+    "poured_g": 41.77,
+    "final_g": 41.77,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 75.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.4,
+      "after_g": 13.03
+     },
+     {
+      "start_deg": 73.8,
+      "flow_deg": 81.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.03,
+      "after_g": 13.68
+     },
+     {
+      "start_deg": 79.0,
+      "flow_deg": 83.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.68,
+      "after_g": 17.6
+     },
+     {
+      "start_deg": 81.2,
+      "flow_deg": 83.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 17.6,
+      "after_g": 21.19
+     },
+     {
+      "start_deg": 81.8,
+      "flow_deg": 86.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 21.19,
+      "after_g": 28.05
+     },
+     {
+      "start_deg": 84.2,
+      "flow_deg": 87.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 28.05,
+      "after_g": 36.87
+     },
+     {
+      "start_deg": 85.6,
+      "flow_deg": 89.3,
+      "let_run": true,
+      "stopped_deg": 89.27600000002275,
+      "before_g": 36.87,
+      "after_g": 39.81
+     },
+     {
+      "start_deg": 87.3,
+      "flow_deg": 88.8,
+      "let_run": false,
+      "stopped_deg": 88.77400000002336,
+      "before_g": 39.81,
+      "after_g": 40.46
+     },
+     {
+      "start_deg": 86.8,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.45700000002297,
+      "before_g": 40.46,
+      "after_g": 40.79
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 88.8,
+      "let_run": false,
+      "stopped_deg": 88.83000000002261,
+      "before_g": 40.79,
+      "after_g": 41.11
+     },
+     {
+      "start_deg": 86.8,
+      "flow_deg": 89.0,
+      "let_run": false,
+      "stopped_deg": 89.01100000002224,
+      "before_g": 41.11,
+      "after_g": 41.77
+     }
+    ],
+    "seconds": 159.0,
+    "smallest_gap_mm": 10.0,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 41.93,
+    "read_g": 41.77,
+    "true_g": 41.766,
+    "off_true_g": -0.094
+   }
+  ],
+  "imbalance_g": 0.155,
+  "spilled": 5,
+  "back": {
+   "blank0": {
+    "off_mm": 0.77,
+    "tilt_deg": 1.22
+   },
+   "blank1": {
+    "off_mm": 0.3,
+    "tilt_deg": 1.79
+   },
+   "water0": {
+    "off_mm": 1.3,
+    "tilt_deg": 1.67
+   },
+   "water1": {
+    "off_mm": 0.73,
+    "tilt_deg": 1.73
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 286.0
+ },
+ {
+  "seed": 5,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 41.84,
+   "sample1": 38.51,
+   "sample2": 38.28
+  },
+  "plan": "1. balance A (fill an empty tube to 41.95 g) into hole 3\n2. sample0 (41.84 g) into hole 0\n3. sample1 (38.51 g) into hole 1\n4. sample2 (38.28 g) into hole 4\nBalance: 0.20 g out (limit 1.0 g); at most 0.54 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 41.95,
+    "empty_g": 11.65,
+    "poured_g": 42.02,
+    "final_g": 42.02,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 76.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.65,
+      "after_g": 11.98
+     },
+     {
+      "start_deg": 74.9,
+      "flow_deg": 80.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.98,
+      "after_g": 13.93
+     },
+     {
+      "start_deg": 78.2,
+      "flow_deg": 82.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.93,
+      "after_g": 19.81
+     },
+     {
+      "start_deg": 80.6,
+      "flow_deg": 84.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.81,
+      "after_g": 21.77
+     },
+     {
+      "start_deg": 82.7,
+      "flow_deg": 86.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 21.77,
+      "after_g": 31.57
+     },
+     {
+      "start_deg": 84.7,
+      "flow_deg": 89.1,
+      "let_run": true,
+      "stopped_deg": 89.07800000002106,
+      "before_g": 31.57,
+      "after_g": 38.43
+     },
+     {
+      "start_deg": 87.1,
+      "flow_deg": 89.4,
+      "let_run": false,
+      "stopped_deg": 89.4440000000223,
+      "before_g": 38.43,
+      "after_g": 39.41
+     },
+     {
+      "start_deg": 87.4,
+      "flow_deg": 89.8,
+      "let_run": false,
+      "stopped_deg": 89.7540000000235,
+      "before_g": 39.41,
+      "after_g": 40.06
+     },
+     {
+      "start_deg": 87.8,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.92800000002305,
+      "before_g": 40.06,
+      "after_g": 41.04
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 88.6,
+      "let_run": false,
+      "stopped_deg": 88.6430000000227,
+      "before_g": 41.04,
+      "after_g": 41.37
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.90200000002233,
+      "before_g": 41.37,
+      "after_g": 41.69
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 90.3,
+      "let_run": false,
+      "stopped_deg": 90.346000000022,
+      "before_g": 41.69,
+      "after_g": 42.02
+     }
+    ],
+    "seconds": 187.8,
+    "smallest_gap_mm": 6.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 41.95,
+    "read_g": 42.02,
+    "true_g": 42.018,
+    "off_true_g": 0.068
+   }
+  ],
+  "imbalance_g": 0.206,
+  "spilled": 11,
+  "back": {
+   "blank0": {
+    "off_mm": 0.42,
+    "tilt_deg": 1.75
+   },
+   "water0": {
+    "off_mm": 0.75,
+    "tilt_deg": 0.72
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 177.2
+ },
+ {
+  "seed": 7,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 37.75,
+   "sample1": 45.09
+  },
+  "plan": "1. balance A (fill an empty tube to 37.75 g) into hole 3\n2. balance B (fill an empty tube to 45.09 g) into hole 5\n3. sample0 (37.75 g) into hole 0\n4. sample1 (45.09 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 37.75,
+    "empty_g": 11.35,
+    "poured_g": 38.45,
+    "final_g": 38.45,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 79.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.35,
+      "after_g": 14.29
+     },
+     {
+      "start_deg": 77.3,
+      "flow_deg": 81.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 14.29,
+      "after_g": 16.25
+     },
+     {
+      "start_deg": 79.4,
+      "flow_deg": 82.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.25,
+      "after_g": 20.17
+     },
+     {
+      "start_deg": 80.7,
+      "flow_deg": 84.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.17,
+      "after_g": 24.74
+     },
+     {
+      "start_deg": 82.1,
+      "flow_deg": 86.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.74,
+      "after_g": 31.6
+     },
+     {
+      "start_deg": 84.3,
+      "flow_deg": 88.0,
+      "let_run": true,
+      "stopped_deg": 87.99300000002029,
+      "before_g": 31.6,
+      "after_g": 34.21
+     },
+     {
+      "start_deg": 86.0,
+      "flow_deg": 86.9,
+      "let_run": false,
+      "stopped_deg": 86.89600000002048,
+      "before_g": 34.21,
+      "after_g": 34.54
+     },
+     {
+      "start_deg": 84.9,
+      "flow_deg": 87.6,
+      "let_run": false,
+      "stopped_deg": 87.57700000002194,
+      "before_g": 34.54,
+      "after_g": 35.52
+     },
+     {
+      "start_deg": 85.6,
+      "flow_deg": 87.7,
+      "let_run": false,
+      "stopped_deg": 87.67000000002298,
+      "before_g": 35.52,
+      "after_g": 36.17
+     },
+     {
+      "start_deg": 85.7,
+      "flow_deg": 87.7,
+      "let_run": false,
+      "stopped_deg": 87.7160000000226,
+      "before_g": 36.17,
+      "after_g": 37.15
+     },
+     {
+      "start_deg": 85.7,
+      "flow_deg": 88.7,
+      "let_run": false,
+      "stopped_deg": 88.70100000002226,
+      "before_g": 37.15,
+      "after_g": 38.45
+     }
+    ],
+    "seconds": 160.3,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 37.75,
+    "read_g": 38.45,
+    "true_g": 38.454,
+    "off_true_g": 0.704
+   },
+   {
+    "blank_cell": 5,
+    "water_cell": 3,
+    "target_g": 45.44,
+    "empty_g": 11.6,
+    "poured_g": 45.56,
+    "final_g": 45.56,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 75.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.6,
+      "after_g": 11.92
+     },
+     {
+      "start_deg": 73.1,
+      "flow_deg": 78.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.92,
+      "after_g": 12.25
+     },
+     {
+      "start_deg": 76.1,
+      "flow_deg": 82.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.25,
+      "after_g": 18.78
+     },
+     {
+      "start_deg": 80.5,
+      "flow_deg": 84.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.78,
+      "after_g": 20.41
+     },
+     {
+      "start_deg": 82.3,
+      "flow_deg": 85.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.41,
+      "after_g": 22.7
+     },
+     {
+      "start_deg": 83.2,
+      "flow_deg": 86.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 22.7,
+      "after_g": 29.56
+     },
+     {
+      "start_deg": 84.4,
+      "flow_deg": 87.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 29.56,
+      "after_g": 33.15
+     },
+     {
+      "start_deg": 85.3,
+      "flow_deg": 88.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 33.15,
+      "after_g": 38.37
+     },
+     {
+      "start_deg": 86.8,
+      "flow_deg": 89.8,
+      "let_run": true,
+      "stopped_deg": 89.81900000002622,
+      "before_g": 38.37,
+      "after_g": 42.29
+     },
+     {
+      "start_deg": 87.8,
+      "flow_deg": 90.2,
+      "let_run": false,
+      "stopped_deg": 90.21300000002748,
+      "before_g": 42.29,
+      "after_g": 42.62
+     },
+     {
+      "start_deg": 88.2,
+      "flow_deg": 90.6,
+      "let_run": false,
+      "stopped_deg": 90.57900000002871,
+      "before_g": 42.62,
+      "after_g": 43.27
+     },
+     {
+      "start_deg": 88.6,
+      "flow_deg": 90.2,
+      "let_run": false,
+      "stopped_deg": 90.16100000002939,
+      "before_g": 43.27,
+      "after_g": 43.6
+     },
+     {
+      "start_deg": 88.2,
+      "flow_deg": 90.0,
+      "let_run": false,
+      "stopped_deg": 90.021000000029,
+      "before_g": 43.6,
+      "after_g": 43.92
+     },
+     {
+      "start_deg": 88.0,
+      "flow_deg": 89.9,
+      "let_run": false,
+      "stopped_deg": 89.93200000002862,
+      "before_g": 43.92,
+      "after_g": 44.25
+     },
+     {
+      "start_deg": 87.9,
+      "flow_deg": 90.2,
+      "let_run": false,
+      "stopped_deg": 90.19400000002825,
+      "before_g": 44.25,
+      "after_g": 44.9
+     },
+     {
+      "start_deg": 88.2,
+      "flow_deg": 90.4,
+      "let_run": false,
+      "stopped_deg": 90.36000000002788,
+      "before_g": 44.9,
+      "after_g": 45.23
+     },
+     {
+      "start_deg": 88.4,
+      "flow_deg": 90.8,
+      "let_run": false,
+      "stopped_deg": 90.83500000002752,
+      "before_g": 45.23,
+      "after_g": 45.56
+     }
+    ],
+    "seconds": 213.9,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 45.09,
+    "read_g": 45.56,
+    "true_g": 45.556,
+    "off_true_g": 0.116
+   }
+  ],
+  "imbalance_g": 0.623,
+  "spilled": 9,
+  "back": {
+   "blank0": {
+    "off_mm": 0.29,
+    "tilt_deg": 1.77
+   },
+   "blank1": {
+    "off_mm": 0.41,
+    "tilt_deg": 1.64
+   },
+   "water0": {
+    "off_mm": 0.19,
+    "tilt_deg": 1.34
+   },
+   "water1": {
+    "off_mm": 0.23,
+    "tilt_deg": 1.27
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 339.3
+ },
+ {
+  "seed": 9,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 33.18,
+   "sample1": 43.28,
+   "sample2": 32.89
+  },
+  "plan": "1. balance A (fill an empty tube to 43.43 g) into hole 4\n2. sample0 (33.18 g) into hole 0\n3. sample1 (43.28 g) into hole 1\n4. sample2 (32.89 g) into hole 3\nBalance: 0.25 g out (limit 1.0 g); at most 0.56 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 43.43,
+    "empty_g": 11.48,
+    "poured_g": 43.48,
+    "final_g": 43.48,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 75.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.48,
+      "after_g": 13.11
+     },
+     {
+      "start_deg": 73.5,
+      "flow_deg": 80.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.11,
+      "after_g": 14.09
+     },
+     {
+      "start_deg": 78.4,
+      "flow_deg": 82.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 14.09,
+      "after_g": 17.03
+     },
+     {
+      "start_deg": 80.1,
+      "flow_deg": 84.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 17.03,
+      "after_g": 18.34
+     },
+     {
+      "start_deg": 82.0,
+      "flow_deg": 85.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.34,
+      "after_g": 24.54
+     },
+     {
+      "start_deg": 83.7,
+      "flow_deg": 87.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.54,
+      "after_g": 34.99
+     },
+     {
+      "start_deg": 85.5,
+      "flow_deg": 88.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 34.99,
+      "after_g": 36.95
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 90.1,
+      "let_run": true,
+      "stopped_deg": 90.06200000002485,
+      "before_g": 36.95,
+      "after_g": 40.54
+     },
+     {
+      "start_deg": 88.1,
+      "flow_deg": 90.4,
+      "let_run": false,
+      "stopped_deg": 90.39300000002606,
+      "before_g": 40.54,
+      "after_g": 41.2
+     },
+     {
+      "start_deg": 88.4,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.90400000002597,
+      "before_g": 41.2,
+      "after_g": 41.52
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 90.3,
+      "let_run": false,
+      "stopped_deg": 90.29700000002565,
+      "before_g": 41.52,
+      "after_g": 41.85
+     },
+     {
+      "start_deg": 88.3,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.5190000000252,
+      "before_g": 41.85,
+      "after_g": 42.18
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 90.6,
+      "let_run": false,
+      "stopped_deg": 90.6200000000249,
+      "before_g": 42.18,
+      "after_g": 42.83
+     },
+     {
+      "start_deg": 88.6,
+      "flow_deg": 89.8,
+      "let_run": false,
+      "stopped_deg": 89.81100000002449,
+      "before_g": 42.83,
+      "after_g": 43.16
+     },
+     {
+      "start_deg": 87.8,
+      "flow_deg": 90.3,
+      "let_run": false,
+      "stopped_deg": 90.25600000002413,
+      "before_g": 43.16,
+      "after_g": 43.48
+     }
+    ],
+    "seconds": 199.9,
+    "smallest_gap_mm": 6.6,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 43.43,
+    "read_g": 43.48,
+    "true_g": 43.482,
+    "off_true_g": 0.052
+   }
+  ],
+  "imbalance_g": 0.254,
+  "spilled": 13,
+  "back": {
+   "blank0": {
+    "off_mm": 0.31,
+    "tilt_deg": 1.17
+   },
+   "water0": {
+    "off_mm": 2.1,
+    "tilt_deg": 3.84
+   }
+  },
+  "back_ok": false,
+  "disturbed": [],
+  "wall_seconds": 183.2
+ },
+ {
+  "seed": 11,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 41.44,
+   "sample1": 34.62
+  },
+  "plan": "1. balance A (fill an empty tube to 41.44 g) into hole 3\n2. balance B (fill an empty tube to 34.62 g) into hole 5\n3. sample0 (41.44 g) into hole 0\n4. sample1 (34.62 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 41.44,
+    "empty_g": 11.39,
+    "poured_g": 41.76,
+    "final_g": 41.76,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 81.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.39,
+      "after_g": 19.23
+     },
+     {
+      "start_deg": 79.4,
+      "flow_deg": 83.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.23,
+      "after_g": 19.55
+     },
+     {
+      "start_deg": 81.1,
+      "flow_deg": 83.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.55,
+      "after_g": 20.21
+     },
+     {
+      "start_deg": 81.3,
+      "flow_deg": 85.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.21,
+      "after_g": 23.8
+     },
+     {
+      "start_deg": 83.1,
+      "flow_deg": 85.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 23.8,
+      "after_g": 27.72
+     },
+     {
+      "start_deg": 83.8,
+      "flow_deg": 86.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.72,
+      "after_g": 28.37
+     },
+     {
+      "start_deg": 84.1,
+      "flow_deg": 84.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 28.37,
+      "after_g": 28.7
+     },
+     {
+      "start_deg": 82.1,
+      "flow_deg": 88.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 28.7,
+      "after_g": 37.19
+     },
+     {
+      "start_deg": 86.1,
+      "flow_deg": 89.2,
+      "let_run": true,
+      "stopped_deg": 89.18900000002577,
+      "before_g": 37.19,
+      "after_g": 39.14
+     },
+     {
+      "start_deg": 87.2,
+      "flow_deg": 90.2,
+      "let_run": false,
+      "stopped_deg": 90.15700000002744,
+      "before_g": 39.14,
+      "after_g": 39.8
+     },
+     {
+      "start_deg": 88.2,
+      "flow_deg": 88.3,
+      "let_run": false,
+      "stopped_deg": 88.32800000002699,
+      "before_g": 39.8,
+      "after_g": 40.12
+     },
+     {
+      "start_deg": 86.3,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.33100000002665,
+      "before_g": 40.12,
+      "after_g": 41.1
+     },
+     {
+      "start_deg": 87.3,
+      "flow_deg": 89.4,
+      "let_run": false,
+      "stopped_deg": 89.38900000002627,
+      "before_g": 41.1,
+      "after_g": 41.76
+     }
+    ],
+    "seconds": 175.6,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 41.44,
+    "read_g": 41.76,
+    "true_g": 41.757,
+    "off_true_g": 0.317
+   },
+   {
+    "blank_cell": 6,
+    "water_cell": 3,
+    "target_g": 34.78,
+    "empty_g": 11.63,
+    "poured_g": 35.47,
+    "final_g": 35.47,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 75.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.63,
+      "after_g": 12.29
+     },
+     {
+      "start_deg": 73.4,
+      "flow_deg": 80.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.29,
+      "after_g": 13.92
+     },
+     {
+      "start_deg": 78.3,
+      "flow_deg": 82.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.92,
+      "after_g": 17.84
+     },
+     {
+      "start_deg": 80.7,
+      "flow_deg": 83.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 17.84,
+      "after_g": 19.14
+     },
+     {
+      "start_deg": 81.2,
+      "flow_deg": 86.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.14,
+      "after_g": 30.9
+     },
+     {
+      "start_deg": 84.1,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.89500000002022,
+      "before_g": 30.9,
+      "after_g": 32.53
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 86.7,
+      "let_run": false,
+      "stopped_deg": 86.66500000002031,
+      "before_g": 32.53,
+      "after_g": 32.86
+     },
+     {
+      "start_deg": 84.7,
+      "flow_deg": 88.3,
+      "let_run": false,
+      "stopped_deg": 88.33400000002,
+      "before_g": 32.86,
+      "after_g": 33.84
+     },
+     {
+      "start_deg": 86.3,
+      "flow_deg": 86.9,
+      "let_run": false,
+      "stopped_deg": 86.85600000001956,
+      "before_g": 33.84,
+      "after_g": 34.17
+     },
+     {
+      "start_deg": 84.9,
+      "flow_deg": 88.4,
+      "let_run": false,
+      "stopped_deg": 88.38100000001924,
+      "before_g": 34.17,
+      "after_g": 35.47
+     }
+    ],
+    "seconds": 160.6,
+    "smallest_gap_mm": 10.0,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 34.62,
+    "read_g": 35.47,
+    "true_g": 35.472,
+    "off_true_g": 0.692
+   }
+  ],
+  "imbalance_g": 0.746,
+  "spilled": 5,
+  "back": {
+   "blank0": {
+    "off_mm": 0.42,
+    "tilt_deg": 2.01
+   },
+   "blank1": {
+    "off_mm": 0.29,
+    "tilt_deg": 1.69
+   },
+   "water0": {
+    "off_mm": 0.25,
+    "tilt_deg": 1.42
+   },
+   "water1": {
+    "off_mm": 0.44,
+    "tilt_deg": 1.83
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 325.2
+ },
+ {
+  "seed": 13,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 24.64,
+   "sample1": 24.78,
+   "sample2": 42.03
+  },
+  "plan": "1. balance A (fill an empty tube to 17.32 g) into hole 1\n2. sample0 (24.64 g) into hole 0\n3. sample1 (24.78 g) into hole 2\n4. sample2 (42.03 g) into hole 4\nBalance: 0.12 g out (limit 1.0 g); at most 0.51 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 17.32,
+    "empty_g": 11.37,
+    "poured_g": 17.91,
+    "final_g": 17.91,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 73.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.37,
+      "after_g": 12.03
+     },
+     {
+      "start_deg": 71.4,
+      "flow_deg": 80.5,
+      "let_run": true,
+      "stopped_deg": 80.51600000000877,
+      "before_g": 12.03,
+      "after_g": 15.95
+     },
+     {
+      "start_deg": 78.5,
+      "flow_deg": 83.3,
+      "let_run": false,
+      "stopped_deg": 83.3160000000085,
+      "before_g": 15.95,
+      "after_g": 16.93
+     },
+     {
+      "start_deg": 81.3,
+      "flow_deg": 81.5,
+      "let_run": false,
+      "stopped_deg": 81.51100000000805,
+      "before_g": 16.93,
+      "after_g": 17.91
+     }
+    ],
+    "seconds": 108.1,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 17.32,
+    "read_g": 17.91,
+    "true_g": 17.905,
+    "off_true_g": 0.585
+   }
+  ],
+  "imbalance_g": 0.595,
+  "spilled": 0,
+  "back": {
+   "blank0": {
+    "off_mm": 0.33,
+    "tilt_deg": 1.62
+   },
+   "water0": {
+    "off_mm": 0.24,
+    "tilt_deg": 1.45
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 104.9
+ },
+ {
+  "seed": 15,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 39.25,
+   "sample1": 44.71
+  },
+  "plan": "1. balance A (fill an empty tube to 39.25 g) into hole 3\n2. balance B (fill an empty tube to 44.71 g) into hole 5\n3. sample0 (39.25 g) into hole 0\n4. sample1 (44.71 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 39.25,
+    "empty_g": 11.56,
+    "poured_g": 39.98,
+    "final_g": 39.97,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 81.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.56,
+      "after_g": 15.81
+     },
+     {
+      "start_deg": 79.3,
+      "flow_deg": 85.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.81,
+      "after_g": 23.32
+     },
+     {
+      "start_deg": 83.5,
+      "flow_deg": 86.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 23.32,
+      "after_g": 28.54
+     },
+     {
+      "start_deg": 84.9,
+      "flow_deg": 88.4,
+      "let_run": true,
+      "stopped_deg": 88.39500000001749,
+      "before_g": 28.54,
+      "after_g": 36.71
+     },
+     {
+      "start_deg": 86.4,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.46000000001851,
+      "before_g": 36.71,
+      "after_g": 37.36
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.47600000001813,
+      "before_g": 37.36,
+      "after_g": 37.69
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.88000000001773,
+      "before_g": 37.69,
+      "after_g": 38.01
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 89.2,
+      "let_run": false,
+      "stopped_deg": 89.2310000000174,
+      "before_g": 38.01,
+      "after_g": 38.67
+     },
+     {
+      "start_deg": 87.2,
+      "flow_deg": 87.4,
+      "let_run": false,
+      "stopped_deg": 87.43500000001696,
+      "before_g": 38.67,
+      "after_g": 38.99
+     },
+     {
+      "start_deg": 85.4,
+      "flow_deg": 89.2,
+      "let_run": false,
+      "stopped_deg": 89.18800000001664,
+      "before_g": 38.99,
+      "after_g": 39.98
+     }
+    ],
+    "seconds": 165.1,
+    "smallest_gap_mm": 6.6,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 39.25,
+    "read_g": 39.97,
+    "true_g": 39.974,
+    "off_true_g": 0.724
+   },
+   {
+    "blank_cell": 5,
+    "water_cell": 3,
+    "target_g": 45.07,
+    "empty_g": 11.45,
+    "poured_g": 45.09,
+    "final_g": 45.09,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 79.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.45,
+      "after_g": 12.76
+     },
+     {
+      "start_deg": 77.5,
+      "flow_deg": 80.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.76,
+      "after_g": 13.41
+     },
+     {
+      "start_deg": 78.3,
+      "flow_deg": 83.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.41,
+      "after_g": 20.92
+     },
+     {
+      "start_deg": 81.3,
+      "flow_deg": 85.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.92,
+      "after_g": 27.78
+     },
+     {
+      "start_deg": 83.1,
+      "flow_deg": 87.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.78,
+      "after_g": 35.29
+     },
+     {
+      "start_deg": 85.2,
+      "flow_deg": 88.7,
+      "let_run": true,
+      "stopped_deg": 88.68600000002078,
+      "before_g": 35.29,
+      "after_g": 41.82
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 89.5,
+      "let_run": false,
+      "stopped_deg": 89.50700000002234,
+      "before_g": 41.82,
+      "after_g": 42.48
+     },
+     {
+      "start_deg": 87.5,
+      "flow_deg": 90.1,
+      "let_run": false,
+      "stopped_deg": 90.06200000002372,
+      "before_g": 42.48,
+      "after_g": 43.13
+     },
+     {
+      "start_deg": 88.1,
+      "flow_deg": 88.3,
+      "let_run": false,
+      "stopped_deg": 88.31100000002327,
+      "before_g": 43.13,
+      "after_g": 43.46
+     },
+     {
+      "start_deg": 86.3,
+      "flow_deg": 90.7,
+      "let_run": false,
+      "stopped_deg": 90.65200000002298,
+      "before_g": 43.46,
+      "after_g": 44.44
+     },
+     {
+      "start_deg": 88.7,
+      "flow_deg": 88.8,
+      "let_run": false,
+      "stopped_deg": 88.82300000002253,
+      "before_g": 44.44,
+      "after_g": 45.09
+     }
+    ],
+    "seconds": 160.7,
+    "smallest_gap_mm": 10.0,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 44.71,
+    "read_g": 45.09,
+    "true_g": 45.087,
+    "off_true_g": 0.017
+   }
+  ],
+  "imbalance_g": 0.628,
+  "spilled": 10,
+  "back": {
+   "blank0": {
+    "off_mm": 0.05,
+    "tilt_deg": 1.03
+   },
+   "blank1": {
+    "off_mm": 0.2,
+    "tilt_deg": 1.24
+   },
+   "water0": {
+    "off_mm": 0.34,
+    "tilt_deg": 1.69
+   },
+   "water1": {
+    "off_mm": 0.24,
+    "tilt_deg": 1.18
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 311.7
+ },
+ {
+  "seed": 17,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 40.91,
+   "sample1": 31.49,
+   "sample2": 31.86
+  },
+  "plan": "1. balance A (fill an empty tube to 40.72 g) into hole 3\n2. sample0 (40.91 g) into hole 0\n3. sample1 (31.49 g) into hole 1\n4. sample2 (31.86 g) into hole 4\nBalance: 0.32 g out (limit 1.0 g); at most 0.59 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 40.72,
+    "empty_g": 11.38,
+    "poured_g": 41.09,
+    "final_g": 41.09,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 78.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.38,
+      "after_g": 13.33
+     },
+     {
+      "start_deg": 76.2,
+      "flow_deg": 81.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.33,
+      "after_g": 15.62
+     },
+     {
+      "start_deg": 79.0,
+      "flow_deg": 82.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.62,
+      "after_g": 18.23
+     },
+     {
+      "start_deg": 80.6,
+      "flow_deg": 84.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.23,
+      "after_g": 20.19
+     },
+     {
+      "start_deg": 82.2,
+      "flow_deg": 86.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.19,
+      "after_g": 27.38
+     },
+     {
+      "start_deg": 84.2,
+      "flow_deg": 88.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.38,
+      "after_g": 37.17
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 88.6,
+      "let_run": false,
+      "stopped_deg": 88.56200000002224,
+      "before_g": 37.17,
+      "after_g": 37.83
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 87.5,
+      "let_run": false,
+      "stopped_deg": 87.54200000002248,
+      "before_g": 37.83,
+      "after_g": 38.15
+     },
+     {
+      "start_deg": 85.5,
+      "flow_deg": 88.7,
+      "let_run": false,
+      "stopped_deg": 88.74100000002431,
+      "before_g": 38.15,
+      "after_g": 38.48
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 87.5,
+      "let_run": false,
+      "stopped_deg": 87.45500000002437,
+      "before_g": 38.48,
+      "after_g": 38.8
+     },
+     {
+      "start_deg": 85.5,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.51500000002403,
+      "before_g": 38.8,
+      "after_g": 39.13
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 88.6,
+      "let_run": false,
+      "stopped_deg": 88.60900000002366,
+      "before_g": 39.13,
+      "after_g": 39.46
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.2790000000233,
+      "before_g": 39.46,
+      "after_g": 40.44
+     },
+     {
+      "start_deg": 87.3,
+      "flow_deg": 89.8,
+      "let_run": false,
+      "stopped_deg": 89.75700000002294,
+      "before_g": 40.44,
+      "after_g": 41.09
+     }
+    ],
+    "seconds": 194.9,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 40.72,
+    "read_g": 41.09,
+    "true_g": 41.09,
+    "off_true_g": 0.37
+   }
+  ],
+  "imbalance_g": 0.482,
+  "spilled": 9,
+  "back": {
+   "blank0": {
+    "off_mm": 0.27,
+    "tilt_deg": 1.88
+   },
+   "water0": {
+    "off_mm": 0.14,
+    "tilt_deg": 1.26
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 190.8
+ },
+ {
+  "seed": 19,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 32.7,
+   "sample1": 36.55
+  },
+  "plan": "1. balance A (fill an empty tube to 32.70 g) into hole 3\n2. balance B (fill an empty tube to 36.55 g) into hole 5\n3. sample0 (32.70 g) into hole 0\n4. sample1 (36.55 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 32.7,
+    "empty_g": 11.58,
+    "poured_g": 32.81,
+    "final_g": 32.81,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 73.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.58,
+      "after_g": 12.24
+     },
+     {
+      "start_deg": 71.0,
+      "flow_deg": 78.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.24,
+      "after_g": 12.57
+     },
+     {
+      "start_deg": 76.0,
+      "flow_deg": 79.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.57,
+      "after_g": 13.87
+     },
+     {
+      "start_deg": 77.6,
+      "flow_deg": 81.3,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.87,
+      "after_g": 15.83
+     },
+     {
+      "start_deg": 79.3,
+      "flow_deg": 82.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.83,
+      "after_g": 18.12
+     },
+     {
+      "start_deg": 80.1,
+      "flow_deg": 83.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.12,
+      "after_g": 22.03
+     },
+     {
+      "start_deg": 81.4,
+      "flow_deg": 84.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 22.03,
+      "after_g": 24.32
+     },
+     {
+      "start_deg": 82.9,
+      "flow_deg": 85.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.32,
+      "after_g": 26.93
+     },
+     {
+      "start_deg": 83.7,
+      "flow_deg": 87.7,
+      "let_run": true,
+      "stopped_deg": 87.71900000002472,
+      "before_g": 26.93,
+      "after_g": 30.85
+     },
+     {
+      "start_deg": 85.7,
+      "flow_deg": 86.1,
+      "let_run": false,
+      "stopped_deg": 86.12100000002428,
+      "before_g": 30.85,
+      "after_g": 31.5
+     },
+     {
+      "start_deg": 84.1,
+      "flow_deg": 86.0,
+      "let_run": false,
+      "stopped_deg": 86.0380000000239,
+      "before_g": 31.5,
+      "after_g": 32.16
+     },
+     {
+      "start_deg": 84.0,
+      "flow_deg": 88.7,
+      "let_run": false,
+      "stopped_deg": 88.66100000002362,
+      "before_g": 32.16,
+      "after_g": 32.81
+     }
+    ],
+    "seconds": 157.5,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 32.7,
+    "read_g": 32.81,
+    "true_g": 32.809,
+    "off_true_g": 0.109
+   },
+   {
+    "blank_cell": 6,
+    "water_cell": 3,
+    "target_g": 36.6,
+    "empty_g": 11.51,
+    "poured_g": 36.98,
+    "final_g": 36.98,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 73.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.51,
+      "after_g": 11.84
+     },
+     {
+      "start_deg": 71.4,
+      "flow_deg": 78.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.84,
+      "after_g": 14.12
+     },
+     {
+      "start_deg": 76.8,
+      "flow_deg": 83.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 14.12,
+      "after_g": 18.04
+     },
+     {
+      "start_deg": 81.6,
+      "flow_deg": 83.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.04,
+      "after_g": 22.29
+     },
+     {
+      "start_deg": 81.9,
+      "flow_deg": 86.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 22.29,
+      "after_g": 31.1
+     },
+     {
+      "start_deg": 84.2,
+      "flow_deg": 88.5,
+      "let_run": true,
+      "stopped_deg": 88.49700000002065,
+      "before_g": 31.1,
+      "after_g": 35.35
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 86.7,
+      "let_run": false,
+      "stopped_deg": 86.6980000000202,
+      "before_g": 35.35,
+      "after_g": 36.0
+     },
+     {
+      "start_deg": 84.7,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.24400000001988,
+      "before_g": 36.0,
+      "after_g": 36.98
+     }
+    ],
+    "seconds": 133.9,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 36.55,
+    "read_g": 36.98,
+    "true_g": 36.981,
+    "off_true_g": 0.381
+   }
+  ],
+  "imbalance_g": 0.386,
+  "spilled": 7,
+  "back": {
+   "blank0": {
+    "off_mm": 0.21,
+    "tilt_deg": 1.56
+   },
+   "blank1": {
+    "off_mm": 0.41,
+    "tilt_deg": 1.31
+   },
+   "water0": {
+    "off_mm": 0.4,
+    "tilt_deg": 1.75
+   },
+   "water1": {
+    "off_mm": 0.1,
+    "tilt_deg": 1.24
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 282.9
+ },
+ {
+  "seed": 21,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 30.03,
+   "sample1": 30.19,
+   "sample2": 41.4
+  },
+  "plan": "1. balance A (fill an empty tube to 41.32 g) into hole 4\n2. sample0 (30.03 g) into hole 0\n3. sample2 (41.40 g) into hole 1\n4. sample1 (30.19 g) into hole 3\nBalance: 0.14 g out (limit 1.0 g); at most 0.52 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 41.32,
+    "empty_g": 11.55,
+    "poured_g": 41.27,
+    "final_g": 41.27,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 81.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.55,
+      "after_g": 16.78
+     },
+     {
+      "start_deg": 79.2,
+      "flow_deg": 80.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.78,
+      "after_g": 17.1
+     },
+     {
+      "start_deg": 78.1,
+      "flow_deg": 83.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 17.1,
+      "after_g": 18.41
+     },
+     {
+      "start_deg": 81.1,
+      "flow_deg": 85.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.41,
+      "after_g": 21.68
+     },
+     {
+      "start_deg": 83.0,
+      "flow_deg": 86.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 21.68,
+      "after_g": 31.15
+     },
+     {
+      "start_deg": 84.6,
+      "flow_deg": 88.4,
+      "let_run": true,
+      "stopped_deg": 88.4270000000206,
+      "before_g": 31.15,
+      "after_g": 38.33
+     },
+     {
+      "start_deg": 86.4,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.86300000002188,
+      "before_g": 38.33,
+      "after_g": 38.66
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.25000000002314,
+      "before_g": 38.66,
+      "after_g": 39.63
+     },
+     {
+      "start_deg": 87.3,
+      "flow_deg": 87.4,
+      "let_run": false,
+      "stopped_deg": 87.43600000002269,
+      "before_g": 39.63,
+      "after_g": 40.29
+     },
+     {
+      "start_deg": 85.4,
+      "flow_deg": 89.2,
+      "let_run": false,
+      "stopped_deg": 89.20400000002238,
+      "before_g": 40.29,
+      "after_g": 40.94
+     },
+     {
+      "start_deg": 87.2,
+      "flow_deg": 89.8,
+      "let_run": false,
+      "stopped_deg": 89.77500000002202,
+      "before_g": 40.94,
+      "after_g": 41.27
+     }
+    ],
+    "seconds": 173.6,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 41.32,
+    "read_g": 41.27,
+    "true_g": 41.268,
+    "off_true_g": -0.052
+   }
+  ],
+  "imbalance_g": 0.15,
+  "spilled": 6,
+  "back": {
+   "blank0": {
+    "off_mm": 0.27,
+    "tilt_deg": 1.57
+   },
+   "water0": {
+    "off_mm": 0.38,
+    "tilt_deg": 1.76
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 167.6
+ },
+ {
+  "seed": 23,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 23.84,
+   "sample1": 39.18
+  },
+  "plan": "1. balance A (fill an empty tube to 23.84 g) into hole 3\n2. balance B (fill an empty tube to 39.18 g) into hole 5\n3. sample0 (23.84 g) into hole 0\n4. sample1 (39.18 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 23.84,
+    "empty_g": 11.41,
+    "poured_g": 25.13,
+    "final_g": 25.13,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 78.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.41,
+      "after_g": 13.04
+     },
+     {
+      "start_deg": 76.2,
+      "flow_deg": 81.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.04,
+      "after_g": 16.64
+     },
+     {
+      "start_deg": 79.6,
+      "flow_deg": 82.9,
+      "let_run": true,
+      "stopped_deg": 82.93300000001204,
+      "before_g": 16.64,
+      "after_g": 20.88
+     },
+     {
+      "start_deg": 80.9,
+      "flow_deg": 81.7,
+      "let_run": false,
+      "stopped_deg": 81.71000000001214,
+      "before_g": 20.88,
+      "after_g": 21.21
+     },
+     {
+      "start_deg": 79.7,
+      "flow_deg": 86.3,
+      "let_run": false,
+      "stopped_deg": 86.26900000001638,
+      "before_g": 21.21,
+      "after_g": 22.84
+     },
+     {
+      "start_deg": 84.3,
+      "flow_deg": 84.4,
+      "let_run": false,
+      "stopped_deg": 84.39500000001593,
+      "before_g": 22.84,
+      "after_g": 23.49
+     },
+     {
+      "start_deg": 82.4,
+      "flow_deg": 86.5,
+      "let_run": false,
+      "stopped_deg": 86.50500000001563,
+      "before_g": 23.49,
+      "after_g": 25.13
+     }
+    ],
+    "seconds": 132.9,
+    "smallest_gap_mm": 10.0,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 23.84,
+    "read_g": 25.13,
+    "true_g": 25.125,
+    "off_true_g": 1.285
+   },
+   {
+    "blank_cell": 5,
+    "water_cell": 3,
+    "target_g": 39.83,
+    "empty_g": 11.42,
+    "poured_g": 39.82,
+    "final_g": 39.83,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 80.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.42,
+      "after_g": 13.37
+     },
+     {
+      "start_deg": 78.5,
+      "flow_deg": 82.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.37,
+      "after_g": 16.64
+     },
+     {
+      "start_deg": 80.5,
+      "flow_deg": 84.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.64,
+      "after_g": 24.81
+     },
+     {
+      "start_deg": 82.8,
+      "flow_deg": 85.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.81,
+      "after_g": 27.09
+     },
+     {
+      "start_deg": 83.8,
+      "flow_deg": 88.0,
+      "let_run": true,
+      "stopped_deg": 87.99100000001874,
+      "before_g": 27.09,
+      "after_g": 36.89
+     },
+     {
+      "start_deg": 86.0,
+      "flow_deg": 88.7,
+      "let_run": false,
+      "stopped_deg": 88.68600000002021,
+      "before_g": 36.89,
+      "after_g": 37.87
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 87.8,
+      "let_run": false,
+      "stopped_deg": 87.8380000000198,
+      "before_g": 37.87,
+      "after_g": 38.19
+     },
+     {
+      "start_deg": 85.8,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.92500000001947,
+      "before_g": 38.19,
+      "after_g": 38.84
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.94500000001905,
+      "before_g": 38.84,
+      "after_g": 39.17
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 89.2,
+      "let_run": false,
+      "stopped_deg": 89.15800000001872,
+      "before_g": 39.17,
+      "after_g": 39.82
+     }
+    ],
+    "seconds": 158.9,
+    "smallest_gap_mm": 7.4,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 39.18,
+    "read_g": 39.83,
+    "true_g": 39.824,
+    "off_true_g": -0.006
+   }
+  ],
+  "imbalance_g": 1.115,
+  "spilled": 4,
+  "back": {
+   "blank0": {
+    "off_mm": 0.35,
+    "tilt_deg": 1.37
+   },
+   "blank1": {
+    "off_mm": 0.32,
+    "tilt_deg": 1.47
+   },
+   "water0": {
+    "off_mm": 0.15,
+    "tilt_deg": 1.22
+   },
+   "water1": {
+    "off_mm": 0.07,
+    "tilt_deg": 1.52
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 277.9
+ },
+ {
+  "seed": 25,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 34.69,
+   "sample1": 27.07,
+   "sample2": 26.8
+  },
+  "plan": "1. balance A (fill an empty tube to 34.82 g) into hole 3\n2. sample0 (34.69 g) into hole 0\n3. sample1 (27.07 g) into hole 1\n4. sample2 (26.80 g) into hole 4\nBalance: 0.23 g out (limit 1.0 g); at most 0.55 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 34.82,
+    "empty_g": 11.42,
+    "poured_g": 34.93,
+    "final_g": 34.93,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 80.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.42,
+      "after_g": 14.03
+     },
+     {
+      "start_deg": 78.8,
+      "flow_deg": 82.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 14.03,
+      "after_g": 16.97
+     },
+     {
+      "start_deg": 80.4,
+      "flow_deg": 84.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.97,
+      "after_g": 22.85
+     },
+     {
+      "start_deg": 82.8,
+      "flow_deg": 86.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 22.85,
+      "after_g": 27.09
+     },
+     {
+      "start_deg": 84.5,
+      "flow_deg": 87.6,
+      "let_run": true,
+      "stopped_deg": 87.58500000001845,
+      "before_g": 27.09,
+      "after_g": 31.99
+     },
+     {
+      "start_deg": 85.6,
+      "flow_deg": 88.1,
+      "let_run": false,
+      "stopped_deg": 88.07000000001977,
+      "before_g": 31.99,
+      "after_g": 32.64
+     },
+     {
+      "start_deg": 86.1,
+      "flow_deg": 88.4,
+      "let_run": false,
+      "stopped_deg": 88.422000000021,
+      "before_g": 32.64,
+      "after_g": 33.62
+     },
+     {
+      "start_deg": 86.4,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.24300000002061,
+      "before_g": 33.62,
+      "after_g": 33.95
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.46600000002024,
+      "before_g": 33.95,
+      "after_g": 34.6
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.47000000001987,
+      "before_g": 34.6,
+      "after_g": 34.93
+     }
+    ],
+    "seconds": 157.7,
+    "smallest_gap_mm": 5.4,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 34.82,
+    "read_g": 34.93,
+    "true_g": 34.928,
+    "off_true_g": 0.108
+   }
+  ],
+  "imbalance_g": 0.257,
+  "spilled": 12,
+  "back": {
+   "blank0": {
+    "off_mm": 0.47,
+    "tilt_deg": 1.96
+   },
+   "water0": {
+    "off_mm": 0.28,
+    "tilt_deg": 1.18
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 142.0
+ },
+ {
+  "seed": 27,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 39.18,
+   "sample1": 23.24
+  },
+  "plan": "1. balance A (fill an empty tube to 39.18 g) into hole 3\n2. balance B (fill an empty tube to 23.24 g) into hole 5\n3. sample0 (39.18 g) into hole 0\n4. sample1 (23.24 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 39.18,
+    "empty_g": 11.35,
+    "poured_g": 39.11,
+    "final_g": 39.11,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 80.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.35,
+      "after_g": 12.33
+     },
+     {
+      "start_deg": 78.5,
+      "flow_deg": 79.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.33,
+      "after_g": 14.29
+     },
+     {
+      "start_deg": 77.7,
+      "flow_deg": 80.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 14.29,
+      "after_g": 15.27
+     },
+     {
+      "start_deg": 78.7,
+      "flow_deg": 83.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.27,
+      "after_g": 17.88
+     },
+     {
+      "start_deg": 81.0,
+      "flow_deg": 85.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 17.88,
+      "after_g": 19.19
+     },
+     {
+      "start_deg": 83.0,
+      "flow_deg": 86.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.19,
+      "after_g": 27.68
+     },
+     {
+      "start_deg": 84.7,
+      "flow_deg": 88.5,
+      "let_run": true,
+      "stopped_deg": 88.48500000002218,
+      "before_g": 27.68,
+      "after_g": 36.17
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.85100000002342,
+      "before_g": 36.17,
+      "after_g": 36.5
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 89.0,
+      "let_run": false,
+      "stopped_deg": 88.96500000002447,
+      "before_g": 36.5,
+      "after_g": 37.15
+     },
+     {
+      "start_deg": 87.0,
+      "flow_deg": 89.8,
+      "let_run": false,
+      "stopped_deg": 89.77200000002603,
+      "before_g": 37.15,
+      "after_g": 38.46
+     },
+     {
+      "start_deg": 87.8,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.34700000002563,
+      "before_g": 38.46,
+      "after_g": 39.11
+     }
+    ],
+    "seconds": 151.8,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 39.18,
+    "read_g": 39.11,
+    "true_g": 39.109,
+    "off_true_g": -0.071
+   },
+   {
+    "blank_cell": 5,
+    "water_cell": 3,
+    "target_g": 23.2,
+    "empty_g": 11.41,
+    "poured_g": 23.17,
+    "final_g": 23.16,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 80.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.41,
+      "after_g": 16.31
+     },
+     {
+      "start_deg": 78.6,
+      "flow_deg": 83.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.31,
+      "after_g": 18.92
+     },
+     {
+      "start_deg": 81.2,
+      "flow_deg": 85.6,
+      "let_run": true,
+      "stopped_deg": 85.55100000001391,
+      "before_g": 18.92,
+      "after_g": 21.21
+     },
+     {
+      "start_deg": 83.6,
+      "flow_deg": 86.2,
+      "let_run": false,
+      "stopped_deg": 86.24800000001356,
+      "before_g": 21.21,
+      "after_g": 23.17
+     }
+    ],
+    "seconds": 108.4,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 23.24,
+    "read_g": 23.16,
+    "true_g": 23.165,
+    "off_true_g": -0.035
+   }
+  ],
+  "imbalance_g": 0.076,
+  "spilled": 19,
+  "back": {
+   "blank0": {
+    "off_mm": 0.31,
+    "tilt_deg": 1.45
+   },
+   "blank1": {
+    "off_mm": 0.28,
+    "tilt_deg": 1.41
+   },
+   "water0": {
+    "off_mm": 0.07,
+    "tilt_deg": 1.53
+   },
+   "water1": {
+    "off_mm": 0.22,
+    "tilt_deg": 1.38
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 242.6
+ },
+ {
+  "seed": 29,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 24.21,
+   "sample1": 44.74,
+   "sample2": 24.13
+  },
+  "plan": "1. balance A (fill an empty tube to 44.78 g) into hole 4\n2. sample0 (24.21 g) into hole 0\n3. sample1 (44.74 g) into hole 1\n4. sample2 (24.13 g) into hole 3\nBalance: 0.07 g out (limit 1.0 g); at most 0.50 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 44.78,
+    "empty_g": 11.42,
+    "poured_g": 45.06,
+    "final_g": 45.05,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 82.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.42,
+      "after_g": 13.38
+     },
+     {
+      "start_deg": 80.9,
+      "flow_deg": 84.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.38,
+      "after_g": 21.87
+     },
+     {
+      "start_deg": 82.1,
+      "flow_deg": 85.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 21.87,
+      "after_g": 24.16
+     },
+     {
+      "start_deg": 83.9,
+      "flow_deg": 87.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.16,
+      "after_g": 32.97
+     },
+     {
+      "start_deg": 85.5,
+      "flow_deg": 89.1,
+      "let_run": true,
+      "stopped_deg": 89.13200000001956,
+      "before_g": 32.97,
+      "after_g": 42.77
+     },
+     {
+      "start_deg": 87.1,
+      "flow_deg": 89.5,
+      "let_run": false,
+      "stopped_deg": 89.51900000002081,
+      "before_g": 42.77,
+      "after_g": 43.42
+     },
+     {
+      "start_deg": 87.5,
+      "flow_deg": 89.3,
+      "let_run": false,
+      "stopped_deg": 89.27100000002042,
+      "before_g": 43.42,
+      "after_g": 43.75
+     },
+     {
+      "start_deg": 87.3,
+      "flow_deg": 89.9,
+      "let_run": false,
+      "stopped_deg": 89.89600000002007,
+      "before_g": 43.75,
+      "after_g": 44.08
+     },
+     {
+      "start_deg": 87.9,
+      "flow_deg": 89.9,
+      "let_run": false,
+      "stopped_deg": 89.88800000001969,
+      "before_g": 44.08,
+      "after_g": 44.4
+     },
+     {
+      "start_deg": 87.9,
+      "flow_deg": 90.1,
+      "let_run": false,
+      "stopped_deg": 90.06000000001931,
+      "before_g": 44.4,
+      "after_g": 45.06
+     }
+    ],
+    "seconds": 174.9,
+    "smallest_gap_mm": 9.9,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 44.78,
+    "read_g": 45.05,
+    "true_g": 45.055,
+    "off_true_g": 0.275
+   }
+  ],
+  "imbalance_g": 0.289,
+  "spilled": 3,
+  "back": {
+   "blank0": {
+    "off_mm": 0.35,
+    "tilt_deg": 1.65
+   },
+   "water0": {
+    "off_mm": 0.16,
+    "tilt_deg": 1.66
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 164.1
+ },
+ {
+  "seed": 31,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 44.25,
+   "sample1": 35.7
+  },
+  "plan": "1. balance A (fill an empty tube to 44.25 g) into hole 3\n2. balance B (fill an empty tube to 35.70 g) into hole 5\n3. sample0 (44.25 g) into hole 0\n4. sample1 (35.70 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 44.25,
+    "empty_g": 11.36,
+    "poured_g": 44.35,
+    "final_g": 44.35,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 74.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.36,
+      "after_g": 12.02
+     },
+     {
+      "start_deg": 72.6,
+      "flow_deg": 79.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.02,
+      "after_g": 15.94
+     },
+     {
+      "start_deg": 77.7,
+      "flow_deg": 81.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.94,
+      "after_g": 16.59
+     },
+     {
+      "start_deg": 79.1,
+      "flow_deg": 83.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.59,
+      "after_g": 20.83
+     },
+     {
+      "start_deg": 81.1,
+      "flow_deg": 85.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.83,
+      "after_g": 26.06
+     },
+     {
+      "start_deg": 83.1,
+      "flow_deg": 86.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 26.06,
+      "after_g": 29.0
+     },
+     {
+      "start_deg": 84.6,
+      "flow_deg": 87.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 29.0,
+      "after_g": 33.57
+     },
+     {
+      "start_deg": 85.8,
+      "flow_deg": 88.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 33.57,
+      "after_g": 37.16
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 88.7,
+      "let_run": true,
+      "stopped_deg": 88.72700000002544,
+      "before_g": 37.16,
+      "after_g": 40.43
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 89.9,
+      "let_run": false,
+      "stopped_deg": 89.87000000002723,
+      "before_g": 40.43,
+      "after_g": 41.4
+     },
+     {
+      "start_deg": 87.9,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.16400000002699,
+      "before_g": 41.4,
+      "after_g": 42.06
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 89.7,
+      "let_run": false,
+      "stopped_deg": 89.69900000002906,
+      "before_g": 42.06,
+      "after_g": 42.71
+     },
+     {
+      "start_deg": 87.7,
+      "flow_deg": 87.9,
+      "let_run": false,
+      "stopped_deg": 87.93600000002861,
+      "before_g": 42.71,
+      "after_g": 43.04
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 89.8,
+      "let_run": false,
+      "stopped_deg": 89.8000000000283,
+      "before_g": 43.04,
+      "after_g": 43.36
+     },
+     {
+      "start_deg": 87.8,
+      "flow_deg": 88.0,
+      "let_run": false,
+      "stopped_deg": 87.97700000002786,
+      "before_g": 43.36,
+      "after_g": 44.02
+     },
+     {
+      "start_deg": 86.0,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.92000000002751,
+      "before_g": 44.02,
+      "after_g": 44.35
+     }
+    ],
+    "seconds": 206.2,
+    "smallest_gap_mm": 7.2,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 44.25,
+    "read_g": 44.35,
+    "true_g": 44.345,
+    "off_true_g": 0.095
+   },
+   {
+    "blank_cell": 5,
+    "water_cell": 3,
+    "target_g": 35.75,
+    "empty_g": 11.4,
+    "poured_g": 35.89,
+    "final_g": 35.89,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 73.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.4,
+      "after_g": 11.73
+     },
+     {
+      "start_deg": 71.6,
+      "flow_deg": 79.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.73,
+      "after_g": 13.69
+     },
+     {
+      "start_deg": 77.6,
+      "flow_deg": 82.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.69,
+      "after_g": 18.59
+     },
+     {
+      "start_deg": 80.2,
+      "flow_deg": 84.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 18.59,
+      "after_g": 19.24
+     },
+     {
+      "start_deg": 82.5,
+      "flow_deg": 85.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.24,
+      "after_g": 27.08
+     },
+     {
+      "start_deg": 83.7,
+      "flow_deg": 86.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.08,
+      "after_g": 30.67
+     },
+     {
+      "start_deg": 84.4,
+      "flow_deg": 84.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 30.67,
+      "after_g": 30.99
+     },
+     {
+      "start_deg": 82.4,
+      "flow_deg": 88.2,
+      "let_run": true,
+      "stopped_deg": 88.1790000000235,
+      "before_g": 30.99,
+      "after_g": 34.59
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 86.4,
+      "let_run": false,
+      "stopped_deg": 86.38600000002306,
+      "before_g": 34.59,
+      "after_g": 34.92
+     },
+     {
+      "start_deg": 84.4,
+      "flow_deg": 88.0,
+      "let_run": false,
+      "stopped_deg": 87.98000000002274,
+      "before_g": 34.92,
+      "after_g": 35.89
+     }
+    ],
+    "seconds": 147.1,
+    "smallest_gap_mm": 6.6,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 35.7,
+    "read_g": 35.89,
+    "true_g": 35.893,
+    "off_true_g": 0.143
+   }
+  ],
+  "imbalance_g": 0.171,
+  "spilled": 7,
+  "back": {
+   "blank0": {
+    "off_mm": 0.39,
+    "tilt_deg": 1.89
+   },
+   "blank1": {
+    "off_mm": 0.54,
+    "tilt_deg": 1.55
+   },
+   "water0": {
+    "off_mm": 0.76,
+    "tilt_deg": 1.66
+   },
+   "water1": {
+    "off_mm": 0.32,
+    "tilt_deg": 1.5
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 345.6
+ },
+ {
+  "seed": 33,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 33.34,
+   "sample1": 43.57,
+   "sample2": 33.38
+  },
+  "plan": "1. balance A (fill an empty tube to 43.55 g) into hole 4\n2. sample0 (33.34 g) into hole 0\n3. sample1 (43.57 g) into hole 1\n4. sample2 (33.38 g) into hole 3\nBalance: 0.03 g out (limit 1.0 g); at most 0.50 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 43.55,
+    "empty_g": 11.5,
+    "poured_g": 43.51,
+    "final_g": 43.51,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 79.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.5,
+      "after_g": 15.1
+     },
+     {
+      "start_deg": 77.5,
+      "flow_deg": 83.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.1,
+      "after_g": 19.34
+     },
+     {
+      "start_deg": 81.5,
+      "flow_deg": 85.1,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 19.34,
+      "after_g": 24.24
+     },
+     {
+      "start_deg": 83.1,
+      "flow_deg": 85.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.24,
+      "after_g": 26.53
+     },
+     {
+      "start_deg": 83.7,
+      "flow_deg": 86.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 26.53,
+      "after_g": 28.48
+     },
+     {
+      "start_deg": 84.7,
+      "flow_deg": 87.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 28.48,
+      "after_g": 35.02
+     },
+     {
+      "start_deg": 85.8,
+      "flow_deg": 88.7,
+      "let_run": true,
+      "stopped_deg": 88.70200000002234,
+      "before_g": 35.02,
+      "after_g": 40.57
+     },
+     {
+      "start_deg": 86.7,
+      "flow_deg": 88.0,
+      "let_run": false,
+      "stopped_deg": 88.01800000002282,
+      "before_g": 40.57,
+      "after_g": 40.89
+     },
+     {
+      "start_deg": 86.0,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.20200000002393,
+      "before_g": 40.89,
+      "after_g": 41.22
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.54000000002515,
+      "before_g": 41.22,
+      "after_g": 41.55
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 89.6,
+      "let_run": false,
+      "stopped_deg": 89.59200000002687,
+      "before_g": 41.55,
+      "after_g": 42.2
+     },
+     {
+      "start_deg": 87.6,
+      "flow_deg": 87.8,
+      "let_run": false,
+      "stopped_deg": 87.80500000002642,
+      "before_g": 42.2,
+      "after_g": 42.53
+     },
+     {
+      "start_deg": 85.8,
+      "flow_deg": 89.4,
+      "let_run": false,
+      "stopped_deg": 89.4140000000261,
+      "before_g": 42.53,
+      "after_g": 43.18
+     },
+     {
+      "start_deg": 87.4,
+      "flow_deg": 87.6,
+      "let_run": false,
+      "stopped_deg": 87.63900000002566,
+      "before_g": 43.18,
+      "after_g": 43.51
+     }
+    ],
+    "seconds": 174.7,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 43.55,
+    "read_g": 43.51,
+    "true_g": 43.505,
+    "off_true_g": -0.045
+   }
+  ],
+  "imbalance_g": 0.054,
+  "spilled": 2,
+  "back": {
+   "blank0": {
+    "off_mm": 0.28,
+    "tilt_deg": 1.45
+   },
+   "water0": {
+    "off_mm": 0.16,
+    "tilt_deg": 1.31
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 177.0
+ },
+ {
+  "seed": 35,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 30.94,
+   "sample1": 25.72
+  },
+  "plan": "1. balance A (fill an empty tube to 30.94 g) into hole 3\n2. balance B (fill an empty tube to 25.72 g) into hole 5\n3. sample0 (30.94 g) into hole 0\n4. sample1 (25.72 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 30.94,
+    "empty_g": 11.49,
+    "poured_g": 31.4,
+    "final_g": 31.41,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 79.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.49,
+      "after_g": 15.4
+     },
+     {
+      "start_deg": 77.9,
+      "flow_deg": 84.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.4,
+      "after_g": 18.02
+     },
+     {
+      "start_deg": 82.6,
+      "flow_deg": 86.1,
+      "let_run": true,
+      "stopped_deg": 86.10400000001431,
+      "before_g": 18.02,
+      "after_g": 28.47
+     },
+     {
+      "start_deg": 84.1,
+      "flow_deg": 87.8,
+      "let_run": false,
+      "stopped_deg": 87.83500000001652,
+      "before_g": 28.47,
+      "after_g": 29.45
+     },
+     {
+      "start_deg": 85.8,
+      "flow_deg": 86.0,
+      "let_run": false,
+      "stopped_deg": 86.00600000001607,
+      "before_g": 29.45,
+      "after_g": 30.1
+     },
+     {
+      "start_deg": 84.0,
+      "flow_deg": 86.0,
+      "let_run": false,
+      "stopped_deg": 85.96800000001569,
+      "before_g": 30.1,
+      "after_g": 30.43
+     },
+     {
+      "start_deg": 84.0,
+      "flow_deg": 87.2,
+      "let_run": false,
+      "stopped_deg": 87.18700000001536,
+      "before_g": 30.43,
+      "after_g": 31.4
+     }
+    ],
+    "seconds": 142.3,
+    "smallest_gap_mm": 5.6,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 30.94,
+    "read_g": 31.41,
+    "true_g": 31.405,
+    "off_true_g": 0.465
+   },
+   {
+    "blank_cell": 6,
+    "water_cell": 3,
+    "target_g": 25.96,
+    "empty_g": 11.62,
+    "poured_g": 26.97,
+    "final_g": 26.97,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 76.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.62,
+      "after_g": 12.28
+     },
+     {
+      "start_deg": 74.7,
+      "flow_deg": 78.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.28,
+      "after_g": 12.6
+     },
+     {
+      "start_deg": 76.7,
+      "flow_deg": 79.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.6,
+      "after_g": 15.87
+     },
+     {
+      "start_deg": 77.6,
+      "flow_deg": 79.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.87,
+      "after_g": 16.52
+     },
+     {
+      "start_deg": 77.8,
+      "flow_deg": 82.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.52,
+      "after_g": 20.44
+     },
+     {
+      "start_deg": 80.7,
+      "flow_deg": 84.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.44,
+      "after_g": 21.09
+     },
+     {
+      "start_deg": 82.4,
+      "flow_deg": 86.6,
+      "let_run": true,
+      "stopped_deg": 86.63000000002086,
+      "before_g": 21.09,
+      "after_g": 23.05
+     },
+     {
+      "start_deg": 84.6,
+      "flow_deg": 85.4,
+      "let_run": false,
+      "stopped_deg": 85.40700000002096,
+      "before_g": 23.05,
+      "after_g": 23.38
+     },
+     {
+      "start_deg": 83.4,
+      "flow_deg": 87.0,
+      "let_run": false,
+      "stopped_deg": 87.02600000002309,
+      "before_g": 23.38,
+      "after_g": 24.03
+     },
+     {
+      "start_deg": 85.0,
+      "flow_deg": 87.8,
+      "let_run": false,
+      "stopped_deg": 87.79500000002274,
+      "before_g": 24.03,
+      "after_g": 25.01
+     },
+     {
+      "start_deg": 85.8,
+      "flow_deg": 87.2,
+      "let_run": false,
+      "stopped_deg": 87.20500000002234,
+      "before_g": 25.01,
+      "after_g": 26.97
+     }
+    ],
+    "seconds": 153.1,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 25.72,
+    "read_g": 26.97,
+    "true_g": 26.97,
+    "off_true_g": 1.01
+   }
+  ],
+  "imbalance_g": 1.097,
+  "spilled": 17,
+  "back": {
+   "blank0": {
+    "off_mm": 0.16,
+    "tilt_deg": 1.61
+   },
+   "blank1": {
+    "off_mm": 0.48,
+    "tilt_deg": 1.65
+   },
+   "water0": {
+    "off_mm": 0.27,
+    "tilt_deg": 0.8
+   },
+   "water1": {
+    "off_mm": 0.04,
+    "tilt_deg": 1.74
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 272.5
+ },
+ {
+  "seed": 37,
+  "job": "odd_one",
+  "weights": {
+   "sample0": 39.36,
+   "sample1": 26.83,
+   "sample2": 26.87
+  },
+  "plan": "1. balance A (fill an empty tube to 39.34 g) into hole 3\n2. sample0 (39.36 g) into hole 0\n3. sample1 (26.83 g) into hole 1\n4. sample2 (26.87 g) into hole 4\nBalance: 0.03 g out (limit 1.0 g); at most 0.50 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 6,
+    "water_cell": 0,
+    "target_g": 39.34,
+    "empty_g": 11.38,
+    "poured_g": 40.12,
+    "final_g": 40.12,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 76.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.38,
+      "after_g": 11.71
+     },
+     {
+      "start_deg": 74.7,
+      "flow_deg": 78.6,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.71,
+      "after_g": 12.69
+     },
+     {
+      "start_deg": 76.6,
+      "flow_deg": 80.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 12.69,
+      "after_g": 13.02
+     },
+     {
+      "start_deg": 78.5,
+      "flow_deg": 82.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 13.02,
+      "after_g": 16.93
+     },
+     {
+      "start_deg": 80.5,
+      "flow_deg": 84.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 16.93,
+      "after_g": 21.18
+     },
+     {
+      "start_deg": 82.8,
+      "flow_deg": 82.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 21.18,
+      "after_g": 21.83
+     },
+     {
+      "start_deg": 80.8,
+      "flow_deg": 87.0,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 21.83,
+      "after_g": 32.28
+     },
+     {
+      "start_deg": 85.0,
+      "flow_deg": 88.6,
+      "let_run": true,
+      "stopped_deg": 88.62700000002383,
+      "before_g": 32.28,
+      "after_g": 36.2
+     },
+     {
+      "start_deg": 86.6,
+      "flow_deg": 88.1,
+      "let_run": false,
+      "stopped_deg": 88.11800000002444,
+      "before_g": 36.2,
+      "after_g": 37.18
+     },
+     {
+      "start_deg": 86.1,
+      "flow_deg": 87.3,
+      "let_run": false,
+      "stopped_deg": 87.2590000000248,
+      "before_g": 37.18,
+      "after_g": 37.51
+     },
+     {
+      "start_deg": 85.3,
+      "flow_deg": 87.6,
+      "let_run": false,
+      "stopped_deg": 87.62000000002443,
+      "before_g": 37.51,
+      "after_g": 37.84
+     },
+     {
+      "start_deg": 85.6,
+      "flow_deg": 88.2,
+      "let_run": false,
+      "stopped_deg": 88.17900000002408,
+      "before_g": 37.84,
+      "after_g": 38.16
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 88.9,
+      "let_run": false,
+      "stopped_deg": 88.86700000002372,
+      "before_g": 38.16,
+      "after_g": 38.48
+     },
+     {
+      "start_deg": 86.9,
+      "flow_deg": 88.3,
+      "let_run": false,
+      "stopped_deg": 88.27700000002332,
+      "before_g": 38.48,
+      "after_g": 38.81
+     },
+     {
+      "start_deg": 86.3,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.51500000002295,
+      "before_g": 38.81,
+      "after_g": 39.14
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 89.5,
+      "let_run": false,
+      "stopped_deg": 89.53000000002261,
+      "before_g": 39.14,
+      "after_g": 40.12
+     }
+    ],
+    "seconds": 202.7,
+    "smallest_gap_mm": 10.0,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 39.34,
+    "read_g": 40.12,
+    "true_g": 40.118,
+    "off_true_g": 0.778
+   }
+  ],
+  "imbalance_g": 0.781,
+  "spilled": 1,
+  "back": {
+   "blank0": {
+    "off_mm": 0.12,
+    "tilt_deg": 1.54
+   },
+   "water0": {
+    "off_mm": 0.34,
+    "tilt_deg": 1.07
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 195.3
+ },
+ {
+  "seed": 39,
+  "job": "mismatch",
+  "weights": {
+   "sample0": 45.72,
+   "sample1": 34.67
+  },
+  "plan": "1. balance A (fill an empty tube to 45.72 g) into hole 3\n2. balance B (fill an empty tube to 34.67 g) into hole 5\n3. sample0 (45.72 g) into hole 0\n4. sample1 (34.67 g) into hole 2\nBalance: 0.00 g out (limit 1.0 g); at most 0.87 g if each balance tube is 0.5 g off.",
+  "fills": [
+   {
+    "blank_cell": 5,
+    "water_cell": 0,
+    "target_g": 45.72,
+    "empty_g": 11.4,
+    "poured_g": 45.68,
+    "final_g": 45.68,
+    "steady": true,
+    "over": false,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 79.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.4,
+      "after_g": 15.97
+     },
+     {
+      "start_deg": 77.5,
+      "flow_deg": 83.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.97,
+      "after_g": 20.86
+     },
+     {
+      "start_deg": 81.4,
+      "flow_deg": 85.7,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 20.86,
+      "after_g": 28.05
+     },
+     {
+      "start_deg": 83.7,
+      "flow_deg": 87.9,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 28.05,
+      "after_g": 35.88
+     },
+     {
+      "start_deg": 85.9,
+      "flow_deg": 88.2,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 35.88,
+      "after_g": 38.82
+     },
+     {
+      "start_deg": 86.2,
+      "flow_deg": 89.8,
+      "let_run": true,
+      "stopped_deg": 89.76400000002155,
+      "before_g": 38.82,
+      "after_g": 43.4
+     },
+     {
+      "start_deg": 87.8,
+      "flow_deg": 90.3,
+      "let_run": false,
+      "stopped_deg": 90.31900000002292,
+      "before_g": 43.4,
+      "after_g": 44.05
+     },
+     {
+      "start_deg": 88.3,
+      "flow_deg": 88.5,
+      "let_run": false,
+      "stopped_deg": 88.49900000002248,
+      "before_g": 44.05,
+      "after_g": 44.7
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 90.1,
+      "let_run": false,
+      "stopped_deg": 90.06900000002216,
+      "before_g": 44.7,
+      "after_g": 45.03
+     },
+     {
+      "start_deg": 88.1,
+      "flow_deg": 90.1,
+      "let_run": false,
+      "stopped_deg": 90.11500000002178,
+      "before_g": 45.03,
+      "after_g": 45.35
+     },
+     {
+      "start_deg": 88.1,
+      "flow_deg": 90.1,
+      "let_run": false,
+      "stopped_deg": 90.0590000000214,
+      "before_g": 45.35,
+      "after_g": 45.68
+     }
+    ],
+    "seconds": 181.1,
+    "smallest_gap_mm": 5.4,
+    "error": "",
+    "balance_tube": "balance A",
+    "blank": "blank0",
+    "water": "water0",
+    "planned_g": 45.72,
+    "read_g": 45.68,
+    "true_g": 45.682,
+    "off_true_g": -0.038
+   },
+   {
+    "blank_cell": 6,
+    "water_cell": 3,
+    "target_g": 34.65,
+    "empty_g": 11.42,
+    "poured_g": 34.93,
+    "final_g": 34.93,
+    "steady": true,
+    "over": true,
+    "rounds": [
+     {
+      "start_deg": 70.0,
+      "flow_deg": 81.5,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 11.42,
+      "after_g": 15.66
+     },
+     {
+      "start_deg": 79.5,
+      "flow_deg": 84.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 15.66,
+      "after_g": 24.81
+     },
+     {
+      "start_deg": 82.8,
+      "flow_deg": 85.8,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 24.81,
+      "after_g": 27.09
+     },
+     {
+      "start_deg": 83.8,
+      "flow_deg": 87.4,
+      "let_run": true,
+      "stopped_deg": null,
+      "before_g": 27.09,
+      "after_g": 29.7
+     },
+     {
+      "start_deg": 85.4,
+      "flow_deg": 88.5,
+      "let_run": true,
+      "stopped_deg": 88.53700000001913,
+      "before_g": 29.7,
+      "after_g": 32.32
+     },
+     {
+      "start_deg": 86.5,
+      "flow_deg": 88.8,
+      "let_run": false,
+      "stopped_deg": 88.75600000002026,
+      "before_g": 32.32,
+      "after_g": 34.93
+     }
+    ],
+    "seconds": 120.2,
+    "smallest_gap_mm": 5.3,
+    "error": "",
+    "balance_tube": "balance B",
+    "blank": "blank1",
+    "water": "water1",
+    "planned_g": 34.67,
+    "read_g": 34.93,
+    "true_g": 34.929,
+    "off_true_g": 0.279
+   }
+  ],
+  "imbalance_g": 0.282,
+  "spilled": 14,
+  "back": {
+   "blank0": {
+    "off_mm": 0.11,
+    "tilt_deg": 0.19
+   },
+   "blank1": {
+    "off_mm": 0.3,
+    "tilt_deg": 1.7
+   },
+   "water0": {
+    "off_mm": 0.14,
+    "tilt_deg": 1.48
+   },
+   "water1": {
+    "off_mm": 0.21,
+    "tilt_deg": 1.23
+   }
+  },
+  "back_ok": true,
+  "disturbed": [],
+  "wall_seconds": 250.6
+ }
+]
