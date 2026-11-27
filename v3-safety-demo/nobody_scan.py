@@ -12,11 +12,15 @@ and the camera's sensor noise, it runs a registry version of the detector and th
 pictures where the zone is not clear. Two uses:
 
 - **a test** (seeds 4 to 7, never trained on): the false-alarm rate with nobody there, with a 95% upper bound;
-- **mining** (seeds 0 to 3, the training jobs, ``--save``): every false alarm is written out as a training
-  picture with no hand in it (and its depth, for the record), for the next version to learn from.
+- **mining** (seeds 0 to 3, the training jobs, ``--save``): every picture where the model sees even a weak
+  "hand" (any box at ``--mine-conf`` or above, far below the release threshold, so near-misses count too) is
+  written out as a training picture with no hand in it (and its depth), for the next version to learn from.
+  ``--lightings 2`` renders each moment under two lighting levels. Mining uses the approved model's bytes
+  with a lower threshold; it never feeds the safety function.
 
     python nobody_scan.py --version v2 --jobs 4 5 6 7 --name test_v2
-    python nobody_scan.py --version v2 --jobs 0 1 2 3 --save train_negatives --name mine_v2
+    python nobody_scan.py --version v2 --jobs 0 1 2 3 --every 1 --lightings 2 --mine-conf 0.01 \
+        --save train_negatives --name mine_v2
 """
 
 from __future__ import annotations
@@ -44,10 +48,23 @@ RESULTS = HERE / "results"
 MODELS = HERE / "models"
 
 
-def scan(version: str, jobs: list[int], every: int, rng_seed: int, save: str | None, name: str) -> dict:
+def scan(
+    version: str,
+    jobs: list[int],
+    every: int,
+    rng_seed: int,
+    save: str | None,
+    name: str,
+    lightings: int = 1,
+    mine_conf: float | None = None,
+) -> dict:
     key = keys.load()
     registry = Registry(MODELS / "registry.json", key=key)
     det = D.load(MODELS / registry.models[version]["file"], registry, SafetyLog(), sensing.yolo_builder())
+    miner = None
+    if save and mine_conf is not None:
+        blob, entry = registry.read_approved(MODELS / registry.models[version]["file"])
+        miner = sensing.YoloDetector(blob, version, {**entry["settings"], "threshold": mine_conf})
     rng = np.random.default_rng(rng_seed)
     examples = RESULTS / f"nobody_{name}"
     examples.mkdir(parents=True, exist_ok=True)
@@ -61,7 +78,7 @@ def scan(version: str, jobs: list[int], every: int, rng_seed: int, save: str | N
         job = dataset.load_job(seed)
         person = sensing.Person(model, data, rng, reaches=False)
         cam = sensing.SafetyCamera(person, rng)
-        for i in range(0, len(job["time"]), every):
+        for i, _ in [(i, k) for i in range(0, len(job["time"]), every) for k in range(lightings)]:
             dataset.set_snapshot(model, data, job, i)
             level = str(rng.choice(list(scene_plus.LIGHTING), p=[0.25, 0.5, 0.25]))
             scene_plus.set_lighting(model, float(rng.uniform(*scene_plus.LIGHTING[level])))
@@ -87,9 +104,11 @@ def scan(version: str, jobs: list[int], every: int, rng_seed: int, save: str | N
                     for b in d.boxes:
                         draw.rectangle(b, outline=(255, 0, 255), width=2)
                     im.save(examples / f"seed{seed}_snap{i:05d}_{d.zone}.jpg", quality=90)
-            if save and (d.boxes or d.zone != "clear"):
-                # A picture with no hand in it that the detector got wrong: a training picture with no box.
-                stem = f"{save}_s{seed}_{i:05d}"
+            weak = bool(miner.detect(frame).boxes) if miner is not None else False
+            if save and (d.boxes or d.zone != "clear" or weak):
+                # A picture with no hand in it that the detector got wrong, or nearly: a training picture with
+                # no box.
+                stem = f"{save}_s{seed}_{len(rows):05d}"
                 Image.fromarray(frame.image).save(dataset.OUT / "images" / save / f"{stem}.jpg", quality=92)
                 (dataset.OUT / "labels" / save / f"{stem}.txt").write_text("")
                 dataset.save_depth(dataset.OUT / "depth" / save / f"{stem}.png", frame.depth)
@@ -122,9 +141,13 @@ def main() -> None:
     p.add_argument("--every", type=int, default=2, help="use every n-th snapshot (they are 0.25 s apart)")
     p.add_argument("--rng", type=int, default=7)
     p.add_argument("--save", default=None, help="write the false alarms as hand-free training pictures here")
+    p.add_argument("--lightings", type=int, default=1, help="lighting levels drawn per moment")
+    p.add_argument(
+        "--mine-conf", type=float, default=None, help="when saving: also keep near-misses this sure"
+    )
     p.add_argument("--name", required=True)
     a = p.parse_args()
-    r = scan(a.version, a.jobs, a.every, a.rng, a.save, a.name)
+    r = scan(a.version, a.jobs, a.every, a.rng, a.save, a.name, a.lightings, a.mine_conf)
     f = r["false alarms (zone not clear)"]
     print(
         f"{a.version} on jobs {a.jobs}: {f['k']} false alarms in {f['n']} pictures with nobody there "

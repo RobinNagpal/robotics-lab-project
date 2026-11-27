@@ -10,7 +10,13 @@ new version is released only if, on the 3,000 test pictures,
    it misses at most 1 more hand than the current version (one picture of slack per condition, so chance alone
    does not block a better model; a real step backwards in one condition still does).
 
+5. with nobody there, over the recorded test jobs (``nobody_scan.py``, the same pictures for both versions),
+   it raises no more false alarms than the current version. Added after v2's closed-loop run (a false alarm
+   on the robot's own gripper held the arm for good: docs/integration.md), and before v3 was evaluated.
+
     python release_check.py results/evaluation_v1.json results/evaluation_v2.json
+    python release_check.py results/evaluation_v2.json results/evaluation_v3.json \
+        --nobody results/nobody_test_v2.json results/nobody_test_v3.json
 """
 
 from __future__ import annotations
@@ -27,7 +33,7 @@ FALSE_SLACK = 0.01
 CONDITION_SLACK = 1
 
 
-def check(current: dict, new: dict) -> list[tuple[str, bool, str]]:
+def check(current: dict, new: dict, nobody: tuple[dict, dict] | None = None) -> list[tuple[str, bool, str]]:
     """Each rule: (what, passed, the numbers)."""
     a, b = current["test"], new["test"]
     out = [
@@ -63,6 +69,15 @@ def check(current: dict, new: dict) -> list[tuple[str, bool, str]]:
                     f"{before} -> {after} of {numbers['missed']['n']}",
                 )
             )
+    if nobody is not None:
+        before, after = (n["false alarms (zone not clear)"] for n in nobody)
+        out.append(
+            (
+                "false alarms with nobody there (recorded test jobs): no more than now",
+                after["k"] <= before["k"] and after["n"] == before["n"],
+                f"{before['k']} -> {after['k']} of {after['n']}",
+            )
+        )
     return out
 
 
@@ -71,8 +86,10 @@ def main() -> None:
     p.add_argument("current", type=Path)
     p.add_argument("new", type=Path)
     p.add_argument("--out", type=Path, default=None, help="write the verdict as JSON")
+    p.add_argument("--nobody", type=Path, nargs=2, default=None, help="nobody_scan results: current, new")
     args = p.parse_args()
-    rules = check(json.loads(args.current.read_text()), json.loads(args.new.read_text()))
+    nobody = tuple(json.loads(f.read_text()) for f in args.nobody) if args.nobody else None
+    rules = check(json.loads(args.current.read_text()), json.loads(args.new.read_text()), nobody)
     for what, passed, numbers in rules:
         print(f"{'pass' if passed else 'FAIL'}  {what}: {numbers}")
     release = all(passed for _, passed, _ in rules)
