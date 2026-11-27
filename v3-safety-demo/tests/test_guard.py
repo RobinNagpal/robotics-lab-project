@@ -47,7 +47,7 @@ def make_guard(model, data, hand=None, camera=None, detector=None, limits=LOOSE,
         detector or PerfectDetector(),
         SafetyLog(),
         limits=limits,
-        **kw,
+        **{"latency": 0.0, **kw},
     )
     return G.attach(g)
 
@@ -379,3 +379,64 @@ def test_v3_home_is_inside_the_set_limits():
     lim = G.Limits()
     assert np.all(pts[0] >= lim.box_min) and np.all(pts[0] <= lim.box_max)
     assert np.all(pts[1] >= lim.elbow_min) and np.all(pts[1] <= lim.elbow_max)
+
+
+# --- the detection delay, the start-up check, the measured speeds, the boxes in the log --------------------
+
+
+def test_decisions_take_effect_one_latency_after_the_frame(model, data):
+    """With the real 0.1 s delay, a hand in the stop zone from 0.25 s is first seen in the frame taken at
+    0.301 s (frames from the first step, every 0.1 s), and that frame's hold takes effect at 0.401 s."""
+    g = make_guard(model, data, ScriptedHand([Visit(0.25, 0.75, 0.05)]), latency=G.LATENCY)
+    move(model, data, GOAL, 1.5)
+    hold = [e for e in g.log.entries if e.get("kind") == "detector" and e.get("action") == G.HOLD]
+    assert hold[0]["taken"] == pytest.approx(0.301, abs=1e-6)
+    assert hold[0]["t"] == pytest.approx(0.401, abs=1e-6)
+
+
+def test_no_watchdog_faults_with_the_delay(model, data):
+    """Decisions keep coming once a frame period apart with the delay too: no false 'no fresh frame'."""
+    g = make_guard(model, data, latency=G.LATENCY)
+    move(model, data, GOAL, 2.0)
+    assert not [e for e in g.log.entries if e.get("zone") == G.FAULT]
+    assert g.held_steps == 0 and g.slow_steps == 0
+
+
+def test_start_up_check_holds_a_hand_already_there(model, data):
+    """A hand already in the stop zone when the job starts: the arm never moves until it has been gone 1 s."""
+    g = make_guard(model, data, ScriptedHand([Visit(0.0, 0.5, 0.05)]), latency=G.LATENCY)
+    start = joints(model, data)
+    act = scene.arm_actuator_ids(model)
+    data.ctrl[act] = GOAL
+    scene.step(model, data)  # one tick of a v3 script asking for a big move
+    first = g.log.entries[1]
+    assert first["kind"] == "detector" and first["t"] == 0.0 and first["action"] == G.HOLD
+    assert data.time > 1.4  # the call returned only after the hand had been gone for 1 s (and the delay)
+    # All that time the arm stood still; it has only just started on the tick (one physics step).
+    assert g.held_steps > 1400
+    assert np.abs(joints(model, data) - start).max() < 0.01
+
+
+def test_measured_overspeed_latches_a_stop(model, data):
+    """The normal layer also watches the arm's measured speed: a joint really turning too fast stops it,
+    whatever the commands said."""
+    g = make_guard(model, data, limits=G.Limits())
+    q = data.qpos[g.joints].copy()
+    for k in range(20):  # the shoulder turning at 4 rad/s, twice the measured limit (1.6 x 1.25)
+        data.qpos[g.joints[0]] = q[0] + 0.004 * k
+        g._tool = data.site_xpos[g.site].copy()
+        g._check_measured()
+    assert g.normal.latched and "measured" in g.normal.latched
+
+
+def test_hand_boxes_are_logged(model, data):
+    class Boxes:
+        version = "boxes-1"
+
+        def detect(self, frame):
+            return Detection("warning", 0.9, self.version, boxes=((10.0, 20.0, 30.0, 40.0),))
+
+    g = make_guard(model, data, detector=Boxes())
+    move(model, data, GOAL, 0.3)
+    logged = [e for e in g.log.entries if e.get("kind") == "detector"]
+    assert logged and logged[-1]["boxes"] == [[10.0, 20.0, 30.0, 40.0]]

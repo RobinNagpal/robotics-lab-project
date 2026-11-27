@@ -74,13 +74,16 @@ def hand_box(seg: np.ndarray, hand_ids: np.ndarray) -> tuple[int, tuple[int, int
     return count, (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
 
 
-def render_chunk(job: tuple[str, int, list[int], int, int, str]) -> list[dict]:
+def render_chunk(job: tuple[str, int, list[int], int, int, str, str]) -> list[dict]:
     """Render pictures ``start`` to ``start + count`` of a split, from the recorded jobs of ``seeds``.
 
     ``mode``: "all" writes the pictures and labels; "depth" writes only the depth pictures (the same moments,
     drawn from the same random numbers, so they fit pictures rendered before); "both" writes everything.
+
+    ``focus``: "none", or "near_robot" for v2's extra pictures: most reaches go to where the robot is (so it
+    partly covers the hand), and most hands wear dark gloves.
     """
-    split, start, seeds, count, rng_seed, mode = job
+    split, start, seeds, count, rng_seed, mode, focus = job
     rng = np.random.default_rng([rng_seed, start])
     w, h = cameras.SAFETY.width, cameras.SAFETY.height
     for sub in ("images", "labels", "depth"):
@@ -105,7 +108,7 @@ def render_chunk(job: tuple[str, int, list[int], int, int, str]) -> list[dict]:
         lighting = str(rng.choice(list(scene_plus.LIGHTING), p=[0.25, 0.5, 0.25]))
         scale = float(rng.uniform(*scene_plus.LIGHTING[lighting]))
         scene_plus.set_lighting(model, scale)
-        look = hand.Look.draw(rng)
+        look = hand.Look.draw(rng, dark_gloves=focus == "near_robot")
         hand.set_look(model, look)
         mujoco.mj_forward(model, data)
         row = {
@@ -119,7 +122,8 @@ def render_chunk(job: tuple[str, int, list[int], int, int, str]) -> list[dict]:
             hand.place(model, data, None, np.array([1.0, 0, 0, 0]))
             row.update(goal="nobody", phase="none")
         else:
-            goal, reach = hand.draw_reach(rng, model, data, 0.0, 0.0)
+            wanted = hand.NEAR_ROBOT if focus == "near_robot" and rng.random() < 0.6 else None
+            goal, reach = hand.draw_reach(rng, model, data, 0.0, 0.0, goal=wanted)
             phase = str(rng.choice(["in", "pause", "out"], p=[0.4, 0.4, 0.2]))
             t = {
                 "in": rng.uniform(reach.t0, reach.t_arrive),
@@ -186,13 +190,19 @@ def main() -> None:
         default="all",
         help="depth: only the depth pictures, for pictures already rendered (checked against their truth)",
     )
+    p.add_argument(
+        "--focus",
+        choices=["none", "near_robot"],
+        default="none",
+        help="near_robot: v2's extra pictures, hands where the robot is and mostly dark gloves",
+    )
     args = p.parse_args()
     rng_seed = (
         args.rng if args.rng is not None else {"train": 1, "val": 2, "test": 3, "train_extra": 4}[args.split]
     )
     chunk = 50
     work = [
-        (args.split, s, args.jobs, min(chunk, args.n - s), rng_seed, args.mode)
+        (args.split, s, args.jobs, min(chunk, args.n - s), rng_seed, args.mode, args.focus)
         for s in range(0, args.n, chunk)
     ]
     with ProcessPoolExecutor(max_workers=args.workers) as pool:

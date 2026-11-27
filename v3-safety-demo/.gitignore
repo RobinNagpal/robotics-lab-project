@@ -5,3 +5,5 @@ runs/
 # Raw safety logs and traces of guarded runs (tens of MB): remade by run_guarded.py; summaries are kept
 results/*/log_*.jsonl
 results/*/trace_*.json
+# The secret key that signs the safety log and the model registry (keys.py): never committed
+keys/

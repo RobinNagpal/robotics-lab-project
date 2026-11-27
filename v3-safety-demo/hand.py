@@ -125,7 +125,21 @@ class Look:
     sleeve: str  # a key of SLEEVES
 
     @staticmethod
-    def draw(rng: np.random.Generator) -> Look:
+    def draw(rng: np.random.Generator, dark_gloves: bool = False) -> Look:
+        """A random look. ``dark_gloves``: mostly gloves, and mostly the dark ones (black, blue, green,
+        purple), which v1 found hardest against the robot's dark links (docs/detector-results.md)."""
+        if dark_gloves:
+            gloved = rng.random() < 0.8
+            weights = {"glove_black": 0.35, "glove_blue": 0.25, "glove_green": 0.15, "glove_purple": 0.15}
+            weights["glove_white"] = 1.0 - sum(weights.values())
+            names = list(GLOVES)
+            hand = (
+                str(rng.choice(names, p=[weights[n] for n in names]))
+                if gloved
+                else str(rng.choice(list(SKIN)))
+            )
+            sleeve = str(rng.choice(list(SLEEVES), p=[0.55, 0.15, 0.15, 0.15]))
+            return Look(size=float(rng.uniform(0.85, 1.15)), hand=hand, sleeve=sleeve)
         gloved = rng.random() < 0.6
         hand = str(rng.choice(list(GLOVES if gloved else SKIN)))
         sleeve = str(rng.choice(list(SLEEVES), p=[0.55, 0.15, 0.15, 0.15]))
@@ -235,6 +249,10 @@ SIDES = {"front": 0.5, "left": 0.25, "right": 0.25}  # left is +y, right is -y (
 # warning zone only, or to reach into the stop zone. Radii are for the wrist; the fingers reach about 18 cm
 # further.
 GOALS = {"outside": (0.2, 1.40, 1.60), "warning": (0.3, 1.02, 1.28), "stop": (0.5, 0.35, 0.95)}
+# A fourth goal, only when asked for (v2's extra pictures): the hand goes to where the robot is, beside or
+# just under one of its links, so the robot partly covers it.
+NEAR_ROBOT = "near_robot"
+ROBOT_POINTS = ("arm/forearm_link", "arm/wrist_1_link", "arm/wrist_2_link", "arm/wrist_3_link")
 # m/s. ISO 13855 takes 1.6 m/s for a hand reaching in, 2.0 m/s close to the hazard.
 HAND_SPEED = (0.3, 2.0)
 CLEARANCE = 0.04  # m: the lowest the hand goes above anything on the bench
@@ -285,8 +303,10 @@ def draw_reach(
     don't collide, so this is what keeps it from going through the centrifuge), and never higher than
     ``HIGHEST``: a reach that would have to go higher is drawn again.
     """
-    for _ in range(100):
-        drawn = _draw_once(rng, model, data, t_from, t_to, goal)
+    for attempt in range(200):
+        # A robot standing high up leaves no low spot beside it: then reach into the stop zone instead.
+        g = "stop" if goal == NEAR_ROBOT and attempt >= 100 else goal
+        drawn = _draw_once(rng, model, data, t_from, t_to, g)
         if drawn[1].start[2] <= HIGHEST:
             return drawn
     raise RuntimeError("no reach found below HIGHEST")
@@ -304,7 +324,7 @@ def _draw_once(
     if goal is None:
         names = list(GOALS)
         goal = str(rng.choice(names, p=[GOALS[n][0] for n in names]))
-    _, r_lo, r_hi = GOALS[goal]
+    _, r_lo, r_hi = GOALS["stop" if goal == NEAR_ROBOT else goal]
     # The start: past the bench's edge on that side, far enough out that the fingertips are clear of the
     # warning zone, and out of the safety camera's view.
     along = rng.uniform(-1.0, 1.0)
@@ -323,6 +343,15 @@ def _draw_once(
     target = np.array([r * math.cos(angle), r * math.sin(angle), 0.0])
     start[2] = rng.uniform(0.25, 0.45)
     target[2] = rng.uniform(0.10, 0.35)
+    if goal == NEAR_ROBOT:
+        # Beside or under a link of the robot: the fingertips (about 18 cm ahead of the wrist) end near it.
+        link = data.xpos[model.body(ROBOT_POINTS[rng.integers(len(ROBOT_POINTS))]).id]
+        towards = link[:2] - start[:2]
+        towards /= np.linalg.norm(towards)
+        side_step = np.array([-towards[1], towards[0]]) * rng.uniform(-0.07, 0.07)
+        target[:2] = link[:2] - towards * rng.uniform(0.0, 0.18) + side_step
+        target[2] = link[2] + rng.uniform(-0.15, 0.03)
+        target[0] = max(target[0], -0.05)  # never behind the arm's base
     # Keep the hand above things: look along the path, the fingers' reach beyond the target included.
     path = target - start
     reach_dir = path / np.linalg.norm(path)

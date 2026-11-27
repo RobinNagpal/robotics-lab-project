@@ -99,3 +99,39 @@ def test_detector_load_goes_through_the_registry(files):
     with pytest.raises(ValueError):
         load(v1, reg, log, lambda blob, version: Fake("v9"))
     assert [e["action"] for e in log.entries] == ["loaded", "refused", "loaded"]
+
+
+def test_signed_registry_refuses_hand_edits(tmp_path):
+    """Approving a model or changing its threshold by editing the file is refused without the key."""
+    import json as _json
+
+    from registry import RegistryTampered
+
+    key = b"s" * 32
+    model = tmp_path / "m.pt"
+    model.write_bytes(b"weights")
+    reg = Registry(tmp_path / "reg.json", key=key)
+    reg.approve(model, "v1", settings={"threshold": 0.2, "imgsz": 640})
+    assert Registry(tmp_path / "reg.json", key=key).models["v1"]["settings"]["threshold"] == 0.2
+    data = _json.loads((tmp_path / "reg.json").read_text())
+    data["models"]["v1"]["settings"]["threshold"] = 0.9
+    (tmp_path / "reg.json").write_text(_json.dumps(data))
+    with pytest.raises(RegistryTampered):
+        Registry(tmp_path / "reg.json", key=key)
+
+
+def test_load_passes_the_approved_settings(tmp_path):
+    from detector import load
+
+    reg = Registry(tmp_path / "reg.json")
+    model = tmp_path / "m.pt"
+    model.write_bytes(b"weights")
+    reg.approve(model, "v1", settings={"threshold": 0.3})
+    got = {}
+
+    def build(blob, version, settings):
+        got.update(settings)
+        return type("D", (), {"version": version})()
+
+    load(model, reg, SafetyLog(), build)
+    assert got == {"threshold": 0.3}

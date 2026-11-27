@@ -9,14 +9,22 @@ is logged.
 The registry also says which approved version is in use (``active``) and keeps the order versions were made
 active in, so an update can be rolled back to the version before it.
 
-    reg = Registry("models/registry.json")
-    reg.approve("models/detector_v1.pt", "v1", note="first release")
+Each entry also holds the model's **settings** (its confidence threshold, its picture size): they change what
+the safety function does as much as the weights do, so they are approved with them and cannot be changed apart.
+
+Given a ``key`` (``keys.py``), the registry file is **signed** (HMAC-SHA256 over its whole contents). A
+registry whose signature is missing or wrong is refused as a whole (``RegistryTampered``): editing the file by
+hand to approve a model, or to change a threshold, does not work without the key.
+
+    reg = Registry("models/registry.json", key=keys.load())
+    reg.approve("models/detector_v1.pt", "v1", note="first release", settings={"threshold": 0.2})
     reg.activate("v1")
     blob, entry = reg.read_approved("models/detector_v1.pt", log)
 
 From the command line:
 
-    python registry.py models/registry.json approve models/detector_v1.pt v1 --note "first release"
+    python registry.py models/registry.json approve models/detector_v1.pt v1 --note "first release" \
+        --threshold 0.2 --imgsz 640
     python registry.py models/registry.json activate v1
     python registry.py models/registry.json rollback
     python registry.py models/registry.json show
@@ -29,9 +37,20 @@ import hashlib
 import json
 from pathlib import Path
 
+import keys
+
 
 class UnapprovedModel(RuntimeError):
     """A model file whose fingerprint is not in the registry (or whose version was revoked)."""
+
+
+class RegistryTampered(UnapprovedModel):
+    """The registry file's signature is missing or does not match its contents."""
+
+
+def _canonical(data: dict) -> str:
+    body = {k: v for k, v in data.items() if k != "signature"}
+    return json.dumps(body, sort_keys=True, separators=(",", ":"))
 
 
 def fingerprint(blob: bytes) -> str:
@@ -43,10 +62,17 @@ def fingerprint_file(path: str | Path) -> str:
 
 
 class Registry:
-    def __init__(self, path: str | Path):
+    def __init__(self, path: str | Path, key: bytes | None = None):
         self.path = Path(path)
+        self.key = key
         if self.path.exists():
             self.data = json.loads(self.path.read_text())
+            if key is not None:
+                signature = str(self.data.get("signature", ""))
+                if not keys.same(signature, keys.sign(key, _canonical(self.data))):
+                    raise RegistryTampered(
+                        f"{self.path.name}: the signature does not match (changed by hand?)"
+                    )
         else:
             self.data = {"models": {}, "active": None, "history": []}
 
@@ -71,10 +97,14 @@ class Registry:
     # --- changing it ---------------------------------------------------------------------------------------
 
     def save(self) -> None:
+        if self.key is not None:
+            self.data["signature"] = keys.sign(self.key, _canonical(self.data))
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.path.write_text(json.dumps(self.data, indent=1) + "\n")
 
-    def approve(self, model_path: str | Path, version: str, note: str = "") -> dict:
+    def approve(
+        self, model_path: str | Path, version: str, note: str = "", settings: dict | None = None
+    ) -> dict:
         blob = Path(model_path).read_bytes()
         if version in self.models:
             raise ValueError(f"version {version!r} is already in the registry")
@@ -84,6 +114,7 @@ class Registry:
             "sha256": fingerprint(blob),
             "bytes": len(blob),
             "note": note,
+            "settings": dict(settings or {}),
         }
         self.models[version] = entry
         self.save()
@@ -156,15 +187,21 @@ def main() -> None:
     a.add_argument("model")
     a.add_argument("version")
     a.add_argument("--note", default="")
+    a.add_argument("--threshold", type=float, default=None, help="the detector's confidence threshold")
+    a.add_argument("--imgsz", type=int, default=None, help="the picture size the detector runs at")
     sub.add_parser("activate").add_argument("version")
     sub.add_parser("revoke").add_argument("version")
     sub.add_parser("rollback")
     sub.add_parser("show")
+    p.add_argument("--unsigned", action="store_true", help="no key: an unsigned registry (tests only)")
     args = p.parse_args()
-    reg = Registry(args.registry)
+    reg = Registry(args.registry, key=None if args.unsigned else keys.load())
     match args.cmd:
         case "approve":
-            print(reg.approve(args.model, args.version, args.note))
+            settings = {
+                k: v for k, v in (("threshold", args.threshold), ("imgsz", args.imgsz)) if v is not None
+            }
+            print(reg.approve(args.model, args.version, args.note, settings=settings))
         case "activate":
             reg.activate(args.version)
         case "revoke":

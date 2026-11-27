@@ -54,6 +54,9 @@ class Detection:
     zone: str
     score: float
     model_version: str
+    # Where the hands were found, (x0, y0, x1, y1) pixels each: logged with the decision, so a reviewer can
+    # see what the zone was based on. Empty for the perfect detector.
+    boxes: tuple = field(default=(), compare=False)
 
 
 class Detector(Protocol):
@@ -113,14 +116,20 @@ class TruthCamera:
         return Frame(number, float(data.time), None, {"hand": hand, "arm": arm})
 
 
-def load(model_path, registry, log, build: Callable[[bytes, str], Detector]) -> Detector:
+def load(model_path, registry, log, build: Callable[..., Detector]) -> Detector:
     """A trained detector from ``model_path``, only if the registry approves the file.
 
-    ``build(blob, version)`` turns the approved bytes into a detector. Refusals raise
-    ``registry.UnapprovedModel`` and are logged.
+    ``build(blob, version)`` or ``build(blob, version, settings)`` turns the approved bytes (and the settings
+    approved with them: threshold, picture size) into a detector. Refusals raise ``registry.UnapprovedModel``
+    and are logged.
     """
+    import inspect
+
     blob, entry = registry.read_approved(model_path, log)
-    det = build(blob, entry["version"])
+    if len(inspect.signature(build).parameters) >= 3:
+        det = build(blob, entry["version"], dict(entry.get("settings", {})))
+    else:
+        det = build(blob, entry["version"])
     if det.version != entry["version"]:
         raise ValueError(f"the detector calls itself {det.version}, the registry says {entry['version']}")
     return det

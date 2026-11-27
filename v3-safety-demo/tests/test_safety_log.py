@@ -82,3 +82,29 @@ def test_numpy_and_nan_values_are_plain():
     )
     assert verify(log.entries) == []
     assert not any(isinstance(v, float) and math.isnan(v) for v in e.values())
+
+
+def test_keyed_log_needs_the_key(tmp_path):
+    """A log written with a key: verifies with it; recomputing the hashes without the key is caught."""
+    import hashlib
+    import json as _json
+
+    key, other = b"k" * 32, b"o" * 32
+    log = SafetyLog(tmp_path / "keyed.jsonl", key=key)
+    for i in range(5):
+        log.append(kind="detector", t=i * 0.1, zone="clear", action="run")
+    log.close()
+    entries = read(tmp_path / "keyed.jsonl")
+    assert verify(entries, head=log.head, key=key) == []
+    assert verify(entries, head=log.head, key=other)  # the wrong key: nothing verifies
+    # Someone without the key edits entry 2 and rebuilds every plain SHA-256 after it.
+    entries[2]["action"] = "stop"
+    prev = entries[1]["hash"]
+    for e in entries[2:]:
+        e["prev"] = prev
+        body = {k: v for k, v in e.items() if k != "hash"}
+        e["hash"] = hashlib.sha256(
+            _json.dumps(body, sort_keys=True, separators=(",", ":")).encode()
+        ).hexdigest()
+        prev = e["hash"]
+    assert verify(entries, key=key)

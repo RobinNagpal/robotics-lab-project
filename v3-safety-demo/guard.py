@@ -66,6 +66,14 @@ FRAME_HZ = 10.0  # camera frames per simulated second
 MAX_FRAME_AGE = 0.15  # s: a newer frame than this must have been checked, or the arm holds
 FROZEN_FRAMES = 3  # the same picture this many times running counts as a frozen camera
 DETECTOR_BUDGET = 0.25  # s (wall clock) the detector may take per frame
+# s from a frame being taken to its decision taking effect: the camera's exposure and read-out, the detector and
+# the rule. A real system's figure would be measured; 0.1 s covers a 30 frame-a-second camera (33 ms), YOLO11n
+# (about 15 ms on the Mac's GPU) and the rest with room. Frames are acted on this late in the simulation too.
+LATENCY = 0.1
+# The measured speeds may exceed the command limits by this factor before the normal layer stops the arm: the
+# arm follows its targets with a little overshoot. Set from v3's own jobs (docs/safety-layer.md).
+MEASURED_MARGIN = 1.25
+MEASURED_WINDOW = 0.01  # s the measured speeds are averaged over (one physics step alone is noisy)
 STOPPED = 0.01  # rad/s: the arm counts as stopped when no joint turns faster than this
 STOP_WATCH = 3.0  # s: the longest a stop is timed
 CATCH_UP_SPEED = 0.5  # rad/s: easing back onto v3's path after a hold (v3's own moves go up to 0.7)
@@ -288,6 +296,7 @@ class Guard:
         max_frame_age: float = MAX_FRAME_AGE,
         frozen_frames: int | None = FROZEN_FRAMES,
         detector_budget: float = DETECTOR_BUDGET,
+        latency: float = LATENCY,
         clock: Callable[[], float] = time.perf_counter,
         trace: bool = False,
     ):
@@ -297,6 +306,8 @@ class Guard:
         self.max_frame_age = max_frame_age
         self.frozen_frames = frozen_frames
         self.detector_budget = detector_budget
+        self.latency = latency
+        self.pending: deque = deque()  # frames taken, waiting LATENCY before their decision takes effect
         self.clock = clock
         self.act = np.concatenate([scene.arm_actuator_ids(model), [scene.gripper_actuator_id(model)]])
         self.joints = scene.arm_joint_ids(model)
@@ -320,7 +331,7 @@ class Guard:
         self.frame_no = 0
         self.last_frame: tuple[int, float, str | None] | None = None
         self.same_pictures = 0
-        self.last_good = -math.inf
+        self.last_good = -math.inf  # when the last trustworthy decision took effect (simulation s)
         # Hooks: called before every physics step (Track A moves its hand here); test-only command changes.
         self.before_physics: list[Callable[[mujoco.MjModel, mujoco.MjData], None]] = []
         self.inject: Callable[[Guard, np.ndarray], np.ndarray] | None = None
@@ -333,8 +344,29 @@ class Guard:
         self._watch: StopEvent | None = None
         self._tool = data.site_xpos[self.site].copy()
         self.tool_speed = 0.0
+        n = max(1, int(round(MEASURED_WINDOW / self.dt)))
+        self._q_hist: deque = deque([data.qpos[self.joints].copy()] * (n + 1), maxlen=n + 1)
+        self._p_hist: deque = deque([self._tool.copy()] * (n + 1), maxlen=n + 1)
+        self.measured_peak = {"joint": np.zeros(len(self.joints)), "tool": 0.0}
         self.trace: list[tuple] | None = [] if trace else None
         self.log.append(kind="guard", t=float(data.time), action=RUN, reason="started", model=self.version)
+        self._start_up()
+
+    def _start_up(self) -> None:
+        """The check before the job starts: one frame, judged at once.
+
+        A real safety camera and its detector are running before the robot's program starts, so the first
+        decision is ready when the arm is first told to move. Here the scene is still at that moment, so a
+        frame taken now and judged at once stands for it. Frames during the job then take ``latency`` to act
+        on, one every ``1 / frame_hz`` s from the first physics step.
+        """
+        t = float(self.data.time)
+        self.frame_no += 1
+        self._frame(t, self.frame_no, self._capture())
+        self._set_action(t, self.fault or "")
+        # The next frame is due so that its decision lands one frame period after this one (decisions keep
+        # coming every period, the watchdog's rhythm), but no sooner than the first physics step.
+        self.next_frame = t + max(self.dt, self.frame_period - self.latency)
 
     @property
     def version(self) -> str:
@@ -422,6 +454,7 @@ class Guard:
         moved = float(np.linalg.norm(tool - self._tool))
         self.tool_speed = moved / self.dt
         self._tool = tool.copy()
+        self._check_measured()
         w = self._watch
         if w is not None:
             w.distance += moved
@@ -430,6 +463,29 @@ class Guard:
                 self._watch = None
             elif self.data.time - w.t > STOP_WATCH:
                 self._watch = None
+
+    def _check_measured(self) -> None:
+        """The normal layer's check on what the arm actually does (not only what it is told): measured joint
+        and gripper speeds, over ``MEASURED_WINDOW``, against the limits times ``MEASURED_MARGIN``."""
+        self._q_hist.append(self.data.qpos[self.joints].copy())
+        self._p_hist.append(self._tool.copy())
+        span = (len(self._q_hist) - 1) * self.dt
+        joint = np.abs(self._q_hist[-1] - self._q_hist[0]) / span
+        tool = float(np.linalg.norm(self._p_hist[-1] - self._p_hist[0])) / span
+        peak = self.measured_peak
+        peak["joint"] = np.maximum(peak["joint"], joint)
+        peak["tool"] = max(peak["tool"], tool)
+        if self.normal.latched:
+            return
+        limit = self.normal.joint_limit * MEASURED_MARGIN
+        if np.any(joint > limit):
+            k = int(np.argmax(joint - limit))
+            self._latch(
+                f"normal layer: joint {k + 1} measured at {joint[k]:.2f} rad/s (limit {limit[k]:.2f})"
+            )
+        elif tool > self.normal.limits.tool_speed * MEASURED_MARGIN:
+            limit_tool = self.normal.limits.tool_speed * MEASURED_MARGIN
+            self._latch(f"normal layer: gripper measured at {tool:.2f} m/s (limit {limit_tool:.2f})")
 
     # --- the operator's buttons ----------------------------------------------------------------------------
 
@@ -465,18 +521,27 @@ class Guard:
             if self.next_frame <= t:
                 self.next_frame = t + self.frame_period
             self.frame_no += 1
-            self._frame(t)
+            self.pending.append((t + self.latency, self.frame_no, self._capture()))
+        while self.pending and self.pending[0][0] <= t + 1e-9:
+            _, number, captured = self.pending.popleft()
+            self._frame(t, number, captured)
         if self.fault is None and t - self.last_good > self.max_frame_age + 1e-9:
             self._bad(t, None, "watchdog: no fresh camera frame", kind="watchdog")
         self._set_action(t, self.fault or "")
 
-    def _frame(self, t: float) -> None:
+    def _capture(self):
+        """Take a frame now; its decision takes effect ``latency`` later. A failing camera is kept as the
+        error, to be handled then (the fault shows when the frame's answer was due)."""
         try:
-            frame = self.camera.capture(self.model, self.data, self.frame_no)
+            return self.camera.capture(self.model, self.data, self.frame_no)
         except Exception as e:  # noqa: BLE001 - any camera failure is a fault, never a crash of the guard
-            return self._bad(t, None, f"camera failed: {type(e).__name__}")
+            return e
+
+    def _frame(self, t: float, number: int, frame) -> None:
+        if isinstance(frame, Exception):
+            return self._bad(t, None, f"camera failed: {type(frame).__name__}", number=number)
         if frame is None:
-            return self._bad(t, None, "frame missing")
+            return self._bad(t, None, "frame missing", number=number)
         why = self._check_frame(t, frame)
         if why:
             return self._bad(t, frame, why)
@@ -502,18 +567,21 @@ class Guard:
                 reason=f"fault ended ({self.fault})",
             )
             self.fault = None
-        self.last_good = frame.time
+        self.last_good = t
         self.ml_action = self.behaviour.update(t, det.zone)
         action = self._effective(self.ml_action)
+        extra = {"boxes": [[round(float(v), 1) for v in b] for b in det.boxes]} if det.boxes else {}
         self.log.append(
             kind="detector",
             t=t,
             frame=frame.number,
+            taken=float(frame.time),
             model=det.model_version,
             score=float(det.score),
             zone=det.zone,
             action=action,
             reason="",
+            **extra,
         )
         if self.trace is not None:
             dist = getattr(self.camera, "last_distance", None)
@@ -556,7 +624,9 @@ class Guard:
             return f"detector too slow: {took * 1000:.0f} ms"
         return None
 
-    def _bad(self, t: float, frame, reason: str, det=None, kind: str = "detector") -> None:
+    def _bad(
+        self, t: float, frame, reason: str, det=None, kind: str = "detector", number: int | None = None
+    ) -> None:
         self.fault = reason
         self.behaviour.update(t, FAULT)
         self.ml_action = HOLD
@@ -564,7 +634,7 @@ class Guard:
         self.log.append(
             kind=kind,
             t=t,
-            frame=frame.number if isinstance(frame, Frame) else self.frame_no,
+            frame=frame.number if isinstance(frame, Frame) else (number or self.frame_no),
             model=self.version,
             score=score if isinstance(score, (int, float)) else None,
             zone=FAULT,
@@ -614,6 +684,8 @@ class Guard:
             "peak_joint_speed": round(n.peak["joint_speed"], 4),
             "peak_tool_speed": round(n.peak["tool_speed"], 4),
             "joint_peaks": np.round(n.joint_peaks, 4).tolist(),
+            "measured_joint_peaks": np.round(self.measured_peak["joint"], 4).tolist(),
+            "measured_tool_peak": round(float(self.measured_peak["tool"]), 4),
             "peak_where": n.peak_where,
             "tool_box_seen": np.round(n.tool_seen, 4).tolist(),
             "elbow_box_seen": np.round(n.elbow_seen, 4).tolist(),

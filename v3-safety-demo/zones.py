@@ -128,3 +128,20 @@ def distance_to_robot(
             d = mujoco.mj_geomDistance(model, data, int(p), int(g), distmax, None)
             best = min(best, d)
     return best
+
+
+ZONE_NAMES = {Zone.CLEAR: "clear", Zone.WARNING: "warning", Zone.STOP: "stop"}  # as the detector names them
+
+
+def zone_of_points(points: np.ndarray | None, arm=None) -> tuple[str, float]:
+    """The zone for a set of person points (n, 3), and how close they come to the arm's base (m, seen from
+    above). The call the safety layer's perfect detector uses; ``arm`` is not needed (the zones are fixed)."""
+    if points is None or len(points) == 0:
+        return "clear", float("inf")
+    pts = np.atleast_2d(points)
+    pts = pts[pts[:, 2] <= ZONE_TOP]
+    if len(pts) == 0:
+        return "clear", float("inf")
+    reach = float(np.linalg.norm(pts[:, :2] - ARM_BASE, axis=1).min())
+    zone = Zone.STOP if reach < STOP_RADIUS else Zone.WARNING if reach < WARNING_RADIUS else Zone.CLEAR
+    return ZONE_NAMES[zone], reach

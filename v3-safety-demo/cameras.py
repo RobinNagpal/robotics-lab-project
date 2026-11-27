@@ -70,3 +70,14 @@ def pixel_rays(model: mujoco.MjModel, data: mujoco.MjData, camera: str, px, widt
     px = np.asarray(px, dtype=float)
     local = np.stack([(px[:, 0] - width / 2) / f, -(px[:, 1] - height / 2) / f, -np.ones(len(px))], axis=1)
     return pos.copy(), local @ rot.T
+
+
+def camera_only():
+    """A model holding just the safety camera (and its data, posed): for working out where a picture's pixels
+    point, without the whole scene."""
+    spec = mujoco.MjSpec()
+    add_safety_camera(spec)
+    model = spec.compile()
+    data = mujoco.MjData(model)
+    mujoco.mj_forward(model, data)
+    return model, data
